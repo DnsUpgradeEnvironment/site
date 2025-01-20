@@ -144,8 +144,9 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120071003">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120073138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -260,31 +261,32 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-12">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/site/en/12/" aria-label=" 12" title="View this goal's indicator overview">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png"
+              alt="Responsible consumption and production - Goal 12"
+              id="goal-12"
+              class="goal-icon-image goal-icon-image-" />
+        </a>
+      </div>
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1 class="titles goal-12">
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/en/12/" aria-label=" 12" title=" 12">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png"
-                        alt="Responsible consumption and production - Goal 12"
-                        id="goal-12"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+              Indicator 12.2
             
-                <div>
-                    <h1>
-                        
-                        Indicator 12.2
-                        
-                        <span class="lead-copy">EMAS eco-management</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">EMAS eco-management</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-12" role="main">
   
 
@@ -319,6 +321,8 @@ layout-indicator-iframe
 
 
 
+
+
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_12-2'
@@ -326,9 +330,12 @@ layout-indicator-iframe
   data-country="Australia"
   data-charttitle="Umweltmanagement EMAS"
   data-charttitles="[{&quot;series&quot;:&quot;Employees in EMAS organisations&quot;,&quot;title&quot;:&quot;Use of  EMAS eco-management system&quot;},{&quot;series&quot;:&quot;EMAS organisations&quot;,&quot;title&quot;:&quot;Use of  EMAS eco-management system&quot;},{&quot;series&quot;:&quot;Locations of organisation registered with EMAS&quot;,&quot;title&quot;:&quot;Use of  EMAS eco-management system&quot;}]"
+  data-chartsubtitle=""
+  data-chartsubtitles="[{&quot;series&quot;:&quot;Employees in EMAS organisations&quot;,&quot;title&quot;:&quot;Employees in EMAS organisations in 1,000&quot;},{&quot;series&quot;:&quot;Locations of organisation registered with EMAS&quot;,&quot;title&quot;:&quot;Locations of organisation registered in Germany&quot;},{&quot;series&quot;:&quot;EMAS organisations&quot;,&quot;title&quot;:&quot;EMAS organisations&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -336,20 +343,24 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Locations of organisation registered with EMAS&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
+  data-showline="true"
+  data-spangaps="true"
   data-graphannotations="[{&quot;series&quot;:&quot;Locations of organisation registered with EMAS&quot;,&quot;value&quot;:5000,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
+  data-graphtargetpoints="[{&quot;series&quot;:&quot;Locations of organisation registered with EMAS&quot;,&quot;xValue&quot;:19,&quot;yValue&quot;:5000,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#bf8b2e&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;Locations of organisation registered with EMAS&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:18.9,&quot;yValue&quot;:4500.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;5000&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
+  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Number&quot;,&quot;1 000&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Locations of organisation registered with EMAS&quot;,&quot;Employees in EMAS organisations&quot;,&quot;EMAS organisations&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Federal state&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
+  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1879,110 +1890,114 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-  </div>
-  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link active"
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-chartview"
-          data-bs-target="#chartview"
-          aria-controls="chartview"
-          aria-describedby="table-alternative"
-          data-on="click"
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        
-      >Chart</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-tableview"
-          data-bs-target="#tableview"
-          aria-controls="tableview"
-          data-on="click"
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Chart</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        
-      >Table</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        map
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-mapview"
-          data-bs-target="#mapview"
-          aria-controls="mapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Table</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-mapview"
+        data-bs-target="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
 
-        
-      >Map</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        embedded-map
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-embeddedmapview"
-          data-bs-target="#embeddedmapview"
-          aria-controls="embeddedmapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Map</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      embedded-map
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-embeddedmapview"
+        data-bs-target="#embeddedmapview"
+        aria-controls="embeddedmapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to embedded item tab"
 
-        
-      >Additional information</button>
-    </li>
-    
-  </ul>
+        ><i class="fa fa-plus-square" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Additional information</span></button>
+  </li>
   
+</ul>
+
     <div class="tab-content data-view">
     
       
@@ -1995,12 +2010,12 @@ data-event-label="Change to embedded item tab"
     </div>
 
     
+    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">
-            Use of  EMAS eco-management system
-          </h4>
+          <h4 id="chart-heading" class="chart-title">Use of  EMAS eco-management system</h4>
+          <h6 id="chart-heading" class="chart-subtitle">Employees in EMAS organisations in 1,000</h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -2015,54 +2030,58 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
+          <dt><u>Data source</u>:</dt>
+          <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+          <dt><u>Note</u>:</dt>
+          <dd>EMAS: Eco-Management and Audit Scheme.</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-        <dt>Note:</dt>
-        <dd>EMAS: Eco-Management and Audit Scheme.</dd>
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
         </div>
@@ -2094,54 +2113,58 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
+          <dt><u>Data source</u>:</dt>
+          <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+          <dt><u>Note</u>:</dt>
+          <dd>EMAS: Eco-Management and Audit Scheme.</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-        <dt>Note:</dt>
-        <dd>EMAS: Eco-Management and Audit Scheme.</dd>
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -2152,10 +2175,15 @@ data-event-label="Change to embedded item tab"
       
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
-<h4 id="map-heading" class="map-title">Use of  EMAS eco-management system</h4>
+
+<h4 id="map-heading" class="chart-title">Use of  EMAS eco-management system</h4>
+<h6 id="map-subheading" class="chart-subtitle">Employees in EMAS organisations in 1,000</h6>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Loading map" />
 </div>
+
+
+
 
 
 
@@ -2164,50 +2192,51 @@ data-event-label="Change to embedded item tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
+          <dt><u>Data source</u>:</dt>
+          <dd><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+          <dt><u>Note</u>:</dt>
+          <dd>EMAS: Eco-Management and Audit Scheme.</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-        <dt>Note:</dt>
-        <dd>EMAS: Eco-Management and Audit Scheme.</dd>
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 
@@ -2312,22 +2341,18 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -2346,112 +2371,148 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Time series available </th>
-        <td>
-          
-            <p>EMAS eco-management</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Definition </th>
-        <td>
-          
-            <p>The indicator shows the number of locations in Germany registered with <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr>, the Eco-Management and Audit Scheme, for German as well as foreign organisations.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target and intention </th>
-        <td>
-          
-            <p>Climate change, the energy transition and scarcity of resources are presenting companies with new challenges that are forcing them to reconfigure their business processes, structures and products along environmentally responsible and resource-saving lines. <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr> offers a strategy for organisations to pursue systematic environmental protection, with the ultimate aim of steadily improving their locations’ environmental performance. The goal is therefore to identify a total of 5,000 organisation premises for registration with <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr> by 2030.</p>
 
-          
-        </td>
-        </tr>
-        
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Data state </th>
-        <td>
-          
-            <p>The data published in the indicator report 2022 is as of 31 October 2022. The data shown on this platform is updated regularly, so that more current data may be available online than published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a>.</p>
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
+
+      
+    
   
       
-      
-      
-      
-      <tr>
-        <th scope="row">Letztes Datenupdate </th>
-        <td>
-          
-            Jan 20, 2025
-          
-        </td>
-        </tr>
         
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>The indicator shows the number of locations in Germany registered with <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr>, the Eco-Management and Audit Scheme, for German as well as foreign organisations.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target and intention </th>
+            <td>
+              
+                <p>Climate change, the energy transition and scarcity of resources are presenting companies with new challenges that are forcing them to reconfigure their business processes, structures and products along environmentally responsible and resource-saving lines. <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr> offers a strategy for organisations to pursue systematic environmental protection, with the ultimate aim of steadily improving their locations’ environmental performance. The goal is therefore to identify a total of 5,000 organisation premises for registration with <abbr title="Eco-Management and Audit Scheme" tabindex="0">EMAS</abbr> by 2030.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Data state </th>
+            <td>
+              
+                <p>The data published in the indicator report 2022 is as of 31 October 2022. The data shown on this platform is updated regularly, so that more current data may be available online than published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a>.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Letztes Datenupdate </th>
+            <td>
+              
+                <p>2025-01-20</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
   
   
   
@@ -3231,100 +3292,106 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
+  
+  
+  
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
   
   
-      
-      
       
         
           
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Indicator name </th>
-        <td>
-          
-            <p>EMAS eco-management</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target number </th>
-        <td>
-          
-            <p>12.2.1</p>
 
-          
-        </td>
-        </tr>
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Indicator name </th>
+            <td>
+              
+                <p>EMAS eco-management</p>
+
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
       
+        
+          
       
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target number </th>
+            <td>
+              
+                <p>12.2.1</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -4122,24 +4189,19 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
+        <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -4153,8 +4215,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -4892,110 +4954,151 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/dihk.png" alt="German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry" title=" Click here to visit the homepage of the organizationGerman EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.emas.de/statistiken/" target="_blank">
-                EMAS statistics (only available in German) <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/dihk.png" alt="German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry" title=" Click here to visit the homepage of the organizationGerman EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
       
+        
+      
+
       
       
+
+
       
+
+      <!-- weather -->
       
+
+      
+    
   
       
+        
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.dihk.de/de" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En')">German EMAS Advisory Board based on data from the Association of German Chambers of Commerce and Industry</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                    <a href="https://www.emas.de/statistiken/" target="_blank" onclick="return confirm_alert('the German EMAS Advisory Board', 'En');">
+                      EMAS statistics (only available in German) <span class="visuallyhidden">opens in a new window</span>
+                    </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -5061,7 +5164,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -5069,11 +5171,35 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
-    
+  
+  
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="data">Edit Data</a>
+  
+
+  
+  <a class="btn btn-primary" href="metadata">Edit Metadata</a>
+  
+
+  
+  <a class="btn btn-primary" href="config"></a>
+  
+
+</div>
+
+    </div>
+  
 </div>
 
 </div>
@@ -5118,12 +5244,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120071003'></script>
+<script src='/site/assets/js/sdg.js?v=20250120073138'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120071003"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120073138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -144,8 +144,9 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120071003">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120073138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -178,7 +179,7 @@ layout-indicator
     <h2 class="internet-explorer-message-title"></h2>
     <p class="internet-explorer-message-body"></p>
 </div>
-<div id="disclaimer">
+<!-- <div id="disclaimer">
     
 <div class="container">
   <div class="disclaimer-alert">
@@ -189,7 +190,7 @@ layout-indicator
   </div>
 </div>
 
-</div>
+</div> -->
 
 <header role="banner" class="">
     <div class="container">
@@ -204,18 +205,24 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/en/">Home</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/en/goals">Goals</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/en/news">menu.updates</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/en/faq">menu.faq</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/en/about">About</a>
-</li></ul>
-    
+</li>
+</ul>
+
                 </div>
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/en/search/">
@@ -255,18 +262,23 @@ layout-indicator
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
             <a class="language-toggle-link" href="/site/17-1/">
                 Deutsch
             </a>
+        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
+            <span>
+                English
+            </span>
         </li></ul>
-</div></span><a title="" aria-label=""
-    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+</div>
+</span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
+
                 </div>
             </div>
         </nav>
@@ -366,21 +378,17 @@ data-event-label="high"
 <nav>
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         
-        <li class="breadcrumb-item">
-            <a href="/site/en/">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="/site/en/goals">Goals</a>
-        </li>
-        
-        <li class="breadcrumb-item">
-            <a href="/site/en/17/"
-               title="Goal 17 - Partnerships for the goals"
-               aria-label="Goal  - ">
-               Goal 17
-            </a>
-        </li>
-        
+          <li class="breadcrumb-item">
+                <a href="/site/en/">Home</a>
+            </li>
+          <li class="breadcrumb-item">
+                <a href="/site/en/goals">Goals</a>
+            </li>
+          
+          <li class="breadcrumb-item">
+              <a href="/site/en/17/" title="Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development">Goal 17</a>
+          </li>
+          
     </ol>
 </nav>
 
@@ -388,31 +396,32 @@ data-event-label="high"
   
 </div>
 <div class="heading goal-banner indicator goal-17">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/site/en/17/" aria-label=" 17" title="View this goal's indicator overview">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png"
+              alt="Partnerships for the goals - Goal 17"
+              id="goal-17"
+              class="goal-icon-image goal-icon-image-" />
+        </a>
+      </div>
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1 class="titles goal-17">
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/en/17/" aria-label=" 17" title=" 17">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png"
-                        alt="Partnerships for the goals - Goal 17"
-                        id="goal-17"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+              Indicator 17.1
             
-                <div>
-                    <h1>
-                        
-                        Indicator 17.1
-                        
-                        <span class="lead-copy">Official development assistance as a proportion of gross national income</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Official development assistance as a proportion of gross national income</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-17" role="main">
   
 
@@ -447,6 +456,8 @@ data-event-label="high"
 
 
 
+
+
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_17-1'
@@ -454,9 +465,12 @@ data-event-label="high"
   data-country="Australia"
   data-charttitle="Official development assistance as a share of gross national income"
   data-charttitles="null"
+  data-chartsubtitle=""
+  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -464,20 +478,24 @@ data-event-label="high"
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Official development assistance as a proportion of gross national income&quot;},{&quot;field&quot;:&quot;Calculation method&quot;,&quot;value&quot;:&quot;Calculated as net expenditure&quot;},{&quot;field&quot;:&quot;Calculation method&quot;,&quot;value&quot;:&quot;Calculated in grant equivalents&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
+  data-showline="true"
+  data-spangaps="true"
   data-graphannotations="[{&quot;value&quot;:0.7,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
+  data-graphtargetpoints="[{&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:28.655,&quot;xMax&quot;:29.345,&quot;yMin&quot;:0,&quot;yMax&quot;:0.7,&quot;borderColor&quot;:&quot;#19486a&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:28.8,&quot;yValue&quot;:0.8,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;0,7&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
+  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;calculation method&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Calculated as net expenditure&quot;,&quot;Calculated in grant equivalents&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Calculation method&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2.0}]"
+  data-graphstepsize="[{&quot;step&quot;:0.1}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -525,85 +543,88 @@ data-event-label="high"
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-  </div>
-  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link active"
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-chartview"
-          data-bs-target="#chartview"
-          aria-controls="chartview"
-          aria-describedby="table-alternative"
-          data-on="click"
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        
-      >Chart</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-tableview"
-          data-bs-target="#tableview"
-          aria-controls="tableview"
-          data-on="click"
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Chart</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        
-      >Table</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        embedded-map
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-embeddedmapview"
-          data-bs-target="#embeddedmapview"
-          aria-controls="embeddedmapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Table</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      embedded-map
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-embeddedmapview"
+        data-bs-target="#embeddedmapview"
+        aria-controls="embeddedmapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to embedded item tab"
 
-        
-      >Additional information</button>
-    </li>
-    
-  </ul>
+        ><i class="fa fa-plus-square" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Additional information</span></button>
+  </li>
   
+</ul>
+
     <div class="tab-content data-view">
     
       
@@ -616,12 +637,12 @@ data-event-label="Change to embedded item tab"
     </div>
 
     
+    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">
-            Official development assistance as a share of gross national income
-          </h4>
+          <h4 id="chart-heading" class="chart-title">Official development assistance as a share of gross national income</h4>
+          <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -636,51 +657,58 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></dd>
+          <dt><u>Data sources</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Notes</u>:</dt>
+          <dd><br>• Due to methodological changes, the results from 2018&nbsp;are only comparable with previous years to a limited extent. Up to 2017, the calculation was based on the gross-net principle; from 2018, the grant-equivalent method was used.<br>• 2022&nbsp;revised data.<br>• 2023&nbsp;provisional data.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
         </div>
@@ -712,51 +740,58 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></dd>
+          <dt><u>Data sources</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Notes</u>:</dt>
+          <dd><br>• Due to methodological changes, the results from 2018&nbsp;are only comparable with previous years to a limited extent. Up to 2017, the calculation was based on the gross-net principle; from 2018, the grant-equivalent method was used.<br>• 2022&nbsp;revised data.<br>• 2023&nbsp;provisional data.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -866,22 +901,18 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -900,112 +931,148 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Time series available </th>
-        <td>
-          
-            <p>Official development assistance as a proportion of gross national income</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Definition </th>
-        <td>
-          
-            <p>The indicator shows public expenditure on official development assistance (<abbr title="Official development assistance" tabindex="0">ODA</abbr>) as a percentage of gross national income (<abbr title="Gross national income" tabindex="0">GNI</abbr>). Since 2018, it has been calculated using the grant-equivalent method.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target and intention </th>
-        <td>
-          
-            <p>Through their development cooperation, donor countries play a role in reducing global poverty, preventing humanitarian need, safeguarding peace, achieving democracy, making globalisation fair and protecting the environment. To live up to that responsibility, the Federal Government has committed itself to the target, originally set by the <abbr title="United Nations" tabindex="0">UN</abbr> General Assembly in 1970, of raising its <abbr title="Official development assistance" tabindex="0">ODA</abbr> expenditure to 0.7 % of its <abbr title="Gross national income" tabindex="0">GNI</abbr>. For the indicator maintained in the German strategy for sustainable development, the aim is to reach that target by the year 2030.</p>
 
-          
-        </td>
-        </tr>
-        
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Data state </th>
-        <td>
-          
-            <p>The data published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a> is as of 31 October 2022. The data shown on this platform was last updated in January 2025.</p>
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
+
+      
+    
   
       
-      
-      
-      
-      <tr>
-        <th scope="row">Letztes Datenupdate </th>
-        <td>
-          
-            Jan 20, 2025
-          
-        </td>
-        </tr>
         
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>The indicator shows public expenditure on official development assistance (<abbr title="Official development assistance" tabindex="0">ODA</abbr>) as a percentage of gross national income (<abbr title="Gross national income" tabindex="0">GNI</abbr>). Since 2018, it has been calculated using the grant-equivalent method.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target and intention </th>
+            <td>
+              
+                <p>Through their development cooperation, donor countries play a role in reducing global poverty, preventing humanitarian need, safeguarding peace, achieving democracy, making globalisation fair and protecting the environment. To live up to that responsibility, the Federal Government has committed itself to the target, originally set by the <abbr title="United Nations" tabindex="0">UN</abbr> General Assembly in 1970, of raising its <abbr title="Official development assistance" tabindex="0">ODA</abbr> expenditure to 0.7 % of its <abbr title="Gross national income" tabindex="0">GNI</abbr>. For the indicator maintained in the German strategy for sustainable development, the aim is to reach that target by the year 2030.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Data state </th>
+            <td>
+              
+                <p>The data published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a> is as of 31 October 2022. The data shown on this platform was last updated in January 2025.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Letztes Datenupdate </th>
+            <td>
+              
+                <p>2025-01-20</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
   
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
   
   
   
@@ -1785,100 +1852,106 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
+  
+  
+  
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
   
   
-      
-      
       
         
           
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Indicator name </th>
-        <td>
-          
-            <p>Official development assistance as a proportion of gross national income</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target number </th>
-        <td>
-          
-            <p>17.1.1</p>
 
-          
-        </td>
-        </tr>
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Indicator name </th>
+            <td>
+              
+                <p>Official development assistance as a proportion of gross national income</p>
+
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
       
+        
+          
       
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target number </th>
+            <td>
+              
+                <p>17.1.1</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -2676,24 +2749,19 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
+        <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2707,8 +2775,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -3446,110 +3514,151 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.destatis.de/EN/Themes/Government/Public-Finance/Development-Cooperation/_node.html" target="_blank">
-                Development cooperation <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
       
+        
+      
+
       
       
+
+
       
+
+      <!-- weather -->
       
+
+      
+    
   
       
+        
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www.destatis.de/EN/Themes/Government/Public-Finance/Development-Cooperation/_node.html" target="_blank">
+                    Development cooperation <span class="visuallyhidden">opens in a new window</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -3615,7 +3724,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -3627,8 +3735,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -4378,110 +4486,151 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmz.png" alt="Federal Ministry for Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry for Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.bmz.de/en/ministry/facts-figures" target="_blank">
-                Facts and figures of German development cooperation <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmz.png" alt="Federal Ministry for Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry for Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
       
+        
+      
+
       
       
+
+
       
+
+      <!-- weather -->
       
+
+      
+    
   
       
+        
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En')">Federal Ministry for Economic Cooperation and Development</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                    <a href="https://www.bmz.de/en/ministry/facts-figures" target="_blank" onclick="return confirm_alert('the Federal Ministry for Economic Cooperation and Development', 'En');">
+                      Facts and figures of German development cooperation <span class="visuallyhidden">opens in a new window</span>
+                    </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -4535,7 +4684,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -4547,8 +4695,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 3</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -5310,100 +5458,145 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/oecd.png" alt="Organisation for Economic Co-operation and Development" title=" Click here to visit the homepage of the organizationOrganisation for Economic Co-operation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC1&df[ag]=OECD.DCD.FSD&df[vs]=1.1&pd=%2C&dq=DEU...1140%2B1160..Q%2BV.&ly[rw]=MEASURE&ly[cl]=TIME_PERIOD&to[TIME_PERIOD]=false&lo=10&lom=LASTNPERIODS&vw=tb" target="_blank">
-                Flows by donor (<abbr title="Official development assistance" tabindex="0">ODA</abbr> + OOF + Private) <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/oecd.png" alt="Organisation for Economic Co-operation and Development" title=" Click here to visit the homepage of the organizationOrganisation for Economic Co-operation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
       
+        
+      
+
       
       
+
+
       
+
+      <!-- weather -->
       
+
+      
+    
   
       
+        
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En')">Organisation for Economic Co-operation and Development</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                    <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_DAC1%40DF_DAC1&df[ag]=OECD.DCD.FSD&df[vs]=1.1&pd=%2C&dq=DEU...1140%2B1160..Q%2BV.&ly[rw]=MEASURE&ly[cl]=TIME_PERIOD&to[TIME_PERIOD]=false&lo=10&lom=LASTNPERIODS&vw=tb" target="_blank" onclick="return confirm_alert('the Organisation for Economic Co-operation and Development', 'En');">
+                      Flows by donor (<abbr title="Official development assistance" tabindex="0">ODA</abbr> + OOF + Private) <span class="visuallyhidden">opens in a new window</span>
+                    </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
       
         
           
@@ -5447,7 +5640,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -5455,13 +5647,13 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
-    
-        <div role="tabpanel" class="tab-pane" id="edit">
-            <div class="edit-container">
+  
+  
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
   
   
 
@@ -5482,8 +5674,8 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-        </div>
-    
+    </div>
+  
 </div>
 
 </div>
@@ -5493,6 +5685,7 @@ data-event-label="Change to indicator.sources tab"
   <a href="#top"></a>
 </div>
 
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -5500,27 +5693,33 @@ data-event-label="Change to indicator.sources tab"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Built using Open SDG</a>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('open-sdg', 'En');">
+                              Built using Open SDG
+                            </a>
                         </li>
                         
                         <li>
-                            <a href="/site/en/contact-us">Contact us</a>
-                            
-                        </li>
+                              <a href="/site/en/contact-us ">Contact us</a>
+                              
+                          </li>
                         <li>
-                            
-                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="https://twitter.com/MyTwitterAccount"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                                
+                              
+                          </li>
                         <li>
-                            
-                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="https://facebook.com/MyFacebookAccount">general.facebook</a>
+                                
+                              
+                          </li>
                         <li>
-                            <a href="/site/en/about/cookies-and-privacy/">Cookies</a>
-                            
-                        </li>
+                              <a href="/site/en/about/cookies-and-privacy/ ">Cookies</a>
+                              
+                          </li>
                         
                         
                         
@@ -5562,12 +5761,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120071003'></script>
+<script src='/site/assets/js/sdg.js?v=20250120073138'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120071003"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120073138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -5575,3 +5774,4 @@ data-event-label="Change to indicator.sources tab"
 
 </body>
 </html>
+

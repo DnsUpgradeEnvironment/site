@@ -144,8 +144,9 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120071003">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120073138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -260,31 +261,32 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-11">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/site/11/" aria-label=" 11" title="Zu den Indikatoren dieses Ziels">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/11.png"
+              alt="Nachhaltige Städte und Gemeinden - Ziel 11"
+              id="goal-11"
+              class="goal-icon-image goal-icon-image-" />
+        </a>
+      </div>
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1 class="titles goal-11">
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/11/" aria-label=" 11" title=" 11">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/11.png"
-                        alt="Nachhaltige Städte und Gemeinden - Ziel 11"
-                        id="goal-11"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+              Indikator 11.4
             
-                <div>
-                    <h1>
-                        
-                        Indikator 11.4
-                        
-                        <span class="lead-copy">Zahl der Objekte in der Deutschen Digitalen Bibliothek</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Zahl der Objekte in der Deutschen Digitalen Bibliothek</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-11" role="main">
   
 
@@ -319,6 +321,8 @@ layout-indicator-iframe
 
 
 
+
+
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_11-4'
@@ -326,9 +330,12 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Anzahl der Objekte in der Deutschen Digitalen Bibliothek"
   data-charttitles="null"
+  data-chartsubtitle=""
+  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -336,20 +343,24 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Zahl der Objekte in der Deutschen Digitalen Bibliothek&quot;}]"
   data-graphlimits="[{&quot;maximum&quot;:60.0}]"
   data-stackeddisaggregation="Zeitreihe"
+  data-showline="true"
+  data-spangaps="true"
   data-graphannotations="[{&quot;value&quot;:50,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
+  data-graphtargetpoints="[{&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:11.6805,&quot;xMax&quot;:12.3195,&quot;yMin&quot;:0,&quot;yMax&quot;:50,&quot;borderColor&quot;:&quot;#fd9d24&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:12,&quot;yValue&quot;:55.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;50&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
+  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Objekte mit Digitalisat&quot;,&quot;Objekte ohne Digitalisat&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
+  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -641,85 +652,88 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-  </div>
-  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link active"
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-chartview"
-          data-bs-target="#chartview"
-          aria-controls="chartview"
-          aria-describedby="table-alternative"
-          data-on="click"
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        
-      >Grafik</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-tableview"
-          data-bs-target="#tableview"
-          aria-controls="tableview"
-          data-on="click"
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Grafik</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        
-      >Tabelle</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        embedded-map
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-embeddedmapview"
-          data-bs-target="#embeddedmapview"
-          aria-controls="embeddedmapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Tabelle</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      embedded-map
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-embeddedmapview"
+        data-bs-target="#embeddedmapview"
+        aria-controls="embeddedmapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to embedded item tab"
 
-        
-      >Weitere Informationen</button>
-    </li>
-    
-  </ul>
+        ><i class="fa fa-plus-square" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Weitere Informationen</span></button>
+  </li>
   
+</ul>
+
     <div class="tab-content data-view">
     
       
@@ -732,12 +746,12 @@ data-event-label="Change to embedded item tab"
     </div>
 
     
+    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">
-            Anzahl der Objekte in der Deutschen Digitalen Bibliothek
-          </h4>
+          <h4 id="chart-heading" class="chart-title">Anzahl der Objekte in der Deutschen Digitalen Bibliothek</h4>
+          <h6 id="chart-heading" class="chart-subtitle"></h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -752,57 +766,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a>, <a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></dd>
+          <dt><u>Datenquellen</u>:</dt>
+          <dd><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a>, <a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Deutschland</dd>
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+          <dt><u>Anmerkung</u>:</dt>
+          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung der Daten</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
-
-        
-        <dt>Anmerkung:</dt>
-        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Anmerkung:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Letzte Änderung der Daten:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
         </div>
@@ -834,57 +852,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a>, <a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></dd>
+          <dt><u>Datenquellen</u>:</dt>
+          <dd><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a>, <a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Deutschland</dd>
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+          <dt><u>Anmerkung</u>:</dt>
+          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung der Daten</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
-
-        
-        <dt>Anmerkung:</dt>
-        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Anmerkung:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Letzte Änderung der Daten:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -990,22 +1012,18 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -1024,118 +1042,159 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Zahl der Objekte in der Deutschen Digitalen Bibliothek</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Definition </th>
-        <td>
-          
-            <p>Der Indikator zeigt die Anzahl der Objekte, die in der Deutschen Digitalen Bibliothek (<abbr title="Deutsche Digitale Bibliothek" tabindex="0">DDB</abbr>) vernetzt sind.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
 
-          
-        </td>
-        </tr>
-        
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention </th>
-        <td>
-          
-            <p>In der Deutschen Digitalen Bibliothek (<abbr title="Deutsche Digitale Bibliothek" tabindex="0">DDB</abbr>) werden die digitalen Angebote der deutschen Kultur- und Wissenseinrichtungen zentral miteinander vernetzt und online zugänglich gemacht. Die Deutsche Digitale Bibliothek eröffnet dadurch Wissenschaft und kulturinteressierten Nutzerinnen und Nutzern gleichermaßen einen zeitgemäßen und niederschwelligen Zugang. Der Indikator ist somit Gradmesser für die digitale Zugänglichmachung des Kultur- und Wissenserbes in Deutschland. Ziel ist es, die Anzahl der in der Deutschen Digitalen Bibliothek verzeichneten Objekte bis 2030 auf 50 Millionen zu steigern.</p>
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2022 hat den Datenstand 31.10.2022. Die Daten auf dieser Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indikatorenbericht 2022</a> veröffentlicht.</p>
 
-          
-        </td>
-        </tr>
-        
       
+    
   
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Letztes Datenupdate </th>
-        <td>
-          
-            Jan 20, 2025
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
       
         
-          
+      
+
       
       
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>Der Indikator zeigt die Anzahl der Objekte, die in der Deutschen Digitalen Bibliothek (<abbr title="Deutsche Digitale Bibliothek" tabindex="0">DDB</abbr>) vernetzt sind.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Ziel und Intention </th>
+            <td>
+              
+                <p>In der Deutschen Digitalen Bibliothek (<abbr title="Deutsche Digitale Bibliothek" tabindex="0">DDB</abbr>) werden die digitalen Angebote der deutschen Kultur- und Wissenseinrichtungen zentral miteinander vernetzt und online zugänglich gemacht. Die Deutsche Digitale Bibliothek eröffnet dadurch Wissenschaft und kulturinteressierten Nutzerinnen und Nutzern gleichermaßen einen zeitgemäßen und niederschwelligen Zugang. Der Indikator ist somit Gradmesser für die digitale Zugänglichmachung des Kultur- und Wissenserbes in Deutschland. Ziel ist es, die Anzahl der in der Deutschen Digitalen Bibliothek verzeichneten Objekte bis 2030 auf 50 Millionen zu steigern.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Datenstand </th>
+            <td>
+              
+                <p>Der Indikatorenbericht 2022 hat den Datenstand 31.10.2022. Die Daten auf dieser Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indikatorenbericht 2022</a> veröffentlicht.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Letztes Datenupdate </th>
+            <td>
+              
+                <p>2025-01-20</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
   
@@ -1920,100 +1979,103 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
   
   
-      
-      
       
         
           
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
-        <td>
-          
-            <p>Zahl der Objekte in der Deutschen Digitalen Bibliothek</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Unterzielnummerierung </th>
-        <td>
-          
-            <p>11.4.1</p>
 
-          
-        </td>
-        </tr>
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Indikatorenbezeichnung </th>
+            <td>
+              
+                <p>Zahl der Objekte in der Deutschen Digitalen Bibliothek</p>
+
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
       
+        
+          
       
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Unterzielnummerierung </th>
+            <td>
+              
+                <p>11.4.1</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -2811,24 +2873,19 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
+        <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2842,8 +2899,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -3581,90 +3638,98 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ddb.png" alt="Deutsche Digitale Bibliothek" title=" Klicken Sie hier um zur Homepage der Organisation Deutsche Digitale Bibliothek zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
       
         
-          
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ddb.png" alt="Deutsche Digitale Bibliothek" title=" Klicken Sie hier um zur Homepage der Organisation Deutsche Digitale Bibliothek zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
       
       
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.deutsche-digitale-bibliothek.de/" target="_blank" onclick="return confirm_alert('der deutschen digitalen Bibliothek', 'De')">Deutsche Digitale Bibliothek</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -3730,7 +3795,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -3742,8 +3806,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -4493,90 +4557,98 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bkm.png" alt="Beauftragte der Bundesregierung für Kultur und Medien" title=" Klicken Sie hier um zur Homepage der Organisation Beauftragte der Bundesregierung für Kultur und Medien zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
       
         
-          
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bkm.png" alt="Beauftragte der Bundesregierung für Kultur und Medien" title=" Klicken Sie hier um zur Homepage der Organisation Beauftragte der Bundesregierung für Kultur und Medien zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
       
       
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.kulturstaatsministerin.de/DE/startseite/startseite_node.html" target="_blank" onclick="return confirm_alert('der Beauftragten der Bundesregierung für Kultur und Medien', 'De')">Beauftragte der Bundesregierung für Kultur und Medien</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -4630,7 +4702,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -4638,11 +4709,35 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
-    
+  
+  
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="data">Daten bearbeiten</a>
+  
+
+  
+  <a class="btn btn-primary" href="metadata">Metadaten bearbeiten</a>
+  
+
+  
+  <a class="btn btn-primary" href="config"></a>
+  
+
+</div>
+
+    </div>
+  
 </div>
 
 </div>
@@ -4678,12 +4773,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120071003'></script>
+<script src='/site/assets/js/sdg.js?v=20250120073138'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120071003"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120073138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

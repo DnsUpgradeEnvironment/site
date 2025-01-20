@@ -144,8 +144,9 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120071003">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120073138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -178,7 +179,7 @@ layout-indicator
     <h2 class="internet-explorer-message-title">Dieser Internet-Browser wird nicht mehr unterstützt</h2>
     <p class="internet-explorer-message-body">Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.</p>
 </div>
-<div id="disclaimer">
+<!-- <div id="disclaimer">
     
 <div class="container">
   <div class="disclaimer-alert">
@@ -189,7 +190,7 @@ layout-indicator
   </div>
 </div>
 
-</div>
+</div> -->
 
 <header role="banner" class="">
     <div class="container">
@@ -204,18 +205,24 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/goals">Ziele</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/news">menu.updates</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/faq">menu.faq</a>
-</li><li class="nav-item ">
+</li>
+<li class="nav-item ">
     <a class="nav-link" href="/site/about">Über uns</a>
-</li></ul>
-    
+</li>
+</ul>
+
                 </div>
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/search/">
@@ -255,18 +262,23 @@ layout-indicator
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
+            <span>
+                Deutsch
+            </span>
+        </li><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/site/en/5-1-a/">
                 English
             </a>
         </li></ul>
-</div></span><a title="" aria-label=""
-    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
+</div>
+</span><a title="" aria-label=""
+    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
+
                 </div>
             </div>
         </nav>
@@ -366,21 +378,17 @@ data-event-label="high"
 <nav>
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         
-        <li class="breadcrumb-item">
-            <a href="/site/">Start</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="/site/goals">Ziele</a>
-        </li>
-        
-        <li class="breadcrumb-item">
-            <a href="/site/5/"
-               title="Ziel 5 - Geschlechtergleichheit"
-               aria-label="Ziel  - ">
-               Ziel 5
-            </a>
-        </li>
-        
+          <li class="breadcrumb-item">
+                <a href="/site/">Start</a>
+            </li>
+          <li class="breadcrumb-item">
+                <a href="/site/goals">Ziele</a>
+            </li>
+          
+          <li class="breadcrumb-item">
+              <a href="/site/5/" title="Geschlechtergleichstellung erreichen und alle Frauen und Mädchen zur Selbstbestimmung befähigen">Ziel 5</a>
+          </li>
+          
     </ol>
 </nav>
 
@@ -388,31 +396,32 @@ data-event-label="high"
   
 </div>
 <div class="heading goal-banner indicator goal-5">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/site/5/" aria-label=" 5" title="Zu den Indikatoren dieses Ziels">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/5.png"
+              alt="Geschlechtergleichheit - Ziel 5"
+              id="goal-5"
+              class="goal-icon-image goal-icon-image-" />
+        </a>
+      </div>
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1 class="titles goal-5">
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/5/" aria-label=" 5" title=" 5">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/5.png"
-                        alt="Geschlechtergleichheit - Ziel 5"
-                        id="goal-5"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+              Indikator 5.1.a
             
-                <div>
-                    <h1>
-                        
-                        Indikator 5.1.a
-                        
-                        <span class="lead-copy">Verdienstabstand zwischen Frauen und Männern</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Verdienstabstand zwischen Frauen und Männern</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -447,6 +456,8 @@ data-event-label="high"
 
 
 
+
+
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_5-1-a'
@@ -454,9 +465,12 @@ data-event-label="high"
   data-country="Deutschland"
   data-charttitle="Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten von Frauen und Männern"
   data-charttitles="null"
+  data-chartsubtitle="In Prozent der Verdienste der Männer"
+  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -464,20 +478,24 @@ data-event-label="high"
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Verdienstabstand zwischen Frauen und Männern&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
+  data-showline="true"
+  data-spangaps="true"
   data-graphannotations="[{&quot;value&quot;:10,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2020&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:10,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
+  data-graphtargetpoints="[{&quot;xValue&quot;:14,&quot;yValue&quot;:10,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#ff3a21&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:14.5,&quot;xMax&quot;:18,&quot;yMin&quot;:10,&quot;yMax&quot;:10,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#ff3a21&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:14.0,&quot;yValue&quot;:12.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;10&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:15.5}]"
+  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Württemberg&quot;,&quot;Bayern&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hessen&quot;,&quot;Mecklenburg-Vorpommern&quot;,&quot;Niedersachsen&quot;,&quot;Nordrhein-Westfalen&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Saarland&quot;,&quot;Sachsen&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thüringen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Bundesland&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
+  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -923,110 +941,114 @@ data-event-label="high"
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-  </div>
-  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link active"
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-chartview"
-          data-bs-target="#chartview"
-          aria-controls="chartview"
-          aria-describedby="table-alternative"
-          data-on="click"
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        
-      >Grafik</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-tableview"
-          data-bs-target="#tableview"
-          aria-controls="tableview"
-          data-on="click"
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Grafik</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        
-      >Tabelle</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        map
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-mapview"
-          data-bs-target="#mapview"
-          aria-controls="mapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Tabelle</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-mapview"
+        data-bs-target="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
 
-        
-      >Karte</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        embedded-map
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-embeddedmapview"
-          data-bs-target="#embeddedmapview"
-          aria-controls="embeddedmapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Karte</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      embedded-map
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-embeddedmapview"
+        data-bs-target="#embeddedmapview"
+        aria-controls="embeddedmapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to embedded item tab"
 
-        
-      >Weitere Informationen</button>
-    </li>
-    
-  </ul>
+        ><i class="fa fa-plus-square" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Weitere Informationen</span></button>
+  </li>
   
+</ul>
+
     <div class="tab-content data-view">
     
       
@@ -1039,12 +1061,12 @@ data-event-label="Change to embedded item tab"
     </div>
 
     
+    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">
-            Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten von Frauen und Männern
-          </h4>
+          <h4 id="chart-heading" class="chart-title">Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten von Frauen und Männern</h4>
+          <h6 id="chart-heading" class="chart-subtitle">In Prozent der Verdienste der Männer</h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1059,54 +1081,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+          <dt><u>Datenquelle</u>:</dt>
+          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Deutschland</dd>
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          <dd><br>• 2006&nbsp;bis 2021&nbsp;Verdienststrukturerhebung, fortgeschrieben mit Ergebnissen der vierteljährlichen Verdiensterhebung.<br>• Ab 2022: Ergebnisse der Verdiensterhebung.<br>• Aufgrund methodischer Änderungen sind die Ergebnisse ab 2022&nbsp;nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung der Daten</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Anmerkung:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Letzte Änderung der Daten:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
         </div>
@@ -1138,54 +1167,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+          <dt><u>Datenquelle</u>:</dt>
+          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Deutschland</dd>
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          <dd><br>• 2006&nbsp;bis 2021&nbsp;Verdienststrukturerhebung, fortgeschrieben mit Ergebnissen der vierteljährlichen Verdiensterhebung.<br>• Ab 2022: Ergebnisse der Verdiensterhebung.<br>• Aufgrund methodischer Änderungen sind die Ergebnisse ab 2022&nbsp;nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung der Daten</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Anmerkung:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Letzte Änderung der Daten:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1196,10 +1232,15 @@ data-event-label="Change to embedded item tab"
       
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
-<h4 id="map-heading" class="map-title">Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten von Frauen und Männern</h4>
+
+<h4 id="map-heading" class="chart-title">Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten von Frauen und Männern</h4>
+<h6 id="map-subheading" class="chart-subtitle">In Prozent der Verdienste der Männer</h6>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Karte wird geladen" />
 </div>
+
+
+
 
 
 
@@ -1208,50 +1249,54 @@ data-event-label="Change to embedded item tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Datenquelle:</dt>
-        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+          <dt><u>Datenquelle</u>:</dt>
+          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-        <dt>Geographische Abdeckung:</dt>
-        <dd>Deutschland</dd>
+          <dt><u>Geographische Abdeckung</u>:</dt>
+          <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Anmerkungen</u>:</dt>
+          <dd><br>• 2006&nbsp;bis 2021&nbsp;Verdienststrukturerhebung, fortgeschrieben mit Ergebnissen der vierteljährlichen Verdiensterhebung.<br>• Ab 2022: Ergebnisse der Verdiensterhebung.<br>• Aufgrund methodischer Änderungen sind die Ergebnisse ab 2022&nbsp;nur eingeschränkt mit den Vorjahren vergleichbar.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Anmerkung</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Änderung der Daten</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Anmerkung:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Letzte Änderung der Daten:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 
@@ -1360,22 +1405,18 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -1394,118 +1435,159 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
-        <td>
-          
-            <p>Verdienstabstand zwischen Frauen und Männern</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Definition </th>
-        <td>
-          
-            <p>Der Indikator zeigt den Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten der Frauen und der Männer als Anteil an den durchschnittlichen Bruttostundenverdiensten der Männer.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Geographische Abdeckung </th>
-        <td>
-          
-            <p>Deutschland</p>
 
-          
-        </td>
-        </tr>
-        
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Ziel und Intention </th>
-        <td>
-          
-            <p>Lohnunterschiede zwischen Frauen und Männern sind in modernen Erwerbsgesellschaften ein Zeichen für soziale Ungleichheit. Die Verringerung der Lohnunterschiede ist ein Indikator für Fortschritte auf dem Weg zur Gleichstellung. Die Bundesregierung verfolgte daher das Ziel, bis zum Jahr 2020 den Verdienstabstand auf 10 % zu verringern und dieses bis 2030 beizubehalten.</p>
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Datenstand </th>
-        <td>
-          
-            <p>Der Indikatorenbericht 2022 hat den Datenstand 31.10.2022. Die Daten auf dieser Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indikatorenbericht 2022</a> veröffentlicht.</p>
 
-          
-        </td>
-        </tr>
-        
       
+    
   
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Letztes Datenupdate </th>
-        <td>
-          
-            Jan 20, 2025
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
       
         
-          
+      
+
       
       
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>Der Indikator zeigt den Unterschied zwischen den durchschnittlichen Bruttostundenverdiensten der Frauen und der Männer als Anteil an den durchschnittlichen Bruttostundenverdiensten der Männer.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Ziel und Intention </th>
+            <td>
+              
+                <p>Lohnunterschiede zwischen Frauen und Männern sind in modernen Erwerbsgesellschaften ein Zeichen für soziale Ungleichheit. Die Verringerung der Lohnunterschiede ist ein Indikator für Fortschritte auf dem Weg zur Gleichstellung. Die Bundesregierung verfolgte daher das Ziel, bis zum Jahr 2020 den Verdienstabstand auf 10 % zu verringern und dieses bis 2030 beizubehalten.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Datenstand </th>
+            <td>
+              
+                <p>Der Indikatorenbericht 2022 hat den Datenstand 31.10.2022. Die Daten auf dieser Plattform werden regelmäßig aktualisiert, sodass online aktuellere Daten verfügbar sein können als im <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indikatorenbericht 2022</a> veröffentlicht.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Letztes Datenupdate </th>
+            <td>
+              
+                <p>2025-01-20</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
   
@@ -2290,100 +2372,103 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
   
   
-      
-      
       
         
           
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Indikatorenbezeichnung </th>
-        <td>
-          
-            <p>Verdienstabstand zwischen Frauen und Männern</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Unterzielnummerierung </th>
-        <td>
-          
-            <p>5.1.1</p>
 
-          
-        </td>
-        </tr>
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Indikatorenbezeichnung </th>
+            <td>
+              
+                <p>Verdienstabstand zwischen Frauen und Männern</p>
+
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
       
+        
+          
       
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Unterzielnummerierung </th>
+            <td>
+              
+                <p>5.1.1</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -3181,24 +3266,19 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
+        <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3212,8 +3292,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -3951,131 +4031,205 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link zur <br>Datenquelle </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.destatis.de/DE/Themen/Arbeit/Verdienste/Verdienste-GenderPayGap/Tabellen/ugpg-01-gebietsstand.html" target="_blank">
-                Unbereinigter Gender Pay Gap <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.destatis.de/DE/Themen/Arbeit/Verdienste/Verdienste-GenderPayGap/Tabellen/ugpg-02-bundeslaender-ab-2014.html" target="_blank">
-                Unbereinigter Gender Pay Gap nach Bundesländern <span class="visuallyhidden">in neuem Fenster öffnen</span>
-              </a>
-            
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
+
+      
+    
   
-      
-      
-      
-      
-      
-  
-      
-      
       
         
-          
+      
+
       
       
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www.destatis.de/DE/Themen/Arbeit/Verdienste/Verdienste-GenderPayGap/Tabellen/ugpg-01-gebietsstand.html" target="_blank">
+                    Unbereinigter Gender Pay Gap <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www.destatis.de/DE/Themen/Arbeit/Verdienste/Verdienste-GenderPayGap/Tabellen/ugpg-02-bundeslaender-ab-2014.html" target="_blank">
+                    Unbereinigter Gender Pay Gap nach Bundesländern <span class="visuallyhidden">in neuem Fenster öffnen</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
   
@@ -4140,7 +4294,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -4148,13 +4301,13 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
-    
-        <div role="tabpanel" class="tab-pane" id="edit">
-            <div class="edit-container">
+  
+  
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
   
   
 
@@ -4175,8 +4328,8 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-        </div>
-    
+    </div>
+  
 </div>
 
 </div>
@@ -4186,6 +4339,7 @@ data-event-label="Change to indicator.sources tab"
   <a href="#top"></a>
 </div>
 
+
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -4193,27 +4347,33 @@ data-event-label="Change to indicator.sources tab"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org">Seite basiert auf Open SDG</a>
+                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('von open-sdg', 'De');">
+                              Seite basiert auf Open SDG
+                            </a>
                         </li>
                         
                         <li>
-                            <a href="/site/contact-us">Kontakt</a>
-                            
-                        </li>
+                              <a href="/site/contact-us ">Kontakt</a>
+                              
+                          </li>
                         <li>
-                            
-                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="https://twitter.com/MyTwitterAccount"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                                
+                              
+                          </li>
                         <li>
-                            
-                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
-                            
-                        </li>
+                              
+                                
+                                  <a href="https://facebook.com/MyFacebookAccount">general.facebook</a>
+                                
+                              
+                          </li>
                         <li>
-                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
-                            
-                        </li>
+                              <a href="/site/about/cookies-and-privacy/ ">Cookies</a>
+                              
+                          </li>
                         
                         
                         
@@ -4264,12 +4424,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120071003'></script>
+<script src='/site/assets/js/sdg.js?v=20250120073138'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120071003"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120073138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -4277,3 +4437,4 @@ data-event-label="Change to indicator.sources tab"
 
 </body>
 </html>
+

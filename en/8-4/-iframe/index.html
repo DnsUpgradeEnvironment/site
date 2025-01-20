@@ -144,8 +144,9 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120071003">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120073138">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -260,31 +261,32 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-8">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+        <a href="/site/en/8/" aria-label=" 8" title="View this goal's indicator overview">
+          <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png"
+              alt="Decent jobs and economic growth - Goal 8"
+              id="goal-8"
+              class="goal-icon-image goal-icon-image-" />
+        </a>
+      </div>
+      <div class="col-8 col-md-9 col-lg-10 indicator-details">
+      
+        <div>
+          <h1 class="titles goal-8">
             
-            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-                <a href="/site/en/8/" aria-label=" 8" title=" 8">
-                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png"
-                        alt="Decent jobs and economic growth - Goal 8"
-                        id="goal-8"
-                        class="goal-icon-image goal-icon-image-" />
-                </a>
-            </div>
-            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+              Indicator 8.4
             
-                <div>
-                    <h1>
-                        
-                        Indicator 8.4
-                        
-                        <span class="lead-copy">Gross domestic product per capita</span>
-                    </h1>
-                </div>
-            </div>
+            <span class="lead-copy">Gross domestic product per capita</span>
+          </h1>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+
 <div id="main-content" class="container goal-8" role="main">
   
 
@@ -319,6 +321,8 @@ layout-indicator-iframe
 
 
 
+
+
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_8-4'
@@ -326,9 +330,12 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Gross domestic product per capita"
   data-charttitles="null"
+  data-chartsubtitle="Price-adjusted"
+  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
+  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -336,20 +343,24 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Gross domestic product per capita&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
+  data-showline="true"
+  data-spangaps="true"
   data-graphannotations="null"
   data-graphtargetlines="null"
+  data-graphtargetpoints="null"
+  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
+  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1.000 EUR&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;federal state&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Federal state&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;county&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Stuttgart, Stadt&quot;,&quot;Böblingen&quot;,&quot;Esslingen&quot;,&quot;Göppingen&quot;,&quot;Ludwigsburg&quot;,&quot;Rems-Murr-Kreis&quot;,&quot;Heilbronn, Stadt&quot;,&quot;Heilbronn&quot;,&quot;Hohenlohekreis&quot;,&quot;Schwäbisch Hall&quot;,&quot;Main-Tauber-Kreis&quot;,&quot;Heidenheim&quot;,&quot;Ostalbkreis&quot;,&quot;Baden-Baden, Stadt&quot;,&quot;Karlsruhe, Stadt&quot;,&quot;Karlsruhe&quot;,&quot;Rastatt&quot;,&quot;Heidelberg, Stadt&quot;,&quot;Mannheim, Stadt&quot;,&quot;Neckar-Odenwald-Kreis&quot;,&quot;Rhein-Neckar-Kreis&quot;,&quot;Pforzheim, Stadt&quot;,&quot;Calw&quot;,&quot;Enzkreis&quot;,&quot;Freudenstadt&quot;,&quot;Freiburg im Breisgau, Stadt&quot;,&quot;Breisgau-Hochschwarzwald&quot;,&quot;Emmendingen&quot;,&quot;Ortenaukreis&quot;,&quot;Rottweil&quot;,&quot;Schwarzwald-Baar-Kreis&quot;,&quot;Tuttlingen&quot;,&quot;Konstanz&quot;,&quot;Lörrach&quot;,&quot;Waldshut&quot;,&quot;Reutlingen&quot;,&quot;Tübingen&quot;,&quot;Zollernalbkreis&quot;,&quot;Ulm, Stadt&quot;,&quot;Alb-Donau-Kreis&quot;,&quot;Biberach&quot;,&quot;Bodenseekreis&quot;,&quot;Ravensburg&quot;,&quot;Sigmaringen&quot;,&quot;Ingolstadt, Stadt&quot;,&quot;München, Stadt&quot;,&quot;Rosenheim, Stadt&quot;,&quot;Altötting&quot;,&quot;Berchtesgadener Land&quot;,&quot;Bad Tölz-Wolfratshausen&quot;,&quot;Dachau&quot;,&quot;Ebersberg&quot;,&quot;Eichstätt&quot;,&quot;Erding&quot;,&quot;Freising&quot;,&quot;Fürstenfeldbruck&quot;,&quot;Garmisch-Partenkirchen&quot;,&quot;Landsberg am Lech&quot;,&quot;Miesbach&quot;,&quot;Mühldorf am Inn&quot;,&quot;München&quot;,&quot;Neuburg-Schrobenhausen&quot;,&quot;Pfaffenhofen an der Ilm&quot;,&quot;Rosenheim&quot;,&quot;Starnberg&quot;,&quot;Traunstein&quot;,&quot;Weilheim-Schongau&quot;,&quot;Landshut, Stadt&quot;,&quot;Passau, Stadt&quot;,&quot;Straubing, Stadt&quot;,&quot;Deggendorf&quot;,&quot;Freyung-Grafenau&quot;,&quot;Kelheim&quot;,&quot;Landshut&quot;,&quot;Passau&quot;,&quot;Regen&quot;,&quot;Rottal-Inn&quot;,&quot;Straubing-Bogen&quot;,&quot;Dingolfing-Landau&quot;,&quot;Amberg, Stadt&quot;,&quot;Regensburg, Stadt&quot;,&quot;Weiden in der Oberpfalz, Stadt&quot;,&quot;Amberg-Sulzbach&quot;,&quot;Cham&quot;,&quot;Neumarkt in der Oberpfalz&quot;,&quot;Neustadt an der Waldnaab&quot;,&quot;Regensburg&quot;,&quot;Schwandorf&quot;,&quot;Tirschenreuth&quot;,&quot;Bamberg, Stadt&quot;,&quot;Bayreuth, Stadt&quot;,&quot;Coburg, Stadt&quot;,&quot;Hof, Stadt&quot;,&quot;Bamberg&quot;,&quot;Bayreuth&quot;,&quot;Coburg&quot;,&quot;Forchheim&quot;,&quot;Hof&quot;,&quot;Kronach&quot;,&quot;Kulmbach&quot;,&quot;Lichtenfels&quot;,&quot;Wunsiedel im Fichtelgebirge&quot;,&quot;Ansbach, Stadt&quot;,&quot;Erlangen, Stadt&quot;,&quot;Fürth, Stadt&quot;,&quot;Nürnberg, Stadt&quot;,&quot;Schwabach, Stadt&quot;,&quot;Ansbach&quot;,&quot;Erlangen-Höchstadt&quot;,&quot;Fürth&quot;,&quot;Nürnberger Land&quot;,&quot;Neustadt an der Aisch-Bad Windsheim&quot;,&quot;Roth&quot;,&quot;Weißenburg-Gunzenhausen&quot;,&quot;Aschaffenburg, Stadt&quot;,&quot;Schweinfurt, Stadt&quot;,&quot;Würzburg, Stadt&quot;,&quot;Aschaffenburg&quot;,&quot;Bad Kissingen&quot;,&quot;Rhön-Grabfeld&quot;,&quot;Haßberge&quot;,&quot;Kitzingen&quot;,&quot;Miltenberg&quot;,&quot;Main-Spessart&quot;,&quot;Schweinfurt&quot;,&quot;Würzburg&quot;,&quot;Augsburg, Stadt&quot;,&quot;Kaufbeuren, Stadt&quot;,&quot;Kempten (Allgäu), Stadt&quot;,&quot;Memmingen, Stadt&quot;,&quot;Aichach-Friedberg&quot;,&quot;Augsburg&quot;,&quot;Dillingen an der Donau&quot;,&quot;Günzburg&quot;,&quot;Neu-Ulm&quot;,&quot;Lindau (Bodensee)&quot;,&quot;Ostallgäu&quot;,&quot;Unterallgäu&quot;,&quot;Donau-Ries&quot;,&quot;Oberallgäu&quot;,&quot;Berlin, Stadt&quot;,&quot;Brandenburg an der Havel, Stadt&quot;,&quot;Cottbus, Stadt&quot;,&quot;Frankfurt (Oder), Stadt&quot;,&quot;Potsdam, Stadt&quot;,&quot;Barnim&quot;,&quot;Dahme-Spreewald&quot;,&quot;Elbe-Elster&quot;,&quot;Havelland&quot;,&quot;Märkisch-Oderland&quot;,&quot;Oberhavel&quot;,&quot;Oberspreewald-Lausitz&quot;,&quot;Oder-Spree&quot;,&quot;Ostprignitz-Ruppin&quot;,&quot;Potsdam-Mittelmark&quot;,&quot;Prignitz&quot;,&quot;Spree-Neiße&quot;,&quot;Teltow-Fläming&quot;,&quot;Uckermark&quot;,&quot;Bremen, Stadt&quot;,&quot;Bremerhaven, Stadt&quot;,&quot;Hamburg&quot;,&quot;Darmstadt, Stadt&quot;,&quot;Frankfurt am Main, Stadt&quot;,&quot;Offenbach am Main, Stadt&quot;,&quot;Wiesbaden, Stadt&quot;,&quot;Bergstraße&quot;,&quot;Darmstadt-Dieburg&quot;,&quot;Groß-Gerau&quot;,&quot;Hochtaunuskreis&quot;,&quot;Main-Kinzig-Kreis&quot;,&quot;Main-Taunus-Kreis&quot;,&quot;Odenwaldkreis&quot;,&quot;Offenbach&quot;,&quot;Rheingau-Taunus-Kreis&quot;,&quot;Wetteraukreis&quot;,&quot;Gießen&quot;,&quot;Lahn-Dill-Kreis&quot;,&quot;Limburg-Weilburg&quot;,&quot;Marburg-Biedenkopf&quot;,&quot;Vogelsbergkreis&quot;,&quot;Kassel, Stadt&quot;,&quot;Fulda&quot;,&quot;Hersfeld-Rotenburg&quot;,&quot;Kassel&quot;,&quot;Schwalm-Eder-Kreis&quot;,&quot;Waldeck-Frankenberg&quot;,&quot;Werra-Meißner-Kreis&quot;,&quot;Rostock, Stadt&quot;,&quot;Schwerin, Stadt&quot;,&quot;Mecklenburgische Seenplatte&quot;,&quot;Rostock&quot;,&quot;Vorpommern-Rügen&quot;,&quot;Nordwestmecklenburg&quot;,&quot;Vorpommern-Greifswald&quot;,&quot;Ludwigslust-Parchim&quot;,&quot;Braunschweig, Stadt&quot;,&quot;Salzgitter, Stadt&quot;,&quot;Wolfsburg, Stadt&quot;,&quot;Gifhorn&quot;,&quot;Goslar&quot;,&quot;Helmstedt&quot;,&quot;Northeim&quot;,&quot;Osterode am Harz&quot;,&quot;Peine&quot;,&quot;Wolfenbüttel&quot;,&quot;Göttingen&quot;,&quot;Region Hannover&quot;,&quot;Diepholz&quot;,&quot;Hameln-Pyrmont&quot;,&quot;Hildesheim&quot;,&quot;Holzminden&quot;,&quot;Nienburg (Weser)&quot;,&quot;Schaumburg&quot;,&quot;Celle&quot;,&quot;Cuxhaven&quot;,&quot;Harburg&quot;,&quot;Lüchow-Dannenberg&quot;,&quot;Lüneburg&quot;,&quot;Osterholz&quot;,&quot;Rotenburg (Wümme)&quot;,&quot;Heidekreis&quot;,&quot;Stade&quot;,&quot;Uelzen&quot;,&quot;Verden&quot;,&quot;Delmenhorst, Stadt&quot;,&quot;Emden, Stadt&quot;,&quot;Oldenburg (Oldenburg), Stadt&quot;,&quot;Osnabrück, Stadt&quot;,&quot;Wilhelmshaven, Stadt&quot;,&quot;Ammerland&quot;,&quot;Aurich&quot;,&quot;Cloppenburg&quot;,&quot;Emsland&quot;,&quot;Friesland&quot;,&quot;Grafschaft Bentheim&quot;,&quot;Leer&quot;,&quot;Oldenburg&quot;,&quot;Osnabrück&quot;,&quot;Vechta&quot;,&quot;Wesermarsch&quot;,&quot;Wittmund&quot;,&quot;Düsseldorf, Stadt&quot;,&quot;Duisburg, Stadt&quot;,&quot;Essen, Stadt&quot;,&quot;Krefeld, Stadt&quot;,&quot;Mönchengladbach, Stadt&quot;,&quot;Mülheim an der Ruhr, Stadt&quot;,&quot;Oberhausen, Stadt&quot;,&quot;Remscheid, Stadt&quot;,&quot;Solingen, Stadt&quot;,&quot;Wuppertal, Stadt&quot;,&quot;Kleve&quot;,&quot;Mettmann&quot;,&quot;Rhein-Kreis Neuss&quot;,&quot;Viersen&quot;,&quot;Wesel&quot;,&quot;Bonn, Stadt&quot;,&quot;Köln, Stadt&quot;,&quot;Leverkusen, Stadt&quot;,&quot;Städteregion Aachen&quot;,&quot;Düren&quot;,&quot;Rhein-Erft-Kreis&quot;,&quot;Euskirchen&quot;,&quot;Heinsberg&quot;,&quot;Oberbergischer Kreis&quot;,&quot;Rheinisch-Bergischer Kreis&quot;,&quot;Rhein-Sieg-Kreis&quot;,&quot;Bottrop, Stadt&quot;,&quot;Gelsenkirchen, Stadt&quot;,&quot;Münster, Stadt&quot;,&quot;Borken&quot;,&quot;Coesfeld&quot;,&quot;Recklinghausen&quot;,&quot;Steinfurt&quot;,&quot;Warendorf&quot;,&quot;Bielefeld, Stadt&quot;,&quot;Gütersloh&quot;,&quot;Herford&quot;,&quot;Höxter&quot;,&quot;Lippe&quot;,&quot;Minden-Lübbecke&quot;,&quot;Paderborn&quot;,&quot;Bochum, Stadt&quot;,&quot;Dortmund, Stadt&quot;,&quot;Hagen, Stadt&quot;,&quot;Hamm, Stadt&quot;,&quot;Herne, Stadt&quot;,&quot;Ennepe-Ruhr-Kreis&quot;,&quot;Hochsauerlandkreis&quot;,&quot;Märkischer Kreis&quot;,&quot;Olpe&quot;,&quot;Siegen-Wittgenstein&quot;,&quot;Soest&quot;,&quot;Unna&quot;,&quot;Koblenz, Stadt&quot;,&quot;Ahrweiler&quot;,&quot;Altenkirchen (Westerwald)&quot;,&quot;Bad Kreuznach&quot;,&quot;Birkenfeld&quot;,&quot;Cochem-Zell&quot;,&quot;Mayen-Koblenz&quot;,&quot;Neuwied&quot;,&quot;Rhein-Hunsrück-Kreis&quot;,&quot;Rhein-Lahn-Kreis&quot;,&quot;Westerwaldkreis&quot;,&quot;Trier, Stadt&quot;,&quot;Bernkastel-Wittlich&quot;,&quot;Eifelkreis Bitburg-Prüm&quot;,&quot;Vulkaneifel&quot;,&quot;Trier-Saarburg&quot;,&quot;Frankenthal (Pfalz), Stadt&quot;,&quot;Kaiserslautern, Stadt&quot;,&quot;Landau in der Pfalz, Stadt&quot;,&quot;Ludwigshafen am Rhein, Stadt&quot;,&quot;Mainz, Stadt&quot;,&quot;Neustadt an der Weinstraße, Stadt&quot;,&quot;Pirmasens, Stadt&quot;,&quot;Speyer, Stadt&quot;,&quot;Worms, Stadt&quot;,&quot;Zweibrücken, Stadt&quot;,&quot;Alzey-Worms&quot;,&quot;Bad Dürkheim&quot;,&quot;Donnersbergkreis&quot;,&quot;Germersheim&quot;,&quot;Kaiserslautern&quot;,&quot;Kusel&quot;,&quot;Südliche Weinstraße&quot;,&quot;Rhein-Pfalz-Kreis&quot;,&quot;Mainz-Bingen&quot;,&quot;Südwestpfalz&quot;,&quot;Saarbrücken, Regionalverband&quot;,&quot;Merzig-Wadern&quot;,&quot;Neunkirchen&quot;,&quot;Saarlouis&quot;,&quot;Saarpfalz-Kreis&quot;,&quot;St. Wendel&quot;,&quot;Chemnitz, Stadt&quot;,&quot;Erzgebirgskreis&quot;,&quot;Mittelsachsen&quot;,&quot;Vogtlandkreis&quot;,&quot;Zwickau&quot;,&quot;Dresden, Stadt&quot;,&quot;Bautzen&quot;,&quot;Görlitz&quot;,&quot;Meißen&quot;,&quot;Sächsische Schweiz-Osterzgebirge&quot;,&quot;Leipzig, Stadt&quot;,&quot;Leipzig&quot;,&quot;Nordsachsen&quot;,&quot;Dessau-Roßlau, Stadt&quot;,&quot;Halle (Saale), Stadt&quot;,&quot;Magdeburg, Stadt&quot;,&quot;Altmarkkreis Salzwedel&quot;,&quot;Anhalt-Bitterfeld&quot;,&quot;Börde&quot;,&quot;Burgenlandkreis&quot;,&quot;Harz&quot;,&quot;Jerichower Land&quot;,&quot;Mansfeld-Südharz&quot;,&quot;Saalekreis&quot;,&quot;Salzlandkreis&quot;,&quot;Stendal&quot;,&quot;Wittenberg&quot;,&quot;Flensburg, Stadt&quot;,&quot;Kiel, Stadt&quot;,&quot;Lübeck, Stadt&quot;,&quot;Neumünster, Stadt&quot;,&quot;Dithmarschen&quot;,&quot;Herzogtum Lauenburg&quot;,&quot;Nordfriesland&quot;,&quot;Ostholstein&quot;,&quot;Pinneberg&quot;,&quot;Plön&quot;,&quot;Rendsburg-Eckernförde&quot;,&quot;Schleswig-Flensburg&quot;,&quot;Segeberg&quot;,&quot;Steinburg&quot;,&quot;Stormarn&quot;,&quot;Erfurt, Stadt&quot;,&quot;Gera, Stadt&quot;,&quot;Jena, Stadt&quot;,&quot;Suhl, Stadt&quot;,&quot;Weimar, Stadt&quot;,&quot;Eisenach, Stadt&quot;,&quot;Eichsfeld&quot;,&quot;Nordhausen&quot;,&quot;Wartburgkreis&quot;,&quot;Unstrut-Hainich-Kreis&quot;,&quot;Kyffhäuserkreis&quot;,&quot;Schmalkalden-Meiningen&quot;,&quot;Gotha&quot;,&quot;Sömmerda&quot;,&quot;Hildburghausen&quot;,&quot;Ilm-Kreis&quot;,&quot;Weimarer Land&quot;,&quot;Sonneberg&quot;,&quot;Saalfeld-Rudolstadt&quot;,&quot;Saale-Holzland-Kreis&quot;,&quot;Saale-Orla-Kreis&quot;,&quot;Greiz&quot;,&quot;Altenburger Land&quot;,&quot;&quot;]},&quot;title&quot;:&quot;County&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
+  data-graphstepsize="[{&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
-  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1095,110 +1106,114 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-  </div>
-  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link active"
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-chartview"
-          data-bs-target="#chartview"
-          aria-controls="chartview"
-          aria-describedby="table-alternative"
-          data-on="click"
+</div>
+<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link active"
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-chartview"
+        data-bs-target="#chartview"
+        aria-controls="chartview"
+        aria-describedby="table-alternative"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        
-      >Chart</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-tableview"
-          data-bs-target="#tableview"
-          aria-controls="tableview"
-          data-on="click"
+        ><i class="fa fa-line-chart" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Chart</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-tableview"
+        data-bs-target="#tableview"
+        aria-controls="tableview"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        
-      >Table</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        map
-        
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-mapview"
-          data-bs-target="#mapview"
-          aria-controls="mapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-table" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Table</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      map
+      
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-mapview"
+        data-bs-target="#mapview"
+        aria-controls="mapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Map tab"
 
-        
-      >Map</button>
-    </li>
-    
-    <li role="presentation"
-      class="
-        nav-item
-        
-        embedded-map
-      ">
-      <button
-        class="nav-link "
-        data-bs-toggle="tab"
-        role="tab"
-        type="button"
-        
-          id="tab-embeddedmapview"
-          data-bs-target="#embeddedmapview"
-          aria-controls="embeddedmapview"
-          data-no-disagg="true"
-          data-on="click"
+        ><i class="fa fa-map" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Map</span></button>
+  </li>
+  
+  <li role="presentation"
+    class="
+      nav-item
+      
+      embedded-map
+    ">
+    <button
+      class="nav-link "
+      data-bs-toggle="tab"
+      role="tab"
+      type="button"
+      
+        id="tab-embeddedmapview"
+        data-bs-target="#embeddedmapview"
+        aria-controls="embeddedmapview"
+        data-no-disagg="true"
+        data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to embedded item tab"
 
-        
-      >Additional information</button>
-    </li>
-    
-  </ul>
+        ><i class="fa fa-plus-square" aria-hidden="true"></i>
+      
+    <span class="hidden-xs" style="color:black">Additional information</span></button>
+  </li>
   
+</ul>
+
     <div class="tab-content data-view">
     
       
@@ -1211,12 +1226,12 @@ data-event-label="Change to embedded item tab"
     </div>
 
     
+    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">
-            Gross domestic product per capita
-          </h4>
+          <h4 id="chart-heading" class="chart-title">Gross domestic product per capita</h4>
+          <h6 id="chart-heading" class="chart-subtitle">Price-adjusted</h6>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1231,54 +1246,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
+          <dt><u>Data sources</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
         
 
         
-        <dt>Geographical Area:</dt>
-        <dd>Germany</dd>
+          <dt><u>Geographical Area</u>:</dt>
+          <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Notes</u>:</dt>
+          <dd><br>• Previous years’ prices chain-linked: 2020&nbsp;= 100.<br>• 2020&nbsp;to 2023&nbsp;provisional data.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
         </div>
@@ -1310,54 +1332,61 @@ data-event-label="Change to embedded item tab"
 
 
 
+
+
+
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
+          <dt><u>Data sources</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
         
 
         
-        <dt>Geographical Area:</dt>
-        <dd>Germany</dd>
+          <dt><u>Geographical Area</u>:</dt>
+          <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Notes</u>:</dt>
+          <dd><br>• Previous years’ prices chain-linked: 2020&nbsp;= 100.<br>• 2020&nbsp;to 2023&nbsp;provisional data.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1368,10 +1397,15 @@ data-event-label="Change to embedded item tab"
       
         <div role="tabpanel" class="tab-pane " id="mapview" class="map">
           
-<h4 id="map-heading" class="map-title">Gross domestic product per capita</h4>
+
+<h4 id="map-heading" class="chart-title">Gross domestic product per capita</h4>
+<h6 id="map-subheading" class="chart-subtitle">Price-adjusted</h6>
 <div id="map" aria-describedby="table-alternative">
   <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Loading map" />
 </div>
+
+
+
 
 
 
@@ -1380,50 +1414,54 @@ data-event-label="Change to embedded item tab"
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-        <dt>Data source:</dt>
-        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
+          <dt><u>Data sources</u>:</dt>
+          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></dd>
         
 
         
-        <dt>Geographical Area:</dt>
-        <dd>Germany</dd>
+          <dt><u>Geographical Area</u>:</dt>
+          <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-        <dt>Copyright:</dt>
+
+        
+          <dt><u>Notes</u>:</dt>
+          <dd><br>• Previous years’ prices chain-linked: 2020&nbsp;= 100.<br>• 2020&nbsp;to 2023&nbsp;provisional data.</dd>
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ><u>Note</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last modification of data</u>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
+        
+
+        
+        <dt><u>Copyright</u>:</dt>
         <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
-
-        
-
-        
-
-        
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        >Note:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="COMMENT_TS"
-        ></dd>
-        
-        <dt
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        >Last modification of data:</dt>
-        <dd
-          class="data-controlled-footer-field"
-          data-ts-attribute="DATA_LAST_UPDATE"
-        ></dd>
-        
-        
     </dl>
-    
 </div>
 
 
@@ -1528,22 +1566,18 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
+  
     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane active" id="national">
-            <article>
-                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane active" id="national">
+      <article>
+        <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -1562,118 +1596,159 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Time series available </th>
-        <td>
-          
-            <p>Gross domestic product per capita</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Definition </th>
-        <td>
-          
-            <p>The indicator shows price-adjusted gross domestic product (<abbr title="Gross domestic product" tabindex="0">GDP</abbr>) per capita (inhabitants) in Germany at 2015 prices. <abbr title="Gross domestic product" tabindex="0">GDP</abbr> measures the value of all goods and services produced in the domestic economy; inhabitants means all persons whose permanent residence is in Germany.</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Geographical coverage </th>
-        <td>
-          
-            <p>Germany</p>
 
-          
-        </td>
-        </tr>
-        
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target and intention </th>
-        <td>
-          
-            <p>Changes in <abbr title="Gross domestic product" tabindex="0">GDP</abbr> are related in a variety of ways to other indicators included within the strategy for sustainable development. Social factors such as the population structure, the labour supply, the educational system and social cohesion play an important role in society with regard to international economic competitiveness. <abbr title="Gross domestic product" tabindex="0">GDP</abbr> is regarded as an important indicator of the strength and growth of a national economy, and so the goal is to achieve continuous and appropriate levels of <abbr title="Gross domestic product" tabindex="0">GDP</abbr> growth.</p>
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Data state </th>
-        <td>
-          
-            <p>The data published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a> is as of 31 October 2022. The data shown on this platform was last updated in September 2024.</p>
 
-          
-        </td>
-        </tr>
-        
       
+    
   
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Letztes Datenupdate </th>
-        <td>
-          
-            Jan 20, 2025
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
       
         
-          
+      
+
       
       
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
+            <td>
+              
+                <p>The indicator shows price-adjusted gross domestic product (<abbr title="Gross domestic product" tabindex="0">GDP</abbr>) per capita (inhabitants) in Germany at 2015 prices. <abbr title="Gross domestic product" tabindex="0">GDP</abbr> measures the value of all goods and services produced in the domestic economy; inhabitants means all persons whose permanent residence is in Germany.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target and intention </th>
+            <td>
+              
+                <p>Changes in <abbr title="Gross domestic product" tabindex="0">GDP</abbr> are related in a variety of ways to other indicators included within the strategy for sustainable development. Social factors such as the population structure, the labour supply, the educational system and social cohesion play an important role in society with regard to international economic competitiveness. <abbr title="Gross domestic product" tabindex="0">GDP</abbr> is regarded as an important indicator of the strength and growth of a national economy, and so the goal is to achieve continuous and appropriate levels of <abbr title="Gross domestic product" tabindex="0">GDP</abbr> growth.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Data state </th>
+            <td>
+              
+                <p>The data published in the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">indicator report 2022</a> is as of 31 October 2022. The data shown on this platform was last updated in September 2024.</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Letztes Datenupdate </th>
+            <td>
+              
+                <p>2025-01-20</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
   
@@ -2458,100 +2533,103 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="global">
-            <article>
-                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="global">
+      <article>
+        <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
 
-                <table class="table metadata-content">
-  <tbody>
+        
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
   
   
-      
-      
       
         
           
       
+        
       
-      
-      
-      <tr>
-        <th scope="row">Indicator name </th>
-        <td>
-          
-            <p>Gross domestic product per capita</p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Target number </th>
-        <td>
-          
-            <p>8.4.1</p>
 
-          
-        </td>
-        </tr>
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Indicator name </th>
+            <td>
+              
+                <p>Gross domestic product per capita</p>
+
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
-      
-        
-          
-      
-      
       
         
           
       
+        
+          
       
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Target number </th>
+            <td>
+              
+                <p>8.4.1</p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+          
+      
+        
+          
+      
+        
+          
+      
+        
+          
       
         
           
@@ -3349,24 +3427,19 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
-            </article>
-        </div>
+      </article>
+    </div>
+    
+    
+    
+    
+    
+    <div role="tabpanel" class="tab-pane " id="sources">
+      <article>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        <div role="tabpanel" class="tab-pane " id="sources">
-            <article>
-                
-                <!-- Count the non-empty sources (up to 5) -->
+        <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3380,8 +3453,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -4119,150 +4192,257 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code= 81000-0001 &bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
-                National accounts - Gross value added, gross domestic product (nominal/price-adjusted)&nbsp;–&nbsp;GENESIS online 81000-0001 <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code= 12411-0040 &bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
-                Average population&nbsp;–&nbsp;GENESIS online 12411-0040 <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
 
-          
-        </td>
-        </tr>
-        
+      <!-- weather -->
       
-  
-      
-      
-      
-      
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/_inhalt.html#sprg233540" target="_blank">
-                Back-calculated and updated population based on the 2011&nbsp;census <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
 
-          
-        </td>
-        </tr>
-        
       
+    
   
-      
-      
-      
-      
-      
-  
-      
-      
       
         
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code= 81000-0001 &bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
+                    National accounts - Gross value added, gross domestic product (nominal/price-adjusted)&nbsp;–&nbsp;GENESIS online 81000-0001 <span class="visuallyhidden">opens in a new window</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code= 12411-0040 &bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
+                    Average population&nbsp;–&nbsp;GENESIS online 12411-0040 <span class="visuallyhidden">opens in a new window</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/_inhalt.html#sprg233540" target="_blank">
+                    Back-calculated and updated population based on the 2011&nbsp;census <span class="visuallyhidden">opens in a new window</span>
+                  </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
           
-      
-      
       
         
           
@@ -4328,7 +4508,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -4340,8 +4519,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      <table class="table metadata-content">
-  <tbody>
+      
+<table class="table" style="width:100%; table-layout: fixed;">
   
   
   
@@ -5091,110 +5270,151 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+        
       
-      
-      
-      <tr>
-        <th scope="row"> </th>
-        <td>
-          
-            <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/vwgdl.png" alt="Statistische Ämter des Bundes und der Länder" title=" Click here to visit the homepage of the organizationStatistische Ämter des Bundes und der Länder" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
       
       
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></p>
 
-          
-        </td>
-        </tr>
-        
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Organisation </th>
-        <td>
-          
-            <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></p>
 
-          
-        </td>
-        </tr>
+      
         
-      
-  
-      
-      
-      
-      
-      <tr>
-        <th scope="row">Link to <br>data source </th>
-        <td>
-          
-            
-            
-            
-            
-            
-              <a href="https://www.statistikportal.de/de/vgrdl/ergebnisse-laenderebene/bruttoinlandsprodukt-bruttowertschoepfung" target="_blank">
-                Gross domestic product, gross value added (own calculation based on the Volkswirtschaftliche Gesamtrechnungen der Länder  - only available in German) <span class="visuallyhidden">opens in a new window</span>
-              </a>
-            
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;"> </th>
+            <td>
+              
+                <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/vwgdl.png" alt="Statistische Ämter des Bundes und der Länder" title=" Click here to visit the homepage of the organizationStatistische Ämter des Bundes und der Länder" style="height:60px; width:148px; border:transparent" /></a></p>
 
-          
-        </td>
-        </tr>
+              
+            </td>
+          </tr>
         
       
+
+      <!-- weather -->
+      
+
+      
+    
   
       
+        
+      
+
       
       
+
+
       
+
+      <!-- weather -->
       
+
+      
+    
   
       
+        
       
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
+            <td>
+              
+                <p><a href="http://www.statistikportal.de/de/veroeffentlichungen/volkswirtschaftliche-gesamtrechnungen-der-laender" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En')">Statistische Ämter des Bundes und der Länder</a></p>
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+        
+          <tr id="everythingElse">
+            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
+            <td>
+              
+                
+                
+                
+                
+
+                
+                
+                
+
+                
+                  
+                    <a href="https://www.statistikportal.de/de/vgrdl/ergebnisse-laenderebene/bruttoinlandsprodukt-bruttowertschoepfung" target="_blank" onclick="return confirm_alert('the Statistische Ämter des Bundes und der Länder', 'En');">
+                      Gross domestic product, gross value added (own calculation based on the Volkswirtschaftliche Gesamtrechnungen der Länder  - only available in German) <span class="visuallyhidden">opens in a new window</span>
+                    </a>
+                  
+                
+
+              
+            </td>
+          </tr>
+        
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
+      
+        
+      
+
+      
+      
+
+
+      
+
+      <!-- weather -->
+      
+
+      
+    
+  
       
         
           
       
-      
+        
+          
       
         
           
       
-      
-      
         
           
       
-      
-      
         
           
-      
-      
-      
-        
-          
-      
-      
       
         
           
@@ -5248,7 +5468,6 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  </tbody>
 </table>
 
     </div>
@@ -5256,11 +5475,35 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-            </article>
-        </div>
-        
+      </article>
+    </div>
     
-    
+  
+  
+    <div role="tabpanel" class="tab-pane" id="edit">
+      <div class="edit-container">
+  
+  
+
+  
+  
+
+
+  <a class="btn btn-primary" href="data">Edit Data</a>
+  
+
+  
+  <a class="btn btn-primary" href="metadata">Edit Metadata</a>
+  
+
+  
+  <a class="btn btn-primary" href="config"></a>
+  
+
+</div>
+
+    </div>
+  
 </div>
 
 </div>
@@ -5303,12 +5546,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120071003'></script>
+<script src='/site/assets/js/sdg.js?v=20250120073138'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120071003"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120073138"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
