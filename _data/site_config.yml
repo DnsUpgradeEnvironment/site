@@ -138,8 +138,8 @@ indicator_tabs:
   tab_3: ''
   tab_4: ''
 languages:
+  - de
   - en
-  - es
 languages_public: []
 logos: []
 map_layers: []
