@@ -7,7 +7,7 @@
         
         {
           "id": "1-1-ab",
-          "title": "Materielle Deprivation sowie erhebliche materielle Deprivation",
+          "title": "Materielle und soziale Deprivation sowie erhebliche materielle und soziale Deprivation",
           "description": "",
           "keywords": "",
           "href": "/site/1-1-ab/",
@@ -54,11 +54,11 @@
       "indicators": [
         
         {
-          "id": "3-1-ab",
-          "title": "Vorzeitige Sterblichkeit",
+          "id": "3-1-a",
+          "title": "Durch Prävention und Behandlung vermeidbare Sterblichkeit",
           "description": "",
           "keywords": "",
-          "href": "/site/3-1-ab/",
+          "href": "/site/3-1-a/",
           "status": "complete"
         },
         {
