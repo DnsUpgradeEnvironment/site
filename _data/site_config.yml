@@ -84,9 +84,6 @@ frontpage_cards:
 frontpage_goals_grid:
     title: frontpage.heading
     description: frontpage.instructions
-frontpage_introduction_banner:
-  title: frontpage.intro_title
-  description: frontpage.intro_body
 goal_image_base: 'https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns'
 goal_image_extension: ''
 goals_page:
