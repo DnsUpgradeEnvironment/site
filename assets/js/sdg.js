@@ -54,7 +54,7 @@ opensdg.autotrack = function(preset, category, action, label) {
     maxZoom: 10,
     // Visual/choropleth considerations.
     colorRange: chroma.brewer.BuGn,
-    noValueColor: '#f0f0f0',
+    noValueColor: '#66f0f0f0',
     styleNormal: {
       weight: 1,
       opacity: 1,
@@ -104,15 +104,16 @@ opensdg.autotrack = function(preset, category, action, label) {
           break;
         }
       }
-      if (overrideColorRange && typeof colorRange === 'function') {
-        var indicatorId = options.indicatorId.replace('indicator_', ''),
-            indicatorIdParts = indicatorId.split('-'),
-            goalId = (indicatorIdParts.length > 0) ? indicatorIdParts[0] : null,
-            indicatorIdDots = indicatorIdParts.join('.');
-        colorRange = colorRange(indicatorIdDots, goalId);
-      }
       options.mapOptions.colorRange = (overrideColorRange) ? colorRange : defaults.colorRange;
     }
+
+    // Support multiple colorsets
+    if (Array.isArray(options.mapOptions.colorRange[0])) {
+      this.goalNumber = parseInt(options.indicatorId.slice(options.indicatorId.indexOf('_')+1,options.indicatorId.indexOf('-')));
+      options.mapOptions.colorRange = options.mapOptions.colorRange[this.goalNumber-1];
+      console.log("goal: ",this.goalNumber);
+    }
+
 
     this.options = $.extend(true, {}, defaults, options.mapOptions);
     this.mapLayers = [];
@@ -120,16 +121,16 @@ opensdg.autotrack = function(preset, category, action, label) {
     this._precision = options.precision;
     this.precisionItems = options.precisionItems;
     this._decimalSeparator = options.decimalSeparator;
+    this._thousandsSeparator = options.thousandsSeparator;
     this.currentDisaggregation = 0;
     this.dataSchema = options.dataSchema;
     this.viewHelpers = options.viewHelpers;
     this.modelHelpers = options.modelHelpers;
     this.chartTitles = options.chartTitles;
+    this.chartSubtitles = options.chartSubtitles;
     this.proxy = options.proxy;
     this.proxySerieses = options.proxySerieses;
     this.startValues = options.startValues;
-    this.configObsAttributes = null;
-    this.allObservationAttributes = options.allObservationAttributes;
 
     // Require at least one geoLayer.
     if (!options.mapLayers || !options.mapLayers.length) {
@@ -166,18 +167,21 @@ opensdg.autotrack = function(preset, category, action, label) {
       var currentSeries = this.disaggregationControls.getCurrentSeries(),
           currentUnit = this.disaggregationControls.getCurrentUnit(),
           newTitle = null;
+          newSubtitle = null;
       if (this.modelHelpers.GRAPH_TITLE_FROM_SERIES) {
         newTitle = currentSeries;
       }
       else {
         var currentTitle = $('#map-heading').text();
+        var currentSubtitle = $('#map-subheading').text();
         newTitle = this.modelHelpers.getChartTitle(currentTitle, this.chartTitles, currentUnit, currentSeries);
+        newSubtitle = this.modelHelpers.getChartTitle(currentSubtitle, this.chartSubtitles, currentUnit, currentSeries);
       }
       if (newTitle) {
-        if (this.proxy === 'proxy' || this.proxySerieses.includes(currentSeries)) {
-            newTitle += ' ' + this.viewHelpers.PROXY_PILL;
-        }
-        $('#map-heading').html(newTitle);
+        $('#map-heading').text(newTitle);
+      }
+      if (newSubtitle) {
+        $('#map-subheading').text(newSubtitle);
       }
     },
 
@@ -211,27 +215,9 @@ opensdg.autotrack = function(preset, category, action, label) {
     getTooltipContent: function(feature) {
       var tooltipContent = feature.properties.name;
       var tooltipData = this.getData(feature.properties);
-      var plugin = this;
       if (typeof tooltipData === 'number') {
         tooltipContent += ': ' + this.alterData(tooltipData);
       }
-      if (feature.properties.observation_attributes) {
-        var obsAtts = feature.properties.observation_attributes[plugin.currentDisaggregation][plugin.currentYear],
-            footnoteNumbers = [];
-        if (obsAtts) {
-          Object.keys(obsAtts).forEach(function(field) {
-            if (obsAtts[field]) {
-              var hashKey = field + '|' + obsAtts[field];
-              var footnoteNumber = plugin.allObservationAttributes[hashKey].footnoteNumber;
-              footnoteNumbers.push(plugin.viewHelpers.getObservationAttributeFootnoteSymbol(footnoteNumber));
-            }
-          });
-          if (footnoteNumbers.length > 0) {
-            tooltipContent += ' ' + footnoteNumbers.join(' ');
-          }
-        }
-      }
-
       return tooltipContent;
     },
 
@@ -330,21 +316,15 @@ opensdg.autotrack = function(preset, category, action, label) {
       opensdg.dataDisplayAlterations.forEach(function(callback) {
         value = callback(value);
       });
-      if (typeof value !== 'number') {
-        if (this._precision || this._precision === 0) {
-          value = Number.parseFloat(value).toFixed(this._precision);
-        }
-        if (this._decimalSeparator) {
-          value = value.toString().replace('.', this._decimalSeparator);
-        }
+      if (this._precision || this._precision === 0) {
+        value = Number((+(Math.round(+(value + 'e' + this._precision)) + 'e' + -this._precision)).toFixed(this._precision));
+        value = Number.parseFloat(value).toFixed(this._precision);
       }
-      else {
-        var localeOpts = {};
-        if (this._precision || this._precision === 0) {
-            localeOpts.minimumFractionDigits = this._precision;
-            localeOpts.maximumFractionDigits = this._precision;
-        }
-        value = value.toLocaleString(opensdg.language, localeOpts);
+      if (this._decimalSeparator) {
+        value = value.toString().replace('.', this._decimalSeparator);
+      }
+      if (this._thousandsSeparator) {
+        value = value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, this._thousandsSeparator);
       }
       return value;
     },
@@ -613,6 +593,7 @@ opensdg.autotrack = function(preset, category, action, label) {
         }
         else {
           plugin.updateTitle();
+          plugin.updateFooterFields();
           plugin.updatePrecision();
         }
 
@@ -1246,23 +1227,23 @@ opensdg.chartColors = function(indicatorId) {
   var customColorList = [];
 
   this.goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
-  this.goalColors = [['e5243b', '891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
-                ['e5b735', '896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
-                ['4c9f38', '2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
-                ['c5192d', '760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
-                ['ff3a21', 'b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
-                ['26bde2', '167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
-                ['fcc30b', '977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
-                ['a21942', '610f27', 'c7758d', '610F28', 'ecd1d9', '811434', 'b44667', '400a1a', 'd9a3b3'],
-                ['fd6925', '973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
-                ['dd1367', '840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
-                ['fd9d24', '653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
-                ['c9992d', '785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
-                ['3f7e44', '254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
-                ['0a97d9', '065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
-                ['56c02b', '337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
-                ['00689d', '00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
-                ['19486a', '0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
+  this.goalColors = [['891523', 'ef7b89', '2d070b', 'f4a7b0', 'b71c2f', 'ea4f62', '5b0e17', 'fce9eb'],
+                ['896d1f', 'efd385', '2d240a', 'f4e2ae', 'b7922a', 'eac55d', '5b4915', 'f9f0d6'],
+                ['2d5f21', '93c587', '0f1f0b', 'c9e2c3', '3c7f2c', '6fb25f', '1e3f16', 'a7d899'],
+                ['760f1b', 'dc7581', '270509', 'f3d1d5', '9d1424', 'd04656', '4e0a12', 'e7a3ab'],
+                ['b22817', 'ff7563', '330b06', 'ffd7d2', 'cc2e1a', 'ff614d', '7f1d10', 'ff9c90'],
+                ['167187', '7cd7ed', '07252d', 'd3f1f9', '1e97b4', '51cae7', '0f4b5a', 'a8e4f3'],
+                ['977506', 'fddb6c', '322702', 'fef3ce', 'c99c08', 'fccf3b', '644e04', 'fde79d'],
+                ['610f27', 'c7758d', 'ecd1d9', '811434', 'b44667', '400a1a', '400a1a', 'd9a3b3'],
+                ['973f16', 'fda57c', '321507', 'fee1d3', 'ca541d', 'fd8750', '652a0e', 'fec3a7'],
+                ['840b3d', 'ea71a3', '2c0314', 'f8cfe0', 'b00f52', 'd5358b', '580729', 'f1a0c2'],
+                ['653e0e', 'fed7a7', 'b16d19', 'fdba65', 'b14a1e', 'fd976b', '000000', 'fed2bf'],
+                ['785b1b', 'dec181', '281e09', 'f4ead5', 'a07a24', 'd3ad56', '503d12', 'e9d6ab'],
+                ['254b28', '8bb18e', '0c190d', 'd8e5d9', '326436', '659769', '19321b', 'b2cbb4'],
+                ['065a82', '6cc0e8', '021e2b', 'ceeaf7', '0878ad', '3aabe0', '043c56', '9dd5ef'],
+                ['337319', '99d97f', '112608', 'ddf2d4', '449922', '77cc55', '224c11', 'bbe5aa'],
+                ['00293e', '99c2d7', '00486d', '4c95ba', '126b80', 'cce0eb', '5a9fb0', 'a1c8d2'],
+                ['0a1c2a', '8ca3b4', '16377c', 'd1dae1', '11324a', '466c87', '5b73a3', '0f2656']];
   this.colorSets = {'classic':['7e984f', '8d73ca', 'aaa533', 'c65b8a', '4aac8d', 'c95f44'],
                   'sdg':['e5243b', 'dda63a', '4c9f38', 'c5192d', 'ff3a21', '26bde2', 'fcc30b', 'a21942', 'fd6925', 'dd1367','fd9d24','bf8b2e','3f7e44','0a97d9','56c02b','00689d','19486a'],
                   'goal': this.goalColors[this.goalNumber-1],
@@ -2212,13 +2193,22 @@ function getGraphLimits(graphLimits, selectedUnit, selectedSeries) {
  * @param {String} selectedSeries
  * @return {Array} Graph annotations objects, if any
  */
-function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks) {
+function getGraphAnnotations(graphAnnotations, selectedUnit, selectedSeries, graphTargetLines, graphSeriesBreaks, graphErrorBars, graphTargetPoints, graphTargetLabels) {
   var annotations = getMatchesByUnitSeries(graphAnnotations, selectedUnit, selectedSeries);
   if (graphTargetLines) {
     annotations = annotations.concat(getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries));
   }
   if (graphSeriesBreaks) {
     annotations = annotations.concat(getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries));
+  }
+  if (graphErrorBars) {
+    annotations = annotations.concat(getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries));
+  }
+  if (graphTargetPoints) {
+    annotations = annotations.concat(getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries));
+  }
+  if (graphTargetLabels) {
+    annotations = annotations.concat(getGraphTargetLabels(graphTargetLabels, selectedUnit, selectedSeries));
   }
   return annotations;
 }
@@ -2235,8 +2225,48 @@ function getGraphTargetLines(graphTargetLines, selectedUnit, selectedSeries) {
     targetLine.label = { content: targetLine.label_content };
     return targetLine;
   });
-
 }
+
+/**
+ * @param {Array} graphErrorBars Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphErrorBars(graphErrorBars, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphErrorBars, selectedUnit, selectedSeries).map(function(errorBar) {
+    errorBar.preset = 'error_bar';
+    errorBar.label = { content: errorBar.label_content };
+    return errorBar;
+  });
+}
+
+/**
+ * @param {Array} graphTargetPoints Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetPoints(graphTargetPoints, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetPoints, selectedUnit, selectedSeries).map(function(targetPoint) {
+    targetPoint.preset = 'target_point';
+    return targetPoint;
+  });
+}
+
+/**
+ * @param {Array} graphTargetLabels Objects containing 'unit' or 'series' or more
+ * @param {String} selectedUnit
+ * @param {String} selectedSeries
+ * @return {Array} Graph annotations objects, if any
+ */
+function getGraphTargetLabels(graphTargetLabels, selectedUnit, selectedSeries) {
+  return getMatchesByUnitSeries(graphTargetLabels, selectedUnit, selectedSeries).map(function(targetLabel) {
+    targetLabel.preset = 'target_label';
+    return targetLabel;
+  });
+}
+
 
 /**
  * @param {Array} graphSeriesBreaks Objects containing 'unit' or 'series' or more
@@ -2263,8 +2293,8 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
  * @return {Array} Datasets suitable for Chart.js
  */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, allObservationAttributes) {
-  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment;
+function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
+  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
 
@@ -2304,14 +2334,14 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       background = getBackground(color, striped);
       border = getBorderDash(striped);
 
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, allObservationAttributes);
+      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
       datasets.push(dataset);
       index++;
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, allObservationAttributes);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
     datasets.unshift(dataset);
   }
   return datasets;
@@ -2492,16 +2522,14 @@ function getBorderDash(striped) {
  * @param {string} color
  * @param {string} background
  * @param {Array} border
- * @param {Array} excess
  * @return {Object} Dataset object for Chart.js
  */
-function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
+function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, showLine, spanGaps) {
+  var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
+    combination: combination,
+    //type: getCombinationType(combination, labelFallback, mixedTypes),
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -2511,9 +2539,10 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     borderWidth: 2,
     headline: false,
     pointStyle: 'circle',
-    data: data,
+    data: prepareDataForDataset(years, rows),
     excess: excess,
-    observationAttributes: obsAttributes,
+    spanGaps: spanGaps,
+    showLine: showLine,
   });
 }
 
@@ -2527,9 +2556,28 @@ function getBaseDataset() {
     pointHoverBorderWidth: 1,
     tension: 0,
     spanGaps: true,
+    showLine: true,
     maxBarThickness: 150,
+    //type: 'x',
   });
 }
+
+// /**
+//  * @param {Object} combination Key/value representation of a field combo
+//  * @param {string} fallback
+//  * @param {Object} mixedTypes combinations and the respective charttype
+//  * @return {string} type of chart for the given combination
+//  */
+// function getCombinationType(combination, fallback, mixedTypes) {
+//   var combi = getCombinationDescription(combination, fallback);
+//   if (mixedTypes.length === 0) {
+//     return 'line';
+//   }
+//   else {
+//     console.log("MT", typeof mixedTypes);
+//     return 'bar';//mixedTypes.find(item => item.combination === combi).chartType;
+//   }
+// }
 
 /**
  * @param {Object} combination Key/value representation of a field combo
@@ -2551,38 +2599,13 @@ function getCombinationDescription(combination, fallback) {
  * @param {Array} rows
  * @return {Array} Prepared rows
  */
-function prepareDataForDataset(years, rows, allObservationAttributes) {
-  var ret = {
-    data: [],
-    observationAttributes: [],
-  };
-  var configObsAttributes = null;
-  if (configObsAttributes && configObsAttributes.length > 0) {
-    configObsAttributes = configObsAttributes.map(function(obsAtt) {
-      return obsAtt.field;
-    });
-  }
-  else {
-    configObsAttributes = [];
-  }
-  years.forEach(function(year) {
+function prepareDataForDataset(years, rows) {
+  return years.map(function(year) {
     var found = rows.find(function (row) {
       return row[YEAR_COLUMN] === year;
     });
-    ret.data.push(found ? found[VALUE_COLUMN] : null);
-
-    var obsAttributesForRow = [];
-    if (found) {
-      configObsAttributes.forEach(function(field) {
-        if (found[field]) {
-          var hashKey = field + '|' + found[field];
-          obsAttributesForRow.push(allObservationAttributes[hashKey]);
-        }
-      });
-    }
-    ret.observationAttributes.push(obsAttributesForRow);
+    return found ? found[VALUE_COLUMN] : null;
   });
-  return ret;
 }
 
 /**
@@ -2600,23 +2623,32 @@ function getHeadlineColor() {
  * @param {string} label
  * @return {Object} Dataset object for Chart.js
  */
-function makeHeadlineDataset(years, rows, label, allObservationAttributes) {
-  var dataset = getBaseDataset(),
-      prepared = prepareDataForDataset(years, rows, allObservationAttributes),
-      data = prepared.data,
-      obsAttributes = prepared.observationAttributes;
+function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
+  var dataset = getBaseDataset();
   return Object.assign(dataset, {
     label: label,
-    borderColor: getHeadlineColor(),
-    backgroundColor: getHeadlineColor(),
-    pointBorderColor: getHeadlineColor(),
-    pointBackgroundColor: getHeadlineColor(),
+    // Override: no headline color
+    borderColor: '#a9e13e',//getHeadlineColor(colors),
+    backgroundColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBorderColor: '#a9e13e',//getHeadlineColor(colors),
+    pointBackgroundColor: '#a9e13e',//getHeadlineColor(colors),
     borderWidth: 4,
     headline: true,
-    pointStyle: 'rect',
-    data: data,
-    observationAttributes: obsAttributes,
+    pointStyle: 'circle',
+    data: prepareDataForDataset(years, rows),
+    showLine: showLine,
+    spanGaps: spanGaps,
+    //type: getCombinationType([], '', mixedTypes),
   });
+}
+
+  /**
+   * @param {Array} graphStepsize Objects containing 'unit' and 'title'
+   * @param {String} selectedUnit
+   * @param {String} selectedSeries
+   */
+  function getGraphStepsize(graphStepsize, selectedUnit, selectedSeries) {
+    return getMatchByUnitSeries(graphStepsize, selectedUnit, selectedSeries);
 }
 
   /**
@@ -2893,16 +2925,15 @@ function getAllObservationAttributes(rows) {
     getCombinationData: getCombinationData,
     getDatasets: getDatasets,
     tableDataFromDatasets: tableDataFromDatasets,
-    observationAttributesTableFromDatasets: observationAttributesTableFromDatasets,
     sortFieldNames: typeof sortFieldNames !== 'undefined' ? sortFieldNames : function() {},
     sortFieldValueNames: typeof sortFieldValueNames !== 'undefined' ? sortFieldValueNames : function() {},
     getPrecision: getPrecision,
     getGraphLimits: getGraphLimits,
     getGraphAnnotations: getGraphAnnotations,
     getColumnsFromData: getColumnsFromData,
+    getGraphStepsize: getGraphStepsize,
     inputEdges: inputEdges,
     getTimeSeriesAttributes: getTimeSeriesAttributes,
-    getAllObservationAttributes: getAllObservationAttributes,
     inputData: inputData,
   }
 })();
@@ -2930,12 +2961,15 @@ function getAllObservationAttributes(rows) {
   this.shortIndicatorId = options.shortIndicatorId;
   this.chartTitle = options.chartTitle,
   this.chartTitles = options.chartTitles;
+  this.chartSubtitle = options.chartSubtitle;
+  this.chartSubtitles = options.chartSubtitles;
   this.graphType = options.graphType;
   this.graphTypes = options.graphTypes;
   this.measurementUnit = options.measurementUnit;
   this.xAxisLabel = options.xAxisLabel;
   this.startValues = options.startValues;
   this.showData = options.showData;
+  this.showInfo = options.showInfo;
   this.selectedFields = [];
   this.allowedFields = [];
   this.selectedUnit = undefined;
@@ -2950,16 +2984,21 @@ function getAllObservationAttributes(rows) {
   this.showMap = options.showMap;
   this.graphLimits = options.graphLimits;
   this.stackedDisaggregation = options.stackedDisaggregation;
+  this.showLine = options.showLine; // ? options.showLine : true;
+  this.spanGaps = options.spanGaps;
   this.graphAnnotations = options.graphAnnotations;
   this.graphTargetLines = options.graphTargetLines;
   this.graphSeriesBreaks = options.graphSeriesBreaks;
+  this.graphErrorBars = options.graphErrorBars;
+  this.graphTargetPoints = options.graphTargetPoints;
+  this.graphTargetLabels = options.graphTargetLabels;
   this.indicatorDownloads = options.indicatorDownloads;
   this.compositeBreakdownLabel = options.compositeBreakdownLabel;
   this.precision = options.precision;
   this.dataSchema = options.dataSchema;
+  this.graphStepsize = options.graphStepsize;
   this.proxy = options.proxy;
   this.proxySerieses = (this.proxy === 'both') ? options.proxySeries : [];
-  this.observationAttributes = [];
 
   this.initialiseUnits = function() {
     if (this.hasUnits) {
@@ -2975,6 +3014,7 @@ function getAllObservationAttributes(rows) {
     if (this.hasSerieses) {
       if (helpers.GRAPH_TITLE_FROM_SERIES) {
         this.chartTitle = this.selectedSeries;
+        this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
       }
       this.data = helpers.getDataBySeries(this.allData, this.selectedSeries);
       this.years = helpers.getUniqueValuesByProperty(helpers.YEAR_COLUMN, this.data).sort();
@@ -3010,7 +3050,6 @@ function getAllObservationAttributes(rows) {
   }
 
   // calculate some initial values:
-  this.allObservationAttributes = helpers.getAllObservationAttributes(this.allData);
   this.hasGeoData = helpers.dataHasGeoCodes(this.allColumns);
   this.hasUnits = helpers.dataHasUnits(this.allColumns);
   this.initialiseUnits();
@@ -3042,6 +3081,10 @@ function getAllObservationAttributes(rows) {
 
   this.updateChartTitle = function() {
     this.chartTitle = helpers.getChartTitle(this.chartTitle, this.chartTitles, this.selectedUnit, this.selectedSeries);
+  }
+
+  this.updateChartSubtitle = function() {
+    this.chartSubtitle = helpers.getChartTitle(this.chartSubtitle, this.chartSubtitles, this.selectedUnit, this.selectedSeries);
   }
 
   this.updateChartType = function() {
@@ -3140,9 +3183,9 @@ function getAllObservationAttributes(rows) {
         this.selectedSeries = startingSeries;
       }
 
-      // Decide on starting field values if not changing series.
+      // Decide on starting field values.
       var startingFields = this.selectedFields;
-      if (this.hasStartValues && !options.changingSeries) {
+      if (this.hasStartValues) {
         startingFields = helpers.selectFieldsFromStartValues(this.startValues, this.selectableFields);
       }
       else {
@@ -3191,6 +3234,8 @@ function getAllObservationAttributes(rows) {
         precisionItems: this.precision,
         dataSchema: this.dataSchema,
         chartTitles: this.chartTitles,
+        chartSubtitles: this.chartSubtitles,
+        graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
         proxy: this.proxy,
         proxySerieses: this.proxySerieses,
       });
@@ -3218,10 +3263,9 @@ function getAllObservationAttributes(rows) {
       headline = helpers.sortData(headline, this.selectedUnit);
     }
 
-    var combinations = helpers.getCombinationData(this.selectedFields);
-    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, this.country, this.colors, this.selectableFields, this.colorAssignments, this.allObservationAttributes);
+    var combinations = helpers.getCombinationData(this.selectedFields, this.dataSchema);
+    var datasets = helpers.getDatasets(headline, filteredData, combinations, this.years, translations.data.total, this.colors, this.selectableFields, this.colorAssignments, this.showLine, this.spanGaps );
     var selectionsTable = helpers.tableDataFromDatasets(datasets, this.years);
-    var observationAttributesTable = helpers.observationAttributesTableFromDatasets(datasets, this.years);
 
     var datasetCountExceedsMax = false;
     // restrict count if it exceeds the limit:
@@ -3230,6 +3274,7 @@ function getAllObservationAttributes(rows) {
     }
 
     this.updateChartTitle();
+    this.updateChartSubtitle();
     this.updateChartType();
 
     this.onFieldsStatusUpdated.notify({
@@ -3244,20 +3289,20 @@ function getAllObservationAttributes(rows) {
       labels: this.years,
       headlineTable: helpers.getHeadlineTable(headline, this.selectedUnit),
       selectionsTable: selectionsTable,
-      observationAttributesTable: observationAttributesTable,
       indicatorId: this.indicatorId,
       shortIndicatorId: this.shortIndicatorId,
       selectedUnit: this.selectedUnit,
       selectedSeries: this.selectedSeries,
       graphLimits: helpers.getGraphLimits(this.graphLimits, this.selectedUnit, this.selectedSeries),
       stackedDisaggregation: this.stackedDisaggregation,
-      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks),
+      graphAnnotations: helpers.getGraphAnnotations(this.graphAnnotations, this.selectedUnit, this.selectedSeries, this.graphTargetLines, this.graphSeriesBreaks, this.graphErrorBars, this.graphTargetPoints, this.graphTargetLabels),
       chartTitle: this.chartTitle,
+      chartSubtitle: this.chartSubtitle,
       chartType: this.graphType,
       indicatorDownloads: this.indicatorDownloads,
       precision: helpers.getPrecision(this.precision, this.selectedUnit, this.selectedSeries),
+      graphStepsize: helpers.getGraphStepsize(this.graphStepsize, this.selectedUnit, this.selectedSeries),
       timeSeriesAttributes: timeSeriesAttributes,
-      allObservationAttributes: this.allObservationAttributes,
       isProxy: this.proxy === 'proxy' || this.proxySerieses.includes(this.selectedSeries),
     });
   };
@@ -3277,7 +3322,7 @@ var mapView = function () {
 
   "use strict";
 
-  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, startValues, proxy, proxySerieses, allObservationAttributes) {
+  this.initialise = function(indicatorId, precision, precisionItems, decimalSeparator, thousandsSeparator, dataSchema, viewHelpers, modelHelpers, chartTitles, chartSubtitles, startValues, proxy, proxySerieses) {
     $('.map').show();
     $('#map').sdgMap({
       indicatorId: indicatorId,
@@ -3286,14 +3331,15 @@ var mapView = function () {
       precision: precision,
       precisionItems: precisionItems,
       decimalSeparator: decimalSeparator,
+      thousandsSeparator: thousandsSeparator,
       dataSchema: dataSchema,
       viewHelpers: viewHelpers,
       modelHelpers: modelHelpers,
       chartTitles: chartTitles,
+      chartSubtitles: chartSubtitles,
       proxy: proxy,
       proxySerieses: proxySerieses,
       startValues: startValues,
-      allObservationAttributes: allObservationAttributes,
     });
   };
 };
@@ -3542,10 +3588,20 @@ function alterChartConfig(config, info) {
  */
 function updateChartTitle(chartTitle, isProxy) {
     if (typeof chartTitle !== 'undefined') {
-        if (isProxy) {
-            chartTitle += ' ' + PROXY_PILL;
-        }
-        $('.chart-title').html(chartTitle);
+      if (isProxy) {
+          chartTitle += ' ' + PROXY_PILL;
+      }
+      $('.chart-title').html(chartTitle);
+    }
+}
+
+/**
+ * @param {String} chartSubtitle
+ * @return null
+ */
+function updateChartSubtitle(chartSubtitle) {
+    if (typeof chartSubtitle !== 'undefined') {
+        $('.chart-subtitle').text(chartSubtitle);
     }
 }
 
@@ -3594,40 +3650,17 @@ function updateIndicatorDataViewStatus(oldDatasets, newDatasets) {
 }
 
 /**
- * @param {Array} unit
- * @return null
- */
-function updateIndicatorDataUnitStatus(unit) {
-    var status = translations.indicator.announce_unit_switched + translations.t(unit);
-    var current = $('#indicator-data-unit-status').text();
-    if (current != status) {
-        $('#indicator-data-unit-status').text(status);
-    }
-}
-
-/**
- * @param {Array} series
- * @return null
- */
-function updateIndicatorDataSeriesStatus(series) {
-    var status = translations.indicator.announce_series_switched + translations.t(series);
-    var current = $('#indicator-data-series-status').text();
-    if (current != status) {
-        $('#indicator-data-series-status').text(status);
-    }
-}
-
-/**
  * @param {String} contrast
  * @param {Object} chartInfo
  * @return null
  */
-function updateHeadlineColor(contrast, chartInfo) {
+function updateHeadlineColor(contrast, chartInfo, indicatorId) {
+    var goalNumber = parseInt(indicatorId.slice(indicatorId.indexOf('_')+1,indicatorId.indexOf('-')));
     if (chartInfo.data.datasets.length > 0) {
         var firstDataset = chartInfo.data.datasets[0];
         var isHeadline = (typeof firstDataset.disaggregation === 'undefined');
         if (isHeadline) {
-            var newColor = getHeadlineColor(contrast);
+            var newColor = getHeadlineColor(contrast, goalNumber);
             firstDataset.backgroundColor = newColor;
             firstDataset.borderColor = newColor;
             firstDataset.pointBackgroundColor = newColor;
@@ -3640,8 +3673,16 @@ function updateHeadlineColor(contrast, chartInfo) {
  * @param {String} contrast
  * @return {String} The headline color in hex form.
  */
-function getHeadlineColor(contrast) {
-    return isHighContrast(contrast) ? '#55a6e5' : '#e5243b#dda63a#4c9f38#c5192d#ff3a21#26bde2#fcc30b#a21942#fd6925#dd1367#fd9d24#bf8b2e#3f7e44#0a97d9#56c02b#00689d#19486a';
+//Override: No Headline Color
+//function getHeadlineColor(contrast) {
+    //return isHighContrast(contrast) ? '#55a6e5' : '#e5243b#dda63a#4c9f38#c5192d#ff3a21#26bde2#fcc30b#a21942#fd6925#dd1367#fd9d24#bf8b2e#3f7e44#0a97d9#56c02b#00689d#19486a';
+function getHeadlineColor(contrast, goalNumber) {
+
+  var headlineColors = ["#e5243b", "#dda63a", "#4c9f38", "#c5192d", "#ff3a21", "#26bde2", "#fcc30b", "#a21942", "#fd6925", "#dd1367", "#fd9d24", "#bf8b2e", "#3f7e44", "#0a97d9", "#56c02b", "#00689d", "#19486a"];
+  var headlineColor = headlineColors[goalNumber-1];
+  var htmlString = '' + headlineColor + '';
+  console.log("goalNumber: ", htmlString);
+    return isHighContrast(contrast) ? '#55a6e5' : htmlString;
 }
 
 /**
@@ -3673,7 +3714,7 @@ function setPlotEvents(chartInfo) {
     window.addEventListener('contrastChange', function (e) {
         var gridColor = getGridColor(e.detail);
         var tickColor = getTickColor(e.detail);
-        updateHeadlineColor(e.detail, VIEW._chartInstance);
+        updateHeadlineColor(e.detail, VIEW._chartInstance, chartInfo.indicatorId);
         updateGraphAnnotationColors(e.detail, VIEW._chartInstance);
         VIEW._chartInstance.options.scales.y.title.color = tickColor;
         VIEW._chartInstance.options.scales.x.title.color = tickColor;
@@ -3690,7 +3731,7 @@ function setPlotEvents(chartInfo) {
         $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
     });
 
-    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
+    createDownloadButton(chartInfo.selectionsTable, 'Chart', chartInfo.indicatorId, '#chartSelectionDownload');
     createSourceButton(chartInfo.shortIndicatorId, '#chartSelectionDownload');
     createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#chartSelectionDownload');
 
@@ -3746,17 +3787,21 @@ function setPlotEvents(chartInfo) {
  * @param {Object} chartInfo
  * @return null
  */
-function createPlot(chartInfo, helpers) {
+function createPlot(chartInfo) {
 
     var chartConfig = getChartConfig(chartInfo);
-    chartConfig.indicatorViewHelpers = helpers;
     alterChartConfig(chartConfig, chartInfo);
     if (isHighContrast()) {
         updateGraphAnnotationColors('high', chartConfig);
-        updateHeadlineColor('high', chartConfig);
+        //Override: No headline color
+        //updateHeadlineColor('high', chartConfig);
+        updateHeadlineColor('high', chartConfig, chartInfo.indicatorId);
+
     }
     else {
-        updateHeadlineColor('default', chartConfig);
+      //Override: No headline color
+      //updateHeadlineColor('default', chartConfig);
+      updateHeadlineColor('default', chartConfig, chartInfo.indicatorId);
     }
     refreshChartLineWrapping(chartConfig);
 
@@ -3777,8 +3822,11 @@ function createPlot(chartInfo, helpers) {
         createPlot(chartInfo);
         return;
     }
+
     updateIndicatorDataViewStatus(VIEW._chartInstance.data.datasets, updatedConfig.data.datasets);
-    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    // Override: No headline color
+    //updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig);
+    updateHeadlineColor(isHighContrast() ? 'high' : 'default', updatedConfig, chartInfo.indicatorId);
 
     if (chartInfo.selectedUnit) {
         updatedConfig.options.scales.y.title.text = translations.t(chartInfo.selectedUnit);
@@ -3790,7 +3838,6 @@ function createPlot(chartInfo, helpers) {
     VIEW._chartInstance.data.datasets = updatedConfig.data.datasets;
     VIEW._chartInstance.data.labels = updatedConfig.data.labels;
     VIEW._chartInstance.options = updatedConfig.options;
-    updateGraphAnnotationColors(isHighContrast() ? 'high' : 'default', updatedConfig);
 
     // The following is needed in our custom "rescaler" plugin.
     VIEW._chartInstance.data.allLabels = VIEW._chartInstance.data.labels.slice(0);
@@ -3798,7 +3845,7 @@ function createPlot(chartInfo, helpers) {
     VIEW._chartInstance.update();
 
     $(VIEW._legendElement).html(generateChartLegend(VIEW._chartInstance));
-    updateChartDownloadButton(chartInfo.selectionsTable, chartInfo.selectedSeries, chartInfo.selectedUnit);
+    updateChartDownloadButton(chartInfo.selectionsTable);
 };
 
 /**
@@ -3807,8 +3854,8 @@ function createPlot(chartInfo, helpers) {
  * @return null
  */
 function updateGraphAnnotationColors(contrast, chartInfo) {
-    if (chartInfo.options.plugins.annotation) {
-        chartInfo.options.plugins.annotation.annotations.forEach(function (annotation) {
+    if (chartInfo.options.annotation) {
+        chartInfo.options.annotation.annotations.forEach(function (annotation) {
             if (contrast === 'default') {
                 $.extend(true, annotation, annotation.defaultContrast);
             }
@@ -3829,7 +3876,8 @@ function generateChartLegend(chart) {
     text.push('<ul id="legend" class="legend-for-' + chart.config.type + '-chart">');
     _.each(chart.data.datasets, function (dataset) {
         text.push('<li>');
-        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        //text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + (dataset.headline ? ' headline' : '') + '" style="background-color: ' + dataset.borderColor + '">');
+        text.push('<span class="swatch' + (dataset.borderDash ? ' dashed' : '') + '" style="background-color: ' + dataset.borderColor + '">');
         text.push('<span class="swatch-inner" style="background-color: ' + dataset.borderColor + '"></span>');
         text.push('</span>');
         text.push(translations.t(dataset.label));
@@ -3991,6 +4039,12 @@ opensdg.chartTypes.base = function(info) {
             labels: info.labels,
         },
         options: {
+            layout: {
+              padding: {
+                top: 5
+              }
+            },
+            clip: false,
             responsive: true,
             maintainAspectRatio: false,
             spanGaps: true,
@@ -4027,9 +4081,9 @@ opensdg.chartTypes.base = function(info) {
                     suggestedMin: 0,
                     ticks: {
                         color: tickColor,
-                        callback: function (value) {
-                            return alterDataDisplay(value, undefined, 'chart y-axis tick');
-                        },
+                         callback: function (value) {
+                             return alterDataDisplay(value, undefined, 'chart y-axis tick');
+                         },
                     },
                     title: {
                         display: MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit,
@@ -4055,7 +4109,48 @@ opensdg.chartTypes.base = function(info) {
                     backgroundColor: 'rgba(0,0,0,0.7)',
                     callbacks: {
                         label: function (tooltipItem) {
-                            return translations.t(tooltipItem.dataset.label) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip', tooltipItem);
+
+                          var label =  translations.t(tooltipItem.dataset.label);
+                          label = label.replace('<sub>','').replace('</sub>','');
+                          if (label.length > 45){
+
+                            label = label.split(' ');
+                            var line = '';
+
+                            for(var i=0; i<label.length; i++){
+                              if (line.concat(label[i]).length < 45){
+                                line = line.concat(label[i] + ' ');
+                              }
+                              else {
+                                break
+                              }
+                            }
+                            return line;
+                          } else {
+                            return label + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip');
+                          }
+                        },
+                        afterLabel: function(tooltipItem) {
+
+                          var label =  tooltipItem.dataset.label;
+                          label = label.replace('<sub>','').replace('</sub>','');
+                          if (label.length > 45){
+                            label = label.split(' ');
+                            var re = [];
+                            var line = '';
+                            for (var i=0; i<label.length; i++){
+                              if (line.concat(label[i]).length < 45){
+                                line = line.concat(label[i] + ' ');
+                              } else {
+                                re.push(line);
+                                line = '';
+                                line = line.concat(label[i] + ' ');
+                              }
+                            };
+                            re.push(line.slice(0, -1) + ': ' + alterDataDisplay(tooltipItem.raw, tooltipItem.dataset, 'chart tooltip'));
+                            re.shift();
+                          }
+                          return re;
                         },
                         afterBody: function () {
                             var unit = MODEL.selectedUnit ? translations.t(MODEL.selectedUnit) : MODEL.measurementUnit;
@@ -4092,6 +4187,22 @@ opensdg.chartTypes.base = function(info) {
         catch (e) { }
     }
 
+    if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+      var overrides = {
+        options: {
+          scales: {
+            y: {
+              ticks: {
+                stepSize: info.graphStepsize.step,
+              }
+            }
+          }
+        }
+      }
+      // Add these overrides onto the normal config.
+      $.extend(true, config, overrides);
+    }
+
     if (info.graphAnnotations && info.graphAnnotations.length > 0) {
         // Apply some helpers/fixes to the annotations.
         var annotations = info.graphAnnotations.map(function(annotationOverrides) {
@@ -4110,11 +4221,11 @@ opensdg.chartTypes.base = function(info) {
             // Now add any more annotation config.
             $.extend(true, annotation, annotationOverrides);
             // Default to horizontal lines.
-            if (!annotation.mode && annotation.type === 'line') {
+            if (!annotation.mode && annotation.type === 'line' && annotation.preset !== 'error_bar') {
                 annotation.mode = 'horizontal';
             }
             // Provide the obscure scaleID properties on user's behalf.
-            if (!annotation.scaleID && annotation.type === 'line') {
+            if (!annotation.scaleID && annotation.type === 'line' && annotation.preset !== 'error_bar' && annotation.preset !== 'target_point' && annotation.preset !== 'target_label') {
                 if (annotation.mode === 'horizontal') {
                     annotation.scaleID = 'y';
                 }
@@ -4122,10 +4233,10 @@ opensdg.chartTypes.base = function(info) {
                     annotation.scaleID = 'x';
                 }
             }
-            if (!annotation.xScaleID && annotation.type === 'box') {
+            if (!annotation.xScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.xScaleID = 'x';
             }
-            if (!annotation.yScaleID && annotation.type === 'box') {
+            if (!annotation.yScaleID && (annotation.type === 'box' || annotation.type === 'point')) {
                 annotation.yScaleID = 'y';
             }
             // Provide the "enabled" label property on the user's behalf.
@@ -4135,32 +4246,6 @@ opensdg.chartTypes.base = function(info) {
             // Translate any label content.
             if (annotation.label && annotation.label.content) {
                 annotation.label.content = translations.t(annotation.label.content);
-            }
-            // Fix some keys where there was once a discrepancy between
-            // Open SDG and Chart.js. Eg, we mistakenly used "fontColor"
-            // instead of "color".
-            if (annotation.label && annotation.label.fontColor) {
-                annotation.label.color = annotation.label.fontColor;
-            }
-            if (annotation.highContrast && annotation.highContrast.label) {
-                if (annotation.highContrast.label.fontColor) {
-                    annotation.highContrast.label.color = annotation.highContrast.label.fontColor;
-                }
-            }
-            // We also used the wrong values for label position.
-            if (annotation.label &&
-                annotation.label.position &&
-                (annotation.label.position == 'top' ||
-                 annotation.label.position == 'left')) {
-                // It should be 'start' instead of 'top' or 'left'.
-                annotation.label.position = 'start';
-            }
-            if (annotation.label &&
-                annotation.label.position &&
-                (annotation.label.position == 'bottom' ||
-                 annotation.label.position == 'right')) {
-                // It should be 'start' instead of 'top' or 'left'.
-                annotation.label.position = 'end';
             }
             // Save some original values for later used when contrast mode is switched.
             if (typeof annotation.defaultContrast === 'undefined') {
@@ -4173,17 +4258,11 @@ opensdg.chartTypes.base = function(info) {
                 }
                 if (annotation.label) {
                     annotation.defaultContrast.label = {};
-                    if (annotation.label.color) {
-                        annotation.defaultContrast.label.color = annotation.label.color;
+                    if (annotation.label.fontColor) {
+                        annotation.defaultContrast.label.fontColor = annotation.label.fontColor;
                     }
                     if (annotation.label.backgroundColor) {
                         annotation.defaultContrast.label.backgroundColor = annotation.label.backgroundColor;
-                    }
-                    if (annotation.label.borderWidth) {
-                        annotation.defaultContrast.label.borderWidth = annotation.label.borderWidth;
-                    }
-                    if (annotation.label.borderColor) {
-                        annotation.defaultContrast.label.borderColor = annotation.label.borderColor;
                     }
                 }
             }
@@ -4265,10 +4344,25 @@ opensdg.chartTypes.base = function(info) {
             }
         }],
     };
+
+
+    if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+      overrides.options = {
+          scales: {
+            yAxes: [{
+              ticks: {
+                stepSize: info.graphStepsize.step,
+              }
+            }]
+          }
+      };
+    }
+
     // Add these overrides onto the normal config, and return it.
     _.merge(config, overrides);
     return config;
 }
+
   opensdg.chartTypes.bar = function (info) {
     var config = opensdg.chartTypes.base(info);
     var overrides = {
@@ -4295,6 +4389,19 @@ opensdg.chartTypes.base = function(info) {
             dataset.stack = JSON.stringify(disaggregation);
         });
     }
+
+    if (info.graphStepsize && Object.keys(info.graphStepsize).length > 0) {
+      overrides.options = {
+          scales: {
+            yAxes: [{
+              ticks: {
+                stepSize: info.graphStepsize.step,
+              }
+            }]
+          }
+      };
+    }
+
     // Manually set the borderWidths to 0 to avoid a weird border effect on the bars.
     config.data.datasets.forEach(function(dataset) {
         dataset.borderWidth = 0;
@@ -4303,6 +4410,7 @@ opensdg.chartTypes.base = function(info) {
     _.merge(config, overrides);
     return config;
 }
+
   opensdg.convertBinaryValue = function (value) {
     if (typeof value === 'string') {
         value = parseInt(value, 10);
@@ -4386,33 +4494,18 @@ function alterTableConfig(config, info) {
  * @param {Object} tableData
  * @return {String}
  */
-function toCsv(tableData, selectedSeries, selectedUnit) {
+function toCsv(tableData) {
     var lines = [],
-        dataHeadings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; }),
-        metaHeadings = [];
+        headings = _.map(tableData.headings, function (heading) { return '"' + translations.t(heading) + '"'; });
 
-    if (selectedSeries) {
-        metaHeadings.push(translations.indicator.series);
-    }
-    if (selectedUnit) {
-        metaHeadings.push(translations.indicator.unit);
-    }
-    var allHeadings = dataHeadings.concat(metaHeadings);
-
-    lines.push(allHeadings.join(','));
+    lines.push(headings.join(','));
 
     _.each(tableData.data, function (dataValues) {
         var line = [];
 
-        _.each(dataHeadings, function (heading, index) {
+        _.each(headings, function (heading, index) {
             line.push(dataValues[index]);
         });
-        if (selectedSeries) {
-            line.push(JSON.stringify(translations.t(selectedSeries)));
-        }
-        if (selectedUnit) {
-            line.push(JSON.stringify(translations.t(selectedUnit)));
-        }
 
         lines.push(line.join(','));
     });
@@ -4430,7 +4523,6 @@ function initialiseDataTable(el, info) {
     for (var i = 1; i < info.table.headings.length; i++) {
         nonYearColumns.push(i);
     }
-
     var datatables_options = OPTIONS.datatables_options || {
         paging: false,
         bInfo: false,
@@ -4442,10 +4534,7 @@ function initialiseDataTable(el, info) {
             {
                 targets: nonYearColumns,
                 createdCell: function (td, cellData, rowData, row, col) {
-                    var additionalInfo = Object.assign({}, info);
-                    additionalInfo.row = row;
-                    additionalInfo.col = col;
-                    $(td).text(alterDataDisplay(cellData, rowData, 'table cell', additionalInfo));
+                    $(td).text(alterDataDisplay(cellData, rowData, 'table cell'));
                 },
             },
         ],
@@ -4465,10 +4554,10 @@ function initialiseDataTable(el, info) {
  * @return null
  */
 function createSelectionsTable(chartInfo) {
-    createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', chartInfo.isProxy, chartInfo.observationAttributesTable);
+    createTable(chartInfo.selectionsTable, chartInfo.indicatorId, '#selectionsTable', chartInfo.isProxy);
     $('#tableSelectionDownload').empty();
     createTableTargetLines(chartInfo.graphAnnotations);
-    createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload', chartInfo.selectedSeries, chartInfo.selectedUnit);
+    createDownloadButton(chartInfo.selectionsTable, 'Table', chartInfo.indicatorId, '#tableSelectionDownload');
     createSourceButton(chartInfo.shortIndicatorId, '#tableSelectionDownload');
     createIndicatorDownloadButtons(chartInfo.indicatorDownloads, chartInfo.shortIndicatorId, '#tableSelectionDownload');
 };
@@ -4478,22 +4567,22 @@ function createSelectionsTable(chartInfo) {
  * @return null
  */
 function createTableTargetLines(graphAnnotations) {
-    var targetLines = graphAnnotations.filter(function (a) { return a.preset === 'target_line'; });
-    var $targetLines = $('#tableTargetLines');
-    $targetLines.empty();
-    targetLines.forEach(function (targetLine) {
-        var targetLineLabel = targetLine.label.content;
-        if (!targetLineLabel) {
-            targetLineLabel = opensdg.annotationPresets.target_line.label.content;
-        }
-        $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + alterDataDisplay(targetLine.value, targetLine, 'target line') + '</dd>');
-    });
-    if (targetLines.length === 0) {
-        $targetLines.hide();
-    }
-    else {
-        $targetLines.show();
-    }
+    // var targetLines = graphAnnotations.filter(function (a) { return a.preset === 'target_line'; });
+    // var $targetLines = $('#tableTargetLines');
+    // $targetLines.empty();
+    // targetLines.forEach(function (targetLine) {
+    //     var targetLineLabel = targetLine.label.content;
+    //     if (!targetLineLabel) {
+    //         targetLineLabel = opensdg.annotationPresets.target_line.label.content;
+    //     }
+    //     $targetLines.append('<dt>' + targetLineLabel + '</dt><dd>' + alterDataDisplay(targetLine.value, targetLine, 'target line') + '</dd>');
+    // });
+    // if (targetLines.length === 0) {
+    //     $targetLines.hide();
+    // }
+    // else {
+    //     $targetLines.show();
+    // }
 }
 
 /**
@@ -4513,11 +4602,9 @@ function tableHasData(table) {
  * @param {Object} table
  * @param {String} indicatorId
  * @param {Element} el
- * @param {bool} isProxy
- * @param {Object} observationAttributesTable
  * @return null
  */
-function createTable(table, indicatorId, el, isProxy, observationAttributesTable) {
+function createTable(table, indicatorId, el, isProxy) {
 
     var table_class = OPTIONS.table_class || 'table table-hover';
 
@@ -4529,13 +4616,15 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
             'class': table_class,
             'width': '100%'
         });
-
         var tableTitle = MODEL.chartTitle;
         if (isProxy) {
             tableTitle += ' ' + PROXY_PILL;
         }
-        currentTable.append('<caption>' + tableTitle + '</caption>');
-
+        if (MODEL.chartSubtitle) {
+          currentTable.append('<caption>' + tableTitle + '<br><small>' + MODEL.chartSubtitle + '</small></caption>');
+        } else {
+          currentTable.append('<caption>' + tableTitle + '<br><small>' + MODEL.measurementUnit + '</small></caption>');
+        }
         var table_head = '<thead><tr>';
 
         var getHeading = function (heading, index) {
@@ -4559,7 +4648,9 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 var isYear = (index == 0);
                 var cell_prefix = (isYear) ? '<th scope="row"' : '<td';
                 var cell_suffix = (isYear) ? '</th>' : '</td>';
-                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null && data[index] !== undefined ? data[index] : '-') + cell_suffix;
+                //var cell_content = (isYear) ? translations.t(data[index]) : data[index];
+                //row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (cell_content !== null &&  cell_content !== undefined ?  cell_content : '.') + cell_suffix;
+                row_html += cell_prefix + (isYear ? '' : ' class="table-value"') + '>' + (data[index] !== null &&  data[index] !== undefined ?  data[index] : '.') + cell_suffix;
             });
             row_html += '</tr>';
             currentTable.find('tbody').append(row_html);
@@ -4571,7 +4662,6 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
         var alterationInfo = {
             table: table,
             indicatorId: indicatorId,
-            observationAttributesTable: observationAttributesTable,
         };
         initialiseDataTable(el, alterationInfo);
 
@@ -4584,24 +4674,6 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
                 var sortDirection = $(this).attr('aria-sort');
                 $(this).find('span[role="button"]').attr('aria-sort', sortDirection);
             });
-
-        let tableWrapper = document.querySelector('.dataTables_wrapper');
-        if (tableWrapper) {
-            tableWrapper.addEventListener('scroll', function(e) {
-                if (tableWrapper.scrollLeft > 0) {
-                    tableWrapper.classList.add('scrolled-x');
-                }
-                else {
-                    tableWrapper.classList.remove('scrolled-x');
-                }
-                if (tableWrapper.scrollTop > 0) {
-                    tableWrapper.classList.add('scrolled-y');
-                }
-                else {
-                    tableWrapper.classList.remove('scrolled-y');
-                }
-            });
-        }
     } else {
         $(el).append($('<h3 />').text(translations.indicator.data_not_available));
         $(el).addClass('table-has-no-data');
@@ -4614,6 +4686,7 @@ function createTable(table, indicatorId, el, isProxy, observationAttributesTable
  * @return null
  */
 function setDataTableWidth(table) {
+
     table.find('thead th').each(function () {
         var textLength = $(this).text().length;
         for (var loop = 0; loop < VIEW._tableColumnDefs.length; loop++) {
@@ -4631,33 +4704,37 @@ function setDataTableWidth(table) {
     });
 
     table.removeAttr('style width');
-
-    var totalWidth = 0;
-    table.find('thead th').each(function () {
-        if ($(this).data('width')) {
-            totalWidth += $(this).data('width');
-        } else {
-            totalWidth += $(this).width();
-        }
-    });
+    table.css('width', '100%');
+    // var totalWidth = 0;
+    // var column = 0;
+    // table.find('thead th').each(function () {
+    //     column += 1;
+    //     if ($(this).data('width')) {
+    //         totalWidth += $(this).data('width');
+    //         console.log('a) Column ', column, ': ',  $(this).data('width'), ', Total: ' + totalWidth);
+    //     } else {
+    //         totalWidth += $(this).width();
+    //         console.log('b) Column ', column + ': ',  $(this).width(), ', Total: ' + totalWidth);
+    //     }
+    // });
 
     // ascertain whether the table should be width 100% or explicit width:
-    var containerWidth = table.closest('.dataTables_wrapper').width();
-
-    if (totalWidth > containerWidth) {
-        table.css('width', totalWidth + 'px');
-    } else {
-        table.css('width', '100%');
-    }
+    // var containerWidth = table.closest('.dataTables_wrapper').width();
+    // console.log('Table: ', totalWidth, 'Container: ', containerWidth);
+    // if (totalWidth > containerWidth) {
+    //     table.css('width', totalWidth + 'px');
+    // } else {
+    //     table.css('width', '100%');
+    // }
 }
 
 /**
  * @param {Object} table
  * @return null
  */
-function updateChartDownloadButton(table, selectedSeries, selectedUnit) {
+function updateChartDownloadButton(table) {
     if (typeof VIEW._chartDownloadButton !== 'undefined') {
-        var tableCsv = toCsv(table, selectedSeries, selectedUnit);
+        var tableCsv = toCsv(table);
         var blob = new Blob([tableCsv], {
             type: 'text/csv'
         });
@@ -4681,10 +4758,9 @@ function updateChartDownloadButton(table, selectedSeries, selectedUnit) {
  * @param {null|undefined|Float|String} value
  * @param {Object} info
  * @param {Object} context
- * @param {Object} additionalInfo
  * @return {null|undefined|Float|String}
  */
-function alterDataDisplay(value, info, context, additionalInfo) {
+function alterDataDisplay(value, info, context) {
     // If value is empty, we will not alter it.
     if (value == null || value == undefined) {
         return value;
@@ -4703,56 +4779,51 @@ function alterDataDisplay(value, info, context, additionalInfo) {
     opensdg.dataDisplayAlterations.forEach(function (callback) {
         altered = callback(altered, info, context);
     });
+    // Now apply our custom precision control if needed.
+
+    // Special treatment for numbers on y axis: If stepSize is defined, they should display decimal places as follows:
+    // StepSize >= 1 --> 0 decimal places, Stepsize >= 0.1 --> 1 decimal place, StepSize >= 0.01 --> 2 decimal places ...
+    if (context == 'chart y-axis tick' && VIEW._graphStepsize && VIEW.graphStepsize != 0 && VIEW.graphStepsize != '') {
+      precision = Math.ceil(Math.log(1 / VIEW._graphStepsize.step) / Math.LN10);
+      if (precision < 0) {
+        precision = 0
+      }
+    }
+    else {
+      var precision = VIEW._precision
+    };
     // If the returned value is not a number, use the legacy logic for
     // precision and decimal separator.
     if (typeof altered !== 'number') {
         // Now apply our custom precision control if needed.
-        if (VIEW._precision || VIEW._precision === 0) {
-            altered = Number.parseFloat(altered).toFixed(VIEW._precision);
+
+        if (precision || precision === 0) {
+            altered = Number.parseFloat(altered).toFixed(precision);
         }
         // Now apply our custom decimal separator if needed.
         if (OPTIONS.decimalSeparator) {
             altered = altered.toString().replace('.', OPTIONS.decimalSeparator);
         }
+        // Apply thousands seperator if needed
+        if (OPTIONS.thousandsSeparator && precision <=3){
+            altered = altered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, OPTIONS.thousandsSeparator);
+        }
     }
+
     // Otherwise if we have a number, use toLocaleString instead.
     else {
         var localeOpts = {};
         if (VIEW._precision || VIEW._precision === 0) {
-            localeOpts.minimumFractionDigits = VIEW._precision;
-            localeOpts.maximumFractionDigits = VIEW._precision;
+            localeOpts.minimumFractionDigits = precision;
+            localeOpts.maximumFractionDigits = precision;
         }
         altered = altered.toLocaleString(opensdg.language, localeOpts);
-    }
-    // Now let's add any footnotes from observation attributes.
-    var obsAttributes = [];
-    if (context === 'chart tooltip') {
-        var dataIndex = additionalInfo.dataIndex;
-        obsAttributes = info.observationAttributes[dataIndex];
-    }
-    else if (context === 'table cell') {
-        var row = additionalInfo.row,
-            col = additionalInfo.col,
-            obsAttributesTable = additionalInfo.observationAttributesTable;
-        obsAttributes = obsAttributesTable.data[row][col];
-    }
-    if (obsAttributes.length > 0) {
-        var obsAttributeFootnoteNumbers = obsAttributes.map(function(obsAttribute) {
-            return getObservationAttributeFootnoteSymbol(obsAttribute.footnoteNumber);
-        });
-        altered += ' ' + obsAttributeFootnoteNumbers.join(' ');
+        // Apply thousands seperator if needed
+        if (OPTIONS.thousandsSeparator && precision <=3 && opensdg.language == 'de'){
+            altered = altered.replace('.', OPTIONS.thousandsSeparator);
+        }
     }
     return altered;
-}
-
-/**
- * Convert a number into a string for observation atttribute footnotes.
- *
- * @param {int} num 
- * @returns {string} Number converted into unicode character for footnotes.
- */
-function getObservationAttributeFootnoteSymbol(num) {
-    return '[' + translations.indicator.note + ' ' + (num + 1) + ']';
 }
 
   /**
@@ -4917,17 +4988,15 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     initialiseFields: initialiseFields,
     initialiseUnits: initialiseUnits,
     initialiseSerieses: initialiseSerieses,
-    updateIndicatorDataUnitStatus: updateIndicatorDataUnitStatus,
-    updateIndicatorDataSeriesStatus: updateIndicatorDataSeriesStatus,
     alterChartConfig: alterChartConfig,
     alterTableConfig: alterTableConfig,
     alterDataDisplay: alterDataDisplay,
     updateChartTitle: updateChartTitle,
+    updateChartSubtitle: updateChartSubtitle,
     updateWithSelectedFields: updateWithSelectedFields,
     updateSeriesAndUnitElements: updateSeriesAndUnitElements,
     updateUnitElements: updateUnitElements,
     updateTimeSeriesAttributes: updateTimeSeriesAttributes,
-    updateObservationAttributes: updateObservationAttributes,
     updatePlot: updatePlot,
     isHighContrast: isHighContrast,
     getHeadlineColor: getHeadlineColor,
@@ -4942,8 +5011,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     createDownloadButton: createDownloadButton,
     createSelectionsTable: createSelectionsTable,
     sortFieldGroup: sortFieldGroup,
-    getObservationAttributeFootnoteSymbol: getObservationAttributeFootnoteSymbol,
-    getObservationAttributeText: getObservationAttributeText,
   }
 })();
 
@@ -4955,6 +5022,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     VIEW._legendElement = OPTIONS.legendElement;
     VIEW._precision = undefined;
     VIEW._chartInstances = {};
+    VIEW._graphStepsize = undefined;
 
     var chartHeight = screen.height < OPTIONS.maxChartHeight ? screen.height : OPTIONS.maxChartHeight;
     $('.plot-container', OPTIONS.rootElement).css('height', chartHeight + 'px');
@@ -4994,6 +5062,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 $main.removeClass('indicator-main-full');
                 // Make sure the unit/series items are updated, in case
                 // they were changed while on the map.
+                helpers.updateChartSubtitle(VIEW._dataCompleteArgs.chartSubtitle);
                 helpers.updateChartTitle(VIEW._dataCompleteArgs.chartTitle, VIEW._dataCompleteArgs.isProxy);
                 helpers.updateSeriesAndUnitElements(VIEW._dataCompleteArgs.selectedSeries, VIEW._dataCompleteArgs.selectedUnit);
                 helpers.updateUnitElements(VIEW._dataCompleteArgs.selectedUnit);
@@ -5005,11 +5074,12 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
     MODEL.onDataComplete.attach(function (sender, args) {
 
         VIEW._precision = args.precision;
+        VIEW._graphStepsize = args.graphStepsize;
 
         if (MODEL.showData) {
             $('#dataset-size-warning')[args.datasetCountExceedsMax ? 'show' : 'hide']();
             if (!VIEW._chartInstance) {
-                helpers.createPlot(args, helpers);
+                helpers.createPlot(args);
                 helpers.setPlotEvents(args);
             } else {
                 helpers.updatePlot(args);
@@ -5017,11 +5087,11 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
         }
 
         helpers.createSelectionsTable(args);
+        helpers.updateChartSubtitle(args.chartSubtitle);
         helpers.updateChartTitle(args.chartTitle, args.isProxy);
         helpers.updateSeriesAndUnitElements(args.selectedSeries, args.selectedUnit);
         helpers.updateUnitElements(args.selectedUnit);
         helpers.updateTimeSeriesAttributes(args.timeSeriesAttributes);
-        helpers.updateObservationAttributes(args.allObservationAttributes);
 
         VIEW._dataCompleteArgs = args;
     });
@@ -5037,14 +5107,15 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                 args.precision,
                 args.precisionItems,
                 OPTIONS.decimalSeparator,
+                OPTIONS.thousandsSeparator,
                 args.dataSchema,
                 VIEW.helpers,
                 MODEL.helpers,
                 args.chartTitles,
+                args.chartSubtitles,
                 args.startValues,
                 args.proxy,
                 args.proxySerieses,
-                MODEL.allObservationAttributes,
             );
         }
     });
@@ -5058,17 +5129,6 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
 
         MODEL.onSeriesesComplete.attach(function (sender, args) {
             helpers.initialiseSerieses(args);
-        });
-    }
-
-    if (MODEL.onUnitsSelectedChanged) {
-        MODEL.onUnitsSelectedChanged.attach(function (sender, args) {
-            helpers.updateIndicatorDataUnitStatus(args);
-        });
-    }
-    if (MODEL.onSeriesesSelectedChanged) {
-        MODEL.onSeriesesSelectedChanged.attach(function (sender, args) {
-            helpers.updateIndicatorDataSeriesStatus(args);
         });
     }
 
@@ -5130,7 +5190,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
             fieldGroupElement.attr('data-has-data', fieldGroup.hasData);
             var fieldGroupButton = fieldGroupElement.find('> button'),
                 describedByCurrent = fieldGroupButton.attr('aria-describedby') || '',
-                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '-');
+                noDataHintId = 'no-data-hint-' + fieldGroup.field.replace(/ /g, '.');
             if (!fieldGroup.hasData && !describedByCurrent.includes(noDataHintId)) {
                 fieldGroupButton.attr('aria-describedby', describedByCurrent + ' ' + noDataHintId);
             }
@@ -5251,6 +5311,8 @@ var indicatorInit = function () {
                         shortIndicatorId: domData.id,
                         chartTitle: domData.charttitle,
                         chartTitles: domData.charttitles,
+                        chartSubtitle: domData.chartsubtitle,
+                        chartSubtitles: domData.chartsubtitles,
                         measurementUnit: domData.measurementunit,
                         xAxisLabel: domData.xaxislabel,
                         showData: domData.showdata,
@@ -5259,13 +5321,19 @@ var indicatorInit = function () {
                         startValues: domData.startvalues,
                         graphLimits: domData.graphlimits,
                         stackedDisaggregation: domData.stackeddisaggregation,
+                        showLine: domData.showline,
+                        spanGaps: domData.spangaps,
                         graphAnnotations: domData.graphannotations,
                         graphTargetLines: domData.graphtargetlines,
                         graphSeriesBreaks: domData.graphseriesbreaks,
+                        graphErrorBars: domData.grapherrorbars,
+                        graphTargetPoints: domData.graphtargetpoints,
+                        graphTargetLabels: domData.graphtargetlabels,
                         indicatorDownloads: domData.indicatordownloads,
                         dataSchema: domData.dataschema,
                         compositeBreakdownLabel: domData.compositebreakdownlabel,
                         precision: domData.precision,
+                        graphStepsize: domData.graphstepsize,
                         proxy: domData.proxy,
                         proxySeries: domData.proxyseries,
                     });
@@ -5273,11 +5341,12 @@ var indicatorInit = function () {
                         rootElement: '#indicatorData',
                         legendElement: '#plotLegend',
                         decimalSeparator: ',',
+                        thousandsSeparator: ' ',
                         maxChartHeight: 420,
                         tableColumnDefs: [
                             { maxCharCount: 25 }, // nowrap
-                            { maxCharCount: 35, width: 200 },
-                            { maxCharCount: Infinity, width: 250 }
+                            //{ maxCharCount: 35, width: 200 },
+                            { maxCharCount: Infinity, width: 300 }
                         ]
                     });
                     var controller = new indicatorController(model, view);
