@@ -141,7 +141,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120165953">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120175528">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -715,7 +715,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('page_content', "\n\n<div>\n  <div class=\"my-header\">\n    <label class=\"default\">Stickstoffüberschuss: Verringerung auf 70&nbsp;<abbr title=\"Kilogramm pro Hektar\" tabindex=\"0\">kg/ha</abbr> bis 2030\n      <a href=\"https://dnsUpgradeEnvironment.github.io/dns-indicators/status\"><img src=\"https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png\" title=\"Bei Fortsetzung der Entwicklung aus 2018 wäre der Zielwert erreicht oder um weniger als 5&nbsp;% der Differenz zwischen Zielwert und dem Wert aus 2018 verfehlt worden.\" alt=\"Wettersymbol: Sonne\"/>\n      </a>\n    </label>\n  </div>\n</div>\n<div class=\"my-header-note\">\n  <label class=\"default\"><b>(Bewertung aus dem Indikatorenbericht 2022, bezogen auf das Berichtsjahr 2018)\n  </b></label>\n</div>");
+        var currentValue = normalizeCurrentValue('page_content', "\n");
         var propertyEditor = editor.getEditor('root.page_content');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -923,12 +923,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120165953'></script>
+<script src='/site/assets/js/sdg.js?v=20250120175528'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120165953"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120175528"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
