@@ -137,13 +137,13 @@ logos:
     src: assets/img/en/DNS_logo.png
     alt: DESTATIS - German Strategy for Sustainable Development
 map_layers:
-  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/dns-indicators/assets/maps/boundariesKrs.geojson
+  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/site/assets/maps/boundariesKrs.geojson
     min_zoom: 8
     max_zoom: 11
     staticBorders: true
     subfolder: kreise
     label: indicator.counties
-  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/dns-indicators/assets/maps/boundaries.geojson
+  - serviceUrl:  https://DnsUpgradeEnvironment.github.io/site/assets/maps/boundaries.geojson
     min_zoom: 0
     max_zoom: 7
     staticBorders: true
