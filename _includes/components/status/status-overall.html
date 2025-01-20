@@ -1,0 +1,14 @@
+{%- assign overall = include.overall -%}
+{%- assign indicators_plural = page.t.general.indicators | downcase -%}
+<!-- <button onclick="window.print()">Seite ausdrucken</button> -->
+<div class="goal goal-overall">
+    <div class="details">
+        <h1>
+            {{ include.title }}
+        </h1>
+        <div class="container">
+          {{ page.t.weather.overview_blurb }}
+        </div>
+    </div>
+    <br style="clear:both;">
+</div>
