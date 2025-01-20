@@ -141,7 +141,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120074456">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250120074802">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -199,24 +199,54 @@ layout-config-builder
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">Home</a>
+    <a class="nav-link" href="/site/en/">Start</a>
 </li>
-<li class="nav-item ">
-    <a class="nav-link" href="/site/en/goals">Goals</a>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Status overview
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
+    <a class="dropdown-item" href="/site/en/status/">Methodology</a>
 </li>
-<li class="nav-item ">
-    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
-</li>
-<li class="nav-item ">
-    <a class="nav-link" href="/site/en/news">menu.updates</a>
-</li>
-<li class="nav-item ">
-    <a class="nav-link" href="/site/en/faq">menu.faq</a>
-</li>
-<li class="nav-item ">
-    <a class="nav-link" href="/site/en/about">About</a>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/status_summary/">Overview</a>
 </li>
 </ul>
+          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Strategy
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
+    <a class="dropdown-item" href="/site/en/strategy/dns/">German Sustainable Development Strategy</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/strategy/monitoring/">Monitoring</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/strategy/publications/">Publications</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/strategy/links/">Links</a>
+</li>
+</ul>
+          </li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/laender/">Länder</a>
+</li>
+<li class="nav-item ">
+    <a class="nav-link" href="https://sdg-indicators.de">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li>
+<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Help
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
+    <a class="dropdown-item" href="/site/en/help/navigation/">Structure of the online platform</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/help/guidance/">Technical guidance</a>
+</li>
+<li class=" ">
+    <a class="dropdown-item" href="/site/en/help/faq/">FAQ</a>
+</li>
+</ul>
+          </li></ul>
 
                 </div>
                 <div class="header-search-bar">
@@ -943,12 +973,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250120074456'></script>
+<script src='/site/assets/js/sdg.js?v=20250120074802'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250120074456"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250120074802"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
