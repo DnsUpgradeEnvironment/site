@@ -478,11 +478,19 @@
           "status": "complete"
         },
         {
-          "id": "11-3",
+          "id": "11-3-a",
           "title": "Überlastung durch Wohnkosten",
           "description": "",
           "keywords": "",
-          "href": "/site/11-3/",
+          "href": "/site/11-3-a/",
+          "status": "complete"
+        },
+        {
+          "id": "11-3-b",
+          "title": "Erreichbarkeit von für die Erholung geeigneten Grünflächen in Städten",
+          "description": "",
+          "keywords": "",
+          "href": "/site/11-3-b/",
           "status": "complete"
         },
         {
@@ -503,7 +511,7 @@
         
         {
           "id": "12-1-a",
-          "title": "Marktanteil von Produkten mit staatlichen Umweltzeichen",
+          "title": "Marktanteil von Produkten mit staatlichen Nahhaltigkeitssiegeln",
           "description": "",
           "keywords": "",
           "href": "/site/12-1-a/",
@@ -518,19 +526,35 @@
           "status": "complete"
         },
         {
-          "id": "12-2",
+          "id": "12-2-a",
           "title": "Umweltmanagement EMAS",
           "description": "",
           "keywords": "",
-          "href": "/site/12-2/",
+          "href": "/site/12-2-a/",
           "status": "complete"
         },
         {
-          "id": "12-3-ab",
+          "id": "12-2-b",
+          "title": "Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen",
+          "description": "",
+          "keywords": "",
+          "href": "/site/12-2-b/",
+          "status": "complete"
+        },
+        {
+          "id": "12-3-abc",
           "title": "Nachhaltige Beschaffung",
           "description": "",
           "keywords": "",
-          "href": "/site/12-3-ab/",
+          "href": "/site/12-3-abc/",
+          "status": "complete"
+        },
+        {
+          "id": "12-4",
+          "title": "Verbraucherverschuldung",
+          "description": "",
+          "keywords": "",
+          "href": "/site/12-4/",
           "status": "complete"
         }]
     }
