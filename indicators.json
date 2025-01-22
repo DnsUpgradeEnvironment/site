@@ -630,11 +630,27 @@
           "status": "complete"
         },
         {
+          "id": "15-3",
+          "title": "Bodenversiegelungsgrad",
+          "description": "",
+          "keywords": "",
+          "href": "/site/15-3/",
+          "status": "complete"
+        },
+        {
           "id": "15-3-ab",
           "title": "Erhalt bzw. Wiederaufbau von Wäldern unter REDD+ sowie internationaler Bodenschutz",
           "description": "",
           "keywords": "",
           "href": "/site/15-3-ab/",
+          "status": "complete"
+        },
+        {
+          "id": "15-4",
+          "title": "Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land, gemessen in Hektar",
+          "description": "",
+          "keywords": "",
+          "href": "/site/15-4/",
           "status": "complete"
         }]
     }
