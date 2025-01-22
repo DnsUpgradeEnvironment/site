@@ -215,10 +215,26 @@
         },
         {
           "id": "5-1-e",
-          "title": "Vocational qualification of women and girls through German development assistance",
+          "title": "Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter",
           "description": "",
           "keywords": "",
           "href": "/site/en/5-1-e/",
+          "status": "complete"
+        },
+        {
+          "id": "5-1-f",
+          "title": "Vocational qualification of women and girls through German development assistance",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/5-1-f/",
+          "status": "complete"
+        },
+        {
+          "id": "5-1-g",
+          "title": "Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit",
+          "description": "",
+          "keywords": "",
+          "href": "/site/en/5-1-g/",
           "status": "complete"
         }]
     }
