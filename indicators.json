@@ -102,6 +102,14 @@
           "status": "complete"
         },
         {
+          "id": "3-3",
+          "title": "Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt",
+          "description": "",
+          "keywords": "",
+          "href": "/site/3-3/",
+          "status": "complete"
+        },
+        {
           "id": "3-3-a",
           "title": "Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion",
           "description": "",
@@ -115,14 +123,6 @@
           "description": "",
           "keywords": "",
           "href": "/site/3-3-b/",
-          "status": "complete"
-        },
-        {
-          "id": "3-4-ab",
-          "title": "Unterschied in der Lebenserwartung zwischen sozio-ökonomisch deprivierten und wohlhabenden Regionen",
-          "description": "",
-          "keywords": "",
-          "href": "/site/3-4-ab/",
           "status": "complete"
         }]
     }
