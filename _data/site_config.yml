@@ -14,11 +14,6 @@ breadcrumbs:
       label: general.home
     - path: /goals
       label: general.goals
-  post:
-    - path: /
-      label: general.home
-    - path: /news
-      label: menu.updates
 cookie_consent_form:
   enabled: false
 country:
@@ -268,8 +263,6 @@ site_config_form:
 time_series_attributes:
   - field: COMMENT_TS
     label: indicator.footnote
-  - field: DATA_LAST_UPDATE
-    label: metadata_fields.national_data_update_url
 validate_indicator_config: false
 validate_site_config: false
 x_axis_label: ''

@@ -61,7 +61,9 @@
             </td>
           </tr>
         {% else %} <!-- case: content -->
-          <p style="opacity: 0.5"> {{ page.indicator[indicator_metadata.name] | markdownify }} </p>
+          <tr id="content"  style="opacity: 0.5">
+            <p style="opacity: 0.5"> {{ page.indicator[indicator_metadata.name] | markdownify }} </p>
+          </tr>
         {% endif %}
       {% endunless %}
 
