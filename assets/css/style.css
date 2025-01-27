@@ -3989,7 +3989,8 @@ abbr[title]:focus::after {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  padding-top: 10px; }
+  padding-top: 10px;
+  opacity: 0.5; }
 
 h3.h3bold {
   font-weight: bold; }
