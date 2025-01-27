@@ -1342,7 +1342,7 @@ function nonFieldColumns() {
     'Unit multiplier',
     'Unit measure',
   ];
-  var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}];
+  var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"}];
   if (timeSeriesAttributes && timeSeriesAttributes.length > 0) {
     timeSeriesAttributes.forEach(function(tsAttribute) {
       columns.push(tsAttribute.field);
@@ -2829,7 +2829,7 @@ function getTimeSeriesAttributes(rows) {
     return [];
   }
   var timeSeriesAttributes = [],
-      possibleAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}],
+      possibleAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"}],
       firstRow = rows[0],
       firstRowKeys = Object.keys(firstRow);
   possibleAttributes.forEach(function(possibleAttribute) {
@@ -3428,7 +3428,7 @@ function sortFieldGroup(fieldGroupElement) {
  * @return null
  */
 function updateTimeSeriesAttributes(tsAttributeValues) {
-    var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"},{"field":"DATA_LAST_UPDATE","label":"metadata_fields.national_data_update_url"}];
+    var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"}];
     timeSeriesAttributes.forEach(function(tsAttribute) {
         var field = tsAttribute.field,
             valueMatch = tsAttributeValues.find(function(tsAttributeValue) {
