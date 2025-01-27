@@ -24,7 +24,7 @@
 
       {% unless var == 'dontShow' or indicator_metadata.name contains "_url_text" or indicator_metadata.name contains "_link_text" or indicator_metadata.name contains "_url_alert" %}
         {% if indicator_metadata.field.scope != 'content' %}
-          <tr id="everythingElse">
+          <tr id="everythingElse" {% if indicator_metadata.name == "dns_indicator_definition" %} style="opacity: 0.5" {% endif %}>
             <th scope="row" style="text-align: left; width: 130px;">{{ metadata_label }} </th>
             <td>
               {% if indicator_metadata.name contains "_url" or indicator_metadata.name contains "_link" %}
@@ -69,7 +69,7 @@
       {% if indicator_metadata.name contains "weather_indicator" %}
         {% unless indicator_metadata.name contains "_year" %}
           {% unless indicator_metadata.name contains '_target_' %} <!-- leaves only weather_indicator_1_target-->
-            <tr id="indAndtarg">
+            <tr id="indAndtarg" style="opacity: 0.5">
               <th scope="row" style="padding-right: 10px; text-align: left; width: 130px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
               <td colspan="4">
                 {{ page.indicator[indicator_metadata.name] | markdownify }}
