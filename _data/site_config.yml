@@ -192,8 +192,8 @@ menu:
     dropdown:
       - path: /status/
         translation_key: menu.1_status_2_methodology
-      # - path: /status_summary/
-      #   translation_key: menu.1_status_2_overview
+      - path: /status_summary/
+        translation_key: menu.1_status_2_overview
   - translation_key: menu.1_strategy
     dropdown:
       - path: /strategy/dns/
