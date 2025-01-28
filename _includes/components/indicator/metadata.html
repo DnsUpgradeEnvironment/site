@@ -16,7 +16,9 @@
       {% assign var = 'doShow' %}
       {% if indicator_metadata.name contains "source_organisation_" or indicator_metadata.name contains "weather" or indicator_metadata.name == "national_indicator_available" or indicator_metadata.name == "national_geographical_coverage" %}
         {% assign var = 'dontShow' %}
-        {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" or indicator_metadata.name contains "_item_a " %}
+        {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" %}
+          {% assign var = 'doShow' %}
+        {% elseif indicator_metadata.name contains "_item_a" and page.indicator[indicator_metadata.name | append: '_valid'] == true %}
           {% assign var = 'doShow' %}
         {% endif %}
       {% endif %}
