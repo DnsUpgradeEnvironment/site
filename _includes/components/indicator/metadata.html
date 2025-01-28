@@ -18,7 +18,7 @@
         {% assign var = 'dontShow' %}
         {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" %}
           {% assign var = 'doShow' %}
-        {% elseif indicator_metadata.name contains "_item_a" and page.indicator[indicator_metadata.name | append: '_valid'] == true %}
+        {% elsif indicator_metadata.name contains "_item_a" and page.indicator[indicator_metadata.name | append: '_valid'] == true %}
           {% assign var = 'doShow' %}
         {% endif %}
       {% endif %}
