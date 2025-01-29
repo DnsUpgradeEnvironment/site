@@ -1043,14 +1043,7 @@ Chart.register({
                     year = this.chart.data.labels[pointIndex],
                     dataset = this.chart.data.datasets[datasetIndex],
                     label = dataset.label,
-                    value = dataset.data[pointIndex],
-                    observationAttributes = dataset.observationAttributes[pointIndex],
-                    helpers = this.chart.config._config.indicatorViewHelpers;
-
-                if (observationAttributes && observationAttributes.length > 0) {
-                    label += ', ' + observationAttributes.map(helpers.getObservationAttributeText).join(', ');
-                }
-
+                    value = dataset.data[pointIndex];
                 if (typeof labels[year] === 'undefined') {
                     labels[year] = [];
                 }
@@ -1343,17 +1336,9 @@ function nonFieldColumns() {
     'Unit measure',
   ];
   var timeSeriesAttributes = [{"field":"COMMENT_TS","label":"indicator.footnote"}];
-  if (timeSeriesAttributes && timeSeriesAttributes.length > 0) {
-    timeSeriesAttributes.forEach(function(tsAttribute) {
-      columns.push(tsAttribute.field);
-    });
-  }
-  var observationAttributes = null;
-  if (observationAttributes && observationAttributes.length > 0) {
-    observationAttributes.forEach(function(oAttribute) {
-      columns.push(oAttribute.field);
-    });
-  }
+  timeSeriesAttributes.forEach(function(tsAttribute) {
+    columns.push(tsAttribute.field);
+  });
   columns.push(SERIES_COLUMN);
   return columns;
 }
@@ -1739,13 +1724,7 @@ function fieldItemStatesForView(fieldItemStates, fieldsByUnit, selectedUnit, dat
   else if (dataHasUnitSpecificFields) {
     states = fieldItemStatesForUnit(fieldItemStates, fieldsByUnit, selectedUnit);
   }
-  // Set all values to checked=false because they are going to be
-  // conditionally set to true below, if needed.
-  states.forEach(function(fieldItem) {
-    fieldItem.values.forEach(function(defaultFieldItemValue) {
-      defaultFieldItemValue.checked = false;
-    });
-  });
+
   if (selectedFields && selectedFields.length > 0) {
     states.forEach(function(fieldItem) {
       var selectedField = selectedFields.find(function(selectedItem) {
@@ -1822,9 +1801,6 @@ function sortFieldsForView(fieldItemStates, edges) {
       }
     });
     fieldItemStates.forEach(function(fieldItem) {
-      if (typeof tempHierarchyHash[fieldItem.topLevelParent] === 'undefined') {
-        return;
-      }
       if (fieldItem.topLevelParent !== '') {
         tempHierarchyHash[fieldItem.topLevelParent].children.push(fieldItem);
       }
@@ -2016,9 +1992,6 @@ function validParentsByChild(edges, fieldItemStates, rows) {
     var fieldItemState = fieldItemStates.find(function(fis) {
       return fis.field === childField;
     });
-    if (typeof fieldItemState === 'undefined') {
-      return;
-    }
     var childValues = fieldItemState.values.map(function(value) {
       return value.value;
     });
@@ -2670,21 +2643,6 @@ function tableDataFromDatasets(datasets, years) {
 }
 
 /**
- * @param {Array} datasets
- * @param {Array} years
- * @return {Object} Same as tableDataFromDatasets, except values are arrays of observation attributes
- */
-function observationAttributesTableFromDatasets(datasets, years) {
-  return {
-    data: years.map(function(year, index) {
-      return [null].concat(datasets.map(function(ds) {
-        return ds.observationAttributes[index] ? ds.observationAttributes[index] : [];
-      }));
-    }),
-  };
-}
-
-/**
  * @param {Array} rows
  * @param {string} selectedUnit
  * @return {Object} Object containing 'title', 'headings', and 'data'
@@ -2842,38 +2800,6 @@ function getTimeSeriesAttributes(rows) {
     }
   });
   return timeSeriesAttributes;
-}
-
-function getAllObservationAttributes(rows) {
-  if (rows.length === 0) {
-    return {};
-  }
-  var obsAttributeHash = {},
-      footnoteNumber = 0,
-      configObsAttributes = null;
-  if (configObsAttributes && configObsAttributes.length > 0) {
-    configObsAttributes = configObsAttributes.map(function(obsAtt) {
-      return obsAtt.field;
-    });
-  }
-  else {
-    configObsAttributes = [];
-  }
-  configObsAttributes.forEach(function(field) {
-    var attributeValues = Object.keys(_.groupBy(rows, field)).filter(function(value) {
-      return value !== 'undefined';
-    });
-    attributeValues.forEach(function(attributeValue) {
-      var hashKey = field + '|' + attributeValue;
-      obsAttributeHash[hashKey] = {
-        field: field,
-        value: attributeValue,
-        footnoteNumber: footnoteNumber,
-      }
-      footnoteNumber += 1;
-    });
-  });
-  return obsAttributeHash;
 }
 
 
@@ -3447,45 +3373,6 @@ function updateTimeSeriesAttributes(tsAttributeValues) {
             $valueElement.show().text(translations.t(value));
         }
     });
-}
-
-/**
- * @param {Array} obsAttributes
- *   Array of objects containing 'field' and 'value'.
- * @return null
- */
-function updateObservationAttributes(obsAttributes) {
-    var $listElement = $('.observation-attribute-list');
-    $listElement.empty();
-    if (obsAttributes.length === 0) {
-        $listElement.hide();
-        return;
-    }
-    $listElement.show();
-    Object.values(obsAttributes).forEach(function(obsAttribute) {
-        var label = getObservationAttributeText(obsAttribute),
-            num = getObservationAttributeFootnoteSymbol(obsAttribute.footnoteNumber);
-        var $listItem = $('<dt id="observation-footnote-title-' + num + '">' + num + '</dt><dd id="observation-footnote-desc-' + num + '">' + label + '</dd>');
-        $listElement.append($listItem);
-    });
-}
-
-/**
- * Gets the text of an observation attribute for display to the end user.
- */
-function getObservationAttributeText(obsAttribute) {
-    var configuredObsAttributes = null;
-    var attributeConfig = _.find(configuredObsAttributes, function(configuredObsAttribute) {
-        return configuredObsAttribute.field === obsAttribute.field;
-    });
-    if (!attributeConfig) {
-        return '';
-    }
-    var label = translations.t(obsAttribute.value);
-    if (attributeConfig.label) {
-        label = translations.t(attributeConfig.label) + ': ' + label;
-    }
-    return label;
 }
 
   /**
@@ -4874,7 +4761,7 @@ function isHighContrast(contrast) {
  * @param {Element} el
  * @return null
  */
-function createDownloadButton(table, name, indicatorId, el, selectedSeries, selectedUnit) {
+function createDownloadButton(table, name, indicatorId, el) {
     if (window.Modernizr.blobconstructor) {
         var downloadKey = 'download_csv';
         if (name == 'Chart') {
@@ -4884,7 +4771,7 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
             downloadKey = 'download_table';
         }
         var gaLabel = 'Download ' + name + ' CSV: ' + indicatorId.replace('indicator_', '');
-        var tableCsv = toCsv(table, selectedSeries, selectedUnit);
+        var tableCsv = toCsv(table);
         var fileName = indicatorId + '.csv';
         var downloadButton = $('<a />').text(translations.indicator[downloadKey])
             .attr(opensdg.autotrack('download_data_current', 'Downloads', 'Download CSV', gaLabel))
@@ -4893,8 +4780,7 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
                 'title': translations.indicator.download_csv_title,
                 'aria-label': translations.indicator.download_csv_title,
                 'class': 'btn btn-primary btn-download',
-                'tabindex': 0,
-                'role': 'button',
+                'tabindex': 0
             });
         var blob = new Blob([tableCsv], {
             type: 'text/csv'
@@ -4926,8 +4812,7 @@ function createDownloadButton(table, name, indicatorId, el, selectedSeries, sele
                 'title': translations.indicator.download_headline_title,
                 'aria-label': translations.indicator.download_headline_title,
                 'class': 'btn btn-primary btn-download',
-                'tabindex': 0,
-                'role': 'button',
+                'tabindex': 0
             }));
     }
 }
@@ -4947,8 +4832,7 @@ function createSourceButton(indicatorId, el) {
             'title': translations.indicator.download_source_title,
             'aria-label': translations.indicator.download_source_title,
             'class': 'btn btn-primary btn-download',
-            'tabindex': 0,
-            'role': 'button',
+            'tabindex': 0
         }));
 }
 
@@ -4973,8 +4857,7 @@ function createIndicatorDownloadButtons(indicatorDownloads, indicatorId, el) {
                     'download': href.split('/').pop(),
                     'title': buttonLabelTranslated,
                     'class': 'btn btn-primary btn-download',
-                    'tabindex': 0,
-                    'role': 'button',
+                    'tabindex': 0
                 }));
         }
     }
@@ -6261,9 +6144,6 @@ $(function() {
             }
             var disaggregations = features[0].properties.disaggregations,
                 fields = Object.keys(disaggregations[0]),
-                validStartValues = startValues.filter(function(startValue) {
-                    return fields.includes(startValue.field);
-                }),
                 weighted = _.sortBy(disaggregations.map(function(disaggregation, index) {
                     var disaggClone = Object.assign({}, disaggregation);
                     disaggClone.emptyFields = 0;
@@ -6276,7 +6156,7 @@ $(function() {
                     return disaggClone;
                 }), 'emptyFields').reverse(),
                 match = weighted.find(function(disaggregation) {
-                    return _.every(validStartValues, function(startValue) {
+                    return _.every(startValues, function(startValue) {
                         return disaggregation[startValue.field] === startValue.value;
                     });
                 });
@@ -6649,11 +6529,6 @@ $(function() {
                 validFields = Object.keys(disaggregations[0]),
                 invalidFields = [this.seriesColumn, this.unitsColumn],
                 allDisaggregations = [];
-            if (this.plugin.configObsAttributes && this.plugin.configObsAttributes.length > 0) {
-                this.plugin.configObsAttributes.forEach(function(obsAttribute) {
-                    invalidFields.push(obsAttribute.field);
-                });
-            }
 
             this.fieldsInOrder.forEach(function(field) {
                 if (!(invalidFields.includes(field)) && validFields.includes(field)) {
@@ -6664,9 +6539,6 @@ $(function() {
                                 return disaggregation[field];
                             })),
                         };
-                    if (typeof sortedValues === 'undefined') {
-                        return;
-                    }
                     item.values.sort(function(a, b) {
                         return sortedValues.indexOf(a) - sortedValues.indexOf(b);
                     });

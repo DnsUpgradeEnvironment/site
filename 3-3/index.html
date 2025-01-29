@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Promise%2CArray.prototype.forEach%2CString.prototype.includes%2CURLSearchParams%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.filter%2CArray.prototype.some%2CArray.prototype.find%2CArray.prototype.reduce%2CObject.assign%2CArray.isArray%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
+        <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
         <script>
@@ -146,7 +146,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250129133750">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250129165709">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -405,9 +405,6 @@ data-event-label="high"
           <li class="breadcrumb-item">
                 <a href="/site/">Start</a>
             </li>
-          <li class="breadcrumb-item">
-                <a href="/site/goals">Ziele</a>
-            </li>
           
           <li class="breadcrumb-item">
               <a href="/site/3/" title="Ein gesundes Leben für alle Menschen jeden Alters gewährleisten und ihr Wohlergehen fördern">Ziel 3</a>
@@ -485,13 +482,13 @@ data-event-label="high"
   data-geocoderegex=""
   data-showmap="false"
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Pandemieprävention und -reaktion&quot;},{&quot;field&quot;:&quot;Zuordnung&quot;,&quot;value&quot;:&quot;Pandemieprävention und -reaktion&quot;},{&quot;field&quot;:&quot;Zuordnung&quot;,&quot;value&quot;:&quot;Eindämmung der COVID-19-Pandemie&quot;}]"
-  data-graphlimits="null"
+  data-graphlimits="[{&quot;minimum&quot;:0.0}]"
   data-stackeddisaggregation="Zuordnung"
   data-showline="true"
   data-spangaps="true"
   data-graphannotations="[{&quot;series&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;value&quot;:30,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:8.685,&quot;xMax&quot;:9.315,&quot;yMin&quot;:0,&quot;yMax&quot;:30,&quot;borderColor&quot;:&quot;#4c9f38&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:9,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;30&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
+  data-graphtargetpoints="[{&quot;series&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:7.6865,&quot;xMax&quot;:8.3135,&quot;yMin&quot;:0,&quot;yMax&quot;:30,&quot;borderColor&quot;:&quot;#4c9f38&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:8,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;30&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
   data-grapherrorbars="null"
@@ -530,9 +527,9 @@ data-event-label="high"
   <div id="datatables">
 
     
-    <a role="button" href="https://DnsUpgradeEnvironment.github.io/dns-data/de/headline/3-3.csv" class="btn btn-primary btn-download" download="indicator_3-3.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/de/headline/3-3.csv" class="btn btn-primary btn-download" download="indicator_3-3.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
     
-    <a role="button" href="https://DnsUpgradeEnvironment.github.io/dns-data/de/data/3-3.csv" class="btn btn-primary btn-download" download='indicator_3-3.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
+    <a href="https://DnsUpgradeEnvironment.github.io/dns-data/de/data/3-3.csv" class="btn btn-primary btn-download" download='indicator_3-3.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
 
     <p class="no-js-disaggregation-hint"></p>
 
@@ -708,27 +705,7 @@ data-event-label="high"
           
           
           
-          <td></td>
-          
-          
-          
-          <td>Prozent</td>
-          
-          
-          
-          <td class="table-value">Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2023</td>
-          
-          
-          
-          <td>99.0</td>
+          <td>-999.0</td>
           
           
           
@@ -2982,7 +2959,6 @@ data-event-label="Change to indicator.sources tab"
     
     <div class="col-md-6">
       
-      
         <h4>Datenquelle 1</h4>
       
       
@@ -4065,7 +4041,6 @@ data-event-label="Change to indicator.sources tab"
     
     
     <div class="col-md-6">
-      
       
         <h4>Datenquelle 2</h4>
       
@@ -5150,7 +5125,6 @@ data-event-label="Change to indicator.sources tab"
     
     <div class="col-md-6">
       
-      
         <h4>Datenquelle 3</h4>
       
       
@@ -6187,7 +6161,6 @@ data-event-label="Change to indicator.sources tab"
     
     <div class="col-md-6">
       
-      
         <h4>Datenquelle 4</h4>
       
       
@@ -7223,7 +7196,6 @@ data-event-label="Change to indicator.sources tab"
     
     
     <div class="col-md-6">
-      
       
         <h4>Datenquelle 5</h4>
       
@@ -8341,6 +8313,7 @@ data-event-label="Change to indicator.sources tab"
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="//cdn.datatables.net/fixedcolumns/3.2.3/js/dataTables.fixedColumns.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
@@ -8364,12 +8337,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250129133750'></script>
+<script src='/site/assets/js/sdg.js?v=20250129165709'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250129133750"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250129165709"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
