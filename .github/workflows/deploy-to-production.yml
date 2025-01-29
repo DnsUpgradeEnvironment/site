@@ -47,6 +47,6 @@ jobs:
       with:
         REPOSITORY_NAME: dnsupgradeproduction/dnsupgradeproduction.github.io
         ACCESS_TOKEN: ${{ secrets.token }}
-        BRANCH: gh-pages
+        BRANCH: master
         FOLDER: _site
         CLEAN: true
