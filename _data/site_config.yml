@@ -7,13 +7,13 @@ breadcrumbs:
   goal:
     - path: /
       label: general.home
-    - path: /goals
-      label: general.goals
+    # - path: /goals
+    #   label: general.goals
   indicator:
     - path: /
       label: general.home
-    - path: /goals
-      label: general.goals
+    # - path: /goals
+    #   label: general.goals
 cookie_consent_form:
   enabled: false
 country:
