@@ -8,7 +8,7 @@
     {%- assign metadata_label = indicator_metadata.name | translate_metadata_field -%}
     {% if indicator_metadata.field.scope == include.scope %}
       {% if site.hide_empty_metadata %}
-        {% unless (page.indicator[indicator_metadata.name] and page.indicator[indicator_metadata.name] != '') or indicator_metadata.name contains '_item_a' or indicator_metadata.name contains 'dns_' %}
+        {% unless (page.indicator[indicator_metadata.name] and page.indicator[indicator_metadata.name] != '') or indicator_metadata.name contains '_item_a' %}
           {% continue %}
         {% endunless %}
       {% endif %}
@@ -18,8 +18,6 @@
         {% assign var = 'dontShow' %}
         {% if indicator_metadata.name contains "short" or indicator_metadata.name contains "_logo" %}
           {% assign var = 'doShow' %}
-        <!-- {% elsif indicator_metadata.name contains "_item_a" and page.indicator[indicator_metadata.name | append: '_valid'] == true %}
-          {% assign var = 'doShow' %} -->
         {% endif %}
       {% endif %}
 
@@ -63,9 +61,7 @@
             </td>
           </tr>
         {% else %} <!-- case: content -->
-          <tr id="content"  style="opacity: 0.5">
-            <p> {{ page.indicator[indicator_metadata.name] | markdownify }} </p>
-          </tr>
+          <p> {{ page.indicator[indicator_metadata.name] | markdownify }} </p>
         {% endif %}
       {% endunless %}
 
@@ -190,7 +186,7 @@
             <th scope="row" style="padding-right: 10px; text-align: left; width: 130px;">{{ page.t.metadata_fields[indicator_metadata.name] }} </th>
             {% if item_d == 'Sonne' or item_d == 'Leicht bewölkt' or item_d == 'Wolke' or item_d == 'Blitz' %}
               <td align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_d }}.png" title="{{ title_d }}" alt="{{  item_d | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://sdg-indikatoren.de/public/Wettersymbole/left/{{ item_d }}.png" title="{{ title_d }}" alt="{{  item_d | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
               </td>
             {% elsif item_d == 'Bewertung ausgesetzt' or item_d == 'Später' or item_d == 'Ende' and no_futher_cells != true %}
               <td colspan="4" align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
@@ -208,7 +204,7 @@
 
             {% if item_c == 'Sonne' or item_c == 'Leicht bewölkt' or item_c == 'Wolke' or item_c == 'Blitz' %}
               <td align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_c }}.png" title="{{ title_c }}" alt="{{  item_c | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://sdg-indikatoren.de/public/Wettersymbole/left/{{ item_c }}.png" title="{{ title_c }}" alt="{{  item_c | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
               </td>
             {% elsif item_c == 'Bewertung ausgesetzt' or item_c == 'Später' or item_c == 'Ende' and no_futher_cells != true %}
               <td colspan="3" align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
@@ -226,7 +222,7 @@
 
             {% if item_b == 'Sonne' or item_b == 'Leicht bewölkt' or item_b == 'Wolke' or item_b == 'Blitz' %}
               <td align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_b }}.png" title="{{ title_b }}" alt="{{  item_b | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://sdg-indikatoren.de/public/Wettersymbole/left/{{ item_b }}.png" title="{{ title_b }}" alt="{{  item_b | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
               </td>
             {% elsif item_b == 'Bewertung ausgesetzt' or item_b == 'Später' or item_b == 'Ende' and no_futher_cells != true %}
               <td colspan="2" align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
@@ -244,7 +240,7 @@
 
             {% if item_a == 'Sonne' or item_a == 'Leicht bewölkt' or item_a == 'Wolke' or item_a == 'Blitz' %}
               <td align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
-                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://g205sdgs.github.io/sdg-indicators/public/Wettersymbole/left/{{ item_a }}.png" title="{{ title_a }}" alt="{{  item_a | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
+                <a href=" {{ site.baseurl }}{{ baseurl_folder }}/status/ "><img src="https://sdg-indikatoren.de/public/Wettersymbole/left/{{ item_a }}.png" title="{{ title_a }}" alt="{{  item_a | markdownify }}" class="responsiveWeather" style="border: transparent"/></a>
               </td>
             {% elsif item_a == 'Bewertung ausgesetzt' or item_a == 'Später' or item_a == 'Ende' and no_futher_cells != true %}
               <td colspan="1" align="left" style="padding-left: 0px;padding-right: 0px; width: auto">
@@ -261,7 +257,6 @@
               </td>
             {% endif %}
           </tr>
-
 
 
         {% endunless %}
