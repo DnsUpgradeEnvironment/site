@@ -145,11 +145,11 @@ function getGraphSeriesBreaks(graphSeriesBreaks, selectedUnit, selectedSeries) {
  * @param {Array} colorAssignments Color/striping assignments for disaggregation combinations
  * @return {Array} Datasets suitable for Chart.js
  */
-function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps) {
-  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps;
+function getDatasets(headline, data, combinations, years, defaultLabel, colors, selectableFields, colorAssignments, showLine, spanGaps, allObservationAttributes, mixedTypes) {
+  var datasets = [], index = 0, dataset, colorIndex, color, background, border, striped, excess, combinationKey, colorAssignment, showLine, spanGaps, mixedTypes;
   var numColors = colors.length,
       maxColorAssignments = numColors * 2;
-
+  console.log("mixeTypes in getDatasets: ", mixedTypes);
   prepareColorAssignments(colorAssignments, maxColorAssignments);
   setAllColorAssignmentsReadyForEviction(colorAssignments);
 
@@ -185,15 +185,14 @@ function getDatasets(headline, data, combinations, years, defaultLabel, colors, 
       color = getColor(colorIndex, colors);
       background = getBackground(color, striped);
       border = getBorderDash(striped);
-
-      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps);
+      dataset = makeDataset(years, filteredData, combination, defaultLabel, color, background, border, excess, showLine, spanGaps, allObservationAttributes, mixedTypes);
       datasets.push(dataset);
       index++;
     }
   }, this);
 
   if (headline.length > 0) {
-    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps);
+    dataset = makeHeadlineDataset(years, headline, defaultLabel, showLine, spanGaps, allObservationAttributes, mixedTypes);
     datasets.unshift(dataset);
   }
   return datasets;
@@ -243,6 +242,7 @@ function getDataMatchingCombination(data, combination, selectableFields) {
  * @return {Object|undefined} Color assignment object if found.
  */
 function getColorAssignmentByCombination(colorAssignments, combination) {
+  console.log("colorAssignement: ", colorAssignments);
   return colorAssignments.find(function(assignment) {
     return assignment.combination === combination;
   });
@@ -374,14 +374,18 @@ function getBorderDash(striped) {
  * @param {string} color
  * @param {string} background
  * @param {Array} border
+ * @param {Array} excess
  * @return {Object} Dataset object for Chart.js
  */
-function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, showLine, spanGaps) {
-  var dataset = getBaseDataset();
+function makeDataset(years, rows, combination, labelFallback, color, background, border, excess, showLine, spanGaps, allObservationAttributes, mixedTypes) {
+   var dataset = getBaseDataset(),
+       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
+       data = prepared.data,
+       obsAttributes = prepared.observationAttributes;
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
-    //type: getCombinationType(combination, labelFallback, mixedTypes),
+    type: getCombinationType(combination, labelFallback, mixedTypes),
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -391,10 +395,12 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     borderWidth: 2,
     headline: false,
     pointStyle: 'circle',
-    data: prepareDataForDataset(years, rows),
+    data: data,
     excess: excess,
     spanGaps: spanGaps,
+    mixedTypes: mixedTypes,
     showLine: showLine,
+    observationAttributes: obsAttributes,
   });
 }
 
@@ -414,22 +420,32 @@ function getBaseDataset() {
   });
 }
 
-// /**
-//  * @param {Object} combination Key/value representation of a field combo
-//  * @param {string} fallback
-//  * @param {Object} mixedTypes combinations and the respective charttype
-//  * @return {string} type of chart for the given combination
-//  */
-// function getCombinationType(combination, fallback, mixedTypes) {
-//   var combi = getCombinationDescription(combination, fallback);
-//   if (mixedTypes.length === 0) {
-//     return 'line';
-//   }
-//   else {
-//     console.log("MT", typeof mixedTypes);
-//     return 'bar';//mixedTypes.find(item => item.combination === combi).chartType;
-//   }
-// }
+/**
+ * @param {Object} combination Key/value representation of a field combo
+ * @param {string} fallback
+ * @param {Array} mixedTypes objects containing field, value, type
+ * @return {string} type of chart for the given combination
+ */
+function getCombinationType(combination, fallback, mixedTypes) {
+
+  var combi = getCombinationDescription(combination, fallback);
+  if (mixedTypes){
+    if (mixedTypes.length === 0) {
+      return '';
+    }
+    else {
+      return mixedTypes.find(function(item) {
+        return getCombinationDescription([item.value],'') === combi;
+      }).type;
+      //return '';//mixedTypes.find(item => item.combination === combi).chartType;
+    }
+  }
+  else {
+    console.log("B", typeof mixedTypes, mixedTypes, combi, combination);
+    return '';
+  }
+
+}
 
 /**
  * @param {Object} combination Key/value representation of a field combo
@@ -437,6 +453,7 @@ function getBaseDataset() {
  * @return {string} Human-readable description of combo
  */
 function getCombinationDescription(combination, fallback) {
+  //console.log("what does getCombinationDescp recive?", combination);
   var keys = Object.keys(combination);
   if (keys.length === 0) {
     return fallback;
@@ -451,13 +468,38 @@ function getCombinationDescription(combination, fallback) {
  * @param {Array} rows
  * @return {Array} Prepared rows
  */
-function prepareDataForDataset(years, rows) {
-  return years.map(function(year) {
+ function prepareDataForDataset(years, rows, allObservationAttributes) {
+   var ret = {
+     data: [],
+     observationAttributes: [],
+   };
+   var configObsAttributes = {{ site.observation_attributes | jsonify }};
+   if (configObsAttributes && configObsAttributes.length > 0) {
+     configObsAttributes = configObsAttributes.map(function(obsAtt) {
+       return obsAtt.field;
+     });
+   }
+   else {
+     configObsAttributes = [];
+   }
+   years.forEach(function(year) {
     var found = rows.find(function (row) {
       return row[YEAR_COLUMN] === year;
     });
-    return found ? found[VALUE_COLUMN] : null;
+    ret.data.push(found ? found[VALUE_COLUMN] : null);
+
+    var obsAttributesForRow = [];
+    if (found) {
+      configObsAttributes.forEach(function(field) {
+        if (found[field]) {
+          var hashKey = field + '|' + found[field];
+          obsAttributesForRow.push(allObservationAttributes[hashKey]);
+        }
+      });
+    }
+    ret.observationAttributes.push(obsAttributesForRow);
   });
+  return ret;
 }
 
 /**
@@ -475,8 +517,11 @@ function getHeadlineColor() {
  * @param {string} label
  * @return {Object} Dataset object for Chart.js
  */
-function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
-  var dataset = getBaseDataset();
+function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors, allObservationAttributes, mixedTypes) {
+   var dataset = getBaseDataset(),
+       prepared = prepareDataForDataset(years, rows, allObservationAttributes),
+       data = prepared.data,
+       obsAttributes = prepared.observationAttributes;
   return Object.assign(dataset, {
     label: label,
     // Override: no headline color
@@ -487,10 +532,12 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors) {
     borderWidth: 4,
     headline: true,
     pointStyle: 'circle',
-    data: prepareDataForDataset(years, rows),
+    data: data,
+    observationAttributes: obsAttributes,
     showLine: showLine,
     spanGaps: spanGaps,
-    //type: getCombinationType([], '', mixedTypes),
+    mixedTypes: mixedTypes,
+    type: getCombinationType([], '', mixedTypes),
   });
 }
 
