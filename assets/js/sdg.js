@@ -2577,11 +2577,9 @@ function getBaseDataset() {
 function getCombinationType(combination, fallback, mixedTypes) {
 
   var combi = getCombinationDescription(combination, fallback);
-  if (mixedTypes){
-    if (mixedTypes.length === 0) {
-      return '';
-    }
-    else {
+  if (mixedTypes !== undefined){
+    var values = mixedTypes.map(a => a.value);
+    if (values.indexOf(combi) != -1) {
       return mixedTypes.find(function(item) {
         console.log("AB", typeof mixedTypes, mixedTypes, combi, combination, getCombinationDescription([item.value],''));
         console.log("ABx", getCombinationDescription([item.value],'') === combi);
