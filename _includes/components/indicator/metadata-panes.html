@@ -1,4 +1,4 @@
-<div class="tab-content" >
+<div class="tab-content">
   {% if site.metadata_tabs and site.metadata_tabs.size > 0 %}
     {% for tab in site.metadata_tabs %}
     {% if tab.scope %}
@@ -22,7 +22,7 @@
   {% else %}
     {% include components/indicator/metadata-panes-default.html %}
   {% endif %}
-  {% if site.environment == 'staging' %}
+  {% if site.environment == 'staging' and page.layout != 'indicator-iframe' %}
     <div role="tabpanel" class="tab-pane" id="edit">
       {% include components/indicator/edit-buttons.html %}
     </div>
