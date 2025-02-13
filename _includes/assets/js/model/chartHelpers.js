@@ -385,7 +385,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
-    type: getCombinationType(combination, labelFallback, mixedTypes),
+    //type: getCombinationType(combination, labelFallback, mixedTypes),
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -398,7 +398,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
     data: data,
     excess: excess,
     spanGaps: spanGaps,
-    mixedTypes: mixedTypes,
+    //mixedTypes: mixedTypes,
     showLine: showLine,
     observationAttributes: obsAttributes,
   });
@@ -536,8 +536,8 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors, all
     observationAttributes: obsAttributes,
     showLine: showLine,
     spanGaps: spanGaps,
-    mixedTypes: mixedTypes,
-    type: getCombinationType([], '', mixedTypes),
+    //mixedTypes: mixedTypes,
+    //type: getCombinationType([], '', mixedTypes),
   });
 }
 
