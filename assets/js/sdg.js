@@ -2581,7 +2581,7 @@ function getCombinationType(combination, fallback, mixedTypes) {
     if (values.indexOf(combi) != -1) {
       return mixedTypes.find(function(item) {
         return getCombinationDescription([item.value],'') === combi;
-      }).type + '\norder: 1;';
+      }).type;
       //return '';//mixedTypes.find(item => item.combination === combi).chartType;
     }
   }
