@@ -141,7 +141,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250214135407">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250219091338">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -614,7 +614,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('dns_indicator_definition_new', "Der Indikator stellt die Projektmittel von Projekten der deutschen Entwicklungszusammenarbeit, die Gleichstellung mit berücksichtigen (in Prozent) dar.");
+        var currentValue = normalizeCurrentValue('dns_indicator_definition_new', "Der Indikator stellt die Projektmittel von Projekten der deutschen Entwicklungszusammenarbeit, die Gleichstellung mitberücksichtigen (in Prozent) dar.");
         var propertyEditor = editor.getEditor('root.dns_indicator_definition_new');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -626,6 +626,18 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dns_indicator_definition_new'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dns_political_intention', "Die Bundesregierung setzt sich international für die Gleichstellung der Geschlechter ein und arbeitet dafür mit verschiedenen Partnern zusammen. Gleiche Rechte, gleiche Pflichten, gleiche Chancen und gleiche Macht für Frauen und Männer sind explizite Ziele deutscher Entwicklungspolitik. Dabei ist es wichtig, neben Vorhaben, deren Hauptziel die Gleichstellung der Geschlechter ist, auch großvolumige Vorhaben etwa für Verkehrsinfrastruktur, soziale Sicherung, Gesundheit, Bildung <abbr title=\"und so weiter (et cetera)\" tabindex=\"0\">etc.</abbr> zu fördern, die Gleichstellungsaspekte als Nebenziel integrieren und so die gesamte Bevölkerung erreichen.");
+        var propertyEditor = editor.getEditor('root.dns_political_intention');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dns_political_intention');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dns_political_intention'));
 
     
@@ -658,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('target_description', "Der Anteil der Projektmittel der deutschen Entwicklungszusammenarbeit der Geschlechtergleichstellung berücksichtigt soll bis 2030&nbsp;auf mindestens 85&nbsp;Prozent gesteigert werden.<br>Keine Bewertung möglich. Zu wenig Datenpunkte.");
+        var currentValue = normalizeCurrentValue('target_description', "Der Anteil der Projektmittel der deutschen Entwicklungszusammenarbeit der Geschlechtergleichstellung berücksichtigt soll bis 2030&nbsp;auf mindestens 85&nbsp;Prozent gesteigert werden.<br><br>Keine Bewertung möglich. Zu wenig Datenpunkte.");
         var propertyEditor = editor.getEditor('root.target_description');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -830,12 +842,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250214135407'></script>
+<script src='/site/assets/js/sdg.js?v=20250219091338'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250214135407"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250219091338"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

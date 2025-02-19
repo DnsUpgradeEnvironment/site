@@ -141,7 +141,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250214135407">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250219091338">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -626,6 +626,18 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dns_indicator_definition_new'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('dns_political_intention', "Aufgrund des demografischen Wandels kann es langfristig zu einem Mangel an Fachkräften in Deutschland kommen. Gleichzeitig droht eine zunehmende Unterfinanzierung der sozialen Sicherungssysteme. Das vorhandene Arbeitskräftepotenzial ist daher künftig besser auszuschöpfen.");
+        var propertyEditor = editor.getEditor('root.dns_political_intention');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: dns_political_intention');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.dns_political_intention'));
 
     
@@ -658,7 +670,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('target_description', "Die Erwerbstätigenquote insgesamt (8.5.a) soll bis 2030&nbsp;auf mindestens 83&nbsp;Prozent gesteigert werden.<br>Die Erwerbstätigenquote der Älteren (8.5.b) soll bis 2030&nbsp;auf mindestens 77&nbsp;Prozent gesteigert werden.<br>Ausgehend von der Zielformulierung wird der Indikator 8.5.a für das Jahr 2023&nbsp;mit „Leicht bewölkt“ bewertet. Behält der Indikator 8.5.a die durchschnittliche Steigerung der Berichtsjahre 2018&nbsp;bis 2023&nbsp;bei, wird dennoch der Zielwert in 2030&nbsp;knapp verfehlt.<br>Bei Indikator 8.5.b lässt die durchschnittliche Entwicklung der letzten sechs Jahre vermuten, dass der Zielwert schon früher erreicht wird, sodass der Indikator 8.5.b für das Jahr 2023&nbsp;mit „Sonne“ bewertet wird.");
+        var currentValue = normalizeCurrentValue('target_description', "Bis 2030&nbsp;soll die Erwerbstätigenquote insgesamt (8.5.a) auf mindestens 83&nbsp;Prozent und die Erwerbstätigenquote der Älteren (8.5.b) auf mindestens 77&nbsp;Prozent gesteigert werden.<br><br>Ausgehend von der Zielformulierung wird der Indikator 8.5.a für das Jahr 2023&nbsp;mit \"Leicht bewölkt\" bewertet. Behält der Indikator 8.5.a die durchschnittliche Steigerung der Jahre 2018&nbsp;bis 2023&nbsp;bei, wird dennoch der politisch festgelegte Zielwert in 2030&nbsp;knapp verfehlt.<br><br>Bei Indikator 8.5.b lässt die durchschnittliche Entwicklung der letzten sechs Jahre vermuten, dass der politisch festgelegte Zielwert schon früher erreicht wird, sodass der Indikator 8.5.b für das Jahr 2023&nbsp;mit \"Sonne\" bewertet wird.");
         var propertyEditor = editor.getEditor('root.target_description');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -830,12 +842,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250214135407'></script>
+<script src='/site/assets/js/sdg.js?v=20250219091338'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250214135407"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250219091338"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
