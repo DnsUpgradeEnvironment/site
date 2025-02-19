@@ -2533,7 +2533,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
-    type: getCombinationType(combination, labelFallback, mixedTypes),
+    type: getCombinationType(combination, labelFallback, mixedTypes)[0],
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -2579,14 +2579,16 @@ function getCombinationType(combination, fallback, mixedTypes) {
   if (mixedTypes !== undefined && mixedTypes !== null){
     var values = mixedTypes.map(a => a.value);
     if (values.indexOf(combi) != -1) {
-      return mixedTypes.find(function(item) {
+      type = mixedTypes.find(function(item) {
         return getCombinationDescription([item.value],'') === combi;
       }).type;
+      re = [type, '1'];
+      return re;
       //return '';//mixedTypes.find(item => item.combination === combi).chartType;
     }
   }
   else {
-    return '';
+    return ['',''];
   }
 
 }
@@ -2680,7 +2682,7 @@ function makeHeadlineDataset(years, rows, label, showLine, spanGaps, colors, all
     observationAttributes: obsAttributes,
     showLine: showLine,
     spanGaps: spanGaps,
-    type: getCombinationType([], '', mixedTypes),
+    type: getCombinationType([], '', mixedTypes)[0],
   });
 }
 
