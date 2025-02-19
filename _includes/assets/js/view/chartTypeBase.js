@@ -56,7 +56,7 @@ opensdg.chartTypes.base = function(info) {
                     ticks: {
                         color: tickColor,
                          callback: function (value) {
-                             return alterDataDisplay(value, undefined, 'chart y-axis tick', '');
+                             return alterDataDisplay(value, undefined, 'chart y-axis tick');
                          },
                     },
                     title: {
