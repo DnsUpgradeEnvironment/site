@@ -2533,7 +2533,7 @@ function makeDataset(years, rows, combination, labelFallback, color, background,
   return Object.assign(dataset, {
     label: getCombinationDescription(combination, labelFallback),
     combination: combination,
-    type: getCombinationType(combination, labelFallback, mixedTypes)[0],
+    type: getCombinationType(combination, labelFallback, mixedTypes),
     disaggregation: combination,
     borderColor: color,
     backgroundColor: background,
@@ -2579,14 +2579,14 @@ function getCombinationType(combination, fallback, mixedTypes) {
   if (mixedTypes !== undefined && mixedTypes !== null){
     var values = mixedTypes.map(a => a.value);
     if (values.indexOf(combi) != -1) {
-      return [mixedTypes.find(function(item) {
+      return mixedTypes.find(function(item) {
         return getCombinationDescription([item.value],'') === combi;
-      }).type, '1'];
+      }).type;
       //return '';//mixedTypes.find(item => item.combination === combi).chartType;
     }
   }
   else {
-    return ['',''];
+    return '';
   }
 
 }
