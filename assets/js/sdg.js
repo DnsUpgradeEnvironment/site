@@ -4491,7 +4491,7 @@ opensdg.chartTypes.base = function(info) {
         type: 'bar',
     };
     if (info.stackedDisaggregation) {
-        console.log('Stacked', info.stackedDisaggregation);
+        console.log('Stacked', info.stackedDisaggregation, typeof info.stackedDisaggregation);
         overrides.options = {
             scales: {
                 x: { stacked: true },
