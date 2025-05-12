@@ -141,7 +141,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250512061201">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250512071427">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -534,7 +534,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('data_start_values', [{"field":"Series","value":"xxxanteil der länder, die deutschland bei der pandemieprävention, -vorsorge und -reaktion (ppr) unterstützt und die im global health security index (ghsi) fortschritte gemacht haben, an der anzahl der länder, die deutschland im bereich ppr unterstützt"}]);
+        var currentValue = normalizeCurrentValue('data_start_values', [{"field":"time series","value":"x"},{"field":"xxxzuordnung","value":"germany’s contribution to global pandemic prevention and response"},{"field":"xxxzuordnung","value":"separate amount devoted to curbing the covid-19 pandemic"}]);
         var propertyEditor = editor.getEditor('root.data_start_values');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -558,23 +558,11 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.expected_disaggregations'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('footer_fields', [{"series":"xxxbeitrag deutschlands zur globalen pandemieprävention und -reaktion","label":"Anmerkungen","value":"<br>• Alle Daten vorläufig.<br>• Die Daten beruhen auf einer Sonderauswertung und sind nicht öffentlich zugänglich."}]);
-        var propertyEditor = editor.getEditor('root.footer_fields');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: footer_fields');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.footer_fields'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('graph_annotations', [{"series":"xxxanteil der länder, die deutschland bei der pandemieprävention, -vorsorge und -reaktion (ppr) unterstützt und die im global health security index (ghsi) fortschritte gemacht haben, an der anzahl der länder, die deutschland im bereich ppr unterstützt","value":30,"label":{"content":"Ziel 2030","position":"left","backgroundColor":"transparent","color":"transparent"},"preset":"target_line","borderColor":"transparent"}]);
+        var currentValue = normalizeCurrentValue('graph_annotations', [{"value":300.5,"label":{"content":"Ziel 2030","position":"left","backgroundColor":"transparent","color":"transparent"},"preset":"target_line","borderColor":"transparent"}]);
         var propertyEditor = editor.getEditor('root.graph_annotations');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -586,25 +574,25 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.graph_annotations'));
 
+    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_limits'));
+
     
       try {
-        var currentValue = normalizeCurrentValue('graph_limits', [{"minimum":0.0}]);
-        var propertyEditor = editor.getEditor('root.graph_limits');
+        var currentValue = normalizeCurrentValue('graph_series_breaks', [{"value":0.0},{"value":0.0},{"value":0.0}]);
+        var propertyEditor = editor.getEditor('root.graph_series_breaks');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
         
       }
       catch (e) {
         console.log(e.message);
-        console.log('Unable to set config key: graph_limits');
+        console.log('Unable to set config key: graph_series_breaks');
       }
-    propertyEditorAccessibilityFixes(editor.getEditor('root.graph_limits'));
-
     propertyEditorAccessibilityFixes(editor.getEditor('root.graph_series_breaks'));
 
     
       try {
-        var currentValue = normalizeCurrentValue('graph_stacked_disaggregation', "xxxzuordnung");
+        var currentValue = normalizeCurrentValue('graph_stacked_disaggregation', "time series");
         var propertyEditor = editor.getEditor('root.graph_stacked_disaggregation');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -620,7 +608,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('graph_title', "Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt");
+        var currentValue = normalizeCurrentValue('graph_title', "Ausgaben bzw. Zusagen zur globalen Pandemieprävention und -reaktion");
         var propertyEditor = editor.getEditor('root.graph_title');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -632,18 +620,6 @@ data-event-label="high"
       }
     propertyEditorAccessibilityFixes(editor.getEditor('root.graph_title'));
 
-    
-      try {
-        var currentValue = normalizeCurrentValue('graph_titles', [{"series":"xxxanteil der länder, die deutschland bei der pandemieprävention, -vorsorge und -reaktion (ppr) unterstützt und die im global health security index (ghsi) fortschritte gemacht haben, an der anzahl der länder, die deutschland im bereich ppr unterstützt","title":"Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt"},{"series":"xxxbeitrag deutschlands zur globalen pandemieprävention und -reaktion","title":"Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion"}]);
-        var propertyEditor = editor.getEditor('root.graph_titles');
-        propertyEditor.setValue(null);
-        propertyEditor.setValue(currentValue);
-        
-      }
-      catch (e) {
-        console.log(e.message);
-        console.log('Unable to set config key: graph_titles');
-      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.graph_titles'));
 
     
@@ -664,7 +640,7 @@ data-event-label="high"
 
     
       try {
-        var currentValue = normalizeCurrentValue('indicator_name', "Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt");
+        var currentValue = normalizeCurrentValue('indicator_name', "Beitrag Deutschlands zur globalen Pandemieprävention und -reaktion");
         var propertyEditor = editor.getEditor('root.indicator_name');
         propertyEditor.setValue(null);
         propertyEditor.setValue(currentValue);
@@ -736,6 +712,18 @@ data-event-label="high"
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.placeholder'));
 
+    
+      try {
+        var currentValue = normalizeCurrentValue('precision', [{"decimals":1.0}]);
+        var propertyEditor = editor.getEditor('root.precision');
+        propertyEditor.setValue(null);
+        propertyEditor.setValue(currentValue);
+        
+      }
+      catch (e) {
+        console.log(e.message);
+        console.log('Unable to set config key: precision');
+      }
     propertyEditorAccessibilityFixes(editor.getEditor('root.precision'));
 
     propertyEditorAccessibilityFixes(editor.getEditor('root.progress_status'));
@@ -904,12 +892,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250512061201'></script>
+<script src='/site/assets/js/sdg.js?v=20250512071427'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250512061201"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250512071427"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
