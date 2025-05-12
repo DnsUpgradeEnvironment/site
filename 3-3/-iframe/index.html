@@ -146,7 +146,7 @@ var translations = {
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
         <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250512071427">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20250512074230">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -342,7 +342,7 @@ layout-indicator-iframe
   data-graphseriesbreaks="[{&quot;value&quot;:0.0},{&quot;value&quot;:0.0},{&quot;value&quot;:0.0}]"
   data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen EUR&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;xxxzuordnung&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Pandemieprävention und -reaktion&quot;,&quot;Eindämmung der COVID-19-Pandemie&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zuordnung&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
   data-graphstepsize="[{&quot;step&quot;:100.0}]"
@@ -376,133 +376,15 @@ layout-indicator-iframe
   <div id="datatables">
 
     
-    <a role="button" href="https://DnsUpgradeEnvironment.github.io/dns-data/de/headline/3-3.csv" class="btn btn-primary btn-download" download="indicator_3-3.csv" tabindex="0" role="button">Speichern der Headline im CSV-Format</a>
-    
     <a role="button" href="https://DnsUpgradeEnvironment.github.io/dns-data/de/data/3-3.csv" class="btn btn-primary btn-download" download='indicator_3-3.csv' tabindex='0' role='button'>Daten im CSV-Format speichern</a>
 
     <p class="no-js-disaggregation-hint"></p>
 
     
     <h3></h3>
-    <table class="table-responsive table table-hover dataTable no-footer" role="grid">
-      <caption>Ausgaben bzw. Zusagen zur globalen Pandemieprävention und -reaktion</caption>
-      <thead>
-        
-        
-        <th scope="col">Year</th>
-        
-        
-        
-        <th scope="col">Value</th>
-        
-        
-        
-        <th scope="col">Units</th>
-        
-        
-        
-        <th scope="col" class="table-value">Series</th>
-        
-        
-      </thead>
-      <tbody>
-        
-        <tr>
-          
-          
-          <td>2021</td>
-          
-          
-          
-          <td>7.35</td>
-          
-          
-          
-          <td>Prozent</td>
-          
-          
-          
-          <td class="table-value">Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td>Prozent</td>
-          
-          
-          
-          <td class="table-value">Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2022</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td>Prozent</td>
-          
-          
-          
-          <td class="table-value">Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2030</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td>Prozent</td>
-          
-          
-          
-          <td class="table-value">Anteil der Länder, die Deutschland bei der Pandemieprävention, -vorsorge und -reaktion (PPR) unterstützt und die im Global Health Security Index (GHSI) Fortschritte gemacht haben, an der Anzahl der Länder, die Deutschland im Bereich PPR unterstützt</td>
-          
-          
-        </tr>
-        
-      </tbody>
-    </table>
     
   </div>
 
-  
-  <div id="datatableFooter">
-    
-    <p>Datenquelle: <a href="https://www.auswaertiges-amt.de/de/" target="_blank" onclick="return confirm_alert('des Auswärtigen Amtes', 'De')">Auswärtiges Amt</a></p>
-    
-    
-    <p>Geographische Abdeckung: Deutschland</p>
-    
-    
-    
-  </div>
   
 
 </div>
@@ -6293,12 +6175,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20250512071427'></script>
+<script src='/site/assets/js/sdg.js?v=20250512074230'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20250512071427"></script><script>
+    <script src="/site/assets/js/custom.js?v=20250512074230"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
