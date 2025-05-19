@@ -4526,6 +4526,7 @@ opensdg.chartTypes.base = function(info) {
     }
 
     // Manually set the borderWidths to 0 to avoid a weird border effect on the bars.
+    // exception for line datasets in a mixed chart
     config.data.datasets.forEach(function(dataset) {
       if (dataset.type == 'line') {
         dataset.borderWidth = 2;
@@ -4534,6 +4535,14 @@ opensdg.chartTypes.base = function(info) {
         dataset.borderWidth = 0;
       }
         //dataset.borderWidth = 0;
+    });
+    config.data.datasets.forEach(function(dataset) {
+      if (dataset.type == 'line') {
+        dataset.order = 0;
+      }
+      else {
+        ddataset.order = 1;
+      }
     });
     // Add these overrides onto the normal config, and return it.
     _.merge(config, overrides);
