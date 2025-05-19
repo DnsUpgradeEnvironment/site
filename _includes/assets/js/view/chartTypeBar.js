@@ -2,6 +2,8 @@ opensdg.chartTypes.bar = function (info) {
     var config = opensdg.chartTypes.base(info);
     var overrides = {
         type: 'bar',
+        spanGaps: true,
+        showLine: true,
     };
     if (info.stackedDisaggregation) {
         console.log('Stacked', info.stackedDisaggregation, typeof info.stackedDisaggregation);
