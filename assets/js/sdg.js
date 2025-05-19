@@ -4541,7 +4541,7 @@ opensdg.chartTypes.base = function(info) {
         dataset.order = 0;
       }
       else {
-        ddataset.order = 1;
+        dataset.order = 1;
       }
     });
     // Add these overrides onto the normal config, and return it.
