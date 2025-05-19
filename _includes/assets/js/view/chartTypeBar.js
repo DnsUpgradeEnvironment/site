@@ -4,6 +4,7 @@ opensdg.chartTypes.bar = function (info) {
         type: 'bar',
         spanGaps: true,
         showLine: true,
+        borderWidth: 2,
     };
     if (info.stackedDisaggregation) {
         console.log('Stacked', info.stackedDisaggregation, typeof info.stackedDisaggregation);
