@@ -2390,7 +2390,7 @@ function getDataMatchingCombination(data, combination, selectableFields) {
  * @return {Object|undefined} Color assignment object if found.
  */
 function getColorAssignmentByCombination(colorAssignments, combination) {
-  console.log("colorAssignement: ", colorAssignments);
+  //console.log("colorAssignement: ", colorAssignments);
   return colorAssignments.find(function(assignment) {
     return assignment.combination === combination;
   });
@@ -4489,6 +4489,8 @@ opensdg.chartTypes.base = function(info) {
     var config = opensdg.chartTypes.base(info);
     var overrides = {
         type: 'bar',
+        spanGaps: true,
+        showLine: true,
     };
     if (info.stackedDisaggregation) {
         console.log('Stacked', info.stackedDisaggregation, typeof info.stackedDisaggregation);
