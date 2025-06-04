@@ -120,7 +120,7 @@ indicator_tabs:
   tab_4: ''
 languages:
   - de
-  - en
+  #- en
 languages_public: []
 logos:
   - src: assets/img/de/DNS_logo.png
