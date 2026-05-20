@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -192,7 +192,7 @@ layout-config-builder
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/en/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/en/DNS_logo.png" alt="DESTATIS - German Strategy for Sustainable Development" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Sustainable Development Goals - header.tag_line" />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -200,42 +200,18 @@ layout-config-builder
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/en/status/">Methodology</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/status_summary/">Overview</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategy
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/dns/">German Sustainable Development Strategy</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/publications/">Publications</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/laender/">Länder</a>
+    <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/menu.1_global_indicators_path">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Help
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/navigation/">Structure of the online platform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/guidance/">Technical notes</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/en/goals">Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/about">About</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -258,14 +234,21 @@ layout-config-builder
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/site/17-2/metadata/">
-                Deutsch
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/17-2/metadata/">
+              Deutsch
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -331,7 +314,7 @@ data-event-label="high"
   
   
   
-  <script src="https://open-sdg.org/open-sdg-config-form/bundle.js"></script>
+  <script src="https://open-sdg.org/open-sdg-config-form/2.4.0/bundle.js"></script>
 </div>
 <footer role="contentinfo">
     <div class="container">
@@ -344,12 +327,21 @@ data-event-label="high"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            <a href="/site/en/contact-us">Contact us</a>
                             
                         </li>
                         <li>
-                            <a href="/site/en/imprint/">Legal Notice</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/en/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -391,12 +383,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

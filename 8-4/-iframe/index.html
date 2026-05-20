@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/8/" aria-label=" 8" title=" 8">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/8.png"
                         alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8"
                         id="goal-8"
                         class="goal-icon-image goal-icon-image-" />
@@ -1081,6 +1081,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1151,6 +1160,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1189,9 +1207,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1203,16 +1221,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1253,7 +1271,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2181,9 +2199,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2191,31 +2210,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #a21942; font-size: large">8.4&nbsp;Bruttoinlandsprodukt je Einwohnerin und Einwohner</b><br /><br /><b>Inhalt und Entwicklung des Indikators</b><br /><br />Der Indikator stellt das preisbereinigte Bruttoinlandsprodukt (BIP) je Einwohnerin und Einwohner dar. Im Jahr 2024&nbsp;betrug es 42&nbsp;583&nbsp;Euro pro Kopf und lag damit 0,5&nbsp;% unter dem Vorjahreswert. Zwischen 1991&nbsp;und 2024&nbsp;stieg das preisbereinigte BIP pro Kopf insgesamt um 40,0&nbsp;%.<br /><br />Im Jahr 2020&nbsp;führte die COVID-19-Pandemie zu einem Rückgang des preisbereinigten BIP pro Kopf um 4,2&nbsp;%. Einen noch stärkeren Einbruch gab es nur 2009&nbsp;infolge der globalen Finanz- und Wirtschaftskrise mit einem Minus von 5,2&nbsp;%. Mangels einer einheitlichen Definition für ein angemessenes und stetiges Wirtschaftswachstum kann lediglich die durchschnittliche jährliche Veränderung der letzten fünf Jahre als Referenz herangezogen werden. Diese lag bei 0,3&nbsp;% und weist somit auf eine längerfristig negative Entwicklung des Indikators hin.<br /><br />Auf Ebene der Bundesländer zeigte sich 2024&nbsp;folgendes Bild: Sachsen-Anhalt verzeichnete mit 28&nbsp;895&nbsp;Euro das niedrigste, Hamburg mit 66&nbsp;860&nbsp;Euro das höchste reale BIP je Einwohnerin und Einwohner.<br /><br /><b>Hintergrund zur Berechnung</b><br /><br />Das BIP erfasst die gesamte Wirtschaftsleistung, die in einer Berichtsperiode im Inland erbracht wird. Berücksichtigt werden dabei sowohl auf Märkten gehandelte als auch staatlich bereitgestellte Waren und Dienstleistungen. Als Einwohnerinnen und Einwohner gelten alle Personen, die ihren ständigen Wohnsitz in Deutschland haben.<br /><br />Grundlage der Berechnungen ist das Europäische System Volkswirtschaftlicher Gesamtrechnungen (ESVG), das die Konzepte und Methoden der Volkswirtschaftlichen Gesamtrechnungen (VGR) verbindlich festlegt. Die VGR sind ein Gesamtrechensystem, das das wirtschaftliche Geschehen in einem bestimmten Zeitraum abbildet. Die Ergebnisse werden in einem geschlossenen Kontensystems konsistent ermittelt und in Tabellenform dargestellt. Das BIP ist die zentrale Kennzahl der VGR.<br /><br />Die Anzahl der Einwohnerinnen und Einwohner, die für die Berechnung des Indikators verwendet werden, sind die auf den Zensus 2011&nbsp;zurückgerechneten und fortgeschriebenen durchschnittlichen Bevölkerungszahlen des Statistischen Bundesamtes.<br /><br /><b>Grenzen des BIP</b><br /><br />Das BIP ist in erster Linie ein Produktions- und Einkommensindikator. Für eine umfassende Wohlfahrtsmessung sind ergänzende Indikatoren notwendig, etwa aus den Umweltökonomischen Gesamtrechnungen (UGR), die Wechselwirkungen zwischen Wirtschaft und Umwelt abbilden.<br /><br />Als einzelne Zahl erlaubt das BIP naturgemäß keine Aussagen über die Verteilung von Einkommen und Vermögen auf verschiedene Bevölkerungsgruppen. Veränderungen von Bestandsgrößen werden&nbsp;–&nbsp;mit Ausnahme des Kapitalstocks, der über Investitionen und Abschreibungen erfasst wird&nbsp;–&nbsp;im BIP nicht erfasst.<br /><br />Zentrale wirtschaftliche Größen wie Bestände und Qualitäten des Humankapitals (etwa Bildung, Gesundheit), des Sozialkapitals (etwa Sicherheit, Integration) und des Naturkapitals (etwa Ressourcen, Ökosysteme) bleiben ebenfalls im BIP unberücksichtigt. Aussagen darüber, ob das BIP-Wachstum zur Kapitalerhaltung im umfassenden Sinn beigetragen hat, sind daher nicht möglich. Entsprechend lassen sich aus dem BIP keine direkten Rückschlüsse auf die Nachhaltigkeit des Wirtschaftswachstums ziehen.</p>
+            <p>Bruttoinlandsprodukt je Einwohnerin und Einwohner</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>8.4.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4013,12 +4079,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

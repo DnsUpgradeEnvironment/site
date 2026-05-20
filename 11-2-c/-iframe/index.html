@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/11/" aria-label=" 11" title=" 11">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/11.png"
                         alt="Nachhaltige Städte und Gemeinden - Ziel 11"
                         id="goal-11"
                         class="goal-icon-image goal-icon-image-" />
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1603,9 +1621,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1613,31 +1632,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #fd9d24; font-size: large">11.2.c Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln</b><br /><br />Der Indikator wird vom Bundesinstitut für Bau-, Stadt- und Raumforschung (BBSR) berechnet. Als öffentliche Verkehrsmittel gelten Verkehrsangebote, die von jedermann gegen Entgelt genutzt werden können. Flexible Bedienformen wie Anrufbusse, die ohne feste Haltestellen und Fahrpläne auf Anforderung verkehren, bleiben unberücksichtigt. Die bevölkerungsgewichtete durchschnittliche Reisezeit zum nächstgelegenen Mittel- oder Oberzentrum lag im Jahr 2012&nbsp;bei 23,5&nbsp;Minuten. Bis 2020&nbsp;sank sie auf 20,5&nbsp;Minuten und betrug im Jahr 2024&nbsp;schließlich 17,7&nbsp;Minuten. Dies entspricht einer Verringerung um 24,7&nbsp;% im Zeitraum von 2012&nbsp;bis 2024.<br /><br />Die Vergleichbarkeit der Ergebnisse ist jedoch eingeschränkt, da sich sowohl die Methodik als auch die Berechnungsgrundlagen im Zeitverlauf verändert haben. Einerseits variierte die Anzahl der berücksichtigten Mittel- und Oberzentren, andererseits wurde ab 2024&nbsp;die Reisezeit nicht mehr von jeder Haltestelle aus berechnet, sondern erstmals von jeder bewohnten 100×100-Meter-Gitterzelle. Hierzu wurde das gesamte Bundesgebiet in Gitterzellen dieser Größe unterteilt und anhand der Meldeadressen überprüft, ob diese bewohnt sind. Zudem werden in Großstädten nun auch Stadtbezirks- und Stadtteilzentren als Zielpunkte berücksichtigt.<br /><br />Darüber hinaus wurden aktualisierte Datenquellen zu Fahrplänen und Wegenetzen sowie die Ergebnisse des Zensus 2022&nbsp;auf Gitterzellenebene in die Analysen einbezogen. Grundlage der Erreichbarkeitsanalysen mit öffentlichen Verkehrsmitteln sind deutschlandweite Fahrplandaten im GTFS-Format (Soll-Fahrplandaten), die über die DELFI-Integrationsplattform (DIP) aus den Landesauskunftssystemen zusammengeführt und auf der <a href="https://www.opendata-oepnv.de/ht/de/willkommen">Plattform Open Data ÖPNV</a> bereitgestellt werden. Auf dieser Basis wurden die jeweils kürzesten Fahrzeiten zum nächstgelegenen Mittel- oder Oberzentrum während der morgendlichen Hauptverkehrszeit ermittelt.<br /><br />Das Zeitfenster für die Hauptverkehrszeit wurde je nach Berichtsjahr unterschiedlich definiert: 2012&nbsp;wurden Verbindungen mit Ankunftszeit zwischen 6:00&nbsp;und 9:00&nbsp;Uhr berücksichtigt, 2020&nbsp;zwischen 6:00&nbsp;und 12:00&nbsp;Uhr. Für das Jahr 2024&nbsp;wurde als Startzeitpunkt beziehungsweise Reisebeginn der 8. Oktober 2024&nbsp;um 8:00&nbsp;Uhr festgelegt&nbsp;–&nbsp;ein Werktag außerhalb der Ferienzeiten. Die Häufigkeit von Fahrtmöglichkeiten sowie Verbindungen außerhalb des jeweiligen Zeitfensters gehen nicht in die Berechnung des Indikators ein.<br /><br />Ergänzend zu den Fahrzeiten wurden auch Wegezeiten zu den Abgangshaltestellen berücksichtigt. Hierfür kam ein deutschlandweites, auf OpenStreetMap basierendes Straßen- und Wegenetz zum Einsatz, mit dem Zu-, Abgangs- und Umsteigewege modelliert wurden. Dabei wurden unterschiedliche Reisegeschwindigkeiten zugrunde gelegt&nbsp;–&nbsp;etwa 3,6&nbsp;Kilometer pro Stunde für Fußgängerinnen und Fußgänger sowie 18&nbsp;Kilometer pro Stunde für Radfahrende&nbsp;–&nbsp;um verschiedene Reisemodi abzubilden.<br /><br />Die Einstufung eines Ortes als Mittel- oder Oberzentrum erfolgt durch die Landesplanungsbehörden der Länder. Maßgeblich ist dabei die Ausstattung mit Versorgungsangeboten an Waren, Dienstleistungen und Infrastrukturen, die in den umliegenden Unterzentren nicht zur Verfügung stehen. Hierzu zählen beispielsweise Facharztpraxen, Krankenhäuser, kulturelle Einrichtungen sowie weiterführende Schulen und Hochschulen. Bis einschließlich 2024&nbsp;wurde in jedem Mittel- oder Oberzentrum&nbsp;–&nbsp;auch in Großstädten&nbsp;–&nbsp;lediglich ein Zielpunkt (Stadtzentrum) berücksichtigt.<br /><br />Im Jahr 2024&nbsp;wurden in allen Oberzentren mit mehr als 250&nbsp;000&nbsp;Einwohnerinnen und Einwohnern zusätzlich zum Stadtzentrum insgesamt 107&nbsp;weitere zentrale Lagen auf Stadtbezirks- oder Stadtteilebene einbezogen. Grundlage hierfür bildeten Pendler- und Mobilfunkverflechtungen auf Gitterzellenebene, der Central-Shopping District (infas 360) sowie Clusteranalysen auf Basis von Points-of-Interest-Daten des Bundesamtes für Kartografie und Geodäsie (BKG). Berücksichtigt wurden ausschließlich Lagen mit einem Versorgungsbereich von mindestens 50&nbsp;000&nbsp;Einwohnerinnen und Einwohnern, in denen umfassend mittelzentrale Funktionen wahrgenommen werden können. Durch die Berücksichtigung dieser zusätzlichen zentralen Lagen als Zielpunkte ergibt sich in Großstädten ein deutlich differenzierteres Bild der Erreichbarkeiten. Der Aspekt der Daseinsvorsorge im Hinblick auf mittelzentrale Funktionen wird dadurch deutlich realitätsnäher abgebildet.</p>
+            <p>Erreichbarkeit von Mittel- und Oberzentren mit öffentlichen Verkehrsmitteln</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>11.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3397,12 +3463,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

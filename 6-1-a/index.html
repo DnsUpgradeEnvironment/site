@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/6-1-a/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/6-1-a/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/6/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/6/" aria-label=" 6" title=" 6">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/6.png"
                         alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
                         id="goal-6"
                         class="goal-icon-image goal-icon-image-" />
@@ -1239,6 +1225,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1309,6 +1304,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1347,9 +1351,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1361,16 +1365,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1415,7 +1419,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2343,9 +2347,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2353,31 +2358,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #26bde2; font-size: large">6.1.a Phosphor in Fließgewässern</b><br /><br />Phosphor gelangt in der Regel durch den Eintrag von Phosphaten in die Gewässer. Die Phosphorbelastung der Flüsse wird von den Bundesländern im Rahmen der Überwachung gemäß der EG-Wasserrahmenrichtlinie erfasst. Als Datengrundlage für den Indikator dient das Überblicksmessnetz mit rund 250&nbsp;Messstellen. Diese befinden sich überwiegend in den Hauptläufen großer Flüsse sowie an den Einmündungen bedeutender Nebengewässer. Die Zusammenstellung der Daten erfolgt durch das Umweltbundesamt auf Basis von Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA). Seen und andere Stillgewässer werden durch den Indikator nicht erfasst.<br /><br />Der Indikator betrachtet, ob der jeweils gültige Orientierungswert an einer Messstelle im Jahresmittel eingehalten oder unterschritten wurde&nbsp;–&nbsp;nicht jedoch, in welchem Ausmaß dieser bei einer Überschreitung verfehlt wurde. Die Ergebnisse der einzelnen Messstellen werden in zusammengefasster Form dargestellt. Der Wert des Indikators hängt somit von der Anzahl und der Repräsentativität der Messstellenverteilung ab. <br /><br />Da die verschiedenen Gewässertypen unterschiedlich empfindlich auf Nährstoffe wie Phosphor reagieren, gelten für die Messstellen jeweils unterschiedliche Orientierungswerte: Für den Großteil der Fließgewässer liegt der Orientierungswert bei 0,1&nbsp;Milligramm Phosphor pro Liter. Bei organisch geprägten Flüssen beträgt er 0,15&nbsp;Milligramm pro Liter, bei Marschgewässern 0,3&nbsp;Milligramm pro Liter und bei tidebeeinflussten Übergangsgewässern 0,045&nbsp;Milligramm pro Liter.<br /><br />Im Jahr 2023&nbsp;lag der Jahresmittelwert an 41,8&nbsp;% der Messstellen in Flüssen unter dem jeweiligen Orientierungswert. 50,9&nbsp;% der Messstellen wiesen mittlere Konzentrationen auf, das heißt Werte bis zum Doppelten des Orientierungswertes. Weitere 5,2&nbsp;% der Messstellen lagen im Bereich bis zum Vierfachen dieses Wertes. Die verbleibenden 2,2&nbsp;% verzeichneten noch höhere Konzentrationen.<br /><br />Im Zeitverlauf hat sich der Anteil der Messstellen, an denen der Orientierungswert eingehalten wird, tendenziell erhöht und seit 1990&nbsp;mehr als verdoppelt. Besonders der Anteil der Messstellen mit sehr hohen Konzentrationen (mehr als dem doppelten des Orientierungswertes) ist seit Anfang der 1990er-Jahre deutlich zurückgegangen. Maßgeblich dazu beigetragen, die Belastung der Fließgewässer mit Phosphor spürbar zu verringern, haben die Einführung phosphatfreier Waschmittel und die Reduktion des Phosphats in den eingeleiteten geklärten Abwässern.<br /><br />Betrachtet man den durchschnittlichen Verlauf der letzten fünf Jahre, bleibt der Indikator konstant. Das politisch festgelegte Ziel, den jeweils vorgegebenen Grenzwert bis 2030&nbsp;an allen Messstellen einzuhalten, würde somit weiterhin deutlich verfehlt. Die Indikatoren zum Phosphor- und Nitratgehalt (6.1.a und <a href="https://dns-indikatoren.de/6-1-b/">6.1.b</a>) erfassen zwei wesentliche Aspekte der Gewässerqualität. Daneben spielen weitere Faktoren eine Rolle, wie die Ausstattung der Gewässer mit naturnahen Lebensräumen sowie die Belastung durch Schadstoffe wie Pflanzenschutzmittel, Metalle oder Arzneimittel, die ebenfalls für die Gewässerqualität relevant sind.</p>
+            <p>Phosphor in Fließgewässern</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>6.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4166,12 +4218,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4215,12 +4276,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

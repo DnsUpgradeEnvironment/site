@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'en',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/en/9/" aria-label=" 9" title=" 9">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png"
                         alt="Industry, innovation and infrastructure - Goal 9"
                         id="goal-9"
                         class="goal-icon-image goal-icon-image-" />
@@ -1081,6 +1081,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1151,6 +1160,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1189,9 +1207,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >National Metadata</button>
         </li>
     
         
@@ -1203,16 +1221,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Content and progress</button>
+            >Global Metadata</button>
         </li>
     
         
@@ -1253,7 +1271,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2181,9 +2199,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2191,31 +2210,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Content and progress </th>
+        <th scope="row">Indicator name </th>
         <td>
           
-            <p><b style="color: #fd6925; font-size: large">9.1.a Private and public expenditure on research and development</b><br /><br />Research and Development (R&amp;D) comprises scientific activities defined as creative and systematic work undertaken to increase the stock of knowledge&nbsp;–&nbsp;including knowledge of humanity, culture, and society&nbsp;–&nbsp;and to devise new applications based on existing knowledge. A significant element of novelty or further development serves as the central criterion distinguishing R&amp;D from related activities.<br /><br />The share of R&amp;D expenditure in Gross Domestic Product (GDP) is determined annually by the Federal Statistical Office. Total R&amp;D expenditure includes spending by the government sector (including non-profit private research institutions), higher education institutions, and the business enterprise sector. The surveys and calculations follow the methodological guidelines of the Frascati Manual issued by the Organisation for Economic Co-operation and Development (OECD), thereby ensuring international comparability.<br /><br />In 2023, total R&amp;D expenditure in Germany amounted to 132.0&nbsp;billion euros according to preliminary figures. This corresponded to 3.2% of GDP, falling 0.3&nbsp;percentage points short of the politically defined target of at least 3.5% of GDP per year. Since 2000, the R&amp;D-to-GDP ratio in Germany has increased by 0.8&nbsp;percentage points. In total, R&amp;D expenditure has doubled over this period. In the first year of the COVID-19&nbsp;pandemic (2020), R&amp;D expenditure declined by 3.4&nbsp;billion euros compared to 2019. This decrease was exclusively attributable to the business enterprise sector, whereas the other two sectors recorded increases.<br /><br />In 2023, the largest share of R&amp;D expenditure in Germany&nbsp;–&nbsp;68.5%&nbsp;–&nbsp;was attributed to the business sector, followed by 17.4% in the higher education sector and 14.1% in government and non-profit private research institutions. A total of 824,396&nbsp;individuals (measured in full-time equivalents) were employed in R&amp;D, with only the proportion of their working time dedicated to R&amp;D activities being included. Of this workforce, 65.9% were employed in the business sector, 19.1% in higher education institutions, and 14.9% in government and non-profit private research institutions.<br /><br />In a European comparison, Germany’s R&amp;D-to-GDP ratio of 3.1% in 2023&nbsp;exceeded the EU-27&nbsp;average of 2.2%. Higher ratios were recorded in Sweden (3.6%), Belgium (3.3%), and Austria (3.3%). At the national level, Baden-Württemberg reported the highest R&amp;D intensity at 5.7% of GDP, followed by Rheinland-Pfalz at 3.6%, Bayern at 3.4% and Berlin at 3.1% and Hessen at 3.0%.</p>
+            <p>Private and public expenditure on research and development</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
+          
+            <p>9.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4954,12 +5020,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

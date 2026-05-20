@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/5-1-e/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/5-1-e/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/5/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/5/" aria-label=" 5" title=" 5">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/5.png"
                         alt="Geschlechtergleichheit - Ziel 5"
                         id="goal-5"
                         class="goal-icon-image goal-icon-image-" />
@@ -645,6 +631,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -715,6 +710,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -753,9 +757,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -767,16 +771,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -821,7 +825,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1749,9 +1753,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1759,31 +1764,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #ff3a21; font-size: large">5.1.e Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator stellt das Erwerbsverhalten von Müttern und Vätern gegenüber. Die geleisteten Arbeitsstunden beziehen sich dabei nicht nur auf erwerbstätige, sondern auf alle Mütter und Väter. Dadurch werden sowohl die unterschiedlichen Stundenumfänge von arbeitenden Müttern und Vätern als auch die unterschiedlich hohen Erwerbstätigenquoten berücksichtigt.<br /><br />Für den Indikator werden Mütter und Väter im Alter von 15&nbsp;bis unter 65&nbsp;Jahren berücksichtigt, die mit mindestens einem Kind unter 18&nbsp;Jahren im Haushalt leben. Als Kinder gelten neben leiblichen Kindern auch Stief-, Pflege- und Adoptivkinder. Kinder, die noch im Haushalt der Eltern leben, dort aber bereits eigene Kinder betreuen, sowie Kinder, die in einer Lebensgemeinschaft mit einer Partnerin oder einem Partner leben, werden nicht der Herkunftsfamilie zugeordnet, sondern als eigene Familie beziehungsweise Lebensform in der Statistik erfasst.<br /><br />Die Definition der Arbeitszeit folgt dem Konzept der Internationalen Arbeitsorganisation (ILO), das entgeltliche Arbeit sowie selbstständige oder mithelfende Tätigkeit umfasst. Unbezahlte Tätigkeiten wie Arbeiten im eigenen oder fremden Haushalt, Gartenarbeit, die Pflege und Betreuung von Kindern und Erwachsenen sowie ehrenamtliche Tätigkeiten werden nicht berücksichtigt. Die Angaben beziehen sich auf die normalerweise geleistete Arbeitszeit. Gelegentliche oder einmalige Abweichungen von der vertraglich vereinbarten oder allgemein üblichen Arbeitszeit, wie beispielsweise durch Urlaub oder Krankheit, werden nicht berücksichtigt. Dadurch werden Verzerrungen, die unter anderem durch jahreszeitliche Schwankungen entstehen können, vermieden.<br /><br />Einschränkungen der Arbeitszeit aufgrund von Mutterschutz oder Elternzeit fließen jedoch in die Erhebung ein. Arbeitet ein Elternteil beispielsweise grundsätzlich in Vollzeit, befindet sich jedoch zum Zeitpunkt der Befragung in Elternzeit, wird die reduzierte Stundenzahl in den Indikator einbezogen. Dem Indikator liegt das Konzept der Erwerbstätigkeit gemäß der Definition der ILO in Verbindung mit dem Konzept der realisierten Erwerbstätigkeit des Statistischen Bundesamts zugrunde. Das bedeutet, dass Personen im Mutterschutz oder in Elternzeit als Nichterwerbstätige gezählt werden. Neben Erwerbslosen und Nichterwerbspersonen werden somit auch Personen im Mutterschutz oder in Elternzeit mit einer Gewichtung von null Stunden erfasst.<br /><br />Der Unterschied zu anderen Veröffentlichungen besteht darin, dass die Summe der Arbeitsstunden durch die Gesamtzahl der jeweiligen Mütter und Väter geteilt wird. Der so ermittelte Stundendurchschnitt für alle Mütter und Väter unterscheidet sich entsprechend von der durchschnittlichen Arbeitszeit erwerbstätiger Mütter und Väter. Die Daten stammen aus dem Mikrozensus, einer jährlichen Stichprobenerhebung, die 1&nbsp;% der Bevölkerung in Deutschland umfasst. Aufgrund einer umfassenden Neugestaltung des Mikrozensus im Jahr 2020&nbsp;sind die ab diesem Jahr erhobenen Daten nur eingeschränkt mit den Vorjahresdaten vergleichbar.<br /><br /><b>Entwicklung</b><br /><br />Die durchschnittliche Arbeitszeit der Väter lag seit 2005&nbsp;stets über 35&nbsp;Stunden pro Woche und erreichte im Jahr 2012&nbsp;mit 38,8&nbsp;Stunden den höchsten Wert. Der mit 36,5&nbsp;Stunden deutlich niedrigere Wert im Jahr 2020&nbsp;könnte einerseits auf die zuvor genannten Änderungen der Datenquelle zurückzuführen sein, andererseits jedoch auch durch die Auswirkungen der COVID-19-Pandemie, einschließlich der reduzierten Erwerbstätigkeit und der Schließungen von Schulen und Betreuungseinrichtungen, beeinflusst worden sein. 2023&nbsp;betrug die durchschnittliche Wochenarbeitszeit der Väter 36,8&nbsp;Stunden.<br /><br />Die durchschnittliche wöchentliche Arbeitszeit der Mütter stieg zwischen 2006&nbsp;und 2023&nbsp;kontinuierlich an, mit Ausnahme des Jahres 2020. Im Jahr 2023&nbsp;lag sie bei 19,2&nbsp;Stunden. Dies entspricht etwas mehr als der Hälfte der durchschnittlichen Arbeitszeit der Väter. Die Verringerung der Differenz zwischen den Erwerbsarbeitszeiten von Müttern und Vätern von 22,2&nbsp;Stunden im Jahr 2006&nbsp;auf 17,6&nbsp;Stunden im Jahr 2023, die insbesondere auf eine gestiegene Arbeitszeit der Mütter zurückzuführen ist, zeigt, dass sich die Erwerbsbeteiligung von Müttern verändert hat.<br /><br />Die Veränderung könnte auf eine zunehmende Flexibilität und Familienfreundlichkeit auf dem Arbeitsmarkt, verbesserte Rahmenbedingungen für eine Vereinbarkeit von Familie und Beruf sowie andere gesellschaftliche Entwicklungen zurückzuführen sein. Während die Arbeitszeit der Väter weitgehend konstant geblieben ist, zeigt sich bei Müttern eine zunehmende Integration in den Arbeitsmarkt.<br /><br />Der Indikator stellt lediglich die Unterschiede in den quantitativen Umfängen der Erwerbstätigkeit dar. Er gibt daher keine Auskunft über die zugrundeliegenden Ursachen oder Motivationen, warum sich die Erwerbsarbeitszeiten nicht deutlicher annähern, wie etwa fehlende Betreuungsmöglichkeiten, der Wunsch mehr Zeit mit den Kindern zu verbringen, eine unterschiedliche Bezahlung der beiden Elternteile oder ein alleiniges Erziehen der Kinder, das überwiegend von Müttern geleistet wird.<br /><br />Das politisch festgelegte Ziel ist eine Annäherung der durchschnittlichen wöchentlichen Erwerbsarbeitszeit von Müttern und Vätern. Derzeit wird diese Annäherung überwiegend durch eine Erhöhung der Arbeitszeit von Müttern erreicht, während die Arbeitszeit von Vätern nur geringfügig sank.</p>
+            <p>Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>5.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3552,12 +3604,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -3601,12 +3662,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

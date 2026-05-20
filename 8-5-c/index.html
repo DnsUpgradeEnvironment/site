@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/8-5-c/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/8-5-c/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/8/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/8/" aria-label=" 8" title=" 8">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/8.png"
                         alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8"
                         id="goal-8"
                         class="goal-icon-image goal-icon-image-" />
@@ -1127,6 +1113,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1197,6 +1192,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1235,9 +1239,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1249,16 +1253,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1303,7 +1307,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2231,9 +2235,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2241,31 +2246,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #a21942; font-size: large">8.5.c Tarifgebundene Beschäftigungsverhältnisse</b><br /><br />Der Indikator stellt die Anzahl der Beschäftigungsverhältnisse in Betrieben mit Tarifbindung in Relation zur Gesamtzahl aller Beschäftigungsverhältnisse in Deutschland dar. Gelten für ein Beschäftigungsverhältnis mehrere unterschiedliche Tarifverträge, so wird das Beschäftigungsverhältnis nur einmal erfasst. Zudem ist der Indikator nicht eins zu eins auf den Anteil an beschäftigten Personen mit Tarifvertrag übertragbar, da einzelne Personen auch mehreren Beschäftigungsverhältnissen nachgehen können. Der Indikator bezieht sich ausschließlich auf die quantitative Verbreitung von Tarifverträgen, die sich inhaltlich stark unterscheiden können. So gehen Tarifverträge, die vollumfängliche Arbeitsbedingungen beinhalten&nbsp;–&nbsp;etwa Vergütung, Arbeitszeiten, Urlaubsdauer, Sonderzahlungen&nbsp;–&nbsp;genauso in den Indikator ein, wie Tarifverträge, die sich eventuell nur auf einen dieser Bereiche beschränken und einen entsprechend geringeren Einfluss auf die Beschäftigungsverhältnisse ausüben.<br /><br />Die Daten zum Anteil tarifgebundener Beschäftigungsverhältnisse stammen aus dem jährlichen IAB-Betriebspanel zur Verbreitung von Tarifverträgen und betrieblicher Mitbestimmung in Deutschland, das vom Institut für Arbeitsmarkt- und Berufsforschung (IAB) erhoben wird. Das IAB befragt dabei bundesweit 15&nbsp;000&nbsp;Betriebe aller Branchen und Größenklassen. Die befragten Betriebe stellen eine repräsentative Auswahl der insgesamt rund 2,1&nbsp;Millionen Betriebe in Deutschland mit mindestens einem oder einer sozialversicherungspflichtig Beschäftigten dar.<br /><br />In Deutschland wird zwischen Branchentarifverträgen (auch Flächentarifverträgen) und Firmentarifverträgen (auch Haustarifverträgen) unterschieden. Branchentarifverträge werden in der Regel zwischen einem Arbeitgeberverband und einer Gewerkschaft für einen bestimmten Wirtschaftszweig abgeschlossen und gelten für die Mitglieder der vertragsschließenden Verbände. Firmentarifverträge werden hingegen in der Regel direkt mit einzelnen Arbeitgebern abgeschlossen. Das deutsche Tarifrecht sieht vor, dass die Rechtsnormen eines Tarifvertrags durch sogenannte Allgemeinverbindlicherklärungen über die eigentlich tarifgebundenen Parteien hinaus auch bisher nicht tarifgebundene Arbeitgeber und Arbeitnehmer erfassen können. Mit der Allgemeinverbindlicherklärung gelten die im Tarifvertrag festgelegten Arbeitsbedingungen, wie Verdienste, Arbeitszeiten und andere Regelungen, für alle Arbeitgeber und ihre Beschäftigten im Geltungsbereich des Tarifvertrags.<br /><br />Im Jahr 2023&nbsp;lag der Anteil tarifgebundener Beschäftigungsverhältnisse erstmals unter der 50-Prozent-Marke bei 49,5&nbsp;%. Werden nur Betriebe der Privatwirtschaft berücksichtigt, ist die Tarifbindung geringer als unter Einbeziehung des öffentlichen Dienstes. In der Privatwirtschaft unterliegen 35&nbsp;% der Beschäftigungsverhältnisse einem Branchentarifvertrag und 7&nbsp;% einem Firmentarifvertrag. Der überwiegende Teil aller Beschäftigungsverhältnisse (41,6&nbsp;%) unterliegt 2023&nbsp;Branchentarifverträgen und nur etwa 7,9&nbsp;% Firmentarifverträgen. Der generelle Abwärtstrend in der Tarifbindung besteht seit Mitte der 1990er Jahre und resultiert fast ausschließlich aus der sinkenden Anzahl von Branchentarifverträgen. Dagegen blieb der Anteil der Beschäftigungsverhältnisse, die einem Firmentarifvertrag unterliegen, seit 1998&nbsp;annähernd konstant.<br /><br />Die Tarifbindung von Betrieben hängt stark von deren Beschäftigtenanzahl ab: In kleinen Betrieben mit 1&nbsp;bis 4&nbsp;Beschäftigten liegt die Tarifbindung bei nur 15&nbsp;%, während sie mit zunehmender Betriebsgröße ansteigt. In Betrieben mit 5&nbsp;bis 9&nbsp;Beschäftigten beträgt sie 21&nbsp;%, in Betrieben mit 10&nbsp;bis 20&nbsp;Beschäftigten 33&nbsp;% und in Betrieben mit 101&nbsp;bis 200&nbsp;Beschäftigten 48&nbsp;%. Kleinere Betriebe sind in Deutschland in Bezug auf die Anzahl deutlich stärker vertreten als große Betriebe. Dadurch fällt, in Verbindung mit der geringeren Tarifbindung in kleineren Betrieben, der Anteil der Tarifbindung noch geringer aus, wenn statt der Beschäftigten die Betriebe betrachtet werden: 2023&nbsp;waren nur 22&nbsp;% der Betriebe durch einen Branchen- und lediglich 2&nbsp;% durch einen Firmentarifvertrag gebunden.<br /><br />Zwischen dem früheren Bundesgebiet und den neuen Ländern besteht ein deutlicher regionaler Unterschied. In den neuen Ländern sind 45&nbsp;% der Beschäftigungsverhältnisse durch einen Tarifvertrag abgedeckt, während dieser Anteil im früheren Bundesgebiet bei 51&nbsp;% liegt. Der allgemeine Rückgang der Tarifbindung aber ist sowohl im früheren Bundesgebiet als auch in den neuen Ländern zu beobachten.</p>
+            <p>Tarifgebundene Beschäftigungsverhältnisse</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>8.5.2</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4054,12 +4106,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4101,12 +4162,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/5/" aria-label=" 5" title=" 5">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/5.png"
                         alt="Geschlechtergleichheit - Ziel 5"
                         id="goal-5"
                         class="goal-icon-image goal-icon-image-" />
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1603,9 +1621,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1613,31 +1632,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #ff3a21; font-size: large">5.1.b, c Frauen in Führungspositionen in der Wirtschaft sowie im öffentlichen Dienst des Bundes</b><br /><br /><b>5.1.b Frauen in Aufsichtsräten der börsennotierten und paritätisch mitbestimmten Unternehmen</b><br /><br />Der Indikator stellt den Anteil von Frauen in Aufsichtsräten von Aktiengesellschaften und Kommanditgesellschaften auf Aktien mit mehr als 2&nbsp;000&nbsp;Beschäftigten sowie von Europäischen Gesellschaften (Societas Europaea, SE) und börsennotierten Unternehmen dar, die der paritätischen Mitbestimmung unterliegen. Datengrundlage ist die Auswertung der veröffentlichten Angaben dieser Unternehmen durch den Verein <i>Frauen in die Aufsichtsräte</i> (FidAR), die im sogenannten Women-on-Board-Index (WOB-Index) veröffentlicht wird.<br /><br />Seit Inkrafttreten des Gesetzes für die gleichberechtigte Teilhabe von Frauen und Männern in Führungspositionen im Jahr 2016&nbsp;müssen mindestens 30&nbsp;% der neu zu besetzenden Aufsichtsratsposten in börsennotierten und zugleich paritätisch mitbestimmten Unternehmen mit Frauen besetzt werden. In der im selben Jahr aktualisierten Deutschen Nachhaltigkeitsstrategie wurde darüber hinaus das Ziel formuliert, bis zum Jahr 2025&nbsp;mindestens 30&nbsp;% aller&nbsp;–&nbsp;also nicht nur neu zu besetzender&nbsp;–&nbsp;Aufsichtsratspositionen in diesen Unternehmen mit Frauen zu besetzen. Dieses Ziel wurde bereits im Jahr 2018&nbsp;mit einem Anteil von 30,9&nbsp;% erreicht.<br /><br />Im Rahmen der Weiterentwicklung der Deutschen Nachhaltigkeitsstrategie im Jahr 2025&nbsp;wurde das Ziel auf einen Frauenanteil von mindestens 40&nbsp;% bis zum Jahr 2030&nbsp;angehoben. Im Januar 2025&nbsp;lag der Anteil bei 38,6&nbsp;% (zum Vergleich: Januar 2015: 21,3&nbsp;%). Bei Fortsetzung der Entwicklung der letzten Jahre wird das Ziel bereits deutlich vor dem Jahr 2030&nbsp;erreicht werden. Es ist zu beachten, dass nur ein begrenzter Teil der Unternehmen und Führungspositionen in der Wirtschaft durch diesen Indikator erfasst wird. Aktuell umfasst der Berichtskreis lediglich rund 100&nbsp;Unternehmen.<br /><br />Die etwa 1&nbsp;600&nbsp;bislang von FidAR betrachteten Aufsichtsratsposten stellen im Vergleich zu insgesamt etwa 1&nbsp;165&nbsp;000&nbsp;Führungskräften in der Wirtschaft (laut Verdienststrukturerhebung 2024) nur einen kleinen Ausschnitt dar. Gemäß der „Internationalen Standardklassifikation der Berufe“ (ISCO) zählen zu den Führungskräften alle Personen, die die Gesamtaktivitäten von Unternehmen, Behörden oder sonstigen Organisationen beziehungsweise ihrer internen Organisationseinheiten planen, steuern, koordinieren und bewerten&nbsp;–&nbsp;einschließlich der Mitglieder von Aufsichtsräten.<br /><br />Nach dieser Definition waren im Jahr 2024&nbsp;von den insgesamt 1&nbsp;165&nbsp;000&nbsp;Führungspositionen in der Wirtschaft 27&nbsp;% mit Frauen besetzt&nbsp;–&nbsp;ein Anstieg um 6,4&nbsp;Prozentpunkte gegenüber 2014. Berücksichtigt wurden dabei alle Betriebe mit mindestens einer sozialversicherungspflichtig beschäftigten Person, ausgenommen der Wirtschaftsabschnitt O <i>Öffentliche Verwaltung, Verteidigung; Sozialversicherung</i> sowie teilweise der Wirtschaftsabschnitt P <i>Erziehung und Unterricht</i>.<br /><br /><b>5.1.c Frauen in Führungspositionen im öffentlichen Dienst des Bundes</b><br /><br />Als einer der größten Arbeitgeber Deutschlands hat sich der Bund mit dem am 21. August 2021&nbsp;in Kraft getretenen Zweiten Führungspositionengesetz (FüPoG II) das Ziel gesetzt, bis 2025&nbsp;eine gleichberechtigte Teilhabe von Frauen in Führungspositionen zu erreichen.<br /><br />Der Indikator bezieht sich auf alle voll- und teilzeitbeschäftigten Personen sowie auf Beschäftigte, die aufgrund familiärer Betreuungs- oder Pflegeaufgaben beurlaubt oder vollständig freigestellt sind. Erfasst werden die obersten Bundesbehörden, ihre nachgeordneten Behörden sowie Körperschaften, Anstalten und Stiftungen des öffentlichen Rechts des Bundes.<br /><br />Bis zum Jahr 2022&nbsp;basierte der Indikator auf einer Sonderauswertung der nicht veröffentlichten Gleichstellungsstatistik des Bundes gemäß den Vorgaben des Bundesgleichstellungsgesetzes (BGleiG). Das Statistische Bundesamt führt diese Statistik seit 2015&nbsp;im Auftrag des Bundesministeriums für Bildung, Familie, Senioren, Frauen und Jugend (BMBFSFJ) alle zwei Jahre zum Stichtag 30. Juni durch.<br /><br />Im Rahmen der Weiterentwicklung des Maßnahmenprogramms Nachhaltigkeit wurde die Gleichstellungsstatistik im Jahr 2021&nbsp;erweitert: Seit dem 30. Juni 2022&nbsp;erfassen die obersten Bundesbehörden zur Jahresmitte auch für ihre nachgeordneten Behörden der unmittelbaren Bundesverwaltung die Anzahl der Frauen und Männer in Führungspositionen sowie die prozentuale Teilhabe.<br /><br />Gemäß § 3&nbsp;der Gleichstellungsstatistikverordnung (GleiStatV) umfasst der Begriff <i>Führungspersonal</i> Personen mit Vorgesetzten- und Leitungsaufgaben in den Dienststellen des Bundes. In den obersten Bundesbehörden handelt es sich dabei in der Regel um Beschäftigte des höheren Dienstes&nbsp;–&nbsp;von Referatsleitungen bis zu Staatssekretärinnen und Staatssekretären. In anderen Bundesdienststellen können Führungsaufgaben auch von Beschäftigten des gehobenen oder mittleren Dienstes wahrgenommen werden. Um die Vergleichbarkeit der Daten sicherzustellen, werden im Indikator jedoch ausschließlich Personen mit Vorgesetzten- und Leitungsaufgaben im höheren Dienst berücksichtigt&nbsp;–&nbsp;unabhängig davon, ob in einzelnen Ressorts auch andere Dienstebenen entsprechende Aufgaben wahrnehmen. Damit weicht die Definition von Führungspositionen in der Gleichstellungsstatistik und im Monitoring der obersten Bundesbehörden von der ISCO-Klassifikation ab, auf der Indikator 5.1.b basiert. Ein direkter Vergleich beider Indikatoren ist daher nur eingeschränkt möglich.<br /><br />Im Jahr 2024&nbsp;lag der Anteil von Frauen in Führungspositionen im öffentlichen Dienst des Bundes bei 46,5&nbsp;%&nbsp;–&nbsp;gegenüber 19,5&nbsp;% im Jahr 2000. Damit hat sich der Anteil seit dem Jahr 2000&nbsp;mehr als verdoppelt. Bei Fortsetzung der Entwicklung der letzten sechs Berichtsjahre würde das politisch festgelegte Ziel der gleichberechtigten Teilhabe&nbsp;–&nbsp;also annähernde numerische Gleichheit&nbsp;–&nbsp;bis 2025&nbsp;erreicht werden.<br /><br />In den obersten Bundesbehörden lag der Anteil von Frauen in Führungspositionen 2024&nbsp;bei 44,7&nbsp;% und damit etwas niedriger als in den nachgeordneten Behörden (46,7&nbsp;%). Den höchsten Frauenanteil wies mit 67,2&nbsp;% das Bundesministerium für Bildung, Familie, Senioren, Frauen und Jugend (BMBFSFJ) auf (60,4&nbsp;% in den nachgeordneten Behörden). Es folgte das Presse- und Informationsamt der Bundesregierung mit 55,2&nbsp;%. Den geringsten Anteil verzeichnete das Bundesministerium der Verteidigung (BMVg) mit 36,5&nbsp;% in der obersten Behörde und 29,6&nbsp;% in den nachgeordneten Behörden.</p>
+            <p>Frauen in Führungspositionen in der Wirtschaft sowie im öffentlichen Dienst des Bundes</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>5.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -5247,12 +5313,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

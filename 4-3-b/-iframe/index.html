@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/4/" aria-label=" 4" title=" 4">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/4.png"
                         alt="Hochwertige Bildung - Ziel 4"
                         id="goal-4"
                         class="goal-icon-image goal-icon-image-" />
@@ -307,7 +307,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_4-3-b'
   data-id="4-3-b"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung"
   data-charttitles="[{&quot;series&quot;:&quot;Differenz zwischen &lt;i&gt;Keine Risikolage&lt;/i&gt; und &lt;i&gt;Mindestens eine Risikolage&lt;/i&gt;&quot;,&quot;title&quot;:&quot;Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung&quot;},{&quot;series&quot;:&quot;Nach Anzahl der Risikolagen&quot;,&quot;title&quot;:&quot;Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung&quot;}]"
   data-measurementunit=""
@@ -656,6 +656,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -723,6 +732,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -761,9 +779,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -775,16 +793,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -825,7 +843,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1753,9 +1771,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1763,31 +1782,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #c5192d; font-size: large">4.3.b Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator erfasst den Anteil der 17- und 18-Jährigen, die über eine Studienberechtigung verfügen oder diese anstreben. Letzteres schließt 17- und 18-Jährige ein, die ein Gymnasium oder eine berufliche Schule besuchen, die zur Hochschul- oder Fachhochschulreife führt.<br /><br />Der Indikator unterscheidet zwischen 17- und 18-Jährigen, die aufgrund ihres sozialen Hintergrunds einer sogenannten Risikolage ausgesetzt sind und denen, die keine solche Risikolage aufweisen. Zu den Risikolagen gehören das <i>soziale Risiko</i>, wenn keines der Elternteile erwerbstätig ist, das Risiko <i>formal gering qualifizierter Eltern</i>, wenn kein Elternteil eine abgeschlossene Berufsausbildung oder eine Hochschulzugangsberechtigung besitzt, sowie das <i>finanzielle Risiko</i>, wenn das Haushaltsnettoäquivalenzeinkommen unterhalb der Armutsgefährdungsgrenze liegt.<br /><br />Die Risikolagen bedingen sich häufig gegenseitig und treten daher oft zusammen auf. Daher sind viele Jugendliche mehreren Risikolagen gleichzeitig ausgesetzt. 4&nbsp;% der unter 18-Jährigen waren gleichzeitig allen drei Risikolagen ausgesetzt, während 30,9&nbsp;% von mindestens einer der drei Risikolagen betroffen waren.<br /><br />Die Daten basieren auf dem Mikrozensus des Statistischen Bundesamtes, einer jährlichen Stichprobenerhebung, die 1&nbsp;% der Bevölkerung in Deutschland umfasst. Aufgrund einer umfassenden Neugestaltung des Mikrozensus im Jahr 2020&nbsp;sind die ab diesem Jahr erhobenen Daten nur eingeschränkt mit denen der vorangegangenen Jahre vergleichbar. Die Ergebnisse für 2023&nbsp;beruhen auf vorläufigen Daten aus dem Erstergebnis des Mikrozensus.<br /><br /><b>Entwicklung und methodische Einschränkungen</b><br /><br />Im Jahr 2023&nbsp;strebten 58,6&nbsp;% der 17- und 18-Jährigen eine Studienberechtigung an oder verfügten bereits über eine solche. Unter den 17- und 18-Jährigen mit einer oder mehreren Risikolagen war dieser Anteil mit 43,7&nbsp;% deutlich niedriger. Bei 17- und 18-Jährigen ohne Risikolage lag der Anteil bei 65,0&nbsp;%.<br /><br />Die Hochschulreife kann neben Gymnasien und beruflichen Schulen auch an anderen Schulformen, wie beispielsweise einer Gemeinschaftsschule, erworben werden. Da diese Schulformen jedoch überwiegend zu einem Real- oder Hauptschulabschluss führen, werden 17- und 18-Jährige, die eine Studienberechtigung auf zum Beispiel einer Gemeinschaftsschule anstreben nicht berücksichtigt. In dieser Hinsicht unterschätzt der Indikator die reale Situation.<br /><br />Der Indikator berücksichtigt neben den 17- und 18-Jährigen, die bereits eine Studienberechtigung besitzen, nur diejenigen 17- und 18-Jährigen, die eine Schulform besuchen, die in erster Linie auf einen solchen Abschluss abzielt. Die späteren tatsächlichen Abschlussquoten, die zum Teil deutlich geringer sind, fließen nicht in den Indikator ein. Die in den Indikator einfließende Anzahl angestrebter Studienberechtigungen entspricht also nicht der Anzahl der später tatsächlich erworbenen Studienberechtigungen.<br /><br />Dass nicht die tatsächlich erworbenen Studienberechtigungen berücksichtigt werden, hat hauptsächlich methodische Gründe: Viele Schülerinnen und Schüler erlangen die Hochschulreife erst nach dem 18. Lebensjahr. Von den 19-Jährigen leben jedoch nur noch etwa 84&nbsp;% mit mindestens einem Elternteil im selben Haushalt, wodurch für die verbleibenden 16&nbsp;% keine Informationen zur Bestimmung der Risikolage vorliegen.<br /><br />Eine weitere Einschränkung der Aussagekraft des Indikators liegt darin, dass etwa 15&nbsp;% der 17-Jährigen und 7&nbsp;% der 18-Jährigen noch den Sekundarbereich I (Klassenstufen bis 9/10) besuchen. In solchen Fällen ist es teilweise nicht eindeutig festzustellen, ob diese jungen Erwachsenen einem Bildungsgang nachgehen, der auf den Erwerb der Hochschulreife abzielt oder nicht.<br /><br />Im Jahr 2023&nbsp;lag die Differenz zwischen den Anteilen der 17- und 18-Jährigen mit und ohne Risikolage, die eine Studienberechtigung anstreben oder bereits besitzen, bei 21,3&nbsp;Prozentpunkten. Eine klare Tendenz bei der Entwicklung der letzten Jahre ist dabei nicht erkennbar und daher eine Abschätzung der Zielerreichbarkeit nicht möglich.</p>
+            <p>Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>4.3.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4444,12 +4510,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

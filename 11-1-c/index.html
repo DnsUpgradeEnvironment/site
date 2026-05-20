@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/11-1-c/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/11-1-c/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/11/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/11/" aria-label=" 11" title=" 11">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/11.png"
                         alt="Nachhaltige Städte und Gemeinden - Ziel 11"
                         id="goal-11"
                         class="goal-icon-image goal-icon-image-" />
@@ -1447,6 +1433,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1517,6 +1512,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1555,9 +1559,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1569,16 +1573,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1623,7 +1627,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2551,9 +2555,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2561,31 +2566,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #fd9d24; font-size: large">11.1.c Siedlungsdichte</b><br /><br />Die Siedlungsdichte beschreibt das Verhältnis der Einwohnerzahl zur Siedlungs- und Verkehrsfläche (SuV) und unterscheidet sich damit von der Bevölkerungsdichte, die sich auf die Gesamtfläche des Bundesgebiets bezieht. Zur Siedlungsfläche zählen neben Wohnbauflächen auch Flächen mit speziellen Nutzungen wie Krankenhäuser, Schulen, Industrie- und Gewerbegebiete, Mischgebiete sowie Sport-, Freizeit- und Erholungsflächen. Sowohl Veränderungen der Einwohnerzahl als auch Ausdehnungen der SuV wirken sich auf die Siedlungsdichte aus.<br /><br />Die Siedlungsdichte variiert deutlich zwischen <i>ländlichen</i> und <i>nicht-ländlichen</i> Gebieten. Die Einteilung erfolgt nach der Typisierung des Thünen-Instituts, das Kreise und kreisfreie Städte anhand von Kriterien wie Siedlungsdichte, Anteil land- und forstwirtschaftlich genutzter Flächen sowie Erreichbarkeit größerer Zentren klassifiziert. Da die Definition von <i>ländlich</i> auch die Siedlungsdichte berücksichtigt, sind Unterschiede im Indikator zwischen ländlichen und nicht-ländlichen Gebieten teilweise durch die Klassifikation selbst bedingt. So kann ein Anstieg der Siedlungsdichte in einem ländlichen Gebiet dazu führen, dass dieses künftig als nicht-ländlich eingestuft wird.<br /><br />Zwischen 2000&nbsp;und 2011&nbsp;nahm die Siedlungsdichte in beiden Gebietstypen ab&nbsp;–&nbsp;in ländlichen Gebieten um 12&nbsp;%, in nicht-ländlichen um 5&nbsp;%. Seit 2011&nbsp;liegt der Indikatorwert für Deutschland insgesamt relativ konstant bei etwa 1&nbsp;670&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV, was etwa 90&nbsp;% des Werts von 2000&nbsp;entspricht. In nicht-ländlichen Gebieten steigt die Siedlungsdichte seit 2011&nbsp;wieder an und erreichte 2023&nbsp;mit 3&nbsp;384&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV nahezu das Niveau von 2000.<br /><br />Ein Vergleich der Entwicklungen von SuV und Bevölkerungszahlen zeigt unterschiedliche Trends der beiden Einflussfaktoren: Während die SuV seit 2000&nbsp;kontinuierlich gewachsen ist, ging die Bevölkerung zwischen 2000&nbsp;und 2011&nbsp;zunächst zurück, was den Rückgang der Siedlungsdichte erklärt. Seit 2011&nbsp;steigen die Bevölkerungszahlen wieder, weshalb der Indikator seitdem weitgehend konstant geblieben ist. Der Anteil der SuV an der jeweiligen Gesamtfläche liegt 2023&nbsp;in ländlichen Gebieten mit 12,3&nbsp;% deutlich unter dem in nicht-ländlichen Gebieten mit 36,8&nbsp;%. Der Flächenzuwachs der SuV betrifft beide Gebietstypen, fiel jedoch in ländlichen Gebieten mit 17,4&nbsp;% (2023&nbsp;im Vergleich zu 2000) deutlich stärker aus als in nicht-ländlichen mit 9,3&nbsp;%. Gleichzeitig war der Bevölkerungsanstieg seit 2011&nbsp;in ländlichen Gebieten schwächer, weshalb die Siedlungsdichte dort leicht zurückging.<br /><br />Nach der Definition des Thünen-Instituts lebten 2023&nbsp;rund 43&nbsp;% der Bevölkerung in nicht-ländlichen und 57&nbsp;% in ländlichen Gebieten. Gleichzeitig entfielen rund 80&nbsp;% der Siedlungs- und Verkehrsfläche auf ländliche Gebiete. Das politisch festgelegte Ziel sieht vor, die Anzahl der Einwohnerinnen und Einwohner pro Quadratkilometer SuV zu erhöhen. Aufgrund der stagnierenden Entwicklung in den letzten Jahren wird dieses Ziel jedoch nicht oder nur in geringem Maße erreicht.<br /><br />Datengrundlage sind die Bevölkerungsstatistik sowie die Flächenerhebung nach Art der tatsächlichen Nutzung (amtliche Flächenstatistik) des Statistischen Bundesamts. Die Länder harmonisieren ihre Liegenschaftskataster, was in den letzten Jahren zu Neuzuordnungen von Flächen führte&nbsp;–&nbsp;auch ohne tatsächliche Nutzungsänderungen. Im Jahr 2016&nbsp;wurde ein neuer Nutzungsartenkatalog eingeführt, was Auswirkungen auf die amtliche Flächenstatistik hatte und die Vergleichbarkeit mit den Vorjahren erschwert. Um dennoch aussagekräftige Zeitvergleiche zu ermöglichen, wurden die Daten auf Basis des Zensus 2011&nbsp;und der Flächenerhebung 2016&nbsp;rückgerechnet.<br /><br />Eine erneute Erweiterung des Nutzungsartenverzeichnisses erfolgte 2023&nbsp;mit der Einführung einer neuen Modellierung der Geoinformationen des amtlichen Vermessungswesens (GEOInfoDok), die mit geänderten Modellierungskriterien für die tatsächliche Nutzung einherging. Um Beeinträchtigungen des Flächenindikators durch diesen Methodenwechsel möglichst gering zu halten, werden Effekte, die keiner realen Veränderung entsprechen, aus der Berechnung herausgenommen. Da die Migration zur neuen GEOInfoDok in den Landesvermessungsverwaltungen zu unterschiedlichen Zeitpunkten abgeschlossen wird, können diese Effekte je nach Bundesland zu unterschiedlichen Zeitpunkten auftreten und sich über mehrere Jahre hinweg auf die Ergebnisse auswirken. Mittelfristig wird der Methodenwechsel zu deutlichen Qualitätsverbesserungen in der Flächenstatistik führen.<br /><br />Der Indikator weist inhaltliche Querbezüge zum Indikator <a href="https://dns-indikatoren.de/11-1-a">11.1.a</a> <i>Anstieg der Siedlungs- und Verkehrsfläche</i> auf.</p>
+            <p>Siedlungsdichte</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>11.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4414,12 +4466,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4463,12 +4524,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

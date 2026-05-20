@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/12-1-b/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/12-1-b/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/12/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/12/" aria-label=" 12" title=" 12">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/12.png"
                         alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
                         id="goal-12"
                         class="goal-icon-image goal-icon-image-" />
@@ -645,6 +631,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -715,6 +710,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -753,9 +757,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -767,16 +771,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -821,7 +825,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1749,9 +1753,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1759,31 +1764,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #bf8b2e; font-size: large">12.1.b Globale Umweltinanspruchnahme durch den Konsum privater Haushalte</b><br /><br />Die Umweltauswirkungen des Konsumverhaltens privater Haushalte lassen sich nicht durch einen einzelnen Indikator vollständig abbilden. Daher erfolgt die Betrachtung anhand von drei zentralen Einflussfaktoren: dem Rohstoffeinsatz (Indikator 12.1.ba), dem Energieverbrauch (Indikator 12.1.bb), sowie die durch den Konsum der privaten Haushalte entstandenen CO₂-Emissionen (Indikator 12.1.bc).<br /><br />Die zugrunde liegenden Daten stammen aus den Umweltökonomischen Gesamtrechnungen (UGR). Die UGR quantifizieren die Umweltwirkungen im Zusammenhang mit der Produktion der Güter für den Konsum der privaten Haushalte anhand eines Input-Output Modells. Private Haushalte konsumieren Ressourcen sowohl direkt als auch indirekt. Die drei Indikatoren berücksichtigen daher sowohl den direkten als auch den indirekten Konsum und erfassen Umweltauswirkungen im Inland ebenso wie solche, die durch Produktionsprozesse im Ausland für den deutschen Konsum entstehen.<br /><br />Direkter Konsum umfasst beispielsweise den Einsatz von Erdgas zum Heizen, den Kraftstoffverbrauch im Straßenverkehr sowie den direkten Verzehr von Lebensmitteln. Indirekter Konsum entsteht entlang der gesamten Produktions- und Lieferkette&nbsp;–&nbsp;etwa bei Herstellung, Verarbeitung und Transport von Konsumgütern&nbsp;–&nbsp;und betrifft sowohl inländische als auch ausländische Ressourcen, Energieverbräuche und CO₂-Emissionen.<br /><br />Zwischen Rohstoffeinsatz, Energieverbrauch und CO₂-Emissionen bestehen enge Zusammenhänge. So führt der Einsatz fossiler Energieträger wie Kohle, Erdöl oder Erdgas zur Strom- und Wärmeerzeugung nicht nur zu Ressourcen- und Energieverbrauch, sondern auch zu CO₂-Emission. Alle drei Indikatoren werden im Vergleich zum Referenzjahr 2010&nbsp;dargestellt.<br /><br /><b>12.1.ba Rohstoffeinsatz</b><br /><br />Rohstoffe werden in abiotische und biotische Rohstoffe unterteilt. Zu den abiotischen Rohstoffen zählen fossile Energieträger wie Kohle, Erdöl und Erdgas sowie nicht-energetische Rohstoffe, wie Erze und weitere mineralische Rohstoffe, darunter Sand, Kies, Kalkstein, Tone, Quarzsande, Salz und Düngemittelmineralien. Biotische Rohstoffe umfassen pflanzliche Erzeugnisse aus Land- und Forstwirtschaft sowie Wildtiere, die durch Jagd oder Fischerei gewonnen werden. Produkte aus der Tierhaltung wie Fleisch, Milch oder Eier gelten hingegen als Wirtschaftsgüter und nicht als Rohstoffe. Wasser wird nicht als eigenständiger Rohstoff erfasst, da seine mengenmäßige Dominanz die Darstellung der übrigen Rohstoffgruppen überlagern würde. Der Wassergehalt biotischer Rohstoffe wird jedoch als Bestandteil des jeweiligen Rohstoffs berücksichtigt.<br /><br />Der gesamte Rohstoffeinsatz für den Konsum privater Haushalte blieb seit 2010&nbsp;zunächst weitgehend stabil, ging jedoch ab 2016&nbsp;zurück und betrug nach vorläufigen Berechnungen für 2022&nbsp;555&nbsp;Millionen Tonnen. Dies entspricht einem Rückgang auf 89,2&nbsp;% des Wertes von 2010.<br /><br />Eine differenzierte Betrachtung zeigt: Der Verbrauch abiotischer Rohstoffe sank seit 2010&nbsp;um 12,1&nbsp;%, während der Einsatz biotischer Rohstoffe um 7,1&nbsp;% zurückging. Beim Verbrauch abiotischer Rohstoffe entfielen im Jahr 2022&nbsp;rund 60,5&nbsp;% auf fossile Energieträger. Deren Einsatz ging seit 2010&nbsp;um 14,1&nbsp;% zurück. Der Verbrauch von Erzen sank um 25,8&nbsp;%, während der Verbrauch sonstiger mineralischer Rohstoffe um 17,2&nbsp;% anstieg.<br /><br /><b>12.1.bb Energieverbrauch</b><br /><br />Die Daten zum Energieverbrauch umfassen auch Umwandlungs-, Speicher- und Übertragungsverluste, die beispielsweise bei der Strom- und Fernwärmeerzeugung im Rahmen des indirekten Verbrauchs auftreten. Der Indikator wird sowohl durch verändertes Konsumverhalten als auch durch Effizienzsteigerungen in der Energieversorgung beeinflusst.<br /><br />Seit 2010&nbsp;ist der Energieverbrauch durch den Konsum privater Haushalte insgesamt rückläufig. Bis 2021&nbsp;sank er um 14,3&nbsp;% auf 8&nbsp;509&nbsp;Petajoule. Etwa 45&nbsp;% dieses Energieverbrauchs entfallen auf den direkten Verbrauch der Haushalte, 55&nbsp;% auf den indirekten Energieeinsatz, der im Rahmen der Produktion von Gütern, die private Haushalte nachfragen, entsteht. Im Vergleich zu 2010&nbsp;war der Rückgang beim direkten Energieverbrauch geringer als beim indirekten.<br /><br />Der Energieverbrauch lässt sich in die Bereiche Wohnenergie (direkt), Mobilität, Energiegüter, sowie andere Produkte, Ernährung, Dienstleistungen und Handel unterteilen. Den größten Anteil hat der Bereich Wohnenergie (direkt) mit 30&nbsp;% des gesamten Energieverbrauchs privater Haushalte&nbsp;–&nbsp;das entspricht 2&nbsp;554&nbsp;Petajoule im Jahr 2021&nbsp;–&nbsp;gefolgt vom Bereich Mobilität mit 20&nbsp;%.<br /><br />Der Energieverbrauch pro Haushalt sank zwischen 2010&nbsp;und 2021&nbsp;um 16,9&nbsp;% auf 208&nbsp;Gigajoule. Pro Kopf entspricht dies einem Rückgang um 15,8&nbsp;% auf 102&nbsp;Gigajoule.<br /><br /><b>12.1.bc CO₂-Emissionen</b><br /><br />Die CO₂-Emissionen aus dem Konsum privater Haushalte beliefen sich im Jahr 2021&nbsp;auf insgesamt 540&nbsp;Millionen Tonnen. Das entspricht einem Rückgang um 16,9&nbsp;% gegenüber 2010. Wie beim Energieverbrauch sanken auch hier die direkten Emissionen&nbsp;–&nbsp;mit 9,8&nbsp;%&nbsp;–&nbsp;weniger stark als die indirekten Emissionen, die bei Produktion und Transport von Konsumgütern entstehen. Diese reduzierten sich um 20,8&nbsp;%. Pro Haushalt wurden im Jahr 2021&nbsp;durch Konsumaktivitäten 13,2&nbsp;Tonnen CO₂ emittiert&nbsp;–&nbsp;ein Rückgang um 19,4&nbsp;% gegenüber 2010.<br /><br /><b>Einordnung der Indikatoren und methodische Hinweise</b><br /><br />Die Indikatoren zur globalen Umweltinanspruchnahme beziehen sich auf den Konsum privater Haushalte in der gesamten Volkswirtschaft und werden auf das Jahr 2010&nbsp;normiert. Sie beziehen sich nicht auf die Anzahl der Personen oder Haushalte.<br /><br />Bei der Interpretation der Ergebnisse ist zu beachten, dass neben Effizienzsteigerungen und verändertem Konsumverhalten auch demografische Entwicklungen&nbsp;–&nbsp;etwa Bevölkerungswachstum oder eine steigende Anzahl an Haushalten&nbsp;–&nbsp;Auswirkungen auf CO₂-Emissionen sowie den Rohstoff- und Energieverbrauch haben können. So kann eine wachsende Bevölkerung dazu führen, dass die absoluten Verbräuche und Emissionen trotz Effizienzgewinnen oder verändertem Konsumverhalten nicht sinken oder sogar steigen.</p>
+            <p>Globale Umweltinanspruchnahme durch den Konsum privater Haushalte</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>12.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3612,12 +3664,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -3661,12 +3722,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

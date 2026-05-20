@@ -142,7 +142,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -192,7 +192,7 @@ layout-reportingstatus
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/en/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/en/DNS_logo.png" alt="DESTATIS - German Strategy for Sustainable Development" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Sustainable Development Goals - header.tag_line" />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -200,42 +200,18 @@ layout-reportingstatus
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/en/status/">Methodology</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/status_summary/">Overview</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategy
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/dns/">German Sustainable Development Strategy</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/publications/">Publications</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/laender/">Länder</a>
+    <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/menu.1_global_indicators_path">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Help
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/navigation/">Structure of the online platform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/guidance/">Technical notes</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/en/goals">Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/about">About</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -258,14 +234,21 @@ layout-reportingstatus
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/site/reporting-status/">
-                Deutsch
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/reporting-status/">
+              Deutsch
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -394,7 +377,7 @@ data-event-label="Change reporting status view to un_designated_tier"
   <h2>Status by goal</h2><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/1/" title=" 1" aria-label=" 1">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/1.png" alt="No poverty - Goal 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/1.png" alt="No poverty - Goal 1" width="100" height="100" class="goal-icon-1 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -430,7 +413,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/2/" title=" 2" aria-label=" 2">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/2.png" alt="Zero hunger - Goal 2" width="100" height="100" class="goal-icon-2 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -466,7 +449,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/3/" title=" 3" aria-label=" 3">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/3.png" alt="Good health and well-being - Goal 3" width="100" height="100" class="goal-icon-3 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -502,7 +485,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/4/" title=" 4" aria-label=" 4">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png" alt="Quality education - Goal 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/4.png" alt="Quality education - Goal 4" width="100" height="100" class="goal-icon-4 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -538,7 +521,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/5/" title=" 5" aria-label=" 5">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/5.png" alt="Gender equality - Goal 5" width="100" height="100" class="goal-icon-5 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -574,7 +557,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/6/" title=" 6" aria-label=" 6">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/6.png" alt="Clean water and sanitation - Goal 6" width="100" height="100" class="goal-icon-6 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -610,7 +593,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/7/" title=" 7" aria-label=" 7">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/7.png" alt="Affordable and clean energy - Goal 7" width="100" height="100" class="goal-icon-7 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -646,7 +629,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/8/" title=" 8" aria-label=" 8">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/8.png" alt="Decent jobs and economic growth - Goal 8" width="100" height="100" class="goal-icon-8 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -682,7 +665,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/9/" title=" 9" aria-label=" 9">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/9.png" alt="Industry, innovation and infrastructure - Goal 9" width="100" height="100" class="goal-icon-9 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -718,7 +701,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/10/" title=" 10" aria-label=" 10">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/10.png" alt="Reduced inequalities - Goal 10" width="100" height="100" class="goal-icon-10 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -754,7 +737,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/11/" title=" 11" aria-label=" 11">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png" alt="Sustainable cities &amp; communities - Goal 11" width="100" height="100" class="goal-icon-11 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -790,7 +773,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/12/" title=" 12" aria-label=" 12">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/12.png" alt="Responsible consumption and production - Goal 12" width="100" height="100" class="goal-icon-12 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -826,7 +809,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/13/" title=" 13" aria-label=" 13">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png" alt="Climate action - Goal 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/13.png" alt="Climate action - Goal 13" width="100" height="100" class="goal-icon-13 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -862,7 +845,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/14/" title=" 14" aria-label=" 14">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/14.png" alt="Life below water - Goal 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/14.png" alt="Life below water - Goal 14" width="100" height="100" class="goal-icon-14 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -898,7 +881,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/15/" title=" 15" aria-label=" 15">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png" alt="Life on land - Goal 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/15.png" alt="Life on land - Goal 15" width="100" height="100" class="goal-icon-15 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -934,7 +917,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/16/" title=" 16" aria-label=" 16">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png" alt="Peace and justice - strong institutions - Goal 16" width="100" height="100" class="goal-icon-16 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -970,7 +953,7 @@ data-event-label="Change reporting status view to un_designated_tier"
 </div><div class="goal reporting-status-item">
     <div class="frame goal-tiles">
         <a href="/site/en/17/" title=" 17" aria-label=" 17">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
+        <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png" alt="Partnerships for the goals - Goal 17" width="100" height="100" class="goal-icon-17 goal-icon-image goal-icon-image-"/>
         </a>
     </div>
     <div class="details">
@@ -1099,12 +1082,21 @@ data-event-label="Change reporting status view to un_designated_tier"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            <a href="/site/en/contact-us">Contact us</a>
                             
                         </li>
                         <li>
-                            <a href="/site/en/imprint/">Legal Notice</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/en/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -1146,12 +1138,12 @@ data-event-label="Change reporting status view to un_designated_tier"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

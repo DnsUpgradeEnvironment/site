@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/11-2-b/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/11-2-b/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/11/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/11/" aria-label=" 11" title=" 11">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/11.png"
                         alt="Nachhaltige Städte und Gemeinden - Ziel 11"
                         id="goal-11"
                         class="goal-icon-image goal-icon-image-" />
@@ -648,6 +634,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -721,6 +716,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -759,9 +763,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -773,16 +777,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -827,7 +831,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1755,9 +1759,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1765,31 +1770,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #fd9d24; font-size: large">11.2.b Endenergieverbrauch im Personenverkehr</b><br /><br />Der Indikator stellt den Endenergieverbrauch (EEV) dar, der durch die Beförderung von Personen im Inland entsteht. Die zugrunde liegenden Daten stammen aus der TREMOD-Datenbank (Transport Emission Model) des Instituts für Energie- und Umweltforschung (ifeu). TREMOD ist ein Modell zur Bewertung verkehrsbedingter Emissionen. Erfasst werden die Kraftstoffverbräuche des Personenverkehrs innerhalb Deutschlands&nbsp;–&nbsp;unabhängig vom Ort der Betankung&nbsp;–&nbsp;auf Basis des Verbrauchskonzepts. Der Begriff <i>Endenergie</i> bezeichnet die unmittelbar im Verkehr eingesetzte Energiemenge und berücksichtigt weder Umwandlungsverluste bei der Kraftstoffherstellung noch etwaige Leitungsverluste. Im Luftverkehr fließen ausschließlich Inlandsflüge in die Berechnung ein; internationale Flüge von und nach Deutschland bleiben unberücksichtigt. Die Personenbeförderung per Schiff wird ebenfalls nicht berücksichtigt.<br /><br />Im Jahr 2023&nbsp;entfielen 30,8&nbsp;% des gesamten EEV auf den Verkehrssektor, wobei der Personenverkehr einen Anteil von 61,5&nbsp;%<sup>1</sup> hatte. Einsparungen in diesem Bereich wirken sich daher deutlich auf den gesamten Energieverbrauch in Deutschland aus. Zwischen 2015&nbsp;und 2019&nbsp;stieg der EEV im Personenverkehr zunächst um 1,9&nbsp;% gegenüber dem Ausgangsjahr 2015&nbsp;auf einen Höchststand. Mit Beginn der COVID-19-Pandemie im Jahr 2020&nbsp;kam es infolge der zum Teil stark eingeschränkten Mobilität der Bevölkerung zu einem deutlichen Rückgang des Indikatorwerts um 16,2&nbsp;Prozentpunkte. In den Folgejahren stiegen die Werte nur langsam wieder an. Über den gesamten Zeitraum von 2015&nbsp;bis 2023&nbsp;veringerte sich der EEV im Personenverkehr insgesamt um 12,2&nbsp;%. Bei Fortsetzung der Entwicklung der letzten Jahre würde das politisch festgelegte Ziel einer Reduktion um 15&nbsp;% bis 20&nbsp;% im Zeitraum von 2015&nbsp;bis 2030&nbsp;erreicht werden.<br /><br />Die sogenannte Personenbeförderungsleistung gibt die Anzahl der insgesamt zurückgelegten Personenkilometer an. Sie dient als Grundlage für die Berechnung des spezifischen Energieverbrauchs im Personenverkehr und stammt ebenfalls aus der TREMOD-Datenbank. Zwischen 2015&nbsp;und 2023&nbsp;sank die Beförderungsleistung um 9,9&nbsp;%. Ergänzend zum Indikator wird, als Maßstab für die Energieeffizienz im Personenverkehr, der EEV je Personenkilometer betrachtet. Im Jahr 2023&nbsp;lag dieser Wert&nbsp;–&nbsp;über alle Verkehrsträger hinweg&nbsp;–&nbsp;bei 1,52&nbsp;Megajoule je Personenkilometer<sup>2</sup> und damit 2,5&nbsp;% unter dem Niveau von 2015.<br /><br />Der motorisierte Individualverkehr mit Pkw und Zweirädern stellte im Jahr 2022&nbsp;mit einem Anteil von 81,9&nbsp;% den mit Abstand größten Teil der gesamten Personenbeförderungsleistung dar. Dieser lässt sich weiter nach Fahrtzwecken differenzieren: 2022&nbsp;entfielen 36,5&nbsp;% auf den Berufsverkehr (Pendler- und Geschäftsfahrten), 31,0&nbsp;% auf Freizeitfahrten und 17,6&nbsp;% auf Einkaufsfahrten. Die Entwicklung dieser Fahrtzwecke verlief seit 2015&nbsp;unterschiedlich: Besonders deutlich gingen Freizeitfahrten zurück (–19,9&nbsp;Prozentpunkte), gefolgt von Einkaufsfahrten (–7,9&nbsp;Prozentpunkte) und beruflich bedingten Fahrten (–3,1&nbsp;Prozentpunkte).<br /><br /><small><sup>1</sup> Die Summe der Anteile des Güterverkehrs (Indikator <a href="https://dns-indikatoren.de/11-2-a/">11.2.a</a>) und des Personenverkehrs (Indikator 11.2.b) am gesamten Endenergieverbrauch im Verkehr ergibt nicht 100&nbsp;%. Diese Abweichung resultiert aus unterschiedlichen Abgrenzungen: Während die Energieverbräuche im Personen- und Güterverkehr auf dem Inlandsverbrauch basieren (Quelle: TREMOD), bezieht sich der gesamte Endenergieverbrauch im Verkehr auf den Inlandsabsatz (Quelle: AG Energiebilanzen).<br /><sup>2</sup> Zur besseren Einordnung: Der Heizwert eines Liters Benzin beträgt 32&nbsp;Megajoule. Ein Verbrauch von 1,52&nbsp;Megajoule je Personenkilometer entspricht&nbsp;–&nbsp;auf 100&nbsp;Kilometer hochgerechnet&nbsp;–&nbsp;dem Energiegehalt von etwa 4,8&nbsp;Litern Benzin.</small></p>
+            <p>Endenergieverbrauch im Personenverkehr</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>11.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4497,12 +4549,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4546,12 +4607,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

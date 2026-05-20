@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/16/" aria-label=" 16" title=" 16">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/16.png"
                         alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16"
                         id="goal-16"
                         class="goal-icon-image goal-icon-image-" />
@@ -307,7 +307,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_16-3-ab'
   data-id="16-3-ab"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit"
   data-charttitles="[{&quot;series&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;,&quot;title&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;},{&quot;series&quot;:&quot;b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI&quot;,&quot;title&quot;:&quot;b) Corruption Perceptions Index in den Partnerländern der deutschen Entwicklungszusammenarbeit&quot;}]"
   data-measurementunit=""
@@ -1067,6 +1067,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1145,6 +1154,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1183,9 +1201,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1197,16 +1215,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1247,7 +1265,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2175,9 +2193,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2185,31 +2204,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #00689d; font-size: large">16.3.a, b Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</b><br /><br />Der Korruptionswahrnehmungsindex (Corruption Perceptions Index, CPI) ist ein zusammengesetzter Indikator (Kompositindikator), der für jedes Land die Ergebnisse verschiedener Experten- und Unternehmensbefragungen zur subjektiv wahrgenommenen Korruption im öffentlichen Sektor zusammenfasst. Transparency International erstellt den CPI, sobald für ein Land mindestens drei unterschiedliche Befragungen zu Korruptionseinschätzung vorliegen. Die zugrundeliegenden Befragungen und deren Methodiken können dabei im Zeitverlauf variieren und basieren auf unterschiedlichen Korruptionsdefinitionen. Zudem können die Ergebnisse dadurch beeinflusst sein, dass den Befragten die Ergebnisse des CPI-Werts oder der zugrunde liegenden Teilstudien aus früheren Jahren bekannt sind und diese somit die Grundlage der Wahrnehmung bilden können. Diese Faktoren sowie die unterschiedliche Wahrnehmung schränken die Vergleichbarkeit der Ergebnisse sowohl über die Zeit (Längsschnitt) als auch zwischen den Ländern (Querschnitt) ein. Das Joint Research Centre (JRC) der Europäischen Kommission weist in einer Analyse darauf hin, dass bei der Interpretation der Ergebnisse die statistische Signifikanz von Veränderungen stets zu berücksichtigen ist. Selbst bei signifikanten Unterschieden sollte der Indikator jedoch mit Vorsicht interpretiert werden.<br /><br />Deutschland hat sich seit 2012&nbsp;von 79&nbsp;auf 75&nbsp;Punkte im Jahr 2024&nbsp;verschlechtert. Im Vergleich zum Höchststand von 81&nbsp;Punkten in den Jahren 2015&nbsp;bis 2017&nbsp;entspricht dies einem Rückgang um sechs Punkte. Aktuell belegt Deutschland Rang 15&nbsp;von insgesamt 180&nbsp;bewerteten Ländern. Die Veränderung gegenüber 2012&nbsp;ist bei einem Signifikanzniveau von 10&nbsp;% als statistisch signifikant einzustufen. Auch das Statistische Bundesamt erhebt im Rahmen seiner Zufriedenheitsbefragung zu behördlichen Dienstleistungen Daten zur Wahrnehmung von Korruption. Im Jahr 2023&nbsp;gaben 11,6&nbsp;% der Bevölkerung an, bei Kontakten mit öffentlichen Stellen den Eindruck gehabt zu haben, dass Bedienstete bestechlich seien. Damit liegt der Wert deutlich über den Vorjahren: Im Vergleich zu 2021&nbsp;(3,9&nbsp;%) hat sich der Wert verdreifacht. Bei den befragten Unternehmen blieb der Wert hingegen über die Jahre weitgehend konstant: Im Jahr 2023&nbsp;äußerten 3,4&nbsp;% von ihnen den Eindruck, Beschäftigte des öffentlichen Dienstes seien bestechlich.<br /><br />Die Polizeiliche Kriminalstatistik (PKS) erfasst alle der Polizei bekannt gewordenen strafrechtlichen Sachverhalte. Im Jahr 2024&nbsp;wurden insgesamt 976&nbsp;Fälle von Vorteilsannahme, Vorteilsgewährung sowie Bestechlichkeit und Bestechung im öffentlichen Sektor registriert. Damit lag der Wert zwar unter dem Vorjahreswert von 1&nbsp;094&nbsp;Fällen (2023), blieb jedoch weiterhin deutlich über dem Durchschnitt der Jahre 2020&nbsp;bis 2023, der bei 842&nbsp;Fällen liegt. Darüber hinaus erfasst die PKS auch Fälle im geschäftlichen Bereich. Im Jahr 2024&nbsp;wurden 197&nbsp;Fälle von <i>Bestechlichkeit und Bestechung im geschäftlichen Verkehr und im Gesundheitswesen</i> registriert&nbsp;–&nbsp;deutlich weniger als im Vorjahr mit 369&nbsp;Fällen (2023). Zudem erfasst die PKS sogenannte Begleitdelikte der Korruption, darunter Betrug, Untreue, Urkundenfälschung, wettbewerbsbeschränkende Absprachen bei Ausschreibungen, Strafvereitelung, Falschbeurkundung im Amt sowie die Verletzung des Dienstgeheimnisses.<br /><br />Mit Blick auf die deutsche Entwicklungszusammenarbeit haben sich im Jahr 2024&nbsp;im Vergleich zu 2012&nbsp;insgesamt 32&nbsp;der 63&nbsp;vom CPI erfassten Partnerländer verbessert. Die Anzahl der sich positiv entwickelten Partnerländer stieg im Beobachtungszeitraum überwiegend an, mit leichten Rückgängen in den Jahren 2018, 2022&nbsp;sowie im aktuellen Berichtsjahr gegenüber 2023. Eine statistisch signifikante Verbesserung gegenüber 2012&nbsp;(Signifikanzniveau 10&nbsp;%) verzeichneten im Jahr 2024&nbsp;insgesamt 21&nbsp;Partnerländer der deutschen Entwicklungszusammenarbeit.</p>
+            <p>Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>16.3.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4906,12 +4972,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

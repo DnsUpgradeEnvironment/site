@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/4/" aria-label=" 4" title=" 4">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/4.png"
                         alt="Hochwertige Bildung - Ziel 4"
                         id="goal-4"
                         class="goal-icon-image goal-icon-image-" />
@@ -307,7 +307,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_4-1-c'
   data-id="4-1-c"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)"
   data-charttitles="null"
   data-measurementunit=""
@@ -585,6 +585,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -655,6 +664,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -693,9 +711,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -707,16 +725,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -757,7 +775,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1685,9 +1703,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1695,31 +1714,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #c5192d; font-size: large">4.1.c Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</b><br /><br />Schulen, die nachhaltige Prinzipien in ihren Unterricht und ihre Schulentwicklung einbeziehen, können ihr Engagement durch verschiedene BNE-Labels zertifizieren lassen. Der Indikator <i>Schulen mit BNE-Label</i>, der vom Bundesministerium für Bildung und Forschung (BMBF) und der Ständigen Konferenz der Kultusminister der Länder (KMK) eingeführt wurde, erfasst den Anteil der Schulen, die mit bestimmten BNE-Labeln ausgezeichnet sind. Die erste Erhebung dieses Indikators fand zwischen Juli und November 2024&nbsp;statt. Dabei wurden 27&nbsp;verschiedene BNE-Labels berücksichtigt, davon werden sieben bundesweit und 20&nbsp;nur in einzelnen Bundesländern vergeben. Die Auswahl der Labels erfolgt nach festgelegten Kriterien, die die Verankerung von BNE in der Schul- und Unterrichtsentwicklung widerspiegeln sollen.<br /><br />Die Ergebnisse der Erhebung für das Schuljahr 2023/2024&nbsp;zeigen, dass 3&nbsp;556&nbsp;von insgesamt 29&nbsp;988&nbsp;öffentlichen und privaten allgemein- und berufsbildenden Schulen in Deutschland mit BNE-Labels ausgezeichnet sind, was etwa 11,9&nbsp;% der Schulen entspricht. Schulen mit mehreren BNE-Zertifikaten werden dabei nur einmal als eine BNE-zertifizierte Schule gezählt. Die nächste Erhebung ist für das Schuljahr 2025/2026&nbsp;geplant.<br /><br />Die Kriterien für die Berücksichtigung und die Vorauswahl der BNE-Labels wurden von einer Arbeitsgruppe aus Vertreterinnen und Vertretern von Bund, Ländern und der Wissenschaft erarbeitet. Um als BNE-Label anerkannt zu werden, müssen die Labels Anforderungen erfüllen, die gewährleisten sollen, dass die Verankerung von Bildung für nachhaltige Entwicklung (BNE) im Unterricht über die grundlegenden Vorgaben im Lehrplan hinausgeht und als Bestandteil der gesamten Schulentwicklung im Rahmen eines ganzheitlichen Ansatzes (Whole School Approach) berücksichtigt wird. Zu den bundesweit anerkannten BNE-Labels gehören unter anderem das Club-of-Rome-Schulen-Label, Fairtrade Schools, die Naturpark-Schule, Schools for Earth, die Umweltschule in Europa&nbsp;–&nbsp;Internationale Nachhaltigkeitsschule, die UNESCO-Projektschulen und das Verbraucherschulen (Gold)-Label. Eine Veränderung der berücksichtigten Labels sowohl in Bezug auf ihre inhaltlichen Anforderungen als auch den quantitativen Umfang der insgesamt berücksichtigten Labels wird künftig, trotz der festgelegten Auswahlkriterien, die Aussagekraft des Indikators im Zeitverlauf beeinflussen.<br /><br />Die qualitative Aussagekraft des Indikators ist aufgrund der heterogenen Struktur des Label-Systems eingeschränkt, da die verschiedenen Labels unterschiedliche Vergabekriterien aufweisen und somit kein einheitliches Niveau der BNE-Verankerung garantiert werden kann. Der Indikator liefert zudem keine direkte Aussage über den Erfolg der Bildung für nachhaltige Entwicklung oder die tatsächlich vermittelten Kenntnisse. Aus der reinen Anzahl der ausgezeichneten Schulen lässt sich daher nicht unmittelbar auf die Qualität der BNE-Umsetzung schließen. Auch ist mit diesem Indikatoren keine Aussage zu dem Anteil der Schülerinnen und Schüler an BNE zertifizierten Schulen möglich.<br /><br />Das politisch festgelegte Ziel, den Anteil der Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung) zu steigern, kann derzeit nicht bewertet werden, da noch keine Daten im Zeitverlauf vorliegen.</p>
+            <p>Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>4.1.2</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3477,12 +3543,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

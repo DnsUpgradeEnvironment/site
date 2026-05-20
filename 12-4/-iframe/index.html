@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/12/" aria-label=" 12" title=" 12">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/12.png"
                         alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
                         id="goal-12"
                         class="goal-icon-image goal-icon-image-" />
@@ -718,6 +718,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -791,6 +800,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -829,9 +847,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -843,16 +861,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -893,7 +911,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1821,9 +1839,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1831,31 +1850,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #bf8b2e; font-size: large">12.4&nbsp;Verbraucherverschuldung</b><br /><br />Der Indikator stellt die finanzielle Belastung privater Haushalte und privater Organisationen ohne Erwerbszweck in Relation zum Bruttoinlandsprodukt (BIP) dar. Er soll als Analyse dienen, inwieweit diese auf Kredite angewiesen sind, um ihren Konsum und ihre wirtschaftlichen Aktivitäten zu finanzieren. Die Daten zur Berechnung stammen aus der Finanzierungsrechnung der Deutschen Bundesbank.<br /><br />Private Haushalte sind aus finanzwirtschaftlicher Sicht hauptsächlich dadurch gekennzeichnet, dass sie finanzielle Ausgaben überwiegend zum Konsum von Gütern und Dienstleistungen verwenden. Anders als die Volkswirtschaftlichen Gesamtrechnungen<sup>1</sup> zählt die Bundesbank zu diesem Sektor auch Einzelunternehmer, Freiberufler und selbständige Landwirte.<br /><br />Private Organisationen ohne Erwerbszweck<sup>2</sup> umfassen Organisationen mit eigener Rechtspersönlichkeit, die als private, nicht-marktproduzierende Einheiten private Haushalte mit verschiedenen Dienstleistungen versorgen, wie etwa politische Parteien, Gewerkschaften, religiöse Einrichtungen, Stiftungen und soziale Vereinigungen. Die Schulden, die vom Indikator erfasst werden, setzen sich hauptsächlich aus Konsumkrediten, Darlehen und anderen finanziellen Verpflichtungen zusammen, die auf den Konsum ausgerichtet sind. Gewerbliche Kredite werden dabei ebenfalls als Teil der privaten Verschuldung berücksichtigt. Nicht mit berücksichtigt werden Wohnungsbaukredite.<br /><br />Der Indikator ermöglicht durch die Betrachtung der Verbraucherschulden in Relation zum BIP keine detaillierten Rückschlüsse auf die Verschuldungssituation einzelner Haushalte oder deren Verteilung. Er stellt lediglich das Verhältnis der gesamten Verbraucherschulden zur Wirtschaftsleistung dar, ohne die Verteilung der Schulden innerhalb der Bevölkerung oder deren individuelle Tragfähigkeit zu berücksichtigen. Für eine umfassende Analyse der Überschuldung wäre es erforderlich, die Verschuldung der privaten Haushalte im Verhältnis zu Größen wie dem verfügbaren Haushaltseinkommen zu betrachten. Ein solcher Ansatz würde sowohl die absolute Höhe der Verschuldung als auch die Fähigkeit der Haushalte, ihre Schulden im Einklang mit ihren Einkommensverhältnissen zu bedienen, einbeziehen.<br /><br />Im Gegensatz zu Konsumkrediten besteht bei Wohnungsbaukrediten zwar theoretisch die Möglichkeit, die erworbene Immobilie jederzeit bei Bedarf zu veräußern und durch den Verkauf der Immobilie die mit dem Kredit verbundene Schuldenlast potenziell auszugleichen. In der Praxis ist die Werterhaltung von Immobilien jedoch oft schwer vorhersehbar, sodass es auch durch die Aufnahme von Wohnungsbaukrediten zu Überschuldungssituationen kommen kann.<br /><br />Der Indikator zeigt einen Rückgang des Verhältnisses von Verbraucherschulden zum BIP von 15,9&nbsp;% im Jahr 2014&nbsp;auf 11,7&nbsp;% im Jahr 2023. Die absolute Höhe der Schulden stieg im gleichen Zeitraum von etwa 465&nbsp;Milliarden Euro auf rund 488&nbsp;Milliarden Euro, was einem Anstieg von 5&nbsp;% entspricht. Der Rückgang des Anteils der Verbraucherschulden am BIP ist hauptsächlich auf das stärkere Wachstum der Wirtschaftsleistung im Vergleich zum Wachstum der Verbraucherschulden zurückzuführen. Eine Ausnahme bildet das Jahr 2020: Im ersten Jahr der COVID-19-Pandemie ging das BIP zurück, sodass der Indikatorwert kurzzeitig anstieg. Auch die Summe der Kredite sank in den Jahren 2020&nbsp;und 2021. Im Jahr 2022&nbsp;stieg die Summe der Kredite wieder an.<br /><br />In den Jahren 2022&nbsp;und 2023&nbsp;erhöhte die Europäische Zentralbank (EZB) schrittweise den Leitzins. Die Summe der Kredite lag 2023&nbsp;mit rund 488&nbsp;Milliarden Euro auf dem niedrigsten Wert seit 2018. Generell lässt sich feststellen, dass der Verlauf des Indikators in der Vergangenheit hauptsächlich von der Entwicklung des BIP abhängig war, welches insgesamt deutlich stärkere Änderungen aufwies als die Summe der Verbraucherkredite. <br /><br />Das politisch festgelegte Ziel, die Verbraucherverschuldung bis 2030&nbsp;auf unter 10&nbsp;% des BIP zu senken, wird bei Fortsetzung der Entwicklung der vergangenen Jahre voraussichtlich erreicht.<br /><br /><small><sup>1</sup> Sektor S.14&nbsp;des Europäischen Systems der Volkswirtschaftlichen Gesamtrechnungen (ESVG).<br /><sup>2</sup> Sektor S.15&nbsp;des Europäischen Systems der Volkswirtschaftlichen Gesamtrechnungen (ESVG).</small></p>
+            <p>Verbraucherverschuldung</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>12.4.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4534,12 +4600,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

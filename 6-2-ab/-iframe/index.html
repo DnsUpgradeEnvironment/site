@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/6/" aria-label=" 6" title=" 6">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/6.png"
                         alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
                         id="goal-6"
                         class="goal-icon-image goal-icon-image-" />
@@ -307,7 +307,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_6-2-ab'
   data-id="6-2-ab"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Durch deutsche Entwicklungszusammenarbeit geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit"
   data-charttitles="null"
   data-measurementunit=""
@@ -500,6 +500,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -567,6 +576,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -605,9 +623,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -619,16 +637,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -669,7 +687,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1597,9 +1615,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1607,31 +1626,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #26bde2; font-size: large">6.2.a, b Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</b><br /><br />Die beiden Indikatoren zur Entwicklungszusammenarbeit im Bereich Trinkwasser- und Sanitärversorgung basieren auf Angaben der Kreditanstalt für Wiederaufbau (KfW). Erfasst wird die Anzahl der Menschen, die durch Förderprojekte der KfW erreicht wurden, sofern diese auf Mandaten deutscher Ressorts beruhen. Nicht berücksichtigt werden Projekte, die die KfW im Auftrag und mit finanziellen Mitteln der Europäischen Union (EU) oder anderer Geberländer umsetzt. Ebenso bleiben Projekte anderer Akteure&nbsp;–&nbsp;etwa der Deutschen Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, der Bundesländer oder privater Organisationen&nbsp;–&nbsp;unberücksichtigt.<br /><br />Beide Indikatoren beziehen sich ausschließlich auf die jeweiligen Plangrößen neuer Finanzierungszusagen (Finanzierungs- und Darlehensverträge) für Projekte im Bereich Trinkwasser- und Sanitärversorgung zum Zeitpunkt des Vertragsabschlusses zwischen der KfW und dem jeweiligen Partnerland. Die KfW schätzt dabei, wie viele Menschen nach Abschluss der Bauvorhaben künftig von einem neuen oder verbesserten Zugang zu Trinkwasser- und Sanitärversorgung profitieren können. Ob diese Menschen tatsächlich erreicht werden, lässt sich jedoch erst nach Inbetriebnahme der Infrastruktur verlässlich feststellen und wird in den Indikatoren nicht erfasst. Da eine Person sowohl einen neuen oder verbesserten Zugang zur Trinkwasserversorgung als auch zur Sanitärversorgung erhalten kann, sind Mehrfachzählungen zwischen den beiden Indikatoren sowie über den Zeitverlauf hinweg möglich.<br /><br />Die von der KfW zugesagten Mittel bestehen aus Zuschüssen und Darlehen, die entweder aus dem Bundeshaushalt finanziert oder über den Kapitalmarkt aufgenommen werden. Empfänger dieser Mittel sind in der Regel Entwicklungs- und Schwellenländer, wodurch ein Bezug zum Indikator <a href="https://dns-indikatoren.de/17-1/">17.1</a> <i>Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen</i> besteht.<br /><br />Im Jahr 2019&nbsp;wurden Methodik und Datengrundlage der Indikatoren überarbeitet. Bis dahin wurden sowohl direkt erreichte Menschen&nbsp;–&nbsp;beispielsweise über einen Hausanschluss&nbsp;–&nbsp;als auch indirekt erreichte Menschen&nbsp;–&nbsp;etwa die Gesamtbevölkerung eines Landes, das durch ein Sektorreformprogramm unterstützt wurde&nbsp;–&nbsp;erfasst. Seit der Umstellung werden ausschließlich direkt erreichte Menschen berücksichtigt. Zur Einordnung des Verhältnisses von direkt zu indirekt erreichten Menschen: Im Jahr 2017&nbsp;wurden insgesamt 28,6&nbsp;Millionen Menschen erreicht, davon 19,1&nbsp;Millionen direkt. Im Jahr 2018&nbsp;waren es 15,2&nbsp;Millionen direkt von insgesamt 60,3&nbsp;Millionen erreichten Menschen.<br /><br />Eine weitere methodische Änderung betrifft die Berücksichtigung von erreichten Menschen bei multilateralen Projekten: Seit der Umstellung wird deren Anzahl anteilig entsprechend dem deutschen Finanzierungsanteil an der Gesamtmaßnahme erfasst. Bis 2018&nbsp;lagen die Plangrößen der KfW für die Anzahl der Menschen, die mit deutscher Unterstützung Zugang zu Trinkwasser- und Sanitärversorgung erhalten sollten, durchweg über dem politisch festgelegten Ziel von 10&nbsp;Millionen Menschen pro Jahr. Mit Einführung der überarbeiteten Methodik wurde die Zielgröße für einen neuen oder verbesserten Zugang zur Trinkwasserversorgung auf 6&nbsp;Millionen Menschen jährlich angepasst.<br /><br />Im Jahr 2023&nbsp;lag die entsprechende Plangröße bei 10,2&nbsp;Millionen Menschen&nbsp;–&nbsp;und übertraf damit das Ziel, wie bereits in den vier Jahren zuvor, deutlich. Seit 2019&nbsp;liegt der Zielwert für die Anzahl der Menschen mit einem neuen oder verbesserten Zugang zur Basissanitärversorgung beziehungsweise Abwasserbehandlung bei 4&nbsp;Millionen Menschen pro Jahr. Dieser Zielwert wurde bislang nur in den Jahren 2019&nbsp;und 2022&nbsp;überschritten. Für das Jahr 2023&nbsp;liegt die entsprechende Plangröße bei 3,0&nbsp;Millionen erreichten Menschen.</p>
+            <p>Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>6.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3391,12 +3457,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/13-1-a/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/13-1-a/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/13/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/13/" aria-label=" 13" title=" 13">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/13.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/13.png"
                         alt="Maßnahmen zum Klimaschutz - Ziel 13"
                         id="goal-13"
                         class="goal-icon-image goal-icon-image-" />
@@ -1287,6 +1273,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1357,6 +1352,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1395,9 +1399,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1409,16 +1413,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1463,7 +1467,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2391,9 +2395,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2401,31 +2406,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #3f7e44; font-size: large">13.1.a Treibhausgasemissionen</b><br /><br />Der globale Treibhauseffekt entsteht durch den Einfluss verschiedener Gase auf die Erdatmosphäre: Kurzwellige Sonnenstrahlen dringen nahezu ungehindert ein und werden von der Erdoberfläche als langwellige Infrarotstrahlung zurückgestrahlt. Diese Wärmestrahlung wird von Treibhausgasen (THG) absorbiert und in unterschiedlichen Wellenlängenbereichen wieder abgegeben. Je nach Gas unterscheiden sich Absorptionsverhalten und Verweildauer in der Erdatmosphäre. Daher tragen die einzelnen Treibhausgase unterschiedlich stark zum Treibhauseffekt bei. Um ihre Wirkung vergleichbar zu machen, wird diese in sogenannten <i>CO₂-Äquivalenten</i> angegeben. Das Jahr 1990&nbsp;gilt als Referenzjahr zur Bewertung der Entwicklung der Treibhausgasemissionen.<br /><br />Der Indikator erfasst die Emissionen der wichtigsten durch menschliche Aktivitäten verursachten Treibhausgase: Kohlendioxid (CO₂), Methan (CH₄), Lachgas (N₂O), Stickstofftrifluorid (NF₃), teilhalogenierte Fluorkohlenwasserstoffe (H-FKW), perfluorierte Kohlenwasserstoffe (FKW) sowie Schwefelhexafluorid (SF₆). Die jährliche Erhebung und Berichterstattung der Emissionsdaten erfolgt durch das Umweltbundesamt (UBA) im Rahmen internationaler Verpflichtungen&nbsp;–&nbsp;etwa im Zusammenhang mit dem Übereinkommen von Paris, der Klimarahmenkonvention der Vereinten Nationen (UNFCCC) sowie dem Bundes-Klimaschutzgesetz. Die Berechnung erfolgt nach dem Verursacher- und Territorialprinzip, bei dem die relevanten Emissionsquellen innerhalb Deutschlands erfasst werden. Emissionen aus internationaler Seeschifffahrt und Flugverkehr bleiben unberücksichtigt. Auch Emissionen aus Landnutzung, Landnutzungsänderungen und Forstwirtschaft (LULUCF&nbsp;–&nbsp;Land Use, Land Use Change and Forestry) werden gemäß einer Vereinbarung im Rahmen des Kyoto-Protokolls nicht vom Indikator erfasst. Der LULUCF-Sektor umfasst sowohl die Abgabe als auch die Aufnahme von Treibhausgasen durch Wälder, Ackerflächen, Grünland und Feuchtgebiete.<br /><br />Seit 1990&nbsp;verzeichnen die Treibhausgasemissionen in Deutschland einen langfristigen Rückgang, der nur in einzelnen Jahren durch vorübergehende Anstiege unterbrochen wurde. Besonders auffällig waren die Rückgange 2009&nbsp;infolge der globalen Finanz- und Wirtschaftskrise sowie 2020&nbsp;durch pandemiebedingte Effekte, wie die Reduktion wirtschaftlicher Aktivitäten und des Personenverkehrs. Damit wurde das politisch festgelegte Ziel erreicht, die Emissionen bis 2020&nbsp;auf unter 60&nbsp;% des Wertes von 1990&nbsp;zu senken.<br /><br />Laut vorläufigen Berechnungen des UBA sind die ⁠Treibhausgasemissionen zwischen 1990&nbsp;und 2024&nbsp;um 48,2&nbsp;% gesunken. Im Jahr 2024&nbsp;wurden rund 649&nbsp;Millionen Tonnen Treibhausgase emittiert, was einem Rückgang von etwa 23&nbsp;Millionen Tonnen beziehungsweise 3,4&nbsp;% im Vergleich zum Vorjahr entspricht. Setzt sich die Entwicklung der letzten Jahre fort, wird das Ziel, die Treibhausgasemissionen bis 2030&nbsp;auf 35&nbsp;% des Wertes von 1990&nbsp;zu reduzieren voraussichtlich knapp verfehlt.<br /><br />Im Jahr 2023&nbsp;entfielen 88,4&nbsp;% der gesamten Treibhausgasemissionen auf Kohlendioxid (CO₂), 6,7&nbsp;% auf Methan (CH₄), 3,6&nbsp;% auf Lachgas (N₂O) und 1,4&nbsp;% auf fluorierte Treibhausgase. Die CO₂-Emissionen entstehen überwiegend durch Strom- und Wärmeerzeugung, während Methan- und Lachgasemissionen hauptsächlich aus der Landwirtschaft stammen. Der größte Anteil der Treibhausgasemissionen entfiel 2024&nbsp;mit 28,5&nbsp;% auf die Energiewirtschaft. Die Industrie trug 23,6&nbsp;%, der Verkehr 22,0&nbsp;% und der Gebäudesektor 15,5&nbsp;% bei. Die verbleibenden 10,4&nbsp;% entfielen überwiegend auf Landwirtschaft, Abfallwirtschaft und sonstige Emittenten.<br /><br />Im langjährigen Vergleich zwischen 2023&nbsp;und 1990&nbsp;fällt der Rückgang der Treibhausgasemissionen in Deutschland mit 46&nbsp;% deutlich stärker aus als im Durchschnitt der Europäischen Union (EU-27), der nach vorläufigen Angaben bei rund 36&nbsp;% liegt. Noch größere Reduktionen wurden in einigen mittel- und osteuropäischen Staaten verzeichnet&nbsp;–&nbsp;insbesondere im Baltikum: Estland (–73&nbsp;%), Lettland und Litauen (jeweils –62&nbsp;%). Mit Ausnahme von Zypern (+52&nbsp;%) konnten alle Mitgliedsstaaten ihre Emissionen senken. Im Vergleich zum Vorjahr, in dem Irland (+13&nbsp;%) und Spanien (+6&nbsp;%) noch Anstiege verzeichneten, war auch hier ein Rückgang zu beobachten&nbsp;–&nbsp;in Spanien um 6&nbsp;%, in Irland um 1&nbsp;%.</p>
+            <p>Treibhausgasemissionen</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>13.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4214,12 +4266,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4263,12 +4324,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/7-1-ab/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/7-1-ab/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/7/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/7/" aria-label=" 7" title=" 7">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/7.png"
                         alt="Bezahlbare und saubere Energie - Ziel 7"
                         id="goal-7"
                         class="goal-icon-image goal-icon-image-" />
@@ -1423,6 +1409,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1513,6 +1508,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1551,9 +1555,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1565,16 +1569,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1619,7 +1623,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2547,9 +2551,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2557,31 +2562,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #fcc30b; font-size: large">7.1.a, b Endenergieproduktivität und Primärenergieverbrauch</b><br /><br />Bei der Betrachtung von Energieverbräuchen wird zwischen <i>Primär- und Endenergie</i> unterschieden:<br /><br />• <i>Primärenergie</i> bezeichnet die in natürlichen Energieträgern wie Erdgas, Erdöl, Kohle oder Uran enthaltene Energie vor ihrer Umwandlung. Auch die aus erneuerbaren Quellen gewonnene Energie zählt zur Primärenergie.<br /><br />• <i>Endenergie</i> ist jener Teil der Primärenergie, der dem Endverbraucher in Form von zum Beispiel Strom, Fernwärme, Gas oder Kraftstoffen zur Verfügung steht. Sie ergibt sich aus der Primärenergie abzüglich der Verluste, die bei Umwandlung, Transport und Speicherung entstehen.<br /><br /><b>7.1.a Endenergieproduktivität</b><br /><br />Die Endenergieproduktivität beschreibt das Verhältnis zwischen der wirtschaftlichen Wertschöpfung&nbsp;–&nbsp;gemessen als Bruttoinlandsprodukt (BIP)&nbsp;–&nbsp;und dem eingesetzten Endenergieverbrauch. Sie dient als Indikator für die Energieeffizienz bei der Produktion von Gütern, der Erbringung von Dienstleistungen sowie beim Energieverbrauch in privaten Haushalten. Da sich der Indikator auf die Endenergie bezieht, bleiben Verluste bei der Umwandlung, dem Transport und der Speicherung unberücksichtigt. Rückschlüsse auf die Effizienz von Energieumwandlungsprozessen&nbsp;–&nbsp;etwa den Wirkungsgrad von Kraftwerken&nbsp;–&nbsp;oder auf Fortschritte bei der Energieübertragung und ‑speicherung sind daher nicht möglich.<br /><br />Zwischen 2008&nbsp;und 2023&nbsp;stieg die Endenergieproduktivität laut vorläufigen Ergebnissen um 31,8&nbsp;%, davon allein 10,8&nbsp;Prozentpunkte in den Jahren 2022&nbsp;und 2023. Damit wurde sowohl im vergangenen Jahr als auch im mehrjährigen Durchschnitt das politisch festgelegte Ziel eines kontinuierlichen Anstiegs erreicht. Bis 2019&nbsp;war die Entwicklung des Indikators vor allem durch das steigende BIP geprägt (+14,7&nbsp;% im Vergleich zu 2008), während der Endenergieverbrauch vergleichsweise konstant blieb (–3,0&nbsp;%). Zwischen 2021&nbsp;und 2023&nbsp;erhöhte sich das BIP nur geringfügig, gleichzeitig sank jedoch der Energieverbrauch deutlich&nbsp;–&nbsp;von 94,2&nbsp;% auf 87,5&nbsp;% des Ausgangswerts von 2008. Dadurch nahm die Endenergieproduktivität trotz stagnierendem BIP weiter zu.<br /><br />Regionale Unterschiede sind deutlich erkennbar: Im Jahr 2022&nbsp;lag die Endenergieproduktivität in Sachsen-Anhalt bei 0,90&nbsp;Euro pro Kilowattstunde&nbsp;–&nbsp;ein Anstieg von lediglich 4,6&nbsp;% gegenüber 2008. Damit verzeichnete Sachsen-Anhalt sowohl bei der Endenergieproduktivität selbst als auch bei deren Entwicklung den niedrigsten Wert im Bundesvergleich. Die höchsten Werte erzielten die Stadtstaaten Berlin (3,34&nbsp;Euro pro Kilowattstunde) und Hamburg (3,54&nbsp;Euro pro Kilowattstunde). Berlin erreichte zudem mit 72,8&nbsp;% gegenüber 2008&nbsp;den höchsten Zuwachs aller Bundesländer.<br /><br />Der gesamte Endenergieverbrauch belief sich im Jahr 2023&nbsp;auf 8&nbsp;163&nbsp;Petajoule, gegenüber 9&nbsp;327&nbsp;Petajoule im Jahr 2008. Rund 14&nbsp;% entfielen auf Gewerbe, Handel und Dienstleistungen, jeweils 28&nbsp;% auf Haushalte und Industrie sowie 31&nbsp;% auf den Verkehr.<br /><br /><b>7.1.b⁠ Primärenergieverbrauch⁠</b><br /><br />Der ⁠Primärenergieverbrauch⁠ umfasst den gesamten Energiegehalt aller im Inland eingesetzten Energieträger. Dazu zählen Primärenergieträger wie Braun- und Steinkohle, Mineralöl, Erdgas sowie Energie aus erneuerbaren Quellen. Diese werden entweder direkt genutzt oder in Sekundärenergieträger wie Strom, Fernwärme, Benzin oder Diesel umgewandelt. Die Berechnung erfolgt als Summe der im Inland gewonnenen Energieträger zuzüglich des Saldos aus Importen und Exporten sowie Lagerveränderungen, abzüglich der Lieferung von Kraft- und Schmierstoffen an die nationale und internationale Seeschifffahrt in deutschen Häfen. Grundlage sind die Energiebilanzen der Arbeitsgemeinschaft Energiebilanzen (AGEB), ergänzt durch weitere Datenquellen.<br /><br />Im Gegensatz zur Endenergieproduktivität berücksichtigt dieser Indikator keine wirtschaftlichen Bezugsgrößen, sondern ausschließlich den Verbrauch. Da hier die Primärenergie zugrunde liegt, fließen auch Effizienzsteigerungen bei der Umwandlung fossiler Energieträger&nbsp;–&nbsp;insbesondere in der Stromerzeugung&nbsp;–&nbsp;mit ein. Allerdings lässt sich daraus nicht eindeutig ableiten, ob Veränderungen im Indikator auf einen veränderten Energieverbrauch oder auf Entwicklungen in Energieerzeugung, ‑umwandlung und ‑transport zurückzuführen sind. Bei der Erzeugung von Strom aus regenerativen Quellen wird die erzeugte Energie als Primärenergie gewertet, sodass sich Effizienzsteigerungen dieser Anlagen nicht direkt auf den Indikator auswirken.<br /><br />Zwischen 2008&nbsp;und 2024&nbsp;sank der Primärenergieverbrauch laut vorläufigen Angaben auf 73,3&nbsp;% des Ausgangswerts. Setzt sich der Trend der letzten Jahre fort, wird das politisch festgelegte Ziel&nbsp;–&nbsp;eine Reduktion des Primärenergieverbrauchs um mindestens 39,3&nbsp;% gegenüber 2008&nbsp;bis zum Jahr 2030&nbsp;–&nbsp;voraussichtlich vorzeitig erreicht.<br /><br />Auch hier zeigen sich deutliche regionale Unterschiede: Während der Primärenergieverbrauch in Sachsen im Jahr 2022&nbsp;auf 102,8&nbsp;% des Ausgangswerts von 2008&nbsp;anstieg, ging er in Schleswig-Holstein auf 73,5&nbsp;% und im Saarland auf 66,5&nbsp;% zurück.</p>
+            <p>Endenergieproduktivität und Primärenergieverbrauch</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>7.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -5269,12 +5321,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -5318,12 +5379,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

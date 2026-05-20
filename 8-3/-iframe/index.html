@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/8/" aria-label=" 8" title=" 8">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/8.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/8.png"
                         alt="Menschenwürdige Arbeit und Wirtschaftswachstum - Ziel 8"
                         id="goal-8"
                         class="goal-icon-image goal-icon-image-" />
@@ -1086,6 +1086,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1159,6 +1168,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1197,9 +1215,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1211,16 +1229,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1261,7 +1279,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2189,9 +2207,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2199,31 +2218,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #a21942; font-size: large">8.3&nbsp;Verhältnis der Bruttoanlageinvestitionen zum Bruttoinlandsprodukt (Investitionsquote)</b><br /><br />Die Investitionsquote gilt als ein zentraler volkswirtschaftlicher Indikator für die zukünftige wirtschaftliche Entwicklung. Sie stellt das Verhältnis der Bruttoanlageinvestitionen zum Bruttoinlandsprodukt (BIP) in jeweiligen Preisen dar. Bruttoanlageinvestitionen umfassen den wertmäßigen Zugang an Anlagegütern, das heißt den Erwerb abzüglich der Veräußerungen, ohne Berücksichtigung von Abschreibungen, die von inländischen Wirtschaftseinheiten erworben oder selbst erstellt werden, um sie länger als ein Jahr im Produktionsprozess einzusetzen.<br /><br />Sie setzen sich zusammen aus: Ausrüstungen (Maschinen und Geräte einschließlich militärischer Waffensysteme), Bauten (Wohn- und Nichtwohnbauten) sowie sonstigen Anlagen, zu denen insbesondere Forschung und Entwicklung, Software und Datenbanken zählen. Wertminderungen an Ausrüstungen und Anlagen bleiben unberücksichtigt; hingegen werden wesentliche Verbesserungen an vorhandenem Anlagevermögen mit einbezogen. Die Investitionsquote wird im Rahmen der Volkswirtschaftlichen Gesamtrechnungen (VGR) vom Statistischen Bundesamt nach international harmonisierten Standards berechnet&nbsp;–&nbsp;insbesondere auf Grundlage des Europäischen Systems Volkswirtschaftlicher Gesamtrechnungen (ESVG).<br /><br />Zu Beginn der 1990er-Jahre lag die Investitionsquote bei knapp 25&nbsp;%, sank jedoch innerhalb von rund zehn Jahren auf ihren bisherigen Tiefststand von 18,8&nbsp;%. Seit 2009&nbsp;war ein moderates und relativ stetiges Wachstum der Investitionsquote bis 2022&nbsp;zu beobachten. In den Jahren 2022&nbsp;bis 2024&nbsp;ging die Quote vergleichsweise deutlich zurück und lag nach vorläufigen Angaben zuletzt bei 20,9&nbsp;%. Die Bruttoanlageinvestitionen beliefen sich im Jahr 2024&nbsp;auf insgesamt 898&nbsp;Milliarden Euro; davon entfielen 126&nbsp;Milliarden Euro auf den Staat und 772&nbsp;Milliarden Euro auf nichtstaatliche Sektoren.<br /><br />Während seit 1991&nbsp;konstant rund 50&nbsp;% der Investitionen auf Bauinvestitionen entfielen, veränderten sich die Anteile der Ausrüstungs- und sonstigen Investitionen deutlich: Entfielen 1991&nbsp;noch 40&nbsp;% auf Ausrüstungsgüter, sank dieser Anteil bis 2024&nbsp;auf 29&nbsp;%. Im gleichen Zeitraum stieg der Anteil der Investitionen in Forschung und Entwicklung sowie in Software und Datenbanken von 11&nbsp;% auf 19&nbsp;%.<br /><br />Neben der Gliederung nach Gütergruppen lassen sich die Bruttoanlageinvestitionen auch nach Wirtschaftszweigen aufschlüsseln, in denen die Investitionen getätigt wurden. Den geringsten Anteil verzeichnete 2023&nbsp;der Wirtschaftszweig Land-, Forstwirtschaft und Fischerei mit 1,4&nbsp;%. Auf das Produzierende Gewerbe entfielen rund 22&nbsp;% der Investitionen (1991: über 28&nbsp;%). Die verbleibenden 76&nbsp;% wurden in den Dienstleistungsbereichen investiert (1991: 70&nbsp;%). Innerhalb des Dienstleistungsbereichs war das Grundstücks- und Wohnungswesen mit einem Anteil von 33&nbsp;% an der Gesamtsumme am stärksten vertreten.<br /><br />Trotz steigender nominaler Investitionen bleibt Deutschland im internationalen Vergleich investitionsschwach. Seit 1996&nbsp;liegt die Investitionsquote kontinuierlich unter dem Durchschnitt der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD), der im Jahr 2023&nbsp;bei 22,4&nbsp;% lag.</p>
+            <p>Verhältnis der Bruttoanlageinvestitionen zum Bruttoinlandsprodukt (Investitionsquote)</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>8.3.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4041,12 +4107,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

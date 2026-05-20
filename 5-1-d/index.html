@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/de/DNS_logo.png" alt="DESTATIS - Deutsche Nachhaltikeitsstrategie" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Ziele für Nachhaltige Entwicklung - " />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -206,41 +206,17 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategie
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/laender/">Bundesländer</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Hilfe
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/goals">Ziele</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/reporting-status">Berichtsstatus</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/about">Über uns</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
-            <a class="language-toggle-link" href="/site/en/5-1-d/">
-                English
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      Deutsch
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/en/5-1-d/">
+              English
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/">Start</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/goals">Ziele</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/5/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/5/" aria-label=" 5" title=" 5">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/5.png"
                         alt="Geschlechtergleichheit - Ziel 5"
                         id="goal-5"
                         class="goal-icon-image goal-icon-image-" />
@@ -1323,6 +1309,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1393,6 +1388,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1431,9 +1435,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -1445,16 +1449,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -1499,7 +1503,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2427,9 +2431,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2437,31 +2442,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #ff3a21; font-size: large">5.1.d Väterbeteiligung beim Elterngeld</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Das Elterngeld wurde mit Inkrafttreten des Bundeselterngeld- und Elternzeitgesetzes (BEEG) für Kinder eingeführt, die ab dem 1. Januar 2007&nbsp;geboren wurden. Anspruch auf Elterngeld haben Personen mit Wohnsitz oder gewöhnlichem Aufenthalt in Deutschland, die mit dem Kind im selben Haushalt leben, es eigenverantwortlich betreuen und erziehen sowie keiner oder nur einer eingeschränkten Erwerbstätigkeit nachgehen. Die Regelungen gelten gleichermaßen für Mütter und Väter. Auch Ehe- oder Lebenspartnerinnen und &#8209;partner der Eltern sind bei gemeinsamem Haushalt anspruchsberechtigt. In über 99&nbsp;% der Fälle handelt es sich bei den Leistungsbeziehenden um leibliche oder Adoptiveltern.<sup>1</sup><br /><br />Der Indikator basiert auf der vierteljährlich erhobenen Elterngeldstatistik, in der alle bewilligten Elterngeldleistungen erfasst sind. Er stellt den Anteil der Kinder eines bestimmten Geburtsjahrgangs dar, deren Väter Elterngeld bezogen haben&nbsp;–&nbsp;im Verhältnis zu allen Kindern dieses Jahrgangs, für die Elterngeld bezogen wurde. Da ausschließlich Kinder mit Elterngeldanspruch berücksichtigt werden, bleiben beispielsweise Kinder ausländischer Schutzsuchender ohne Anspruch auf Elterngeld unberücksichtigt und haben somit keinen Einfluss auf den Indikator. Die Datengrundlage bilden die abgeschlossenen Elterngeldbezüge pro Geburtsjahrgang. Vollständige Daten liegen daher in der Regel erst etwa zwei Jahre nach Ende des jeweiligen Geburtsjahres vor.<br /><br />Eine Differenzierung nach Art der Partnerschaft (gleich- oder verschiedengeschlechtlich) ist aufgrund der aktuellen Erhebungsmethodik nicht möglich. Es wird daher vereinfachend angenommen, dass jedem Kind genau ein leistungsberechtigter Vater zugeordnet ist. Bis zum 30. Juni 2015&nbsp;war die maximale Bezugsdauer auf 14&nbsp;Monate begrenzt. Für Kinder, die ab dem 1. Juli 2015&nbsp;geboren wurden, können Eltern zwischen verschiedenen Leistungsmodellen wählen oder diese miteinander kombinieren: Basiselterngeld, ElterngeldPlus und Partnerschaftsbonus. Je nach gewähltem Modell kann die Bezugsdauer deutlich variieren.<br /><br />Der Indikator stellt ausschließlich den tatsächlichen Bezug von Elterngeld dar. Er erfasst weder die Bezugsdauer, noch einen möglichen Umfang von Teilzeitbeschäftigung während des Elterngeldbezugs. Seit dem 1. April 2025&nbsp;gelten neue Einkommensgrenzen für den Bezug von Elterngeld. Diese Neuregelung könnte künftig die Entwicklung des Indikators beeinflussen, da voraussichtlich weniger Paare anspruchsberechtigt sein werden.<br /><br /><b>Entwicklung</b><br /><br />Zwischen 2008&nbsp;und 2022&nbsp;ist die Väterbeteiligung beim Elterngeld deutlich gestiegen. Der Anteil der Kinder, deren Väter Elterngeld bezogen, erhöhte sich von 21,2&nbsp;% im Jahr 2008&nbsp;auf 46,3&nbsp;% im Jahr 2021. Die Mütterbeteiligung blieb im selben Zeitraum mit rund 98&nbsp;% konstant auf einem hohen Niveau. Trotz dieses Trends wird das politisch festgelegte Ziel, den Anteil der Kinder mit elterngeldbeziehenden Vätern bis zum Jahr 2030&nbsp;auf mindestens 65&nbsp;% zu erhöhen, bei gleichbleibender Entwicklung voraussichtlich nicht erreicht.<br /><br />Mit dem Anstieg der Väterbeteiligung ging ein leichter Rückgang der durchschnittlichen Bezugsdauer pro Vater einher. Während Väter für Kinder des Geburtsjahrgangs 2008&nbsp;durchschnittlich 3,7&nbsp;Monate Elterngeld bezogen, waren es beim Jahrgang 2022&nbsp;nur noch 3,3&nbsp;Monate. Da sich jedoch insgesamt mehr Väter beteiligten, stieg die Gesamtzahl der von Vätern in Anspruch genommenen Elterngeldmonate an. Bezogen auf alle bezugsberechtigten Väter&nbsp;–&nbsp;also auch auf jene, die keinen Antrag gestellt haben&nbsp;–&nbsp;ergibt sich ein Anstieg der durchschnittlich in Anspruch genommenen Monate von 0,8&nbsp;(2008) auf 1,5&nbsp;Monate (2022).<br /><br />Die durchschnittliche Bezugsdauer bei Müttern (bezogen auf alle bezugsberechtigten Mütter) war im Vergleich deutlich höher: Sie lag für den Geburtsjahrgang 2008&nbsp;bei 11,5&nbsp;Monaten und stieg für den Geburtsjahrgang 2022&nbsp;auf 13,8&nbsp;Monate an.<br /><br />Ein regionaler Vergleich für das Jahr 2022&nbsp;zeigt deutliche Unterschiede in der Väterbeteiligung: Die höchsten Anteile wurden in Sachsen (55,4&nbsp;%) und Bayern (53,8&nbsp;%) verzeichnet, während Bremen (35,0&nbsp;%) und das Saarland (34,8&nbsp;%) die niedrigsten Werte aufwiesen.<br /><br /><small><sup>1</sup> Zur besseren Lesbarkeit wird im Folgenden vereinfacht von <i>Müttern</i> und <i>Vätern</i> gesprochen.</small></p>
+            <p>Väterbeteiligung beim Elterngeld</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>5.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4250,12 +4302,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            <a href="/site/contact-us">Kontakt</a>
                             
                         </li>
                         <li>
-                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -4299,12 +4360,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

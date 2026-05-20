@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'en',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/en/16/" aria-label=" 16" title=" 16">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/16.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/16.png"
                         alt="Peace and justice - strong institutions - Goal 16"
                         id="goal-16"
                         class="goal-icon-image goal-icon-image-" />
@@ -307,7 +307,7 @@ layout-indicator-iframe
   id="indicatorData"
   data-indicatorid='indicator_16-2'
   data-id="16-2"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Personnel trained by the Bundeswehr to strengthen small arms control and ammunition security"
   data-charttitles="null"
   data-measurementunit=""
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >National Metadata</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Content and progress</button>
+            >Global Metadata</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1603,9 +1621,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1613,31 +1632,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Content and progress </th>
+        <th scope="row">Indicator name </th>
         <td>
           
-            <p><b style="color: #00689d; font-size: large">16.2&nbsp;Personnel trained by the Bundeswehr to strengthen small arms control and ammunition safety</b><br /><br />The control of small arms and ammunition is a component of international arms control policy. Inadequate security measures regarding small arms and ammunition can lead to conflict escalation and the illegal proliferation of weapons. Within the framework of its security policy responsibilities, the German Armed Forces (Bundeswehr) participate by deploying experts who train personnel in various regions around the world to strengthen small arms control and ammunition security.<br /><br />The indicator shows the number of individuals who have been trained by the Bundeswehr in the fields of small arms control and ammunition security since 2024. The data are based on a special evaluation by the Bundeswehr’s Verification Centre. The training covers topics such as storage security, weapon identification, ammunition transport, and documentation. A distinction is made between training in small arms control (identification, documentation, registration) and training in storage and ammunition security (Physical Security and Stockpile Management, PSSM). The latter focuses on the safe storage and transport of ammunition and explosives, as well as safety precautions for ammunition depots, including their distance from civilian settlements. The various training courses last from a few days to several weeks.<br /><br />Approximately 5&nbsp;to 10&nbsp;training events are conducted annually, with around 15&nbsp;to 60&nbsp;participants trained per event. Regional priorities are set annually in coordination with the Federal Foreign Office. Currently, the focus is on Southeast Europe, including Ukraine; West Africa, particularly the ECOWAS region (Economic Community of West African States); and Central Asia. In 2024, 182&nbsp;specialists were trained, including 33&nbsp;women and 149&nbsp;men. The politically defined target is to train at least 1,000&nbsp;people in this field between early 2024&nbsp;and the end of 2030. The necessary annual training volume was achieved during the first reporting year in 2024.<br /><br />All trained individuals are treated equally in the indicator, regardless of the duration and intensity of their training, which limits the indicator’s explanatory power to some extent. Furthermore, no qualitative conclusions can be drawn from the indicator regarding the type of training or the subsequent practical application of the skills imparted. A revision in the form of retrospective or ongoing monitoring of the content taught&nbsp;–&nbsp;if carried out at all&nbsp;–&nbsp;is not part of the indicator. It is also not possible to determine to what extent or in what manner the trained personnel later contribute to preventing the illegal proliferation of weapons.</p>
+            <p>Personnel trained by the Bundeswehr to strengthen small arms control and ammunition safety</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
+          
+            <p>16.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3417,12 +3483,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

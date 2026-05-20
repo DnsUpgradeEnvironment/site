@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'en',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/en/11/" aria-label=" 11" title=" 11">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/11.png"
                         alt="Sustainable cities &amp; communities - Goal 11"
                         id="goal-11"
                         class="goal-icon-image goal-icon-image-" />
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >National Metadata</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Content and progress</button>
+            >Global Metadata</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1603,9 +1621,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1613,31 +1632,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Content and progress </th>
+        <th scope="row">Indicator name </th>
         <td>
           
-            <p><b style="color: #fd9d24; font-size: large">11.2.c Accessibility of medium-sized and large cities by public transport</b><br /><br />The indicator is calculated by the Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR). Public transport is defined as services accessible to everyone upon payment of a fare. Flexible service forms such as demand-responsive minibuses, which operate without fixed stops and timetables upon request, are not taken into account. The population-weighted average travel time to the nearest medium- or upper-order centre was 23.5&nbsp;minutes in 2012. By 2020, this had decreased to 20.5&nbsp;minutes and further declined to 17.7&nbsp;minutes in 2024. This corresponds to a reduction of 24.7% over the period from 2012&nbsp;to 2024.<br /><br />However, the comparability of the results is limited due to changes in methodology and calculation bases over time. On the one hand, the number of medium- and upper-order centres considered has varied. On the other hand, from 2024&nbsp;onwards, travel times have no longer been calculated from every stop, but for the first time from every inhabited 100×100-metre grid cell. For this purpose, the entire national territory was divided into grid cells of this size, and residency was verified using registered addresses.<br /><br />Furthermore, in major cities, district and neighbourhood centres are now also included as destinations. In addition, updated data sources on timetables and transport networks as well as the results of the 2022&nbsp;Census at grid cell level have been incorporated into the analyses. The basis for the accessibility analyses by public transport are nationwide timetable data in GTFS format (scheduled timetable data), which are aggregated via the DELFI Integration Platform (DIP) from the regional information systems and made available on the <a href="https://www.opendata-oepnv.de/ht/de/willkommen">Open Data ÖPNV platform</a>. Based on this, the shortest travel times to the nearest medium- or upper-order centre during the morning peak period were determined.<br /><br />The definition of the time window for the morning peak period varied by reporting year: in 2012, connections with arrival times between 06:00&nbsp;and 09:00&nbsp;were considered; in 2020, between 06:00&nbsp;and 12:00. For 2024, the start time or journey commencement was set to 8&nbsp;October 2024&nbsp;at 08:00&nbsp;–&nbsp;a working day outside school holidays. The frequency of services and connections outside the respective time windows are not included in the indicator calculation.<br /><br />In addition to travel times, access times to departure stops were also considered. For this purpose, a nationwide street and path network based on OpenStreetMap was used, modelling access, egress, and transfer routes. Different travel speeds were assumed&nbsp;–&nbsp;approximately 3.6&nbsp;km/h for pedestrians and 18&nbsp;km/h for cyclists&nbsp;–&nbsp;allowing the representation of various travel modes.<br /><br />The classification of a location as a medium- or upper-order centre is carried out by the Landesplanungsbehörden of the Länder. This classification is primarily based on the provision of goods, services and infrastructure that are not available in the surrounding lower-order centres. Examples include specialist medical practices, hospitals, cultural institutions as well as secondary schools and universities. Up to and including 2024, each medium- or upper-order centre&nbsp;–&nbsp;including in large cities&nbsp;–&nbsp;was represented by only one destination point (city centre).<br /><br />In 2024, in all upper-order centres with more than 250,000&nbsp;inhabitants, an additional 107&nbsp;central locations at district or neighbourhood level were included alongside the city centre. The basis for this was commuter and mobile phone data interconnections at grid cell level, the Central Shopping District (infas 360), as well as cluster analyses based on Points-of-Interest data from the Federal Agency for Cartography and Geodesy (BKG). Only locations with a catchment area of at least 50,000&nbsp;inhabitants, where medium-order functions can be comprehensively provided, were included. By including these additional central locations as destinations, a more differentiated picture of accessibility within major cities emerges. This provides a significantly more realistic depiction of public service provision with regard to medium-order functions.</p>
+            <p>Accessibility of medium-sized and large cities by public transport</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
+          
+            <p>11.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3397,12 +3463,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

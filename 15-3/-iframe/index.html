@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/15/" aria-label=" 15" title=" 15">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/15.png"
                         alt="Leben an Land - Ziel 15"
                         id="goal-15"
                         class="goal-icon-image goal-icon-image-" />
@@ -745,6 +745,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -815,6 +824,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -853,9 +871,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -867,16 +885,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -917,7 +935,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1845,9 +1863,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1855,31 +1874,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #56c02b; font-size: large">15.3&nbsp;Bodenversiegelungsgrad</b><br /><br />Die künstliche Versiegelung von Bodenflächen führt zu einer Beeinträchtigung natürlicher Bodenfunktionen. Neben Auswirkungen auf die Biodiversität, das Mikroklima und die Bodenfauna kann über versiegelte Flächen kein Niederschlagswasser versickern, was einerseits zum Absinken des Grundwasserspiegels beitragen und andererseits das Entwässerungssystem bei Starkregenereignissen überlasten kann. Eine Fläche gilt als versiegelt, wenn sie bebaut, betoniert, asphaltiert, gepflastert oder auf andere Art dauerhaft wasserundurchlässig ist. Versiegelte Flächen finden sich vor allem in Wohngebieten, auf Verkehrsflächen sowie in Industrie- und Gewerbegebieten. Auch versiegelte Teile von Flächen wie Kleingärten, Friedhöfen, Sport- und Erholungsgebieten oder Campingplätzen werden erfasst.<br /><br />Unversiegelte Flächen umfassen unter anderem Baustellen (sofern keine erkennbare Bebauung vorhanden ist), Bergwerke, Steinbrüche, Torfabbaugebiete, Sandgruben sowie natürliche, künstliche und kultivierte bewachsene Flächen, unbegrünte oder spärlich bewachsene Flächen, landwirtschaftlich genutzte Felder und Ackerland, Weinberge, Obstplantagen und Rasenflächen aller Art, die sportlich genutzt werden, sowie Wälder. Zusätzlich zählen Gletscher-, Schnee- und Wasserflächen zu den unversiegelten Flächen.<br /><br />Der Indikator wird auf Basis von Daten des europäischen Copernicus-Programms berechnet. Für die Erstellung des Datensatzes werden Satellitendaten automatisiert ausgewertet, wobei für jede betrachtete Flächenzelle der Anteil der versiegelten Fläche bestimmt und anschließend der Mittelwert für ganz Deutschland gebildet wird. Der Datensatz basiert ausschließlich auf Informationen, die sich aus der Fernerkundung der Erdoberfläche ableiten lassen. Informationen aus Katastern oder ähnlichen Quellen werden nicht in den Datensatz einbezogen. Diese Vorgehensweise kann zu Ungenauigkeiten führen, da versiegelte Flächen möglicherweise nicht als solche identifiziert werden, zum Beispiel wenn sie sich unter einem geschlossenen Kronendach befinden. Ein umgekehrter Effekt tritt bei Photovoltaik-Freiflächenanlagen (Solarparks) auf, die als versiegelte Fläche erfasst werden, obwohl sie in der Regel auf unversiegeltem Boden errichtet sind. Bahnschotterflächen können methodisch nicht eindeutig zugeordnet werden. Innerorts lassen sich diese Flächen aus den Fernerkundungsdaten nicht eindeutig von anderen Infrastrukturflächen unterscheiden und werden daher der versiegelten Fläche zugeordnet, während sie außerorts als unversiegelte Fläche betrachtet werden.<br /><br />Der Indikator stellt ausschließlich den Anteil der versiegelten Fläche dar. Es wird nicht berücksichtigt, inwieweit die nicht versiegelte Fläche die gewünschten Eigenschaften hinsichtlich der Wasserdurchlässigkeit aufweist. So werden naturgemäß nahezu wasserundurchlässige Flächen wie Fels- sowie Lehm- und Tonböden als unversiegelte Flächen gezählt. Dies gilt ebenso für landwirtschaftliche Flächen, die durch intensiven Maschinenverkehr zumindest zeitweise stark verdichtet sein können.<br /><br />Im Jahr 2006&nbsp;und 2009&nbsp;lag der Versiegelungsgrad bei 4,2&nbsp;% der Gesamtfläche Deutschlands und stieg bis 2015&nbsp;nur marginal auf 4,3&nbsp;% an. 2018&nbsp;betrug der Versiegelungsgrad 5,2&nbsp;%. Dieser Anstieg resultiert jedoch weniger aus einem tatsächlichen Anstieg. Vielmehr liegen der Auswertung ab dem Jahr 2018&nbsp;deutlich hochauflösendere Satellitenbilder zugrunde, wodurch die Bodenversiegelung räumlich detaillierter und realistischer erfasst werden kann. Insbesondere auf Siedlungsflächen hat die Bodenversiegelung nicht nur erheblichen Einfluss auf das Bereitstellungspotenzial, sondern auch auf die direkte Nachfrage von verschiedenen Ökosystemleistungen wie beispielsweise lokale Kühlung.<br /><br />Daher berechnet das Statistische Bundesamt in den <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/oekosystemgesamtrechnungen/_inhalt.html">Ökosystemrechnungen</a> die Bodenversiegelung separat für Siedlungsflächen und Verkehrsinfrastrukturflächen (Ökosystemabteilung A01&nbsp;der Flächenbilanz der Ökosysteme). Im Jahr 2018&nbsp;betrug der Bodenversiegelungsgrad auf diesen Flächen 42,5&nbsp;%. Durch die deutlich höhere räumliche Auflösung der Satellitendaten ab dem Jahr 2018&nbsp;ist eine Interpretation im Zeitverlauf mit den vorherigen Ergebnissen nicht sinnvoll möglich. Daher kann das politisch festgelegte Ziel, die Zunahme des Bodenversiegelungsgrads zu verringern, noch nicht bewertet werden.</p>
+            <p>Bodenversiegelungsgrad</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>15.3.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -4558,12 +4624,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'en',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -197,7 +197,7 @@ layout-indicator
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light flex-wrap align-items-start">
             <a class="navbar-brand" href="/site/en/" id="home" aria-label="" title="">
-    <img src="/site/assets/img/en/DNS_logo.png" alt="DESTATIS - German Strategy for Sustainable Development" />
+    <img src="/site/assets/img/SDG_logo.png" alt="Sustainable Development Goals - header.tag_line" />
 </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="">
                 <span class="navbar-toggler-icon"></span>
@@ -205,42 +205,18 @@ layout-indicator
             <div class="d-flex flex-wrap w-100 justify-content-between">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
-    <a class="nav-link" href="/site/en/">Start</a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Status
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
-    <a class="dropdown-item" href="/site/en/status/">Methodology</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/status_summary/">Overview</a>
-</li></ul>
-            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Strategy
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/dns/">German Sustainable Development Strategy</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/monitoring/">Monitoring</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/publications/">Publications</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/strategy/links/">Links</a>
-</li></ul>
-            </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/laender/">Länder</a>
+    <a class="nav-link" href="/site/en/">Home</a>
 </li><li class="nav-item ">
-    <a class="nav-link" href="/site/en/menu.1_global_indicators_path">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Help
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/navigation/">Structure of the online platform</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/guidance/">Technical notes</a>
-</li><li class=" ">
-    <a class="dropdown-item" href="/site/en/help/faq/">FAQ</a>
+    <a class="nav-link" href="/site/en/goals">Goals</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/reporting-status">Reporting Status</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/news">menu.updates</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/faq">menu.faq</a>
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/about">About</a>
 </li></ul>
-            </li></ul>
     
                 </div>
                 <div class="header-search-bar">
@@ -263,14 +239,21 @@ layout-indicator
 
 
 
-  <div class="language-toggle-container d-flex">
-    <i class="fa fa-globe language-toggle-globe-links"></i>
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
-            <a class="language-toggle-link" href="/site/17-1/">
-                Deutsch
+  <div class="language-toggle-container">
+  
+  <div class="btn-group language-toggle-dropdown  dropdown">
+    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa fa-globe"></i>
+      English
+    </button>
+    <ul class="dropdown-menu"><li>
+            <a class="dropdown-item" href="/site/17-1/">
+              Deutsch
             </a>
-        </li></ul>
+          </li></ul>
+  </div>
 </div>
+
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
@@ -388,6 +371,9 @@ data-event-label="high"
         <li class="breadcrumb-item">
             <a href="/site/en/">Home</a>
         </li>
+        <li class="breadcrumb-item">
+            <a href="/site/en/goals">Goals</a>
+        </li>
         
         <li class="breadcrumb-item">
             <a href="/site/en/17/"
@@ -409,7 +395,7 @@ data-event-label="high"
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/en/17/" aria-label=" 17" title=" 17">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/17.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/17.png"
                         alt="Partnerships for the goals - Goal 17"
                         id="goal-17"
                         class="goal-icon-image goal-icon-image-" />
@@ -449,7 +435,7 @@ data-event-label="high"
   id="indicatorData"
   data-indicatorid='indicator_17-1'
   data-id="17-1"
-  data-country="Germany"
+  data-country="Australia"
   data-charttitle="Official development assistance as a proportion of gross national income"
   data-charttitles="null"
   data-measurementunit=""
@@ -1170,6 +1156,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1237,6 +1232,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -1275,9 +1279,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >National Metadata</button>
         </li>
     
         
@@ -1289,16 +1293,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Content and progress</button>
+            >Global Metadata</button>
         </li>
     
         
@@ -1343,7 +1347,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -2271,9 +2275,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -2281,31 +2286,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Content and progress </th>
+        <th scope="row">Indicator name </th>
         <td>
           
-            <p><b style="color: #19486a; font-size: large">17.1&nbsp;Official development assistance as a proportion of gross national income</b><br /><br />On behalf of the Federal Ministry for Economic Cooperation and Development (BMZ), the Federal Statistical Office compiles the development cooperation statistics from which Official Development Assistance (ODA) is derived. Whether an expenditure can be classified as ODA is governed by the directives of the Development Assistance Committee (DAC) of the Organisation for Economic Co-operation and Development (OECD).<br /><br />ODA includes public flows provided on concessional terms with the primary objective of promoting the economic and social development of developing countries. This includes, in particular, expenditure for financial and technical cooperation, humanitarian assistance, as well as contributions to development cooperation activities of multilateral institutions such as the United Nations (UN), the European Union (EU), the World Bank Group, or regional development banks.<br /><br />In addition, under certain conditions, expenditures for peace missions, debt relief, or specific in-donor country costs&nbsp;–&nbsp;such as tuition costs for students from developing countries, in-country refugee costs, or spending on development-related research&nbsp;–&nbsp;may also be recognised as ODA. Gross National Income (GNI) is a measure of the primary distribution of income generated by the economic activities of all residents before government redistribution through taxes, social contributions, and transfers. GNI captures all income of residents and resident economic entities, regardless of whether the income is generated domestically or from abroad. This is the key distinction from Gross Domestic Product (GDP), which is based on the location of production and thus follows the domestic production principle.<br /><br />The list of countries eligible to receive ODA is determined by the OECD-DAC. It includes the Least Developed Countries (LDCs) as well as other countries with low and middle per capita GNI. This list is regularly reviewed and updated; countries may be added or removed. In 2018, the valuation method for debt instruments (loans, bonds, and debt relief) was revised: the previous net disbursement approach was replaced by the grant equivalent method. Under this method, only the grant element of an instrument&nbsp;–&nbsp;calculated based on factors such as interest rate and maturity&nbsp;–&nbsp;is counted as ODA. One objective of this change is to enhance the comparability of loans and grants. Since 2020, the grant equivalent method has also applied to debt cancellations and reschedulings, and since 2023, to equity investments.<br /><br />According to preliminary results, German ODA in 2024&nbsp;amounted to 32.4&nbsp;billion euros, which was below the 2023&nbsp;figure of 35.1&nbsp;billion euros. The share of ODA in Germany’s GNI in 2024&nbsp;stood at 0.67% (2023: 0.82%). The politically set target of 0.70% was exceeded in the years 2020&nbsp;to 2023, but slightly underachieved in 2024. While GNI has more than doubled since 2010, ODA has more than tripled over the same period.<br /><br />In international comparison, Germany was again the second-largest donor in absolute terms in 2024&nbsp;–&nbsp;behind the United States and ahead of Japan. However, the US ODA-to-GNI ratio stood at 0.22%, which was below the DAC average of 0.33%. Germany ranked fifth among the 32&nbsp;DAC member countries with a ratio of 0.67%. According to preliminary figures, the international target of 0.70% was achieved in 2024&nbsp;by the DAC countries Norway (1.02%), Luxembourg (1.00%), Sweden (0.79%), and Denmark (0.71%).<br /><br />In addition to public development cooperation, private actors&nbsp;–&nbsp;such as churches, foundations, and associations&nbsp;–&nbsp;also deploy own resources for development purposes. These include own funds (including membership fees) as well as donations. This private, non-ODA-relevant development cooperation amounted to 1.5&nbsp;billion euros in 2023. Private direct investments in developing countries stood at 18.4&nbsp;billion euros in 2023&nbsp;(according to the status prior to Bundesbank revision).</p>
+            <p>Official development assistance as a proportion of gross national income</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
+          
+            <p>17.1.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -5924,12 +5976,21 @@ data-event-label="Change to indicator.sources tab"
                         </li>
                         
                         <li>
-                            
-                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            <a href="/site/en/contact-us">Contact us</a>
                             
                         </li>
                         <li>
-                            <a href="/site/en/imprint/">Legal Notice</a>
+                            
+                            <a href="https://twitter.com/MyTwitterAccount" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i>@destatis</a></a>
+                            
+                        </li>
+                        <li>
+                            
+                            <a href="https://facebook.com/MyFacebookAccount" target="_blank">general.facebook</a>
+                            
+                        </li>
+                        <li>
+                            <a href="/site/en/about/cookies-and-privacy/">Cookies</a>
                             
                         </li>
                         
@@ -5973,12 +6034,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

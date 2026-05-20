@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'en',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/en/10/" aria-label=" 10" title=" 10">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/en/10.png"
                         alt="Reduced inequalities - Goal 10"
                         id="goal-10"
                         class="goal-icon-image goal-icon-image-" />
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Last data update</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >National Metadata</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Content and progress</button>
+            >Global Metadata</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
+                <p>The international organisations (custodian agencies) that are responsible for the respective SDG-indicator publish methodological guidelines for the calculation of the indicator - so-called global metadata.<br /><br />Displayed here are the national time series that fit the global metadata best as well as their comparability to the global metadata. Please find further methodical and country-specific information of the time series in the related national metadata sheet.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1603,9 +1621,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>This table provides information on metadata for SDG indicators. <a href="https://unstats.un.org/sdgs/metadata/">Global metadata</a> is provided by the UN Statistics Division.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1613,31 +1632,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Content and progress </th>
+        <th scope="row">Indicator name </th>
         <td>
           
-            <p><b style="color: #dd1367; font-size: large">10.2&nbsp;Gini coefficient of income after social transfers</b><br /><br />The Gini coefficient is a measure of relative inequality, taking values between zero and one. Under conditions of perfect equality, it equals zero; under conditions of maximum inequality, it reaches one. In the context of income distribution, a Gini coefficient of one means that all income accrues to a single individual. The lower the value, the more evenly income is distributed.<br /><br />For the calculation of the indicator, the so-called equivalised income is used. This is a needs-adjusted income derived from the total household income and the number and age of household members. Using an equivalence scale, incomes are weighted according to household size and composition. This adjustment ensures that the incomes of individuals from households of different sizes are comparable, as larger households benefit from economies of scale&nbsp;–&nbsp;for example, through the shared use of living space or household appliances.<br /><br />Disposable equivalised income refers to total household income (including social transfers) after deduction of taxes and other compulsory payments. It corresponds to the income available for consumption and saving. This is to be distinguished from equivalised income before social transfers, which measures disposable income excluding government transfers such as unemployment benefits or housing allowances. Pensions are not classified as social transfers in this context and are therefore included in equivalised income before social transfers. The same applies to market equivalised income, which denotes income before deduction of taxes and social contributions and without taking social transfers into account. For all the income concepts mentioned, no breakdown is made by source of income&nbsp;–&nbsp;such as wages and salaries, rental income, or capital gains.<br /><br />The income data are drawn from the annually harmonised European Union Statistics on Income and Living Conditions (EU-SILC). In Germany, this survey was integrated into the microcensus in 2020, accompanied by extensive methodological changes, in order to better meet the requirements for data timeliness and detailed regional breakdowns. As a result, the findings from 2020&nbsp;onwards are not comparable with earlier years. Methodological adjustments are also made to account for the underrepresentation of high-income or high-wealth households, which is common in voluntary sample surveys, in order to ensure international comparability.<br /><br />As in previous years, Germany’s Gini coefficient for disposable equivalised income in 2024, at 0.295, was almost identical to the European Union (EU) average (0.293). This indicates that differences in income distribution between Germany and the EU are small. Nevertheless, in 2024&nbsp;Germany’s value was slightly above the EU average, meaning that the politically defined target was not achieved.<br /><br />The Gini coefficient for disposable equivalised income (0.295) was significantly lower than that for equivalised income before social transfers (0.355). As expected, the value for market equivalised income was higher still, at 0.477. This demonstrates that redistributive mechanisms such as social transfers, social insurance, and the tax system make a substantial contribution to reducing income inequalities in Germany.<br /><br />The Gini coefficient for wealth, based on the European Central Bank’s (ECB) <i>Household Finance and Consumption Survey</i> (HFCS), shows a considerably greater degree of inequality. In 2023, Germany’s wealth Gini stood at 0.724, far exceeding the income-based values. By comparison, the value for the euro area in 2021&nbsp;–&nbsp;the most recent available data&nbsp;–&nbsp;was 0.694, and thus lower than the German figure. Certain influencing factors not captured in the wealth Gini, however, put the appearance of above-average wealth inequality into perspective. For example, future pension and retirement entitlements are excluded from the calculation of net wealth.</p>
+            <p>Gini coefficient of income after social transfers</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Target number </th>
+        <td>
+          
+            <p>10.2.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -6178,12 +6244,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -40,7 +40,7 @@ var opensdg = {
   },
 
   // Disaggregations which should be ignored on indicator pages.
-  ignoredDisaggregations: null,
+  ignoredDisaggregations: [],
 
   language: 'de',
 
@@ -147,7 +147,7 @@ var translations = {
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520111654">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520112930">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -267,7 +267,7 @@ layout-indicator-iframe
             
             <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
                 <a href="/site/17/" aria-label=" 17" title=" 17">
-                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png"
+                    <img src="https://open-sdg.org/sdg-translations/assets/img/goals/de/17.png"
                         alt="Partnerschaften zur Erreichung der Ziele - Ziel 17"
                         id="goal-17"
                         class="goal-icon-image goal-icon-image-" />
@@ -503,6 +503,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -573,6 +582,15 @@ data-event-label="Change to Table tab"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ><u>Letzte Datenaktualiserung:</u><br>:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="DATA_LAST_UPDATE"
+        ></dd>
+        
         
     </dl>
     
@@ -611,9 +629,9 @@ data-event-label="Change to Table tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.details tab"
+data-event-label="Change to indicator.national_metadata tab"
 
-            >Details</button>
+            >Nationale Metadaten</button>
         </li>
     
         
@@ -625,16 +643,16 @@ data-event-label="Change to indicator.details tab"
                 type="button"
                 class="nav-link "
                 data-bs-toggle="tab"
-                id="tab-content"
-                data-bs-target="#content"
-                aria-controls="content"
+                id="tab-global"
+                data-bs-target="#global"
+                aria-controls="global"
                 role="tab"
                 data-on="click"
 data-event-category="Tab change"
 data-event-action="Change metadata view"
-data-event-label="Change to indicator.contentAndProgress tab"
+data-event-label="Change to indicator.global_metadata tab"
 
-            >Inhalt und Entwicklung</button>
+            >Globale Metadaten</button>
         </li>
     
         
@@ -675,7 +693,7 @@ data-event-label="Change to indicator.sources tab"
         
         <div role="tabpanel" class="tab-pane active" id="national">
             <article>
-                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
+                <p>Die für den jeweiligen SDG-Indikator zuständigen internationalen Organisationen (Custodian Agencies) veröffentlichen methodische Vorgaben zur Berechnung des Indikators - die sogenannten globalen Metadaten.<br /><br />Hier werden die am besten dazu geeigneten, national verfügbaren Zeitreihen bereitgestellt und ihre Vergleichbarkeit mit den globalen Metadaten ausgewiesen. Zugehörige methodische und länderspezifische Informationen dieser Zeitreihen finden Sie im nationalen Metadatenblatt.</p>
 
                 <table class="table metadata-content">
   <tbody>
@@ -1592,9 +1610,10 @@ data-event-label="Change to indicator.sources tab"
         
         
         
-        <div role="tabpanel" class="tab-pane " id="content">
+        <div role="tabpanel" class="tab-pane " id="global">
             <article>
-                
+                <p>Diese Übersicht stellt Informationen zu den globalen Metadaten des jeweiligen SDG-Indikators bereit. Die <a href="https://unstats.un.org/sdgs/metadata/">globalen Metadaten</a> werden durch die Statistische Division der Vereinten Nationen bereitgestellt.</p>
+
                 <table class="table metadata-content">
   <tbody>
   
@@ -1602,31 +1621,78 @@ data-event-label="Change to indicator.sources tab"
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      
+      
+      
+        
+          
       
       
       
       
       <tr>
-        <th scope="row">Inhalt und Fortschritt </th>
+        <th scope="row">Indikatorenbezeichnung </th>
         <td>
           
-            <p><b style="color: #19486a; font-size: large">17.3&nbsp;Einfuhren aus am wenigsten entwickelten Ländern</b><br /><br />Daten zu den Einfuhren von Waren nach Deutschland werden von der Außenhandelsstatistik des Statistischen Bundesamtes erhoben. Diese umfasst neben dem Herkunftsland der importierten Waren auch deren Wert, Gewicht und eine detaillierte Warenklassifikation. Angaben zu Dienstleistungsimporten werden zwar von der Deutschen Bundesbank erfasst&nbsp;–&nbsp;sie bleiben jedoch bei der Berechnung dieses Indikators unberücksichtigt.<br /><br />Die Einstufung der Länder als am wenigsten entwickelte Länder (Least Developed Countries, LDCs) erfolgt anhand der Liste der Empfänger öffentlicher Entwicklungsgelder des Ausschusses für Entwicklungszusammenarbeit der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD-DAC). Für den Indikator gilt jeweils die im betreffenden Jahr gültige LDC-Einstufung gemäß OECD-DAC. Ändert sich der Status eines Landes, wirkt sich dies auf den Indikator aus&nbsp;–&nbsp;selbst wenn der Wert der Einfuhren aus diesem Land unverändert bleibt. Aufgrund von Re-Importen&nbsp;–&nbsp;auch nach Verarbeitungsschritten im Ausland&nbsp;–&nbsp;ist in gewissem Umfang von Mehrfachzählungen im Zähler und Nenner des Indikators auszugehen.<br /><br />Da die Einfuhren aus LDCs stets im Verhältnis zu den gesamten deutschen Einfuhren betrachtet werden, hängt der Wert des Indikators nicht nur von der absoluten Höhe der Einfuhren aus LDCs, sondern auch vom Gesamtwert aller deutschen Einfuhren im jeweiligen Jahr ab. Neben den gesamten Einfuhren aus LDCs wird auch der Anteil weiterverarbeiteter Produkte dargestellt. Dadurch soll zumindest teilweise berücksichtigt werden, ob Deutschland aus den LDCs hauptsächlich Ausgangsstoffe für industriell erzeugte Produkte bezieht oder ob die LDCs selbst am Fertigungsprozess und an der Wertschöpfung beteiligt sind.<br /><br />Als weiterverarbeitete Produkte gelten alle Waren, die in der Gliederung nach Warengruppen und &#8209;untergruppen der Ernährungs- und der Gewerblichen Wirtschaft (EGW) nicht als Rohstoffe eingestuft sind. Rohstoffe wie Erdöl, Erze, Rundholz oder pflanzliche Spinnstoffe, fallen nicht darunter, während etwa Getreide, Gemüse, lebende Tiere, Fleisch und Milch als weiterverarbeitete Produkte zählen.<br /><br />Der Anteil der Einfuhren aus LDCs an den gesamten deutschen Einfuhren lag 2024&nbsp;nach vorläufigen Berechnungen bei 1,17&nbsp;% beziehungsweise 15,3&nbsp;Milliarden Euro. Damit stieg dieser Anteil seit 2014&nbsp;um 64,0&nbsp;% (2014: 0,71&nbsp;%). Der Anteil weiterverarbeiteter Produkte aus LDCs wuchs zwischen 2014&nbsp;und 2024&nbsp;um 60,1&nbsp;% und betrug 2024&nbsp;1,05&nbsp;% der gesamten Einfuhren nach Deutschland (2014: 0,66&nbsp;%). Dies entspricht einem Wert von 13,8&nbsp;Milliarden Euro. Trotz eines kurzzeitigen Rückgangs im Jahr 2023&nbsp;bewegte sich der Indikator insgesamt in die angestrebte Richtung und würde bei gleichbleibender Entwicklung das politisch festgelegte Ziel für 2030&nbsp;erreichen.<br /><br />Eine genauere Analyse der Einfuhren nach Herkunftsländern zeigt, dass ein Großteil der Einfuhren aus LDCs 2024&nbsp;aus Bangladesch (55,0&nbsp;%) und Kambodscha (14,4&nbsp;%) stammte. Betrachtet man nicht nur die LDCs, sondern alle Entwicklungs- und Schwellenländer, lag ihr Anteil an den gesamten deutschen Einfuhren 2024&nbsp;bei 25,8&nbsp;%, wobei der Anteil weiterverarbeiteter Güter 23,6&nbsp;% betrug. Nicht nur unter den Entwicklungs- und Schwellenländern, sondern auch insgesamt importierte Deutschland 2024&nbsp;am meisten aus China. Der Anteil der Importe aus China an den gesamten deutschen Importen (1&nbsp;307,8&nbsp;Milliarden Euro) belief sich auf 11,9&nbsp;%&nbsp;–&nbsp;wobei 99,7&nbsp;% davon wertmäßig auf weiterverarbeitete Produkte entfielen. Auf den Plätzen zwei und drei folgten die Niederlande (7,2&nbsp;%) und die USA (7,0&nbsp;%) als wichtige Handelspartner bei den Einfuhren.</p>
+            <p>Einfuhren aus am wenigsten entwickelten Ländern</p>
 
           
         </td>
         </tr>
         
       
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Unterzielnummerierung </th>
+        <td>
+          
+            <p>17.3.1</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
   
   
   
@@ -3406,12 +3472,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520111654'></script>
+<script src='/site/assets/js/sdg.js?v=20260520112930'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520111654"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520112930"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
