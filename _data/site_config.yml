@@ -66,8 +66,7 @@ footer_menu:
     translation_key: menu.contact_us
   - path: /imprint/
     translation_key: menu.imprint
-frontpage_cards:
-    
+
 frontpage_goals_grid:
     title: frontpage.heading
     description: frontpage.instructions
@@ -99,7 +98,7 @@ indicator_metadata_form:
   dropdowns: []
   repository_link: /tree/develop/meta
   translation_link: ''
-  language: ''
+  language: de
   scopes:
     - national
     - global
