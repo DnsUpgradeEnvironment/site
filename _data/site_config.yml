@@ -67,15 +67,7 @@ footer_menu:
   - path: /imprint/
     translation_key: menu.imprint
 frontpage_cards:
-    - rule_color: grey
-      title: ''
-      include: components/download-all-data.html
-    - rule_color: grey
-      title: ''
-      include: components/joint_action_column.html
-    - rule_color: grey
-      title: ''
-      include: components/strategy_column.html
+    
 frontpage_goals_grid:
     title: frontpage.heading
     description: frontpage.instructions
