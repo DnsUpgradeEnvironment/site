@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-4">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/4/" aria-label=" 4" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
-              alt="Quality education - Goal 4"
-              id="goal-4"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-4">
+    <div class="container">
+        <div class="row">
             
-              Indicator 4.3.b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/4/" aria-label=" 4" title=" 4">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
+                        alt="Quality education - Goal 4"
+                        id="goal-4"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 4.3.b
+                        
+                        <span class="lead-copy">Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-4" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_4-3-b'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Anteil der 17- und 18-Jährigen mit (angestrebter) Studienberechtigung"
   data-charttitles="[{&quot;series&quot;:&quot;Difference between &lt;i&gt;No risk situation&lt;/i&gt; and &lt;i&gt;At least one risk situation&lt;/i&gt;&quot;,&quot;title&quot;:&quot;Proportion of 17- and 18-year-olds with (aspired) university entrance qualification&quot;},{&quot;series&quot;:&quot;By number of risk positions&quot;,&quot;title&quot;:&quot;Proportion of 17- and 18-year-olds with (aspired) university entrance qualification&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;Difference between &lt;i&gt;No risk situation&lt;/i&gt; and &lt;i&gt;At least one risk situation&lt;/i&gt;&quot;,&quot;title&quot;:&quot;Difference between \&quot;No risk situation\&quot; and \&quot;At least one risk situation\&quot;&quot;},{&quot;series&quot;:&quot;By number of risk positions&quot;,&quot;title&quot;:&quot;By number of risk situations&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="[{&quot;series&quot;:&quot;By number of risk positions&quot;,&quot;type&quot;:&quot;line&quot;},{&quot;series&quot;:&quot;Difference between &lt;i&gt;No risk situation&lt;/i&gt; and &lt;i&gt;At least one risk situation&lt;/i&gt;&quot;,&quot;type&quot;:&quot;bar&quot;}]"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Difference between &lt;i&gt;No risk situation&lt;/i&gt; and &lt;i&gt;At least one risk situation&lt;/i&gt;&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;By number of risk positions&quot;},{&quot;field&quot;:&quot;Risk situation&quot;,&quot;value&quot;:&quot;No risk situation&quot;},{&quot;field&quot;:&quot;Risk situation&quot;,&quot;value&quot;:&quot;At least one risk situation&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage points&quot;,&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Difference between &lt;i&gt;No risk situation&lt;/i&gt; and &lt;i&gt;At least one risk situation&lt;/i&gt;&quot;,&quot;By number of risk positions&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;risk situation&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;No risk situation&quot;,&quot;At least one risk situation&quot;,&quot;Total&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Risk situation&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -547,62 +537,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -615,12 +603,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Difference between "No risk situation" and "At least one risk situation"</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Proportion of 17- and 18-year-olds with (aspired) university entrance qualification
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -635,51 +623,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• 2023 provisional data.<br>• Risk situation: Social risk, risk of formally low-qualified parents and financial risk.<br>&nbsp;&nbsp;- Social risk: Parents are not in employment.<br>&nbsp;&nbsp;- Risk of formally low-skilled parents and financial risk: risk of poverty based on the national equivalent household income.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -711,51 +690,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• 2023 provisional data.<br>• Risk situation: Social risk, risk of formally low-qualified parents and financial risk.<br>&nbsp;&nbsp;- Social risk: Parents are not in employment.<br>&nbsp;&nbsp;- Risk of formally low-skilled parents and financial risk: risk of poverty based on the national equivalent household income.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -843,197 +813,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the proportion of 17- and 18-year-olds who attend a grammar school or a vocational school leading to a higher education entrance qualification or who have already achieved a higher education entrance qualification, out of all 17- and 18-year-olds. It shows the difference between the corresponding proportions of 17- and 18-year-olds with <i>No risk situation</i> and 17- and 18-year-olds with <i>At least one risk situation</i>. The three risk situations are the social risk situation, the risk situation of formally low-qualified parents and the financial risk situation.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the proportion of 17- and 18-year-olds who attend a grammar school or a vocational school leading to a higher education entrance qualification or who have already achieved a higher education entrance qualification, out of all 17- and 18-year-olds. It shows the difference between the corresponding proportions of 17- and 18-year-olds with <i>No risk situation</i> and 17- and 18-year-olds with <i>At least one risk situation</i>. The three risk situations are the social risk situation, the risk situation of formally low-qualified parents and the financial risk situation.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Education is a key prerequisite for participation, prosperity and economic and social development. A reduced influence of social background on the educational path of children and young people is an indicator of equal opportunities in the education system.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Education is a key prerequisite for participation, prosperity and economic and social development. A reduced influence of social background on the educational path of children and young people is an indicator of equal opportunities in the education system.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Reduce or eliminate the gap between the groups <i>no risk situation</i> and <i>at least one risk situation</i></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Reduce or eliminate the gap between the groups <i>no risk situation</i> and <i>at least one risk situation</i></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Directional target</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Directional target</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The difference in the proportion of 17- and 18-year-olds with (aspired) university entrance qualifications between those <i>without risk situation</i> and those with <i>at least one risk situation</i> should be reduced.<br />• According to the target formulation, the six-year average trend – despite a slight improvement in 2023 – shows an increase. Indicator 4.3.b is therefore assessed as <b>cloud</b> for 2023.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="In 2023&nbsp;the average value aimed in the wrong direction or indicates stagnation, but the previous year had shown a turn in the desired direction." alt="Weathersymbol: cloud" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The difference in the proportion of 17- and 18-year-olds with (aspired) university entrance qualifications between those <i>without risk situation</i> and those with <i>at least one risk situation</i> should be reduced.<br />• According to the target formulation, the six-year average trend – despite a slight improvement in 2023 – shows an increase. Indicator 4.3.b is therefore assessed as <b>cloud</b> for 2023.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="In 2023&nbsp;the average value aimed in the wrong direction or indicates stagnation, but the previous year had shown a turn in the desired direction." alt="Weathersymbol: cloud" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1819,20 +1739,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1849,25 +1774,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #c5192d; font-size: large">4.3.b Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</b><br /><br /><b>Content and methodology</b><br /><br />The indicator measures the proportion of 17- and 18-year-olds who either hold or are aiming to obtain a university entrance qualification. The latter group includes 17- and 18-year-olds attending grammar schools or vocational schools that lead to the general or specialised university entrance qualification.<br /><br />The indicator distinguishes between 17- and 18-year-olds who are exposed to so-called risk factors due to their social background and those who are not. The risk factors include <i>social risk</i>, defined as having neither parent in employment; the risk of <i>formally low-qualified parents</i>, where no parent holds a completed vocational qualification or university entrance qualification; and <i>financial risk</i>, where the household net equivalised income falls below the poverty risk threshold.<br /><br />These risks often occur together, meaning many young people are exposed to multiple risk factors simultaneously. Four per cent of under-18s were affected by all three risk factors at once, while 30.9% were affected by at least one of them.<br /><br />The data are based on the Microcensus of the Federal Statistical Office, an annual sample survey covering 1% of the population in Germany. Due to a comprehensive redesign of the Microcensus in 2020, data collected from that year onwards are only partly comparable with those from previous years. The 2023&nbsp;results are based on preliminary data from the Microcensus first results.<br /><br /><b>Development and methodological limitations</b><br /><br />In 2023, 58.6% of 17- and 18-year-olds either held or were aiming to obtain a university entrance qualification. Among 17- and 18-year-olds exposed to one or more risk factors, this proportion was significantly lower at 43.7%. For those without risk factors, the proportion was 65.0%.<br /><br />The university entrance qualification can also be obtained at other types of schools, such as comprehensive schools. However, since these schools mainly lead to a lower secondary or intermediate school leaving certificate, 17- and 18-year-olds aiming to obtain a university entrance qualification at, for example, a comprehensive school are not included. In this respect, the indicator underestimates the actual situation.<br /><br />The indicator includes not only 17- and 18-year-olds who already hold a university entrance qualification but also those attending a school type primarily aimed at obtaining such a qualification. Actual completion rates, which can be considerably lower, are not factored into the indicator. Therefore, the number of university entrance qualifications aimed for does not correspond to the number eventually achieved.<br /><br />This exclusion of actual qualifications mainly stems from methodological reasons: many pupils obtain their university entrance qualification only after the age of 18. However, only around 84% of 19-year-olds still live with at least one parent in the same household, meaning that for the remaining 16%, no information is available to determine their risk status.<br /><br />Another limitation of the indicator’s validity is that about 15% of 17-year-olds and 7% of 18-year-olds are still attending lower secondary education (up to grades 9/10). In these cases, it is sometimes unclear whether these young people are pursuing a course of education aimed at obtaining the university entrance qualification.<br /><br />In 2023, the gap between the proportions of 17- and 18-year-olds with and without risk factors who either hold or aim to obtain a university entrance qualification was 21.3&nbsp;percentage points. No clear trend has emerged in recent years, making it impossible to estimate the likelihood of achieving the target.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #c5192d; font-size: large">4.3.b Proportion of 17- and 18-year-olds with (aspired) university entrance qualification</b><br /><br /><b>Content and methodology</b><br /><br />The indicator measures the proportion of 17- and 18-year-olds who either hold or are aiming to obtain a university entrance qualification. The latter group includes 17- and 18-year-olds attending grammar schools or vocational schools that lead to the general or specialised university entrance qualification.<br /><br />The indicator distinguishes between 17- and 18-year-olds who are exposed to so-called risk factors due to their social background and those who are not. The risk factors include <i>social risk</i>, defined as having neither parent in employment; the risk of <i>formally low-qualified parents</i>, where no parent holds a completed vocational qualification or university entrance qualification; and <i>financial risk</i>, where the household net equivalised income falls below the poverty risk threshold.<br /><br />These risks often occur together, meaning many young people are exposed to multiple risk factors simultaneously. Four per cent of under-18s were affected by all three risk factors at once, while 30.9% were affected by at least one of them.<br /><br />The data are based on the Microcensus of the Federal Statistical Office, an annual sample survey covering 1% of the population in Germany. Due to a comprehensive redesign of the Microcensus in 2020, data collected from that year onwards are only partly comparable with those from previous years. The 2023&nbsp;results are based on preliminary data from the Microcensus first results.<br /><br /><b>Development and methodological limitations</b><br /><br />In 2023, 58.6% of 17- and 18-year-olds either held or were aiming to obtain a university entrance qualification. Among 17- and 18-year-olds exposed to one or more risk factors, this proportion was significantly lower at 43.7%. For those without risk factors, the proportion was 65.0%.<br /><br />The university entrance qualification can also be obtained at other types of schools, such as comprehensive schools. However, since these schools mainly lead to a lower secondary or intermediate school leaving certificate, 17- and 18-year-olds aiming to obtain a university entrance qualification at, for example, a comprehensive school are not included. In this respect, the indicator underestimates the actual situation.<br /><br />The indicator includes not only 17- and 18-year-olds who already hold a university entrance qualification but also those attending a school type primarily aimed at obtaining such a qualification. Actual completion rates, which can be considerably lower, are not factored into the indicator. Therefore, the number of university entrance qualifications aimed for does not correspond to the number eventually achieved.<br /><br />This exclusion of actual qualifications mainly stems from methodological reasons: many pupils obtain their university entrance qualification only after the age of 18. However, only around 84% of 19-year-olds still live with at least one parent in the same household, meaning that for the remaining 16%, no information is available to determine their risk status.<br /><br />Another limitation of the indicator’s validity is that about 15% of 17-year-olds and 7% of 18-year-olds are still attending lower secondary education (up to grades 9/10). In these cases, it is sometimes unclear whether these young people are pursuing a course of education aimed at obtaining the university entrance qualification.<br /><br />In 2023, the gap between the proportions of 17- and 18-year-olds with and without risk factors who either hold or aim to obtain a university entrance qualification was 21.3&nbsp;percentage points. No clear trend has emerged in recent years, making it impossible to estimate the likelihood of achieving the target.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2661,19 +2581,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2687,8 +2612,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3425,98 +3350,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3582,6 +3499,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3593,8 +3511,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4343,98 +4261,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/nbb.png" alt="National Education Report" title=" Click here to visit the homepage of the organizationNational Education Report" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/nbb.png" alt="National Education Report" title=" Click here to visit the homepage of the organizationNational Education Report" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bildungsbericht.de/en/the-national-report-on-education/education-in-germany?set_language=en" target="_blank" onclick="return confirm_alert('the National Education Report', 'En')">National Education Report</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4488,6 +4398,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4495,11 +4406,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4510,16 +4421,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4533,12 +4444,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-15">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/15/" aria-label=" 15" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png"
-              alt="Leben an Land - Ziel 15"
-              id="goal-15"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-15">
+    <div class="container">
+        <div class="row">
             
-              Indikator 15.4
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/15/" aria-label=" 15" title=" 15">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png"
+                        alt="Leben an Land - Ziel 15"
+                        id="goal-15"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 15.4
+                        
+                        <span class="lead-copy">Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-15" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_15-4'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Weltweit"
   data-charttitle="Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation="Sektor"
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen Hektar&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sector&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Nachhaltige bewirtschaftete Fläche&quot;,&quot;Waldfläche nachhaltige Bewirtschaftung und Wiederherstellung&quot;,&quot;Terrestrische Schutzgebiete und Mangrovenwälder in marinen Schutzgebieten&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sektor&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -475,62 +465,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -543,12 +531,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -563,54 +551,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Weltweit</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Weltweit</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -642,54 +624,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Weltweit</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Weltweit</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -777,197 +753,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die Gesamtfläche (in Hektar) dar, die durch die deutsche bilaterale technische Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung (Themenfelder Landwirtschaft (einschließlich Grünland), Waldwirtschaft und Biodiversitätserhalt) gefördert wird.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die Gesamtfläche (in Hektar) dar, die durch die deutsche bilaterale technische Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung (Themenfelder Landwirtschaft (einschließlich Grünland), Waldwirtschaft und Biodiversitätserhalt) gefördert wird.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Gesunde Landökosysteme spielen eine Schlüsselrolle bei der Nahrungsmittelproduktion, der Verringerung von Auswirkungen häufiger und extremer Wetterereignisse, dem Erhalt der biologischen Vielfalt und der Bereitstellung wesentlicher Ökosystemleistungen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Gesunde Landökosysteme spielen eine Schlüsselrolle bei der Nahrungsmittelproduktion, der Verringerung von Auswirkungen häufiger und extremer Wetterereignisse, dem Erhalt der biologischen Vielfalt und der Bereitstellung wesentlicher Ökosystemleistungen.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Steigerung der nachhaltigen Landnutzung (durch Schutz, nachhaltige Bewirtschaftung, Wiederherstellung) bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Steigerung der nachhaltigen Landnutzung (durch Schutz, nachhaltige Bewirtschaftung, Wiederherstellung) bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Fläche, die durch die deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung gefördert wird, soll gesteigert werden.<br />• Eine Bewertung des Indikators 15.4 ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Fläche, die durch die deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung gefördert wird, soll gesteigert werden.<br />• Eine Bewertung des Indikators 15.4 ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1753,20 +1679,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1783,25 +1714,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #56c02b; font-size: large">15.4&nbsp;Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</b><br /><br />Im Einklang mit internationalen Verpflichtungen, insbesondere im Rahmen der Konvention zur Bekämpfung der Desertifikation der Vereinten Nationen (UNCCD) und des globalen Nachhaltigkeitsziels 15.3, hat sich Deutschland verpflichtet, die Landdegradationsneutralität zu erreichen und fördert weltweit nachhaltige Landmanagementpraktiken sowie den Schutz und die Wiederherstellung von Landökosystemen. Das politisch festgelegte Ziel ist es, die Fläche, die durch deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung gefördert wird, zu erhöhen.<br /><br />Die deutsche bilaterale Entwicklungszusammenarbeit wird in zwei Bereiche unterteilt: die technische Zusammenarbeit (TZ) und die finanzielle Zusammenarbeit (FZ). Die TZ hat die Aufgabe, die Fähigkeiten von Menschen, Organisationen und Gesellschaften in den Partnerländern zu stärken, um diese in die Lage zu versetzen, ihre eigenen Ziele selbst besser zu verwirklichen. Zu den Leistungen der TZ zählen vor allem Beratung sowie, in begrenztem Umfang, die Lieferung von Sachgütern oder die Erstellung von Studien und Gutachten. Die TZ erfolgt stets als Direktleistung, die vom Empfängerland nicht zurückerstattet werden muss.<br /><br />Im Unterschied dazu hat die FZ die Aufgabe, Investitionen in Entwicklungsländer zu fördern. Hierfür stellt das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) günstige, zurückzuzahlende Kredite, Beteiligungskapital oder Zuschüsse, die nicht zurückgezahlt werden müssen, zur Verfügung.<br /><br />Der Indikator zeigt die Gesamtfläche, die durch bilaterale Beiträge der deutschen TZ von der Gesellschaft für Internationale Zusammenarbeit (GIZ) zum Schutz, zur nachhaltigen Nutzung und zur Wiederherstellung von Land (einschließlich Wald) gefördert wurde. Er bildet die Gesamtsumme der Flächen, die durch die Standardindikatoren KT2.5, KT5.1&nbsp;und KT5.5&nbsp;des BMZ erfasst werden.<br /><br /><b>BMZ-Standardindikator KT2.5</b><br /><br />Der BMZ-Standardindikator KT2.5&nbsp;erfasst die land- und/oder weidewirtschaftlich genutzte Fläche, die durch Beiträge der deutschen TZ nachhaltig bewirtschaftet wird. Nachhaltige Bewirtschaftung umfasst agrarökologische Methoden, klimaresiliente Praktiken, Bodenverbesserung und &#8209;erhaltung, effizientes Wassermanagement, die Diversifizierung landwirtschaftlicher Systeme, Maßnahmen zum Erhalt der Biodiversität sowie Zertifizierungen wie Fairtrade und Ökolandbau.<br /><br />Die Fläche, die durch deutsche Förderung nachhaltiger bewirtschaftet wird, kann entweder direkt gemessen oder anhand der Anzahl der geförderten landwirtschaftlichen Betriebe und deren durchschnittliche nachhaltig bewirtschaftete Fläche ermittelt werden. Zur Berechnung des Indikators wird die Fläche mit einer Adoptionsrate und einem Anteilsfaktor multipliziert. Die Adoptionsrate berücksichtigt, dass nicht alle Projektmaßnahmen in der Praxis angewendet werden oder zu einer Verhaltensänderung führen, wie beispielsweise die Umsetzung von Inhalten aus Fortbildungen und Beratungen. Adoptionsraten sollten entweder auf Basis von Referenzwerten aus wissenschaftlichen Studien oder durch projektspezifische sowie vergleichbare projektübergreifende Studien und Erhebungen ermittelt werden.<br /><br />Der Anteilsfaktor berücksichtigt, dass die Ergebnisse möglicherweise nicht ausschließlich auf die Maßnahmen des BMZ zurückzuführen sind, sondern auch von anderen Akteuren beeinflusst werden können wie Fonds, Politik- und Institutionenberatung, Kampagnen. Er erfasst den prozentual zuordenbaren Beitrag zum deutschen Finanzierungsanteil. Die Fläche wird nur einmal berücksichtigt, auch wenn mehrere Ansätze oder Maßnahmen angewendet werden.<br /><br />Im Jahr 2023&nbsp;entfallen 2,5&nbsp;Millionen Hektar der von Deutschland unterstützten Fläche auf nachhaltig bewirtschaftete landwirtschaftliche Flächen, was etwa 4,5&nbsp;% der geförderten Gesamtfläche entspricht.<br /><br /><b>BMZ-Standardindikator KT5.1</b><br /><br />Der BMZ-Standardindikator KT5.1&nbsp;erfasst die Fläche der Schutzgebiete, zu deren Schutz die deutsche TZ einen Beitrag geleistet hat. Die Daten werden für jedes Schutzgebiet einzeln erfasst und anschließend aggregiert. Es werden nur solche Vorhaben berücksichtigt, bei denen vor Ort konkrete Maßnahmen zum Flächenschutz durchgeführt oder gefördert werden. Für den Indikator wird die gesamte Schutzgebietsfläche gezählt, auch wenn die Maßnahmen nur einen Teil des Schutzgebietes betreffen.<br /><br />Schutzgebiete, in denen Wald oder Mangroven einen großen Flächenanteil ausmachen, werden sowohl im BMZ-Standardindikator KT5.1&nbsp;als auch im BMZ-Standardindikator KT5.5&nbsp;(nach Disaggregation a) Schutz) berücksichtigt. Zur Vermeidung von Doppelzählungen fließen vom BMZ-Standardindikator KT5.5&nbsp;nur die Disaggregationen b) nachhaltige Bewirtschaftung und c) Wiederherstellung in die Gesamtsumme ein.<br /><br />Im Jahr 2023&nbsp;entfielen 41,3&nbsp;Millionen Hektar der gesamten unterstützten Fläche auf terrestrische Schutzgebiete und Mangrovenwälder innerhalb mariner Schutzgebiete. Diese Gebiete machen etwa 74&nbsp;% der geförderten Fläche aus und tragen wesentlich zum Erhalt der Biodiversität, der Stärkung der Ökosystemfunktionen und der Anpassung an den Klimawandel bei.<br /><br />Der Indikator liefert keine detaillierte Aufschlüsselung der geförderten Schutzflächen nach Art der Schutzgebiete oder Schutzklassen. Die Schutzziele, Maßnahmen und das Gebietsmanagement variieren je nach Schutzklasse. So wird in Gebieten der IUCN-Kategorie VI (Internationale Union zur Bewahrung der Natur) eine nachhaltige Nutzung der natürlichen Ressourcen angestrebt, während in Naturreservaten der Kategorie 1a menschliche Eingriffe weitgehend ausgeschlossen sind.<br /><br /><b>BMZ-Standardindikator KT5.5</b><br /><br />Der BMZ-Standardindikator KT5.5&nbsp;erfasst die Waldfläche, zu deren a) Schutz (hier nicht berücksichtig, da bereits durch KT5.1&nbsp;abgedeckt), b) nachhaltiger Bewirtschaftung oder c) Wiederherstellung Deutschland durch TZ beigetragen hat. Die Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen (FAO) definiert Waldflächen als Flächen von mehr als 0,5&nbsp;Hektar, die mit Bäumen bedeckt sind, die höher als fünf Meter sind und einen Überschirmungsgrad von mehr als 10&nbsp;% haben, oder mit Bäumen, die diesen Werte erreichen können. Auch Mangroven zählen dazu.<br /><br />Anrechenbar sind auch Flächen, die nicht mit Bäumen bestockt sind, jedoch durch geeignete Bewirtschaftungsmaßnahmen innerhalb von fünf Jahren eine entsprechende Baumbedeckung erreichen sollen. Nicht eingeschlossen sind Flächen, die überwiegend landwirtschaftlich (beispielweise Pflanzungen von Obstbäumen, Ölpalmen oder Bäumen zur Energie- und Rohstofferzeugung sowie Agroforstsysteme) oder städtisch (beispielsweise Parks) genutzt werden. Anpflanzungen von Kautschukbäumen, Korkeichen und Bambus werden gemäß der FAO-Definition ausgeschlossen.<br /><br />Der Indikator der Deutschen Nachhaltigkeitsstrategie berücksichtigt Flächen, die b) der nachhaltigen Bewirtschaftung oder c) der Wiederherstellung von Waldflächen zugeordnet sind. Bei der nachhaltigen Bewirtschaftung handelt es sich um Waldflächen außerhalb von Schutzgebieten, die mit umweltschonenden und ressourcenschonenden Methoden bewirtschaftet werden. Die Wiederherstellung betrifft Flächen, die derzeit nicht bewaldet sind, aber durch Maßnahmen wie Wiederbewaldung, Aussaat oder unterstützte Regeneration wieder mit Wald bestockt werden sollen. Indirekte Maßnahmen zur Wiederherstellung umfassen beispielsweise Feuerprävention, kontrollierte Viehweide oder nachhaltige Nutzung von Feuerholz.<br /><br />Deutschlands Förderung trägt zur nachhaltigen Bewirtschaftung und Wiederherstellung von weltweit 12,0&nbsp;Millionen Hektar Wald bei, was etwa 21,5&nbsp;% der geförderten Gesamtfläche ausmacht.<br /><br /><b>Entwicklung insgesamt</b><br /><br />Im Jahr 2023&nbsp;hat die deutsche TZ gemeinsam mit Partnern eine Gesamtfläche von 55,8&nbsp;Millionen Hektar weltweit in den Bereichen Schutz, nachhaltige Nutzung und Wiederherstellung von Land unterstützt. Die Bewertung des Fortschritts in Bezug auf das politisch festgelegte Ziel, die Fläche durch die deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung zu erhöhen, ist derzeit nicht möglich, da nicht genügend Datenpunkte vorliegen.<br /><br />Der Indikator bietet zwar einen Überblick über die Größe der unterstützten terrestrischen Flächen, die geschützt, wiederhergestellt oder nachhaltig bewirtschaftet werden, jedoch führt die gleichwertige Betrachtung dieser Flächen ohne Differenzierung der Wertigkeit der einzelnen Schutz- oder Bewirtschaftungspraktiken zu einer Verallgemeinerung.<br /><br />Der Indikator liefert keine detaillierten Informationen über den konkreten Beitrag Deutschlands zum Schutz, zur nachhaltigen Nutzung oder zur Wiederherstellung einzelner Flächen und spiegelt nicht die qualitativen Auswirkungen der durchgeführten Maßnahmen wider. Zudem besteht die Gefahr, dass die Messung der Effektivität auf Basis der erreichten Fläche zu einer Fokussierung auf die Flächenmaximierung führt, anstatt eine wirkungsorientierte Mittelvergabe zu gewährleisten.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #56c02b; font-size: large">15.4&nbsp;Bilaterale Beiträge der deutschen internationalen Kooperation zum Schutz, nachhaltiger Nutzung und Wiederherstellung von Land (inkl. Wald)</b><br /><br />Im Einklang mit internationalen Verpflichtungen, insbesondere im Rahmen der Konvention zur Bekämpfung der Desertifikation der Vereinten Nationen (UNCCD) und des globalen Nachhaltigkeitsziels 15.3, hat sich Deutschland verpflichtet, die Landdegradationsneutralität zu erreichen und fördert weltweit nachhaltige Landmanagementpraktiken sowie den Schutz und die Wiederherstellung von Landökosystemen. Das politisch festgelegte Ziel ist es, die Fläche, die durch deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung gefördert wird, zu erhöhen.<br /><br />Die deutsche bilaterale Entwicklungszusammenarbeit wird in zwei Bereiche unterteilt: die technische Zusammenarbeit (TZ) und die finanzielle Zusammenarbeit (FZ). Die TZ hat die Aufgabe, die Fähigkeiten von Menschen, Organisationen und Gesellschaften in den Partnerländern zu stärken, um diese in die Lage zu versetzen, ihre eigenen Ziele selbst besser zu verwirklichen. Zu den Leistungen der TZ zählen vor allem Beratung sowie, in begrenztem Umfang, die Lieferung von Sachgütern oder die Erstellung von Studien und Gutachten. Die TZ erfolgt stets als Direktleistung, die vom Empfängerland nicht zurückerstattet werden muss.<br /><br />Im Unterschied dazu hat die FZ die Aufgabe, Investitionen in Entwicklungsländer zu fördern. Hierfür stellt das Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung (BMZ) günstige, zurückzuzahlende Kredite, Beteiligungskapital oder Zuschüsse, die nicht zurückgezahlt werden müssen, zur Verfügung.<br /><br />Der Indikator zeigt die Gesamtfläche, die durch bilaterale Beiträge der deutschen TZ von der Gesellschaft für Internationale Zusammenarbeit (GIZ) zum Schutz, zur nachhaltigen Nutzung und zur Wiederherstellung von Land (einschließlich Wald) gefördert wurde. Er bildet die Gesamtsumme der Flächen, die durch die Standardindikatoren KT2.5, KT5.1&nbsp;und KT5.5&nbsp;des BMZ erfasst werden.<br /><br /><b>BMZ-Standardindikator KT2.5</b><br /><br />Der BMZ-Standardindikator KT2.5&nbsp;erfasst die land- und/oder weidewirtschaftlich genutzte Fläche, die durch Beiträge der deutschen TZ nachhaltig bewirtschaftet wird. Nachhaltige Bewirtschaftung umfasst agrarökologische Methoden, klimaresiliente Praktiken, Bodenverbesserung und &#8209;erhaltung, effizientes Wassermanagement, die Diversifizierung landwirtschaftlicher Systeme, Maßnahmen zum Erhalt der Biodiversität sowie Zertifizierungen wie Fairtrade und Ökolandbau.<br /><br />Die Fläche, die durch deutsche Förderung nachhaltiger bewirtschaftet wird, kann entweder direkt gemessen oder anhand der Anzahl der geförderten landwirtschaftlichen Betriebe und deren durchschnittliche nachhaltig bewirtschaftete Fläche ermittelt werden. Zur Berechnung des Indikators wird die Fläche mit einer Adoptionsrate und einem Anteilsfaktor multipliziert. Die Adoptionsrate berücksichtigt, dass nicht alle Projektmaßnahmen in der Praxis angewendet werden oder zu einer Verhaltensänderung führen, wie beispielsweise die Umsetzung von Inhalten aus Fortbildungen und Beratungen. Adoptionsraten sollten entweder auf Basis von Referenzwerten aus wissenschaftlichen Studien oder durch projektspezifische sowie vergleichbare projektübergreifende Studien und Erhebungen ermittelt werden.<br /><br />Der Anteilsfaktor berücksichtigt, dass die Ergebnisse möglicherweise nicht ausschließlich auf die Maßnahmen des BMZ zurückzuführen sind, sondern auch von anderen Akteuren beeinflusst werden können wie Fonds, Politik- und Institutionenberatung, Kampagnen. Er erfasst den prozentual zuordenbaren Beitrag zum deutschen Finanzierungsanteil. Die Fläche wird nur einmal berücksichtigt, auch wenn mehrere Ansätze oder Maßnahmen angewendet werden.<br /><br />Im Jahr 2023&nbsp;entfallen 2,5&nbsp;Millionen Hektar der von Deutschland unterstützten Fläche auf nachhaltig bewirtschaftete landwirtschaftliche Flächen, was etwa 4,5&nbsp;% der geförderten Gesamtfläche entspricht.<br /><br /><b>BMZ-Standardindikator KT5.1</b><br /><br />Der BMZ-Standardindikator KT5.1&nbsp;erfasst die Fläche der Schutzgebiete, zu deren Schutz die deutsche TZ einen Beitrag geleistet hat. Die Daten werden für jedes Schutzgebiet einzeln erfasst und anschließend aggregiert. Es werden nur solche Vorhaben berücksichtigt, bei denen vor Ort konkrete Maßnahmen zum Flächenschutz durchgeführt oder gefördert werden. Für den Indikator wird die gesamte Schutzgebietsfläche gezählt, auch wenn die Maßnahmen nur einen Teil des Schutzgebietes betreffen.<br /><br />Schutzgebiete, in denen Wald oder Mangroven einen großen Flächenanteil ausmachen, werden sowohl im BMZ-Standardindikator KT5.1&nbsp;als auch im BMZ-Standardindikator KT5.5&nbsp;(nach Disaggregation a) Schutz) berücksichtigt. Zur Vermeidung von Doppelzählungen fließen vom BMZ-Standardindikator KT5.5&nbsp;nur die Disaggregationen b) nachhaltige Bewirtschaftung und c) Wiederherstellung in die Gesamtsumme ein.<br /><br />Im Jahr 2023&nbsp;entfielen 41,3&nbsp;Millionen Hektar der gesamten unterstützten Fläche auf terrestrische Schutzgebiete und Mangrovenwälder innerhalb mariner Schutzgebiete. Diese Gebiete machen etwa 74&nbsp;% der geförderten Fläche aus und tragen wesentlich zum Erhalt der Biodiversität, der Stärkung der Ökosystemfunktionen und der Anpassung an den Klimawandel bei.<br /><br />Der Indikator liefert keine detaillierte Aufschlüsselung der geförderten Schutzflächen nach Art der Schutzgebiete oder Schutzklassen. Die Schutzziele, Maßnahmen und das Gebietsmanagement variieren je nach Schutzklasse. So wird in Gebieten der IUCN-Kategorie VI (Internationale Union zur Bewahrung der Natur) eine nachhaltige Nutzung der natürlichen Ressourcen angestrebt, während in Naturreservaten der Kategorie 1a menschliche Eingriffe weitgehend ausgeschlossen sind.<br /><br /><b>BMZ-Standardindikator KT5.5</b><br /><br />Der BMZ-Standardindikator KT5.5&nbsp;erfasst die Waldfläche, zu deren a) Schutz (hier nicht berücksichtig, da bereits durch KT5.1&nbsp;abgedeckt), b) nachhaltiger Bewirtschaftung oder c) Wiederherstellung Deutschland durch TZ beigetragen hat. Die Ernährungs- und Landwirtschaftsorganisation der Vereinten Nationen (FAO) definiert Waldflächen als Flächen von mehr als 0,5&nbsp;Hektar, die mit Bäumen bedeckt sind, die höher als fünf Meter sind und einen Überschirmungsgrad von mehr als 10&nbsp;% haben, oder mit Bäumen, die diesen Werte erreichen können. Auch Mangroven zählen dazu.<br /><br />Anrechenbar sind auch Flächen, die nicht mit Bäumen bestockt sind, jedoch durch geeignete Bewirtschaftungsmaßnahmen innerhalb von fünf Jahren eine entsprechende Baumbedeckung erreichen sollen. Nicht eingeschlossen sind Flächen, die überwiegend landwirtschaftlich (beispielweise Pflanzungen von Obstbäumen, Ölpalmen oder Bäumen zur Energie- und Rohstofferzeugung sowie Agroforstsysteme) oder städtisch (beispielsweise Parks) genutzt werden. Anpflanzungen von Kautschukbäumen, Korkeichen und Bambus werden gemäß der FAO-Definition ausgeschlossen.<br /><br />Der Indikator der Deutschen Nachhaltigkeitsstrategie berücksichtigt Flächen, die b) der nachhaltigen Bewirtschaftung oder c) der Wiederherstellung von Waldflächen zugeordnet sind. Bei der nachhaltigen Bewirtschaftung handelt es sich um Waldflächen außerhalb von Schutzgebieten, die mit umweltschonenden und ressourcenschonenden Methoden bewirtschaftet werden. Die Wiederherstellung betrifft Flächen, die derzeit nicht bewaldet sind, aber durch Maßnahmen wie Wiederbewaldung, Aussaat oder unterstützte Regeneration wieder mit Wald bestockt werden sollen. Indirekte Maßnahmen zur Wiederherstellung umfassen beispielsweise Feuerprävention, kontrollierte Viehweide oder nachhaltige Nutzung von Feuerholz.<br /><br />Deutschlands Förderung trägt zur nachhaltigen Bewirtschaftung und Wiederherstellung von weltweit 12,0&nbsp;Millionen Hektar Wald bei, was etwa 21,5&nbsp;% der geförderten Gesamtfläche ausmacht.<br /><br /><b>Entwicklung insgesamt</b><br /><br />Im Jahr 2023&nbsp;hat die deutsche TZ gemeinsam mit Partnern eine Gesamtfläche von 55,8&nbsp;Millionen Hektar weltweit in den Bereichen Schutz, nachhaltige Nutzung und Wiederherstellung von Land unterstützt. Die Bewertung des Fortschritts in Bezug auf das politisch festgelegte Ziel, die Fläche durch die deutsche bilaterale Entwicklungszusammenarbeit im Bereich nachhaltige Landnutzung zu erhöhen, ist derzeit nicht möglich, da nicht genügend Datenpunkte vorliegen.<br /><br />Der Indikator bietet zwar einen Überblick über die Größe der unterstützten terrestrischen Flächen, die geschützt, wiederhergestellt oder nachhaltig bewirtschaftet werden, jedoch führt die gleichwertige Betrachtung dieser Flächen ohne Differenzierung der Wertigkeit der einzelnen Schutz- oder Bewirtschaftungspraktiken zu einer Verallgemeinerung.<br /><br />Der Indikator liefert keine detaillierten Informationen über den konkreten Beitrag Deutschlands zum Schutz, zur nachhaltigen Nutzung oder zur Wiederherstellung einzelner Flächen und spiegelt nicht die qualitativen Auswirkungen der durchgeführten Maßnahmen wider. Zudem besteht die Gefahr, dass die Messung der Effektivität auf Basis der erreichten Fläche zu einer Fokussierung auf die Flächenmaximierung führt, anstatt eine wirkungsorientierte Mittelvergabe zu gewährleisten.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2595,19 +2521,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2621,8 +2552,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3359,98 +3290,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/giz.png" alt="Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH" title=" Klicken Sie hier um zur Homepage der Organisation Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/giz.png" alt="Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH" title=" Klicken Sie hier um zur Homepage der Organisation Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/de/html/index.html" target="_blank" onclick="return confirm_alert('der GIZ', 'De')">Deutsche Gesellschaft für Internationale Zusammenarbeit GmbH</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3516,6 +3439,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3523,11 +3447,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3538,16 +3462,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3561,12 +3485,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

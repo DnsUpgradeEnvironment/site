@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-5">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/5/" aria-label=" 5" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
-              alt="Geschlechtergleichheit - Ziel 5"
-              id="goal-5"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-5">
+    <div class="container">
+        <div class="row">
             
-              Indikator 5.1.e
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/5/" aria-label=" 5" title=" 5">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                        alt="Geschlechtergleichheit - Ziel 5"
+                        id="goal-5"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 5.1.e
+                        
+                        <span class="lead-copy">Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_5-1-e'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Mütter&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Väter&quot;}]"
   data-graphlimits="[{&quot;maximum&quot;:50.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:0.5},{&quot;value&quot;:13.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Stunden&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mütter&quot;,&quot;Väter&quot;,&quot;Differenz&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,57 +467,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>06.02.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Aufgrund einer umfassenden Neugestaltung des Mikrozensus ist ein Vergleich der Daten des Erhebungsjahres 2020 mit den Vorjahren nur eingeschränkt möglich (Zeitreihenbruch).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -561,57 +537,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>06.02.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Aufgrund einer umfassenden Neugestaltung des Mikrozensus ist ein Vergleich der Daten des Erhebungsjahres 2020 mit den Vorjahren nur eingeschränkt möglich (Zeitreihenbruch).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -699,197 +663,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die durchschnittliche normalerweise geleistete wöchentliche Erwerbsarbeitszeit von Müttern bzw. Vätern (in Stunden) dar, bezogen auf alle Mütter bzw. Väter mit Kindern unter 18 Jahren im Haushalt. Dabei wird die Summe der von Müttern bzw. Vätern normalerweise geleisteten Arbeitsstunden je Woche durch die Anzahl der Mütter bzw. Väter geteilt.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die durchschnittliche normalerweise geleistete wöchentliche Erwerbsarbeitszeit von Müttern bzw. Vätern (in Stunden) dar, bezogen auf alle Mütter bzw. Väter mit Kindern unter 18 Jahren im Haushalt. Dabei wird die Summe der von Müttern bzw. Vätern normalerweise geleisteten Arbeitsstunden je Woche durch die Anzahl der Mütter bzw. Väter geteilt.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Eine Annäherung der durchschnittlichen Wochenarbeitszeiten von Müttern und Vätern soll die wirtschaftliche Eigenständigkeit von Müttern stärken, insbesondere auch für den Fall der Trennung und im Alter. Eine Annäherung der Arbeitszeiten kann eine partnerschaftliche Aufgabenteilung unterstützen und umgekehrt.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Eine Annäherung der durchschnittlichen Wochenarbeitszeiten von Müttern und Vätern soll die wirtschaftliche Eigenständigkeit von Müttern stärken, insbesondere auch für den Fall der Trennung und im Alter. Eine Annäherung der Arbeitszeiten kann eine partnerschaftliche Aufgabenteilung unterstützen und umgekehrt.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Annäherung der durchschnittlichen wöchentlichen Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Annäherung der durchschnittlichen wöchentlichen Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Differenz der durchschnittlichen wöchentlichen Erwerbsarbeitszeit zwischen Müttern und Vätern soll gesenkt werden.<br />• Ausgehend von der Zielformulierung, die nicht näher definiert, ob das politisch festgelegte Ziel durch einen Anstieg der Arbeitszeit der Mütter oder eine Verringerung der Arbeitszeit der Väter erreicht werden soll, hat sich die Differenz im Durchschnitt der letzten sechs Jahre sowie im letzten Jahr (2023) in die gewünschte Richtung verringert. Der Indikator 5.1.e wird für das Jahr 2023 mit <b>Sonne</b> bewertet.<br />• Datenstand bei Bewertung: 06.02.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Sowohl der Durchschnittswert als auch die vorangegangene jährliche Veränderung deuteten in 2023&nbsp;in die richtige Richtung." alt="Wettersymbol Sonne" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Differenz der durchschnittlichen wöchentlichen Erwerbsarbeitszeit zwischen Müttern und Vätern soll gesenkt werden.<br />• Ausgehend von der Zielformulierung, die nicht näher definiert, ob das politisch festgelegte Ziel durch einen Anstieg der Arbeitszeit der Mütter oder eine Verringerung der Arbeitszeit der Väter erreicht werden soll, hat sich die Differenz im Durchschnitt der letzten sechs Jahre sowie im letzten Jahr (2023) in die gewünschte Richtung verringert. Der Indikator 5.1.e wird für das Jahr 2023 mit <b>Sonne</b> bewertet.<br />• Datenstand bei Bewertung: 06.02.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Sowohl der Durchschnittswert als auch die vorangegangene jährliche Veränderung deuteten in 2023&nbsp;in die richtige Richtung." alt="Wettersymbol Sonne" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1675,20 +1589,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1705,25 +1624,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #ff3a21; font-size: large">5.1.e Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator stellt das Erwerbsverhalten von Müttern und Vätern gegenüber. Die geleisteten Arbeitsstunden beziehen sich dabei nicht nur auf erwerbstätige, sondern auf alle Mütter und Väter. Dadurch werden sowohl die unterschiedlichen Stundenumfänge von arbeitenden Müttern und Vätern als auch die unterschiedlich hohen Erwerbstätigenquoten berücksichtigt.<br /><br />Für den Indikator werden Mütter und Väter im Alter von 15&nbsp;bis unter 65&nbsp;Jahren berücksichtigt, die mit mindestens einem Kind unter 18&nbsp;Jahren im Haushalt leben. Als Kinder gelten neben leiblichen Kindern auch Stief-, Pflege- und Adoptivkinder. Kinder, die noch im Haushalt der Eltern leben, dort aber bereits eigene Kinder betreuen, sowie Kinder, die in einer Lebensgemeinschaft mit einer Partnerin oder einem Partner leben, werden nicht der Herkunftsfamilie zugeordnet, sondern als eigene Familie beziehungsweise Lebensform in der Statistik erfasst.<br /><br />Die Definition der Arbeitszeit folgt dem Konzept der Internationalen Arbeitsorganisation (ILO), das entgeltliche Arbeit sowie selbstständige oder mithelfende Tätigkeit umfasst. Unbezahlte Tätigkeiten wie Arbeiten im eigenen oder fremden Haushalt, Gartenarbeit, die Pflege und Betreuung von Kindern und Erwachsenen sowie ehrenamtliche Tätigkeiten werden nicht berücksichtigt. Die Angaben beziehen sich auf die normalerweise geleistete Arbeitszeit. Gelegentliche oder einmalige Abweichungen von der vertraglich vereinbarten oder allgemein üblichen Arbeitszeit, wie beispielsweise durch Urlaub oder Krankheit, werden nicht berücksichtigt. Dadurch werden Verzerrungen, die unter anderem durch jahreszeitliche Schwankungen entstehen können, vermieden.<br /><br />Einschränkungen der Arbeitszeit aufgrund von Mutterschutz oder Elternzeit fließen jedoch in die Erhebung ein. Arbeitet ein Elternteil beispielsweise grundsätzlich in Vollzeit, befindet sich jedoch zum Zeitpunkt der Befragung in Elternzeit, wird die reduzierte Stundenzahl in den Indikator einbezogen. Dem Indikator liegt das Konzept der Erwerbstätigkeit gemäß der Definition der ILO in Verbindung mit dem Konzept der realisierten Erwerbstätigkeit des Statistischen Bundesamts zugrunde. Das bedeutet, dass Personen im Mutterschutz oder in Elternzeit als Nichterwerbstätige gezählt werden. Neben Erwerbslosen und Nichterwerbspersonen werden somit auch Personen im Mutterschutz oder in Elternzeit mit einer Gewichtung von null Stunden erfasst.<br /><br />Der Unterschied zu anderen Veröffentlichungen besteht darin, dass die Summe der Arbeitsstunden durch die Gesamtzahl der jeweiligen Mütter und Väter geteilt wird. Der so ermittelte Stundendurchschnitt für alle Mütter und Väter unterscheidet sich entsprechend von der durchschnittlichen Arbeitszeit erwerbstätiger Mütter und Väter. Die Daten stammen aus dem Mikrozensus, einer jährlichen Stichprobenerhebung, die 1&nbsp;% der Bevölkerung in Deutschland umfasst. Aufgrund einer umfassenden Neugestaltung des Mikrozensus im Jahr 2020&nbsp;sind die ab diesem Jahr erhobenen Daten nur eingeschränkt mit den Vorjahresdaten vergleichbar.<br /><br /><b>Entwicklung</b><br /><br />Die durchschnittliche Arbeitszeit der Väter lag seit 2005&nbsp;stets über 35&nbsp;Stunden pro Woche und erreichte im Jahr 2012&nbsp;mit 38,8&nbsp;Stunden den höchsten Wert. Der mit 36,5&nbsp;Stunden deutlich niedrigere Wert im Jahr 2020&nbsp;könnte einerseits auf die zuvor genannten Änderungen der Datenquelle zurückzuführen sein, andererseits jedoch auch durch die Auswirkungen der COVID-19-Pandemie, einschließlich der reduzierten Erwerbstätigkeit und der Schließungen von Schulen und Betreuungseinrichtungen, beeinflusst worden sein. 2023&nbsp;betrug die durchschnittliche Wochenarbeitszeit der Väter 36,8&nbsp;Stunden.<br /><br />Die durchschnittliche wöchentliche Arbeitszeit der Mütter stieg zwischen 2006&nbsp;und 2023&nbsp;kontinuierlich an, mit Ausnahme des Jahres 2020. Im Jahr 2023&nbsp;lag sie bei 19,2&nbsp;Stunden. Dies entspricht etwas mehr als der Hälfte der durchschnittlichen Arbeitszeit der Väter. Die Verringerung der Differenz zwischen den Erwerbsarbeitszeiten von Müttern und Vätern von 22,2&nbsp;Stunden im Jahr 2006&nbsp;auf 17,6&nbsp;Stunden im Jahr 2023, die insbesondere auf eine gestiegene Arbeitszeit der Mütter zurückzuführen ist, zeigt, dass sich die Erwerbsbeteiligung von Müttern verändert hat.<br /><br />Die Veränderung könnte auf eine zunehmende Flexibilität und Familienfreundlichkeit auf dem Arbeitsmarkt, verbesserte Rahmenbedingungen für eine Vereinbarkeit von Familie und Beruf sowie andere gesellschaftliche Entwicklungen zurückzuführen sein. Während die Arbeitszeit der Väter weitgehend konstant geblieben ist, zeigt sich bei Müttern eine zunehmende Integration in den Arbeitsmarkt.<br /><br />Der Indikator stellt lediglich die Unterschiede in den quantitativen Umfängen der Erwerbstätigkeit dar. Er gibt daher keine Auskunft über die zugrundeliegenden Ursachen oder Motivationen, warum sich die Erwerbsarbeitszeiten nicht deutlicher annähern, wie etwa fehlende Betreuungsmöglichkeiten, der Wunsch mehr Zeit mit den Kindern zu verbringen, eine unterschiedliche Bezahlung der beiden Elternteile oder ein alleiniges Erziehen der Kinder, das überwiegend von Müttern geleistet wird.<br /><br />Das politisch festgelegte Ziel ist eine Annäherung der durchschnittlichen wöchentlichen Erwerbsarbeitszeit von Müttern und Vätern. Derzeit wird diese Annäherung überwiegend durch eine Erhöhung der Arbeitszeit von Müttern erreicht, während die Arbeitszeit von Vätern nur geringfügig sank.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #ff3a21; font-size: large">5.1.e Durchschnittliche wöchentliche Erwerbsarbeitszeit bezogen auf alle Mütter und Väter</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator stellt das Erwerbsverhalten von Müttern und Vätern gegenüber. Die geleisteten Arbeitsstunden beziehen sich dabei nicht nur auf erwerbstätige, sondern auf alle Mütter und Väter. Dadurch werden sowohl die unterschiedlichen Stundenumfänge von arbeitenden Müttern und Vätern als auch die unterschiedlich hohen Erwerbstätigenquoten berücksichtigt.<br /><br />Für den Indikator werden Mütter und Väter im Alter von 15&nbsp;bis unter 65&nbsp;Jahren berücksichtigt, die mit mindestens einem Kind unter 18&nbsp;Jahren im Haushalt leben. Als Kinder gelten neben leiblichen Kindern auch Stief-, Pflege- und Adoptivkinder. Kinder, die noch im Haushalt der Eltern leben, dort aber bereits eigene Kinder betreuen, sowie Kinder, die in einer Lebensgemeinschaft mit einer Partnerin oder einem Partner leben, werden nicht der Herkunftsfamilie zugeordnet, sondern als eigene Familie beziehungsweise Lebensform in der Statistik erfasst.<br /><br />Die Definition der Arbeitszeit folgt dem Konzept der Internationalen Arbeitsorganisation (ILO), das entgeltliche Arbeit sowie selbstständige oder mithelfende Tätigkeit umfasst. Unbezahlte Tätigkeiten wie Arbeiten im eigenen oder fremden Haushalt, Gartenarbeit, die Pflege und Betreuung von Kindern und Erwachsenen sowie ehrenamtliche Tätigkeiten werden nicht berücksichtigt. Die Angaben beziehen sich auf die normalerweise geleistete Arbeitszeit. Gelegentliche oder einmalige Abweichungen von der vertraglich vereinbarten oder allgemein üblichen Arbeitszeit, wie beispielsweise durch Urlaub oder Krankheit, werden nicht berücksichtigt. Dadurch werden Verzerrungen, die unter anderem durch jahreszeitliche Schwankungen entstehen können, vermieden.<br /><br />Einschränkungen der Arbeitszeit aufgrund von Mutterschutz oder Elternzeit fließen jedoch in die Erhebung ein. Arbeitet ein Elternteil beispielsweise grundsätzlich in Vollzeit, befindet sich jedoch zum Zeitpunkt der Befragung in Elternzeit, wird die reduzierte Stundenzahl in den Indikator einbezogen. Dem Indikator liegt das Konzept der Erwerbstätigkeit gemäß der Definition der ILO in Verbindung mit dem Konzept der realisierten Erwerbstätigkeit des Statistischen Bundesamts zugrunde. Das bedeutet, dass Personen im Mutterschutz oder in Elternzeit als Nichterwerbstätige gezählt werden. Neben Erwerbslosen und Nichterwerbspersonen werden somit auch Personen im Mutterschutz oder in Elternzeit mit einer Gewichtung von null Stunden erfasst.<br /><br />Der Unterschied zu anderen Veröffentlichungen besteht darin, dass die Summe der Arbeitsstunden durch die Gesamtzahl der jeweiligen Mütter und Väter geteilt wird. Der so ermittelte Stundendurchschnitt für alle Mütter und Väter unterscheidet sich entsprechend von der durchschnittlichen Arbeitszeit erwerbstätiger Mütter und Väter. Die Daten stammen aus dem Mikrozensus, einer jährlichen Stichprobenerhebung, die 1&nbsp;% der Bevölkerung in Deutschland umfasst. Aufgrund einer umfassenden Neugestaltung des Mikrozensus im Jahr 2020&nbsp;sind die ab diesem Jahr erhobenen Daten nur eingeschränkt mit den Vorjahresdaten vergleichbar.<br /><br /><b>Entwicklung</b><br /><br />Die durchschnittliche Arbeitszeit der Väter lag seit 2005&nbsp;stets über 35&nbsp;Stunden pro Woche und erreichte im Jahr 2012&nbsp;mit 38,8&nbsp;Stunden den höchsten Wert. Der mit 36,5&nbsp;Stunden deutlich niedrigere Wert im Jahr 2020&nbsp;könnte einerseits auf die zuvor genannten Änderungen der Datenquelle zurückzuführen sein, andererseits jedoch auch durch die Auswirkungen der COVID-19-Pandemie, einschließlich der reduzierten Erwerbstätigkeit und der Schließungen von Schulen und Betreuungseinrichtungen, beeinflusst worden sein. 2023&nbsp;betrug die durchschnittliche Wochenarbeitszeit der Väter 36,8&nbsp;Stunden.<br /><br />Die durchschnittliche wöchentliche Arbeitszeit der Mütter stieg zwischen 2006&nbsp;und 2023&nbsp;kontinuierlich an, mit Ausnahme des Jahres 2020. Im Jahr 2023&nbsp;lag sie bei 19,2&nbsp;Stunden. Dies entspricht etwas mehr als der Hälfte der durchschnittlichen Arbeitszeit der Väter. Die Verringerung der Differenz zwischen den Erwerbsarbeitszeiten von Müttern und Vätern von 22,2&nbsp;Stunden im Jahr 2006&nbsp;auf 17,6&nbsp;Stunden im Jahr 2023, die insbesondere auf eine gestiegene Arbeitszeit der Mütter zurückzuführen ist, zeigt, dass sich die Erwerbsbeteiligung von Müttern verändert hat.<br /><br />Die Veränderung könnte auf eine zunehmende Flexibilität und Familienfreundlichkeit auf dem Arbeitsmarkt, verbesserte Rahmenbedingungen für eine Vereinbarkeit von Familie und Beruf sowie andere gesellschaftliche Entwicklungen zurückzuführen sein. Während die Arbeitszeit der Väter weitgehend konstant geblieben ist, zeigt sich bei Müttern eine zunehmende Integration in den Arbeitsmarkt.<br /><br />Der Indikator stellt lediglich die Unterschiede in den quantitativen Umfängen der Erwerbstätigkeit dar. Er gibt daher keine Auskunft über die zugrundeliegenden Ursachen oder Motivationen, warum sich die Erwerbsarbeitszeiten nicht deutlicher annähern, wie etwa fehlende Betreuungsmöglichkeiten, der Wunsch mehr Zeit mit den Kindern zu verbringen, eine unterschiedliche Bezahlung der beiden Elternteile oder ein alleiniges Erziehen der Kinder, das überwiegend von Müttern geleistet wird.<br /><br />Das politisch festgelegte Ziel ist eine Annäherung der durchschnittlichen wöchentlichen Erwerbsarbeitszeit von Müttern und Vätern. Derzeit wird diese Annäherung überwiegend durch eine Erhöhung der Arbeitszeit von Müttern erreicht, während die Arbeitszeit von Vätern nur geringfügig sank.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2517,19 +2431,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2543,8 +2462,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3281,98 +3200,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3438,6 +3349,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3445,11 +3357,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3460,18 +3372,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3485,12 +3397,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

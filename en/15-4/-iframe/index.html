@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-15">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/15/" aria-label=" 15" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png"
-              alt="Life on land - Goal 15"
-              id="goal-15"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-15">
+    <div class="container">
+        <div class="row">
             
-              Indicator 15.4
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/15/" aria-label=" 15" title=" 15">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/15.png"
+                        alt="Life on land - Goal 15"
+                        id="goal-15"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 15.4
+                        
+                        <span class="lead-copy">Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-15" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_15-4'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="world-wide"
   data-charttitle="Bilateral contributions of German international cooperation to the protection, sustainable use and restoration of land (including forests)"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Bilateral contributions of German international cooperation to the protection, sustainable use, and restoration of land (including forests)&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation="Sector"
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Million hectares&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sector&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Sustainably farmed area&quot;,&quot;Forest area Sustainable management and restoration&quot;,&quot;Terrestrial protected areas and mangrove forests in marine protected areas&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sector&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -475,62 +465,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -543,12 +531,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Bilateral contributions of German international cooperation to the protection, sustainable use and restoration of land (including forests)</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Bilateral contributions of German international cooperation to the protection, sustainable use and restoration of land (including forests)
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -563,54 +551,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>world-wide</dd>
+        <dt>Geographical Area:</dt>
+        <dd>world-wide</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          <dd>The data is based on a special evaluation and is not publicly accessible.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+
+        
+        <dt>Note:</dt>
+        <dd>The data is based on a special evaluation and is not publicly accessible.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -642,54 +624,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>world-wide</dd>
+        <dt>Geographical Area:</dt>
+        <dd>world-wide</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          <dd>The data is based on a special evaluation and is not publicly accessible.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+
+        
+        <dt>Note:</dt>
+        <dd>The data is based on a special evaluation and is not publicly accessible.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -777,197 +753,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the total area (in hectares) supported by German bilateral technical development cooperation in the area of sustainable land use (thematic areas of agriculture (including grassland), forestry and biodiversity conservation).</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the total area (in hectares) supported by German bilateral technical development cooperation in the area of sustainable land use (thematic areas of agriculture (including grassland), forestry and biodiversity conservation).</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Healthy terrestrial ecosystems play a key role in food production, reducing the impact of frequent and extreme weather events, preserving biodiversity and providing essential ecosystem services.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Healthy terrestrial ecosystems play a key role in food production, reducing the impact of frequent and extreme weather events, preserving biodiversity and providing essential ecosystem services.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Increase in sustainable land use (through protection, sustainable management, restoration) by 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Increase in sustainable land use (through protection, sustainable management, restoration) by 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Directional target</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Directional target</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The area supported by German bilateral development cooperation in sustainable land use should be increased.<br />• An assessment of indicator 15.4 is not possible. Too few data points.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The area supported by German bilateral development cooperation in sustainable land use should be increased.<br />• An assessment of indicator 15.4 is not possible. Too few data points.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1753,20 +1679,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1783,25 +1714,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #56c02b; font-size: large">15.4&nbsp;Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)</b><br /><br />In line with international commitments, particularly under the United Nations Convention to Combat Desertification (UNCCD) and the global Sustainable Development Goal 15.3, Germany has committed to achieving land degradation neutrality and promotes sustainable land management practices worldwide as well as the protection and restoration of land ecosystems. The politically established goal is to increase the area supported by German bilateral development cooperation in the field of sustainable land use.<br /><br />German bilateral development cooperation is divided into two areas: Technical Cooperation (TC) and Financial Cooperation (FC). The TC’s task is to strengthen the capacities of individuals, organisations, and societies in partner countries, enabling them to better achieve their own goals independently. TC services primarily include advisory support as well as, to a limited extent, the provision of goods or the preparation of studies and assessments. TC is always provided as a direct service, which does not require reimbursement by the recipient country.<br /><br />In contrast, FC aims to promote investments in developing countries. For this purpose, the Federal Ministry for Economic Cooperation and Development (BMZ) provides concessional, repayable loans, equity capital, or grants that do not need to be repaid.<br /><br />The indicator shows the total area promoted by bilateral contributions of German TC through the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) for the protection, sustainable use, and restoration of land (including forests). It represents the aggregate of areas recorded by the BMZ standard indicators KT2.5, KT5.1, and KT5.5.<br /><br /><b>BMZ standard indicator KT2.5</b><br /><br />BMZ standard indicator KT2.5&nbsp;captures the agricultural and/or pasture land sustainably managed through contributions of German TC. Sustainable management includes agroecological methods, climate-resilient practices, soil improvement and conservation, efficient water management, diversification of agricultural systems, biodiversity conservation measures, and certifications such as Fairtrade and organic farming.<br /><br />The area sustainably managed through German support can be measured directly or estimated based on the number of supported farms and their average sustainably managed area. To calculate the indicator, the area is multiplied by an adoption rate and a share factor. The adoption rate accounts for the fact that not all project measures are applied in practice or lead to behavioural change, for example, the implementation of content from training and advisory services. Adoption rates should be determined either based on reference values from scientific studies or through project-specific as well as comparable cross-project studies and surveys.<br /><br />The share factor takes into account that the results may not be solely attributable to BMZ measures but also influenced by other actors such as funds, policy and institutional advice, and campaigns. It reflects the percentage contribution attributable to the German funding share. The area is only counted once, even if several approaches or measures are applied.<br /><br />In 2023, 2.5&nbsp;million hectares of the area supported by Germany correspond to sustainably managed agricultural land, accounting for about 4.5% of the total supported area.<br /><br /><b>BMZ standard indicator KT5.1</b><br /><br />BMZ standard indicator KT5.1&nbsp;records the area of protected zones to whose conservation German TC has contributed. Data are collected for each protected area individually and then aggregated. Only projects where concrete on-site measures for area protection are implemented or promoted are considered. For the indicator, the entire protected area is counted, even if measures only affect part of it.<br /><br />Protected areas with a large proportion of forest or mangroves are included in both BMZ standard indicator KT5.1&nbsp;and BMZ standard indicator KT5.5&nbsp;(under disaggregation a) Protection). To avoid double counting, only the disaggregations b) sustainable management and c) restoration from KT5.5&nbsp;are included in the total.<br /><br />In 2023, 41.3&nbsp;million hectares of the total supported area were terrestrial protected areas and mangrove forests within marine protected areas. These areas account for approximately 74% of the supported area and significantly contribute to biodiversity conservation, strengthening ecosystem functions, and climate change adaptation.<br /><br />The indicator does not provide a detailed breakdown of supported protected areas by type or protection category. Protection objectives, measures, and area management vary according to the protection category. For example, IUCN category VI areas (International Union for Conservation of Nature) aim for sustainable use of natural resources, while nature reserves in category Ia largely exclude human interventions.<br /><br /><b>BMZ standard indicator KT5.5</b><br /><br />BMZ standard indicator KT5.5&nbsp;records forest areas to whose a) protection (not included here, as already covered by KT5.1), b) sustainable management, or c) restoration Germany has contributed through TC. The United Nations Food and Agriculture Organization (FAO) defines forest areas as areas larger than 0.5&nbsp;hectares, covered with trees taller than five metres and with a canopy cover of more than 10%, or trees capable of reaching these thresholds. Mangroves are also included.<br /><br />Areas not yet forested but intended to reach tree cover within five years through suitable management practices are also counted. Excluded are areas predominantly used for agriculture (such as orchards, oil palm plantations, or trees for energy and raw material production, including agroforestry systems) or urban uses (such as parks). Plantations of rubber trees, cork oaks, and bamboo are excluded according to the FAO definition.<br /><br />The German Sustainability Strategy indicator includes areas assigned to b) sustainable management or c) restoration of forest areas. Sustainable management refers to forest areas outside protected zones managed with environmentally and resource-friendly methods. Restoration refers to areas currently non-forested but intended to be reforested, reseeded, or supported to regenerate forest cover through measures such as fire prevention, controlled grazing, or sustainable firewood use.<br /><br />Germany’s support contributes to the sustainable management and restoration of 12.0&nbsp;million hectares of forest worldwide, representing about 21.5% of the total supported area.<br /><br /><b>Overall development</b><br /><br />In 2023, German TC, together with partners, supported a total area of 55.8&nbsp;million hectares worldwide in the fields of protection, sustainable use, and restoration of land. Assessment of progress towards the politically set goal to increase the area supported by German bilateral development cooperation in sustainable land use is currently not possible due to insufficient data points.<br /><br />While the indicator provides an overview of the size of supported terrestrial areas that are protected, restored, or sustainably managed, treating these areas equally without differentiating the value of individual protection or management practices leads to generalisation.<br /><br />The indicator does not provide detailed information on Germany’s specific contribution to the protection, sustainable use, or restoration of individual areas and does not reflect the qualitative impacts of the measures implemented. Furthermore, there is a risk that measuring effectiveness based on the area covered encourages a focus on maximising area rather than ensuring impact-oriented resource allocation.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #56c02b; font-size: large">15.4&nbsp;Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)</b><br /><br />In line with international commitments, particularly under the United Nations Convention to Combat Desertification (UNCCD) and the global Sustainable Development Goal 15.3, Germany has committed to achieving land degradation neutrality and promotes sustainable land management practices worldwide as well as the protection and restoration of land ecosystems. The politically established goal is to increase the area supported by German bilateral development cooperation in the field of sustainable land use.<br /><br />German bilateral development cooperation is divided into two areas: Technical Cooperation (TC) and Financial Cooperation (FC). The TC’s task is to strengthen the capacities of individuals, organisations, and societies in partner countries, enabling them to better achieve their own goals independently. TC services primarily include advisory support as well as, to a limited extent, the provision of goods or the preparation of studies and assessments. TC is always provided as a direct service, which does not require reimbursement by the recipient country.<br /><br />In contrast, FC aims to promote investments in developing countries. For this purpose, the Federal Ministry for Economic Cooperation and Development (BMZ) provides concessional, repayable loans, equity capital, or grants that do not need to be repaid.<br /><br />The indicator shows the total area promoted by bilateral contributions of German TC through the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) for the protection, sustainable use, and restoration of land (including forests). It represents the aggregate of areas recorded by the BMZ standard indicators KT2.5, KT5.1, and KT5.5.<br /><br /><b>BMZ standard indicator KT2.5</b><br /><br />BMZ standard indicator KT2.5&nbsp;captures the agricultural and/or pasture land sustainably managed through contributions of German TC. Sustainable management includes agroecological methods, climate-resilient practices, soil improvement and conservation, efficient water management, diversification of agricultural systems, biodiversity conservation measures, and certifications such as Fairtrade and organic farming.<br /><br />The area sustainably managed through German support can be measured directly or estimated based on the number of supported farms and their average sustainably managed area. To calculate the indicator, the area is multiplied by an adoption rate and a share factor. The adoption rate accounts for the fact that not all project measures are applied in practice or lead to behavioural change, for example, the implementation of content from training and advisory services. Adoption rates should be determined either based on reference values from scientific studies or through project-specific as well as comparable cross-project studies and surveys.<br /><br />The share factor takes into account that the results may not be solely attributable to BMZ measures but also influenced by other actors such as funds, policy and institutional advice, and campaigns. It reflects the percentage contribution attributable to the German funding share. The area is only counted once, even if several approaches or measures are applied.<br /><br />In 2023, 2.5&nbsp;million hectares of the area supported by Germany correspond to sustainably managed agricultural land, accounting for about 4.5% of the total supported area.<br /><br /><b>BMZ standard indicator KT5.1</b><br /><br />BMZ standard indicator KT5.1&nbsp;records the area of protected zones to whose conservation German TC has contributed. Data are collected for each protected area individually and then aggregated. Only projects where concrete on-site measures for area protection are implemented or promoted are considered. For the indicator, the entire protected area is counted, even if measures only affect part of it.<br /><br />Protected areas with a large proportion of forest or mangroves are included in both BMZ standard indicator KT5.1&nbsp;and BMZ standard indicator KT5.5&nbsp;(under disaggregation a) Protection). To avoid double counting, only the disaggregations b) sustainable management and c) restoration from KT5.5&nbsp;are included in the total.<br /><br />In 2023, 41.3&nbsp;million hectares of the total supported area were terrestrial protected areas and mangrove forests within marine protected areas. These areas account for approximately 74% of the supported area and significantly contribute to biodiversity conservation, strengthening ecosystem functions, and climate change adaptation.<br /><br />The indicator does not provide a detailed breakdown of supported protected areas by type or protection category. Protection objectives, measures, and area management vary according to the protection category. For example, IUCN category VI areas (International Union for Conservation of Nature) aim for sustainable use of natural resources, while nature reserves in category Ia largely exclude human interventions.<br /><br /><b>BMZ standard indicator KT5.5</b><br /><br />BMZ standard indicator KT5.5&nbsp;records forest areas to whose a) protection (not included here, as already covered by KT5.1), b) sustainable management, or c) restoration Germany has contributed through TC. The United Nations Food and Agriculture Organization (FAO) defines forest areas as areas larger than 0.5&nbsp;hectares, covered with trees taller than five metres and with a canopy cover of more than 10%, or trees capable of reaching these thresholds. Mangroves are also included.<br /><br />Areas not yet forested but intended to reach tree cover within five years through suitable management practices are also counted. Excluded are areas predominantly used for agriculture (such as orchards, oil palm plantations, or trees for energy and raw material production, including agroforestry systems) or urban uses (such as parks). Plantations of rubber trees, cork oaks, and bamboo are excluded according to the FAO definition.<br /><br />The German Sustainability Strategy indicator includes areas assigned to b) sustainable management or c) restoration of forest areas. Sustainable management refers to forest areas outside protected zones managed with environmentally and resource-friendly methods. Restoration refers to areas currently non-forested but intended to be reforested, reseeded, or supported to regenerate forest cover through measures such as fire prevention, controlled grazing, or sustainable firewood use.<br /><br />Germany’s support contributes to the sustainable management and restoration of 12.0&nbsp;million hectares of forest worldwide, representing about 21.5% of the total supported area.<br /><br /><b>Overall development</b><br /><br />In 2023, German TC, together with partners, supported a total area of 55.8&nbsp;million hectares worldwide in the fields of protection, sustainable use, and restoration of land. Assessment of progress towards the politically set goal to increase the area supported by German bilateral development cooperation in sustainable land use is currently not possible due to insufficient data points.<br /><br />While the indicator provides an overview of the size of supported terrestrial areas that are protected, restored, or sustainably managed, treating these areas equally without differentiating the value of individual protection or management practices leads to generalisation.<br /><br />The indicator does not provide detailed information on Germany’s specific contribution to the protection, sustainable use, or restoration of individual areas and does not reflect the qualitative impacts of the measures implemented. Furthermore, there is a risk that measuring effectiveness based on the area covered encourages a focus on maximising area rather than ensuring impact-oriented resource allocation.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2595,19 +2521,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2621,8 +2552,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3359,98 +3290,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/giz.png" alt="German Corporation for International Cooperation" title=" Click here to visit the homepage of the organizationGerman Corporation for International Cooperation" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/giz.png" alt="German Corporation for International Cooperation" title=" Click here to visit the homepage of the organizationGerman Corporation for International Cooperation" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3516,6 +3439,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3523,11 +3447,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3538,16 +3462,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3561,12 +3485,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

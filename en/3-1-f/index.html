@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -179,7 +180,7 @@ layout-indicator
     <h2 class="internet-explorer-message-title"></h2>
     <p class="internet-explorer-message-body"></p>
 </div>
-<!-- <div id="disclaimer">
+<div id="disclaimer">
     
 <div class="container">
   <div class="disclaimer-alert">
@@ -190,7 +191,7 @@ layout-indicator
   </div>
 </div>
 
-</div> -->
+</div>
 
 <header role="banner" class="">
     <div class="container">
@@ -205,54 +206,42 @@ layout-indicator
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/en/">Start</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Status
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
     <a class="dropdown-item" href="/site/en/status/">Methodology</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/status_summary/">Overview</a>
-</li>
-</ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li></ul>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Strategy
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
     <a class="dropdown-item" href="/site/en/strategy/dns/">German Sustainable Development Strategy</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/strategy/monitoring/">Monitoring</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/strategy/publications/">Publications</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/strategy/links/">Links</a>
-</li>
-</ul>
-          </li><li class="nav-item ">
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/site/en/laender/">Länder</a>
-</li>
-<li class="nav-item ">
-    <a class="nav-link" href="https://sdg-indicators.de">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/en/menu.1_global_indicators_path">Global indicators <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Help
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
     <a class="dropdown-item" href="/site/en/help/navigation/">Structure of the online platform</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/help/guidance/">Technical notes</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/en/help/faq/">FAQ</a>
-</li>
-</ul>
-          </li></ul>
-
+</li></ul>
+            </li></ul>
+    
                 </div>
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/en/search/">
@@ -275,37 +264,28 @@ layout-indicator
 
 
   <div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
             <a class="language-toggle-link" href="/site/3-1-f/">
                 Deutsch
             </a>
-        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
-            <span>
-                English
-            </span>
         </li></ul>
 </div>
-
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
     <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item">
             <a class="language-toggle-link" href="/site/3-1-f/">
                 Deutsch
             </a>
-        </li><li class="language-option-en list-inline-item" style="opacity:0.3">
-            <span>
-                English
-            </span>
         </li></ul>
-</div>
-</span><a title="" aria-label=""
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
-
                 </div>
             </div>
         </nav>
@@ -400,83 +380,55 @@ data-event-label="high"
 <script>translations['data'] = {"1,000":"1,000","1,000 euros":"1,000 euros","11 to under 18 years":"11 to under 18 years","12 to under 18 years":"12 to under 18 years","15 years and older":"15 years and older","18 to under 20 years":"18 to under 20 years","1990 = 100":"1990 = 100","2 years and younger":"2 years and younger","20 to under 25 years":"20 to under 25 years","20 to under 65 years":"20 to under 65 years","2000 = 100":"2000 = 100","2005 = 100":"2005 = 100","2008 = 100":"2008 = 100","2010 = 100":"2010 = 100","2015 = 100":"2015 = 100","2030 = 100":"2030 = 100","25 to under 30 years":"25 to under 30 years","3 to under 11 years":"3 to under 11 years","3 to under 5 years":"3 to under 5 years","30 to under 35 years":"30 to under 35 years","35 to under 40 years":"35 to under 40 years","40 to under 45 years":"40 to under 45 years","45 to under 50 years":"45 to under 50 years","50 to under 55 years":"50 to under 55 years","55 to under 60 years":"55 to under 60 years","60 to under 65 years":"60 to under 65 years","65 to under 70 years":"65 to under 70 years","70 to under 75 years":"70 to under 75 years","75 years and older":"75 years and older","<u>additional time series:</u> adjusted gender pay gap":"<u>Additional time series:</u> Adjusted Gender Pay Gap","<u>additional time series:</u> coasts and seas":"<u>Additional time series:</u> Coasts and seas","<u>additional time series:</u> data from the bmleh":"<u>Additional time series:</u> Data from the BMLEH","<u>additional time series:</u> emas organisations":"<u>Additional time series:</u> EMAS organisations","<u>additional time series:</u> employees in emas organisations":"<u>Additional time series:</u> Employees in EMAS organisations","<u>additional time series:</u> germany's contribution to global pandemic prevention, preparedness and response (ppr)":"<u>Additional time series:</u> Germany's contribution to global pandemic prevention, preparedness and response (PPR)","<u>additional time series:</u> gini coefficient of equivalised disposable income before social transfers":"<u>Additional time series:</u> Gini coefficient of equivalised disposable income before social transfers","<u>additional time series:</u> gini coefficient of equivalised market income":"<u>Additional time series:</u> Gini coefficient of equivalised market income","<u>additional time series:</u> gini coefficient of wealth":"<u>Additional time series:</u> Gini coefficient of wealth","<u>additional time series:</u> imports of processed products":"<u>Additional time series:</u> Imports of processed products","<u>additional time series:</u> male recipients of all parental allowance months taken":"<u>Additional time series:</u> Male recipients of all parental allowance months taken","<u>additional time series:</u> productions of audiovisual media that meet ecological standards":"<u>Additional time series:</u> Productions of audiovisual media that meet ecological standards","<u>additional time series:</u> skilled labour potential (total)":"<u>Additional time series:</u> Skilled labour potential (total)","<u>additional time series:</u> technical compliance":"<u>Additional time series:</u> Technical compliance","<u>time series of the indicator:</u> academically qualified and professionally highly qualified persons":"<u>Time series of the indicator:</u> Academically qualified and professionally highly qualified persons","<u>time series of the indicator:</u> children whose fathers have received parental allowance":"<u>Time series of the indicator:</u> Children whose fathers have received parental allowance","<u>time series of the indicator:</u> data from the federal statistical office":"<u>Time series of the indicator:</u> Data from the Federal Statistical Office","<u>time series of the indicator:</u> effectiveness":"<u>Time series of the indicator:</u> Effectiveness","<u>time series of the indicator:</u> gini coefficient of equivalised disposable income":"<u>Time series of the indicator:</u> Gini coefficient of equivalised disposable income","<u>time series of the indicator:</u> imports":"<u>Time series of the indicator:</u> Imports","<u>time series of the indicator:</u> locations of organisation registered with emas":"<u>Time series of the indicator:</u> Locations of organisation registered with EMAS","<u>time series of the indicator:</u> sustainability-certified cultural and media institutions":"<u>Time series of the indicator:</u> Sustainability-certified cultural and media institutions","<u>time series of the indicator:</u> total":"<u>Time series of the indicator:</u> Total","<u>time series of the indicator:</u> unadjusted gender pay gap":"<u>Time series of the indicator:</u> Unadjusted Gender Pay Gap","Year":"Year","a) 0 to 2-year-olds":"a) 0 to 2-year-olds","a) corruption perceptions index in germany":"a) Corruption Perceptions Index in Germany","a) final energy productivity":"a) Final energy productivity","a) government deficit":"a) Government deficit","a) material and social deprivation":"a) Material and social deprivation","a) sustainability in procurement procedures":"a) Sustainability in procurement procedures","a) total (20 to 64-year-olds)":"a) Total (20 to 64-year-olds)","a) with access to new or improved drinking water supply":"a) With access to new or improved drinking water supply","aa) baltic sea":"aa) Baltic Sea","ab) north sea":"ab) North Sea","accessibility of green spaces suitable for recreation in cities":"Accessibility of green spaces suitable for recreation in cities","accessibility of medium-sized and large cities by public transport":"Accessibility of medium-sized and large cities by public transport","accessibility of mediumsized and large cities by public transport":"Accessibility of mediumsized and large cities by public transport","accessibility of recreational green spaces in cities":"Accessibility of recreational green spaces in cities","age group":"Age group","air pollutant":"Air pollutant","all objects":"All objects","all wired technologies":"All wired technologies","all-day care for children <br>(0- to 2-year-olds)":"All-day care for children <br>(0- to 2-year-olds)","all-day care for children <br>(3- to 5-year-olds)":"All-day care for children <br>(3- to 5-year-olds)","area":"Area","at least one risk situation":"At least one risk situation","average weekly working hours in relation to all mothers and fathers":"Average weekly working hours in relation to all mothers and fathers","average weekly working hours of all mothers and fathers":"Average weekly working hours of all mothers and fathers","b) 3 to 5-year-olds":"b) 3 to 5-year-olds","b) co2 emissions of vehicles in the public sector":"b) CO₂ emissions of vehicles in the public sector","b) co₂ emissions of commercially available vehicles in the public sector":"b) CO₂ emissions of commercially available vehicles in the public sector","b) number of partner countries of german development cooperation whose cpi has improved":"b) Number of partner countries of German development cooperation whose CPI has improved","b) older people (55 to 64-year-olds)":"b) Older people (55 to 64-year-olds)","b) on supervisory boards of listed and fully co-determined companies":"b) On supervisory boards of listed and fully co-determined companies","b) primary energy consumption":"b) Primary energy consumption","b) severe material and social deprivation":"b) Severe material and social deprivation","b) structural deficit":"b) Structural deficit","b) with access to new or improved basic sanitation or wastewater treatment":"b) With access to new or improved basic sanitation or wastewater treatment","ba) direct and indirect use of raw materials":"ba) Direct and indirect use of raw materials","baden-wuerttemberg":"Baden-Wuerttemberg","baltic sea":"Baltic Sea","bavaria":"Bavaria","bb) direct and indirect energy consumption":"bb) Direct and indirect energy consumption","bc) direct and indirect co₂ emissions":"bc) Direct and indirect CO₂ emissions","berlin":"Berlin","bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)":"Bilateral contributions from german international cooperation arrangements towards the protection, sustainable use and restoration of land (including forests)","bilateral contributions of german international cooperation to the protection, sustainable use, and restoration of land (including forests)":"Bilateral contributions of German international cooperation to the protection, sustainable use, and restoration of land (including forests)","billion euros":"Billion euros","biodiversity and landscape quality":"Biodiversity and landscape quality","brandenburg":"Brandenburg","bremen":"Bremen","by number of risk positions":"By number of risk positions","c) adolescents":"c) Adolescents","c) in the federal civil service":"c) In the federal civil service","c) sustainable textile procurement":"c) Sustainable textile procurement","calculated annual values":"Calculated annual values","calculated as net expenditure":"Calculated as net expenditure","calculated in grant equivalents":"Calculated in grant equivalents","calculation method":"Calculation method","categorization":"Categorization","children whose fathers have received parental allowance":"Children whose fathers have received parental allowance","collective bargaining coverage":"Collective bargaining coverage","commercial exploited fish stocks assessed for msy that is fished sustainably":"Commercial exploited fish stocks assessed for MSY that is fished sustainably","company/house collective agreement":"Company/house collective agreement","consumer debt":"Consumer debt","corruption perceptions index in germany":"Corruption Perceptions Index in Germany","corruption perceptions index in partner countries for german development cooperation":"Corruption Perceptions Index in partner countries for German development cooperation","county":"County","criminal offence":"Criminal offence","criminal offences":"Criminal offences","cultural and media institutions":"Cultural and media institutions","d) adults":"d) Adults","dangerous and serious bodily injury":"Dangerous and serious bodily injury","day care":"Day care","day care centres":"Day care centres","degree of soil sealing":"Degree of soil sealing","degree of urbanisation":"Degree of urbanisation","density of settlements":"Density of settlements","difference":"Difference","difference between <i>no risk situation</i> and <i>at least one risk situation</i>":"Difference between <i>No risk situation</i> and <i>At least one risk situation</i>","display":"Display","divers":"Divers","domestic burglary":"Domestic burglary","early leavers from education and training":"Early leavers from education and training","early school and training leavers":"Early school and training leavers","eco-management and audit scheme (emas)":"Eco-Management and Audit Scheme (EMAS)","economy":"Economy","emissions of air pollutants":"Emissions of air pollutants","employment rate, older people <br>(55- to 64-year-olds)":"Employment rate, older people <br>(55- to 64-year-olds)","employment rate, total <br>(20- to 64-year-olds)":"Employment rate, total <br>(20- to 64-year-olds)","energy consumption in passenger transport":"Energy consumption in passenger transport","energy consumption per passenger-kilometre":"Energy consumption per passenger-kilometre","energy consumption per tonne-kilometre":"Energy consumption per tonne-kilometre","eu":"EU","eu-27":"EU-27","eu-28":"EU-28","european union":"European Union","eurozone":"Eurozone","eutrophication of ecosystems":"Eutrophication of ecosystems","expansion of settlement and transport area":"Expansion of settlement and transport area","farmland sub-indicator":"Farmland sub-indicator","fathers":"Fathers","federal state":"Federal state","female":"Female","fibre-to-the-building/home (fttb/h)":"Fibre-to-the-Building/Home (FTTB/H)","final energy consumption for the transport of goods":"Final energy consumption for the transport of goods","final energy consumption in goods transport":"Final energy consumption in goods transport","final energy consumption in passenger transport":"Final energy consumption in passenger transport","final energy productivity":"Final energy productivity","financial action task force (fatf) rating effectiveness":"Financial Action Task Force (FATF) rating effectiveness","fine particulate matter":"Fine particulate matter","for the medium-sized and major cities of 2012":"For the medium-sized and major cities of 2012","for the medium-sized and major cities of the year in question":"For the medium-sized and major cities of the year in question","foreign school graduates":"Foreign school graduates","foreigns":"Foreigns","forest area sustainable management and restoration":"Forest area Sustainable management and restoration","forest sub-indicator":"Forest sub-indicator","fraud":"Fraud","gender pay gap":"Gender pay gap","germans":"Germans","germany":"Germany","germany’s contribution to global pandemic prevention and response":"Germany’s contribution to global pandemic prevention and response","gini coefficient":"Gini coefficient","gini coefficient of income after social transfers":"Gini coefficient of income after social transfers","global environmental impact by private household consumption – co₂ emissions":"Global environmental impact by private household consumption – CO₂ emissions","global environmental impact by private household consumption – energy consumption":"Global environmental impact by private household consumption – Energy consumption","global environmental impact by private household consumption – use of raw materials":"Global environmental impact by private household consumption – Use of raw materials","goods transport performance":"Goods transport performance","government and private non-profit institutions":"Government and private non-profit institutions","government debt":"Government debt","government deficit":"Government deficit","greenhouse gas emissions":"Greenhouse gas emissions","gross domestic product (gdp) per capita":"Gross domestic product (GDP) per capita","gross domestic product (price-adjusted)":"Gross domestic product (price-adjusted)","gross domestic product per capita":"Gross domestic product per capita","gross fixed capital formation in relation to gdp":"Gross fixed capital formation in relation to GDP","gross fixed capital formation in relation to gross domestic product (gdp) (investment ratio)":"Gross fixed capital formation in relation to Gross domestic product (GDP) (investment ratio)","hamburg":"Hamburg","hectare":"Hectare","hectares per day":"Hectares per day","hesse":"Hesse","higher qualifying vocational training":"Higher qualifying vocational training","hours":"Hours","hybrid fiber coax (hfc)":"Hybrid Fiber Coax (HFC)","imports from least developed countries":"Imports from least developed countries","inhabitants per km² settlement and transport area":"Inhabitants per km² settlement and transport area","initial training":"Initial training","inland waters sub-index":"Inland waters sub-index","international climate finance for the reduction of greenhouse gases and adaptation to climate change":"International climate finance for the reduction of greenhouse gases and adaptation to climate change","kilograms per hectare":"Kilograms per hectare","largely compliant or compliant":"Largely compliant or compliant","level of compliance":"Level of compliance","low or moderate":"Low or moderate","lower saxony":"Lower Saxony","male":"Male","market share of products certified by a state sustainability standard":"Market share of products certified by a state sustainability standard","market share of products with official sustainability labels":"Market share of products with official sustainability labels","material and social deprivation":"Material and social deprivation","mecklenburg western pomerania":"Mecklenburg Western Pomerania","milligrams per litre":"Milligrams per litre","million euros":"Million euros","million hectares":"Million hectares","million inhabitants":"Million inhabitants","millions":"Millions","minutes":"Minutes","mortality avoidable through prevention":"Mortality avoidable through prevention","mortality avoidable through prevention and treatment":"Mortality avoidable through prevention and treatment","mortality avoidable through treatment":"Mortality avoidable through treatment","mothers":"Mothers","moving five-year average shown for the last year":"Moving five-year average shown for the last year","moving four-year average":"Moving four-year average","m² per inhabitant and year":"m² per inhabitant and year","m² per year":"m² per year","nh₃":"NH₃","nitrate in groundwater":"Nitrate in groundwater","nitrogen input in coastal and marine waters – nitrogen input via the inflows into the baltic sea":"Nitrogen input in coastal and marine waters – Nitrogen input via the inflows into the Baltic Sea","nitrogen input in coastal and marine waters – nitrogen input via the inflows into the north sea":"Nitrogen input in coastal and marine waters – Nitrogen input via the inflows into the North Sea","nitrogen surplus in agriculture":"Nitrogen surplus in agriculture","nmvoc":"NMVOC","no risk situation":"No risk situation","non-compliant or partially compliant":"Non-compliant or partially compliant","non-rural areas":"Non-rural areas","north rhine-westphalia":"North Rhine-Westphalia","north sea":"North Sea","noₓ":"NOₓ","number":"Number","number of people gaining first-time or upgraded access to drinking water or sanitation owing to german support":"Number of people gaining first-time or upgraded access to drinking water or sanitation owing to German support","number of people with access to new or improved basic sanitation or wastewater treatment":"Number of people with access to new or improved basic sanitation or wastewater treatment","number of people with access to new or improved drinking water supply":"Number of people with access to new or improved drinking water supply","number of ratings":"Number of ratings","number of students and researchers from developing countries and least developed countries":"Number of students and researchers from developing countries and least developed countries","obese":"Obese","obesity rate among adults":"Obesity rate among adults","obesity rate among children and adolescents":"Obesity rate among children and adolescents","objects with digitised media":"Objects with digitised media","objects without digitised media":"Objects without digitised media","official development assistance as a proportion of gross national income":"Official development assistance as a proportion of gross national income","official developmentassistance as a proportion of gross national income":"Official developmentassistance as a proportion of gross national income","organic farming":"Organic farming","other offences":"Other offences","overweight without obese":"Overweight without obese","pandemic prevention and response":"Pandemic prevention and response","participation in continuing education":"Participation in continuing education","participation in education and training":"Participation in education and training","passenger transport performance":"Passenger transport performance","per 100,000 inhabitants":"Per 100,000 inhabitants","per 100,000 inhabitants under 70 years (excluding under 1 year olds)":"Per 100,000 inhabitants under 70 years (excluding under 1 year olds)","percentage":"Percentage","percentage points":"Percentage points","personnel trained by the bundeswehr to strengthen small arms control and ammunition safety":"Personnel trained by the Bundeswehr to strengthen small arms control and ammunition safety","personnel trained by the bundeswehr to strengthen small arms control and ammunition security":"Personnel trained by the Bundeswehr to strengthen small arms control and ammunition security","persons with a tertiary or post-secondary non-tertiary level of education":"Persons with a tertiary or post-secondary non-tertiary level of education","persons with an academic or higher vocational qualification":"Persons with an academic or higher vocational qualification","phosphorous in flowing waters":"Phosphorous in flowing waters","phosphorus in flowing waters":"Phosphorus in flowing waters","pm2.5":"PM₂.₅","primary energy consumption":"Primary energy consumption","private and public expenditure on research and development":"Private and public expenditure on research and development","proportion of 17- and 18-year-olds with (aspired) university entrance qualification":"Proportion of 17- and 18-year-olds with (aspired) university entrance qualification","proportion of countries supported by germany in pandemic prevention, preparedness, and response (ppr) that have made pro-gress in the global health security index (ghsi), relative to the total number of countries supported by germany in the area of ppr":"Proportion of countries supported by Germany in pandemic prevention, preparedness, and response (PPR) that have made pro-gress in the Global Health Security Index (GHSI), relative to the total number of countries supported by Germany in the area of PPR","proportion of countries supported by germany in pandemic prevention, preparedness, and response (ppr) that have made progress in the global health security index (ghsi), relative to the total number of countries supported by germany in the area of ppr":"Proportion of countries supported by Germany in pandemic prevention, preparedness, and response (PPR) that have made progress in the Global Health Security Index (GHSI), relative to the total number of countries supported by Germany in the area of PPR","proportion of fathers receiving parental allowance":"Proportion of fathers receiving parental allowance","proportion of people with high housing costs":"Proportion of people with high housing costs","proportion of project funds allocated to gender equality in german development cooperation":"Proportion of project funds allocated to gender equality in German development cooperation","qualification":"Qualification","raw material consumption and investment":"Raw material consumption and investment","raw material consumption for exports":"Raw material consumption for exports","raw material input for consumption, investment and exports":"Raw material input for consumption, investment and exports","raw material input productivity":"Raw material input productivity","recreation area, cemetery":"Recreation area, cemetery","researchers from ldcs":"Researchers from LDCs","researchers from other developing and emerging countries":"Researchers from other developing and emerging countries","rhineland palatinate":"Rhineland Palatinate","risk situation":"Risk situation","rollout of broadband – share of households with access to gigabit broadband services":"Rollout of broadband – Share of households with access to gigabit broadband services","rural areas":"Rural areas","saarland":"Saarland","saxony":"Saxony","saxony-anhalt":"Saxony-Anhalt","schleswig-holstein":"Schleswig-Holstein","schools with an esd label (education for sustainable development)":"Schools with an ESD label (Education for Sustainable Development)","schools with esd label (education for sustainable development)":"Schools with ESD label (Education for Sustainable Development)","sea":"Sea","secondary education, education after abitur":"Secondary education, education after Abitur","sector":"Sector","sector/area collective agreement":"Sector/area collective agreement","separate amount devoted to curbing the covid-19 pandemic":"Separate amount devoted to curbing the COVID-19 pandemic","settlement area (built on)":"Settlement area (built on)","settlements sub-indicator":"Settlements sub-indicator","severe material and social deprivation":"Severe material and social deprivation","sex":"Sex","share of countries that germany supports in pandemic prevention, preparedness and response (ppr) and that have made progress in the global health security index (ghsi) in relation to the number of countries that germany supports in the area of ppr":"Share of countries that Germany supports in pandemic prevention, preparedness and response (PPR) and that have made progress in the Global Health Security Index (GHSI) in relation to the number of countries that Germany supports in the area of PPR","share of electricity from renewable energy sources in gross electricity consumption":"Share of electricity from renewable energy sources in gross electricity consumption","share of msy examined stocks in all managed fish stocks":"Share of MSY examined stocks in all managed fish stocks","share of renewable energies in gross final energy consumption":"Share of renewable energies in gross final energy consumption","share of sustainably fished stocks of fish in the north and baltic seas":"Share of sustainably fished stocks of fish in the North and Baltic Seas","share of the population with excessive exposure to fine particulate matter (pm2.5)":"Share of the population with excessive exposure to fine particulate matter (PM₂.₅)","share of the population with excessive exposure to pm2.5":"Share of the population with excessive exposure to PM₂.₅","smoking rate among adolescents":"Smoking rate among adolescents","smoking rate among adults":"Smoking rate among adults","so₂":"SO₂","structural deficit":"Structural deficit","students from ldcs":"Students from LDCs","students from other developing and emerging countries":"Students from other developing and emerging countries","sub indicator":"Sub indicator","substantial or high":"Substantial or high","support for good governance in attaining appropriate nutrition worldwide":"Support for good governance in attaining appropriate nutrition worldwide","sustainability-certified cultural and media institutions":"Sustainability-certified cultural and media institutions","sustainable procurement – co₂ emissions of commercially available vehicles in the public sector":"Sustainable procurement – CO₂ emissions of commercially available vehicles in the public sector","sustainable procurement – share of public procurement procedures in which at least one sustainability criterion has been taken into account":"Sustainable procurement – Share of public procurement procedures in which at least one sustainability criterion has been taken into account","sustainable procurement – sustainable textile procurement of the federal administration (excluding special textiles)":"Sustainable procurement – Sustainable textile procurement of the Federal Administration (excluding special textiles)","sustainably farmed area":"Sustainably farmed area","terrestrial protected areas and mangrove forests in marine protected areas":"Terrestrial protected areas and mangrove forests in marine protected areas","thuringia":"Thuringia","time series":"Time series","total":"Total","trained personnel":"Trained personnel","trained personnel still required to achieve the target":"Trained personnel still required to achieve the target","transport area":"Transport area","type of area":"Type of area","type of care":"Type of care","type of collective bargaining agreement":"Type of collective bargaining agreement","type of treatment":"Type of treatment","universities":"Universities","university degree":"University degree","unknown":"Unknown","value of consumption, investment and exports (price-adjusted)":"Value of consumption, investment and exports (price-adjusted)","vocational qualifications for women and girls through german development cooperation":"Vocational qualifications for women and girls through German development cooperation","vocational qualifications of women and girls through german development cooperation":"Vocational qualifications of women and girls through German development cooperation","voluntary sustainability reporting by companies":"Voluntary sustainability reporting by companies","voluntary sustainability reporting by companies according to the german sustainability code (dnk)":"Voluntary sustainability reporting by companies according to the German Sustainability Code (DNK)","with a new or higher-quality access to the drinking water supply or connection to the sanitation supply":"With a new or higher-quality access to the drinking water supply or connection to the sanitation supply","with post-secondary non-tertiary qualification":"With post-secondary non-tertiary qualification","with tertiary qualification":"With tertiary qualification","women in management  positions in business":"Women in management  positions in business","women in management positions in the federal civil service":"Women in management positions in the federal civil service"};</script>
 
 
-<div class="heading goal-banner indicator goal-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/3/" aria-label=" 3" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png"
-              alt="Good health and well-being - Goal 3"
-              id="goal-3"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-3">
-            
-              Indicator 3.1.f
-            
-            <span class="lead-copy">Obesity rate among adults</span>
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
 <div class="container">
   
 <nav>
     <ol aria-label="breadcrumb" class="breadcrumb" style="--bs-breadcrumb-divider: '&rsaquo;';">
         
-          <li class="breadcrumb-item">
-                <a href="/site/en/">Home</a>
-            </li>
-          
-          <li class="breadcrumb-item">
-              <a href="/site/en/3/" title="Ensure healthy lives and promote well-being for all at all ages">Goal 3</a>
-          </li>
-          
+        <li class="breadcrumb-item">
+            <a href="/site/en/">Home</a>
+        </li>
+        
+        <li class="breadcrumb-item">
+            <a href="/site/en/3/"
+               title="Goal 3 - Good health and well-being"
+               aria-label="Goal  - ">
+               Goal 3
+            </a>
+        </li>
+        
     </ol>
 </nav>
 
 
   
-
-
-
-<!---Indicator page-->
-<!---3 Btns if there is a corresponding Indicator-->
-
-<div class="container" id="navigationbuttons">
-  <div class="row justify-content-around">
-    
-      <div class="col-sm-6 d-grid gap-2">
-    
-      <a href="https://dnsupgradeenvironment.github.io/site/en//3-1-e" class="btn btn-primary btn-block goal-3 navigation-btn text-nowrap" role="button">
-        <b class="d-sm-none d-lg-block"><i class="fa fa-chevron-left" aria-hidden="true"></i> Previous indicator</b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-left" aria-hidden="true"></i></b>
-      </a>
-    </div>
-
-    
-
-    
-      <div class="col-sm-6 d-grid gap-2">
-    
-      <a href="https://dnsupgradeenvironment.github.io/site/en/3-2-a" class="btn btn-primary btn-block goal-3 navigation-btn text-nowrap" role="button">
-        <b class="btn-label d-sm-none d-lg-block">Next indicator <i class="fa fa-chevron-right" aria-hidden="true"></i></b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-right" aria-hidden="true"></i></b>
-      </a>
-    </div>
-  </div>
 </div>
-
-  
+<div class="heading goal-banner indicator goal-3">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/3/" aria-label=" 3" title=" 3">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png"
+                        alt="Good health and well-being - Goal 3"
+                        id="goal-3"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
+            
+                <div>
+                    <h1>
+                        
+                        Indicator 3.1.f
+                        
+                        <span class="lead-copy">Obesity rate among adults</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
 <div id="main-content" class="container goal-3" role="main">
   
 
@@ -493,8 +445,6 @@ data-event-label="high"
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_3-1-f'
@@ -502,38 +452,30 @@ data-event-label="high"
   data-country="Germany"
   data-charttitle="Obesity rate among adults"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Obesity rate among adults&quot;},{&quot;field&quot;:&quot;Sex&quot;,&quot;value&quot;:&quot;Female&quot;},{&quot;field&quot;:&quot;Sex&quot;,&quot;value&quot;:&quot;Male&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;18 to under 20 years&quot;,&quot;20 to under 25 years&quot;,&quot;25 to under 30 years&quot;,&quot;30 to under 35 years&quot;,&quot;35 to under 40 years&quot;,&quot;40 to under 45 years&quot;,&quot;45 to under 50 years&quot;,&quot;50 to under 55 years&quot;,&quot;55 to under 60 years&quot;,&quot;60 to under 65 years&quot;,&quot;65 to under 70 years&quot;,&quot;70 to under 75 years&quot;,&quot;75 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;länder&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Wuerttemberg&quot;,&quot;Bavaria&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hesse&quot;,&quot;Mecklenburg Western Pomerania&quot;,&quot;Lower Saxony&quot;,&quot;North Rhine-Westphalia&quot;,&quot;Rhineland Palatinate&quot;,&quot;Saarland&quot;,&quot;Saxony&quot;,&quot;Saxony-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thuringia&quot;,&quot;&quot;]},&quot;title&quot;:&quot;länder&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;18 to under 20 years&quot;,&quot;20 to under 25 years&quot;,&quot;25 to under 30 years&quot;,&quot;30 to under 35 years&quot;,&quot;35 to under 40 years&quot;,&quot;40 to under 45 years&quot;,&quot;45 to under 50 years&quot;,&quot;50 to under 55 years&quot;,&quot;55 to under 60 years&quot;,&quot;60 to under 65 years&quot;,&quot;65 to under 70 years&quot;,&quot;70 to under 75 years&quot;,&quot;75 years and older&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Age group&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:2.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -580,7 +522,11 @@ data-event-label="high"
         
         
         
-        <th scope="col" class="table-value">Units</th>
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
         
         
       </thead>
@@ -597,7 +543,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -613,7 +563,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -629,7 +583,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -645,7 +603,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -661,7 +623,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -677,7 +643,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -693,263 +663,11 @@ data-event-label="high"
           
           
           
-          <td class="table-value">Percentage</td>
+          <td>Percentage</td>
           
           
-        </tr>
-        
-        <tr>
           
-          
-          <td>2000</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2001</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2002</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2004</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2006</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2007</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2008</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Percentage</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -983,62 +701,85 @@ data-event-label="high"
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
-  
-</ul>
+        
+      >Table</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
 
+        
+      >Map</button>
+    </li>
+    
+  </ul>
+  
     <div class="tab-content data-view">
     
       
@@ -1051,12 +792,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Obesity rate among adults</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Obesity rate among adults
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1071,54 +812,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Age-standardisation: new European population.<br>• The data is based on a special evaluation and is not publicly available.<br>• The next data update (reporting year 2025) is planned for 2026.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1150,57 +882,104 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Age-standardisation: new European population.<br>• The data is based on a special evaluation and is not publicly available.<br>• The next data update (reporting year 2025) is planned for 2026.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title">Obesity rate among adults</h4>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Loading map" />
+</div>
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        
+
+        
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Note:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
 
         </div>
       
@@ -1289,197 +1068,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the proportion of adults (aged 18 and over) with obesity among all people in the same age group (in %). According to the classification of the World Health Organisation (WHO), people are considered obese if their body mass index (BMI), which is calculated from the ratio of body weight to the square of height, is greater than or equal to 30.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Obesity rate among adults</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the proportion of adults (aged 18 and over) with obesity among all people in the same age group (in %). According to the classification of the World Health Organisation (WHO), people are considered obese if their body mass index (BMI), which is calculated from the ratio of body weight to the square of height, is greater than or equal to 30.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Obesity plays a major role in the development of diseases of civilisation such as cardiovascular disease, diabetes and joint damage. In addition to the health consequences, obesity also has a negative economic and social impact.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Obesity plays a major role in the development of diseases of civilisation such as cardiovascular disease, diabetes and joint damage. In addition to the health consequences, obesity also has a negative economic and social impact.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Increase to be permanently halted</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Increase to be permanently halted</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Target direction</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Target direction</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The proportion of adults with obesity should decrease or remain stable.<br />• According to the target formulation, the politically defined target for indicator 3.1.f was not met in the most recent year, 2021, nor on average over the past six years. Indicator 3.1.f is therefore assessed as <b>thunderstorm</b> for 2021.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2021&nbsp;neither the average value nor the last change pointed in the right direction." alt="Weathersymbol: Thuder strom" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The proportion of adults with obesity should decrease or remain stable.<br />• According to the target formulation, the politically defined target for indicator 3.1.f was not met in the most recent year, 2021, nor on average over the past six years. Indicator 3.1.f is therefore assessed as <b>thunderstorm</b> for 2021.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2021&nbsp;neither the average value nor the last change pointed in the right direction." alt="Weathersymbol: Thuder strom" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2265,20 +1994,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2295,25 +2029,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #4c9f38; font-size: large">3.1.f Obesity rate among adults</b><br /><br />The Body Mass Index (BMI) serves as a reference value for assessing overweight and, in particular, obesity. It is calculated as the ratio of body weight to the square of body height (expressed in kg/m²). Individual differences in body build, age- and sex-specific characteristics, as well as the composition of body mass, are not taken into account. According to the classification of the World Health Organization (WHO), individuals with a BMI of 25&nbsp;or above are considered overweight, and those with a BMI of 30&nbsp;or above are classified as obese.<br /><br />The data basis for this indicator consists of self-reported body weight and height, which are voluntarily collected every four years within the framework of the Mikrozensus, covering 1% of the total population. In self-reports&nbsp;–&nbsp;as collected in the Mikrozensus&nbsp;–&nbsp;body weight is often underestimated compared to measured values, while height tends to be overestimated. Therefore, it can be assumed that the BMI calculated from these data is generally lower than the value that would be determined based on measured data. To ensure comparability of data across different years and regions, and to avoid distortions due to differences in age structure, the results were age-standardised based on the new European Standard Population.<br /><br />In 2021, 15.4% of the population aged 18&nbsp;and over were classified as obese. The proportion of obese men was 17.3%, exceeding that of women, of whom 13.3% were affected. In 1999, the proportion was still 10.7%. Even then, women (10.2%) were slightly less affected by obesity than men (11.1%). Thus, the obesity rate among adults has increased and is developing contrary to the politically established targets of the Deutsche Nachhaltigkeitsstrategie. A further 33.6% of the population aged 18&nbsp;and over had a BMI between 25&nbsp;and under 30&nbsp;in 2021. Overall, this meant that 49% of adults were classified as overweight (BMI ≥ 25). The proportion of overweight women was significantly lower at 38.7%, compared to 58.5% of men affected.<br /><br />The proportion of obese individuals increases with age and only decreases again at older ages. In 2021, 5.3% of women aged 20&nbsp;to under 25&nbsp;were obese. In the age group 30&nbsp;to under 35, the proportion was already 12.3%. The highest value for women was recorded in the age group 70&nbsp;to under 75, at 20.1%. Among men, the obesity rate was higher than that of women of the same age group in all age groups under 75. The highest rates were recorded in the 45&nbsp;to under 50&nbsp;and 60&nbsp;to under 65&nbsp;age groups, both at 23.5%. In the age group 75&nbsp;and above, women (16.3%) and men (16.1%) were obese at nearly equal rates.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #4c9f38; font-size: large">3.1.f Obesity rate among adults</b><br /><br />The Body Mass Index (BMI) serves as a reference value for assessing overweight and, in particular, obesity. It is calculated as the ratio of body weight to the square of body height (expressed in kg/m²). Individual differences in body build, age- and sex-specific characteristics, as well as the composition of body mass, are not taken into account. According to the classification of the World Health Organization (WHO), individuals with a BMI of 25&nbsp;or above are considered overweight, and those with a BMI of 30&nbsp;or above are classified as obese.<br /><br />The data basis for this indicator consists of self-reported body weight and height, which are voluntarily collected every four years within the framework of the Mikrozensus, covering 1% of the total population. In self-reports&nbsp;–&nbsp;as collected in the Mikrozensus&nbsp;–&nbsp;body weight is often underestimated compared to measured values, while height tends to be overestimated. Therefore, it can be assumed that the BMI calculated from these data is generally lower than the value that would be determined based on measured data. To ensure comparability of data across different years and regions, and to avoid distortions due to differences in age structure, the results were age-standardised based on the new European Standard Population.<br /><br />In 2021, 15.4% of the population aged 18&nbsp;and over were classified as obese. The proportion of obese men was 17.3%, exceeding that of women, of whom 13.3% were affected. In 1999, the proportion was still 10.7%. Even then, women (10.2%) were slightly less affected by obesity than men (11.1%). Thus, the obesity rate among adults has increased and is developing contrary to the politically established targets of the Deutsche Nachhaltigkeitsstrategie. A further 33.6% of the population aged 18&nbsp;and over had a BMI between 25&nbsp;and under 30&nbsp;in 2021. Overall, this meant that 49% of adults were classified as overweight (BMI ≥ 25). The proportion of overweight women was significantly lower at 38.7%, compared to 58.5% of men affected.<br /><br />The proportion of obese individuals increases with age and only decreases again at older ages. In 2021, 5.3% of women aged 20&nbsp;to under 25&nbsp;were obese. In the age group 30&nbsp;to under 35, the proportion was already 12.3%. The highest value for women was recorded in the age group 70&nbsp;to under 75, at 20.1%. Among men, the obesity rate was higher than that of women of the same age group in all age groups under 75. The highest rates were recorded in the 45&nbsp;to under 50&nbsp;and 60&nbsp;to under 65&nbsp;age groups, both at 23.5%. In the age group 75&nbsp;and above, women (16.3%) and men (16.1%) were obese at nearly equal rates.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3107,19 +2836,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3133,8 +2867,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3871,98 +3605,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4028,6 +3754,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4035,13 +3762,13 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
-    <div role="tabpanel" class="tab-pane" id="edit">
-      <div class="edit-container">
+    
+        <div role="tabpanel" class="tab-pane" id="edit">
+            <div class="edit-container">
   
   
 
@@ -4062,8 +3789,8 @@ data-event-label="Change to indicator.sources tab"
 
 </div>
 
-    </div>
-  
+        </div>
+    
 </div>
 
 </div>
@@ -4073,8 +3800,6 @@ data-event-label="Change to indicator.sources tab"
   <a href="#top"></a>
 </div>
 
-
-
 <footer role="contentinfo">
     <div class="container">
         <div class="row">
@@ -4082,22 +3807,18 @@ data-event-label="Change to indicator.sources tab"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('open-sdg', 'En');">
-                              Built using Open SDG
-                            </a>
+                            <a href="https://open-sdg.org">Built using Open SDG</a>
                         </li>
                         
                         <li>
-                              
-                                
-                                  <a href="mailto:dns-indikatoren@destatis.de">Contact us</a>
-                                
-                              
-                          </li>
+                            
+                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Contact us</a>
+                            
+                        </li>
                         <li>
-                              <a href="/site/en/imprint/ ">Legal Notice</a>
-                              
-                          </li>
+                            <a href="/site/en/imprint/">Legal Notice</a>
+                            
+                        </li>
                         
                         
                         
@@ -4114,16 +3835,25 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.js" integrity="sha384-+Ae+bvCvR9gwQHFyh60GUfdqhUAL+S/O5mLeAkmkv2yBQxeLxm3gvLEzYPoXBwbT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js" integrity="sha384-cU7kVmimPTBpe76764qMxEdujXzlgSm15cCQe6FXFud5DiV4vrJQHUK9S0Lo2cqT" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.js" integrity="sha384-vOZkQA9epgnqbXkNdVSlxfyhrOSzYBsL3s3b2CQYn05H6lzrbrb368uBSRSUTAiv" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/socib/Leaflet.TimeDimension@fa36ffee7f6390aadce8c055ca7c60ede7c2134c/dist/leaflet.timedimension.min.js" integrity="sha384-xQ62+wlP0nHf7UhZ81djmqLn+7arwKiMk/dJk+smi+rJhaXPZAeFPX4bEiD9twIy" crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js" integrity="sha384-btJhAWztz7ttA6ibFC5ppM39nkCPK6CWzRVmsaLcDn37mA3x1TzF1DbFwa6tJpTN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@84a0291e80244ed9301cbc09d55850f0af53e602/dist/leaflet.zoomhome.min.js" integrity="sha384-UH2Ux7vOhzo5dH5kWWPmpvCCRCiS0hQ12YQN6qTUJXOpx+HpKePItLNSSm2AxKjF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js" integrity="sha384-C/UzSz5aXmLxJwe/b9I0CIv+cfLcGIXmfl40m9+kyJhlgNxvWT6+WRjCbA8Eflf/" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4137,12 +3867,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -4150,4 +3880,3 @@ data-event-label="Change to indicator.sources tab"
 
 </body>
 </html>
-

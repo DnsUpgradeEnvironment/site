@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-5">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/5/" aria-label=" 5" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png"
-              alt="Gender equality - Goal 5"
-              id="goal-5"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-5">
+    <div class="container">
+        <div class="row">
             
-              Indicator 5.1.f
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/5/" aria-label=" 5" title=" 5">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/5.png"
+                        alt="Gender equality - Goal 5"
+                        id="goal-5"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Vocational qualifications for women and girls through German development cooperation</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 5.1.f
+                        
+                        <span class="lead-copy">Vocational qualifications for women and girls through German development cooperation</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_5-1-f'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Women and girls reached by vocational qualification measures through German development assistance"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Vocational qualifications of women and girls through German development cooperation&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:473,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:2.694,&quot;xMax&quot;:3.306,&quot;yMin&quot;:0,&quot;yMax&quot;:473,&quot;borderColor&quot;:&quot;#ff3a21&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:3,&quot;yValue&quot;:550.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target: 473&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1,000&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -487,62 +477,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -555,12 +543,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Women and girls reached by vocational qualification measures through German development assistance</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Women and girls reached by vocational qualification measures through German development assistance
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -575,51 +563,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a>, <a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a>, <a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a>, <a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a>, <a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• The target corresponds to an increase of one third compared to 2015.<br>• The next data update (reporting year 2024) is planned for the course of 2025.<br>• 2021 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -651,51 +630,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a>, <a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a>, <a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a>, <a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a>, <a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• The target corresponds to an increase of one third compared to 2015.<br>• The next data update (reporting year 2024) is planned for the course of 2025.<br>• 2021 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -783,197 +753,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the number of women and girls (in 1,000) who have been reached through vocational training measures organised by German development cooperation in developing and emerging countries. A distinction is made between Financial Cooperation (FC) and Technical Cooperation (TC). Financial cooperation includes favourable loans, equity capital or grants that do not have to be repaid. Technical cooperation services are primarily advisory services, but to a limited extent also the supply of material goods, the construction of facilities as well as studies and expert opinions.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Vocational qualifications for women and girls through German development cooperation</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the number of women and girls (in 1,000) who have been reached through vocational training measures organised by German development cooperation in developing and emerging countries. A distinction is made between Financial Cooperation (FC) and Technical Cooperation (TC). Financial cooperation includes favourable loans, equity capital or grants that do not have to be repaid. Technical cooperation services are primarily advisory services, but to a limited extent also the supply of material goods, the construction of facilities as well as studies and expert opinions.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>The economic participation of girls and women in developing and emerging countries is to be increased. To this end, the number of girls and women in developing and emerging countries who obtain vocational qualifications through German development cooperation is to be gradually increased by one third over the period from 2015 to 2030. The Federal Government as part of the G7 summit is obliged to support girl’s and women’s education since 2015.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>The economic participation of girls and women in developing and emerging countries is to be increased. To this end, the number of girls and women in developing and emerging countries who obtain vocational qualifications through German development cooperation is to be gradually increased by one third over the period from 2015 to 2030. The Federal Government as part of the G7 summit is obliged to support girl’s and women’s education since 2015.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Gradual increase by one third by 2030 compared to 2015 as the base year</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Gradual increase by one third by 2030 compared to 2015 as the base year</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Target with specific target value</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Target with specific target value</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The number of women and girls achieved annually through vocational training measures organised by German development cooperation should be increased to 473,000 by 2030 (an increase of one-third compared with the 2015 value).<br />• The current trend is moving contrary to the target. A conclusive assessment of indicator 5.1.f is not possible. Too few data points.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The number of women and girls achieved annually through vocational training measures organised by German development cooperation should be increased to 473,000 by 2030 (an increase of one-third compared with the 2015 value).<br />• The current trend is moving contrary to the target. A conclusive assessment of indicator 5.1.f is not possible. Too few data points.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1759,20 +1679,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1789,25 +1714,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #ff3a21; font-size: large">5.1.f Vocational qualifications for women and girls through German development cooperation</b><br /><br />The data source for the indicator on the vocational qualification of women and girls through German development cooperation is information provided by the Federal Ministry for Economic Cooperation and Development (BMZ) on development initiatives that were in the implementation phase in the respective reporting year. This includes all short-, medium-, and long-term formal and non-formal vocational training measures in developing and emerging countries. These measures are fully financed through federal and market-based funds.<br /><br />Data on this indicator was first collected in 2015&nbsp;on behalf of the BMZ by the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH and the Centrum für Evaluation (CeVal GmbH). A subsequent data collection took place in 2018. Since 2021, data has been derived every three years from the so-called aggregated results reporting by GIZ and the KfW Development Bank (KfW).<br /><br />In 2015, approximately 355,000&nbsp;women and girls were reached through vocational qualification measures, while in 2018&nbsp;the number increased to around 863,000. The high number in 2018&nbsp;was primarily due to cooperation with China. As this cooperation in the education sector has since ended, the number of women and girls reached in 2021&nbsp;was only about 80,000. Compared to 2015&nbsp;–&nbsp;the first year of data collection&nbsp;–&nbsp;this corresponds to just over one fifth of the women and girls who received vocational training as part of German development cooperation in developing and emerging countries.<br /><br />The number of women and girls reached does not allow any conclusions to be drawn regarding the success, scope, or quality of the respective development measures. Of the approximately 80,000&nbsp;women and girls reached, an estimated 79.3% were supported through Technical Cooperation (TC) and 20.7% through Financial Cooperation (FC). While figures for TC are collected ex post, data for FC is gathered in advance based on estimates. As a result, overestimations and multiple counting may occur.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #ff3a21; font-size: large">5.1.f Vocational qualifications for women and girls through German development cooperation</b><br /><br />The data source for the indicator on the vocational qualification of women and girls through German development cooperation is information provided by the Federal Ministry for Economic Cooperation and Development (BMZ) on development initiatives that were in the implementation phase in the respective reporting year. This includes all short-, medium-, and long-term formal and non-formal vocational training measures in developing and emerging countries. These measures are fully financed through federal and market-based funds.<br /><br />Data on this indicator was first collected in 2015&nbsp;on behalf of the BMZ by the Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH and the Centrum für Evaluation (CeVal GmbH). A subsequent data collection took place in 2018. Since 2021, data has been derived every three years from the so-called aggregated results reporting by GIZ and the KfW Development Bank (KfW).<br /><br />In 2015, approximately 355,000&nbsp;women and girls were reached through vocational qualification measures, while in 2018&nbsp;the number increased to around 863,000. The high number in 2018&nbsp;was primarily due to cooperation with China. As this cooperation in the education sector has since ended, the number of women and girls reached in 2021&nbsp;was only about 80,000. Compared to 2015&nbsp;–&nbsp;the first year of data collection&nbsp;–&nbsp;this corresponds to just over one fifth of the women and girls who received vocational training as part of German development cooperation in developing and emerging countries.<br /><br />The number of women and girls reached does not allow any conclusions to be drawn regarding the success, scope, or quality of the respective development measures. Of the approximately 80,000&nbsp;women and girls reached, an estimated 79.3% were supported through Technical Cooperation (TC) and 20.7% through Financial Cooperation (FC). While figures for TC are collected ex post, data for FC is gathered in advance based on estimates. As a result, overestimations and multiple counting may occur.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2601,19 +2521,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2627,8 +2552,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3365,151 +3290,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmz.png" alt="Federal Ministry of Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry of Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmz.png" alt="Federal Ministry of Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry of Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.bmz.de/resource/blob/116286/4e535985a12d0701e63b25ca9f4d0fb8/2022-07-01-elmau-progress-report-2022-data.pdf" target="_blank">
+                Elmau Progress Report 2022 <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.bmz.de/resource/blob/116286/4e535985a12d0701e63b25ca9f4d0fb8/2022-07-01-elmau-progress-report-2022-data.pdf" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En');">
-                      Elmau Progress Report 2022 <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3575,6 +3459,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3586,8 +3471,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4336,98 +4221,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/giz.png" alt="German Corporation for International Cooperation" title=" Click here to visit the homepage of the organizationGerman Corporation for International Cooperation" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/giz.png" alt="German Corporation for International Cooperation" title=" Click here to visit the homepage of the organizationGerman Corporation for International Cooperation" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.giz.de/en/html/index.html" target="_blank" onclick="return confirm_alert('the German Corporation for International Cooperation', 'En')">German Corporation for International Cooperation</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4481,6 +4358,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4492,8 +4370,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5254,92 +5132,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/ceval.png" alt="CEval GmbH" title=" Click here to visit the homepage of the organizationCEval GmbH" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/ceval.png" alt="CEval GmbH" title=" Click here to visit the homepage of the organizationCEval GmbH" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://ceval.de/en/" target="_blank" onclick="return confirm_alert('the CEval GmbH', 'En')">CEval GmbH</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5383,6 +5249,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5390,11 +5257,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -5405,18 +5272,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -5430,12 +5297,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-14">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/14/" aria-label=" 14" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png"
-              alt="Leben unter Wasser - Ziel 14"
-              id="goal-14"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-14">
+    <div class="container">
+        <div class="row">
             
-              Indikator 14.1.a
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/14/" aria-label=" 14" title=" 14">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png"
+                        alt="Leben unter Wasser - Ziel 14"
+                        id="goal-14"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Nährstoffeinträge in Küsten- und Meeresgewässer - Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 14.1.a
+                        
+                        <span class="lead-copy">Nährstoffeinträge in Küsten- und Meeresgewässer - Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-14" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_14-1-a'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee"
   data-charttitles="null"
-  data-chartsubtitle="Gleitender, abflussgewichteter Fünfjahresdurchschnitt"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;aa) Ostsee&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;ab) Nordsee&quot;}]"
   data-graphlimits="[{&quot;minimum&quot;:2.5,&quot;maximum&quot;:4.5}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:2.6,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel Ostsee&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:2.8,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel Nordsee&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:0,&quot;xMax&quot;:25,&quot;yMin&quot;:2.6,&quot;yMax&quot;:2.6,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#065a82&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:0,&quot;xMax&quot;:25,&quot;yMin&quot;:2.8,&quot;yMax&quot;:2.8,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#6cc0e8&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;yValue&quot;:2.67,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Jährliches Ziel Ostsee: 2,6&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;yValue&quot;:2.87,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Jährliches Ziel Nordsee: 2,8&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Milligramm pro Liter&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;aa) Ostsee&quot;,&quot;ab) Nordsee&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:2.0}]"
-  data-graphstepsize="[{&quot;step&quot;:0.5}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Gleitender, abflussgewichteter Fünfjahresdurchschnitt</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,57 +467,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>12.05.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Zuflüsse Nordsee: Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br>• Zuflüsse Ostsee: Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -561,57 +537,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>12.05.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Zuflüsse Nordsee: Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br>• Zuflüsse Ostsee: Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -699,197 +663,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Die Indikatoren stellen den gleitenden, abflussgewichteten Fünfjahresdurchschnitt der Stickstoffkonzentrationen in Milligramm (mg) Stickstoff pro Liter (l) Wasserabfluss von Flüssen in die Nordsee (14.1.ab)<sup>1</sup> und Ostsee (14.1.aa)<sup>2</sup> dar.<br /><small><sup>1</sup> Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br /><sup>2</sup> Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</small></p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Nährstoffeinträge in Küsten- und Meeresgewässer - Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Die Indikatoren stellen den gleitenden, abflussgewichteten Fünfjahresdurchschnitt der Stickstoffkonzentrationen in Milligramm (mg) Stickstoff pro Liter (l) Wasserabfluss von Flüssen in die Nordsee (14.1.ab)<sup>1</sup> und Ostsee (14.1.aa)<sup>2</sup> dar.<br /><small><sup>1</sup> Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br /><sup>2</sup> Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</small></p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Hohe Konzentrationen von Stickstoff in den Meeren können zu Eutrophierungseffekten wie Sauerstoffmangel und dadurch zum Verlust an Biodiversität und zur Zerstörung von Fisch-Aufzugsgebieten führen. Für den Eintrag von Stickstoff über die Zuflüsse in die Ost- und Nordsee sollen die im Rahmen der Umsetzung der EU-Wasserrahmenrichtlinie (WRRL 2000/60/EG) vereinbarten Bewirtschaftungsziele der Oberflächengewässerverordnung (OGewV 2016) sowie die Ziele der EU-Meeresstrategie-Rahmenrichtlinie (MSRL 2008/56/EG) und des Ostseeaktionsplans gelten.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Hohe Konzentrationen von Stickstoff in den Meeren können zu Eutrophierungseffekten wie Sauerstoffmangel und dadurch zum Verlust an Biodiversität und zur Zerstörung von Fisch-Aufzugsgebieten führen. Für den Eintrag von Stickstoff über die Zuflüsse in die Ost- und Nordsee sollen die im Rahmen der Umsetzung der EU-Wasserrahmenrichtlinie (WRRL 2000/60/EG) vereinbarten Bewirtschaftungsziele der Oberflächengewässerverordnung (OGewV 2016) sowie die Ziele der EU-Meeresstrategie-Rahmenrichtlinie (MSRL 2008/56/EG) und des Ostseeaktionsplans gelten.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>14.1.aa: Einhaltung des guten Zustands nach Oberflächengewässerverordnung (Jahresmittelwerte für Gesamtstickstoff bei in die Ostsee einmündenden Flüssen sollen 2,6 Milligramm pro Liter nicht überschreiten)<br />14.1.ab: Einhaltung des guten Zustands nach Oberflächengewässerverordnung (Jahresmittelwerte für Gesamtstickstoff bei in die Nordsee einmündenden Flüssen sollen 2,8 Milligramm pro Liter nicht überschreiten)</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>14.1.aa: Einhaltung des guten Zustands nach Oberflächengewässerverordnung (Jahresmittelwerte für Gesamtstickstoff bei in die Ostsee einmündenden Flüssen sollen 2,6 Milligramm pro Liter nicht überschreiten)<br />14.1.ab: Einhaltung des guten Zustands nach Oberflächengewässerverordnung (Jahresmittelwerte für Gesamtstickstoff bei in die Nordsee einmündenden Flüssen sollen 2,8 Milligramm pro Liter nicht überschreiten)</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>14.1.aa: Gleichbleibende Zielvorgabe in jedem Jahr<br />14.1.ab: Gleichbleibende Zielvorgabe in jedem Jahr</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>14.1.aa: Gleichbleibende Zielvorgabe in jedem Jahr<br />14.1.ab: Gleichbleibende Zielvorgabe in jedem Jahr</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>14.1.aa: Der Stickstoffeintrag über die Zuflüsse in die Ostsee soll im gleitenden, abflussgewichteten Fünfjahresdurchschnitt jedes Jahr höchstens 2,6 Milligramm pro Liter im Jahr betragen.<br />• Ausgehend von der Zielformulierung wird der Indikator 14.1.aa für das Jahr 2023 mit <b>Wolke</b> bewertet, da der jährlich einzuhaltende politisch festgelegte Schwellenwert 2023 überschritten wurde, die durchschnittliche Entwicklung der letzten sechs Jahre jedoch in die gewünschte Richtung weist.<br />• Datenstand bei Bewertung: 12.05.2025.<br /><br />14.1.ab: Der Stickstoffeintrag über die Zuflüsse in die Nordsee soll im gleitenden, abflussgewichteten Fünfjahresdurchschnitt jedes Jahr höchstens 2,8 Milligramm pro Liter im Jahr betragen.<br />• Der Indikator 14.1.ab wird für das Jahr 2023 mit <b>Sonne</b> bewertet, da der jährlich einzuhaltende politisch festgelegte Schwellenwert 2023 eingehalten wurde und die durchschnittliche Entwicklung der letzten sechs Jahre in die gewünschte Richtung weist.<br />• Datenstand bei Bewertung: 12.05.2025.<br /><br />14.1.aa: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Zielwert wurde in 2023&nbsp;nicht erreicht, aber die durchschnittliche Entwicklung wies in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a><br />14.1.ab: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Der Zielwert oder ein besserer Wert wurde in 2023&nbsp;erreicht und die durchschnittliche Veränderung deutete nicht in Richtung einer Verschlechterung." alt="Wettersymbol Sonne" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>14.1.aa: Der Stickstoffeintrag über die Zuflüsse in die Ostsee soll im gleitenden, abflussgewichteten Fünfjahresdurchschnitt jedes Jahr höchstens 2,6 Milligramm pro Liter im Jahr betragen.<br />• Ausgehend von der Zielformulierung wird der Indikator 14.1.aa für das Jahr 2023 mit <b>Wolke</b> bewertet, da der jährlich einzuhaltende politisch festgelegte Schwellenwert 2023 überschritten wurde, die durchschnittliche Entwicklung der letzten sechs Jahre jedoch in die gewünschte Richtung weist.<br />• Datenstand bei Bewertung: 12.05.2025.<br /><br />14.1.ab: Der Stickstoffeintrag über die Zuflüsse in die Nordsee soll im gleitenden, abflussgewichteten Fünfjahresdurchschnitt jedes Jahr höchstens 2,8 Milligramm pro Liter im Jahr betragen.<br />• Der Indikator 14.1.ab wird für das Jahr 2023 mit <b>Sonne</b> bewertet, da der jährlich einzuhaltende politisch festgelegte Schwellenwert 2023 eingehalten wurde und die durchschnittliche Entwicklung der letzten sechs Jahre in die gewünschte Richtung weist.<br />• Datenstand bei Bewertung: 12.05.2025.<br /><br />14.1.aa: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Zielwert wurde in 2023&nbsp;nicht erreicht, aber die durchschnittliche Entwicklung wies in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a><br />14.1.ab: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Der Zielwert oder ein besserer Wert wurde in 2023&nbsp;erreicht und die durchschnittliche Veränderung deutete nicht in Richtung einer Verschlechterung." alt="Wettersymbol Sonne" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1675,20 +1589,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1705,25 +1624,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #0a97d9; font-size: large">14.1.a Nährstoffeinträge in Küsten- und Meeresgewässer &#8209; Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</b><br /><br />Die Indikatoren basieren auf Messdaten zu Stickstoffkonzentrationen und Wasserabflüssen kleiner und großer Zuflüsse der Nord-<sup>1</sup> und Ostsee<sup>2</sup> . Die Daten werden vom Umweltbundesamt (UBA) unter Einbeziehung der Angaben der Bundesländer beziehungsweise der Flussgebietsgemeinschaften zusammengestellt. Berücksichtigt werden auch kleinere Flüsse, die nicht direkt in die Nord- oder Ostsee münden, sondern zuvor in größere Flüsse einfließen. Die Messstellen sind dann so gewählt, dass jeweils die letzte Messstation vor dem Zusammenfluss in die Auswertung einbezogen wird um Doppelerfassungen zu vermeiden. Zusätzlich wird der Rhein in die Betrachtung einbezogen, obwohl er nicht in Deutschland mündet. Die entsprechenden Werte werden an der Messstelle im Klever Ortsteil Bimmen erhoben, an der der Rhein Deutschland verlässt.<br /><br />Die Stickstoffkonzentrationen der einzelnen Flüsse werden abflussgewichtet gemittelt, sodass Flüsse mit hohen Abflussmengen den Gesamtdurchschnitt stärker beeinflussen als solche mit geringem Abfluss. Um zu verhindern, dass einzelne Extremereignisse wie Hochwasser oder Dürre, die punktuell zu sehr hohen oder sehr niedrigen Stickstoffeinträgen führen können, die langfristige Entwicklung verzerren, werden die Ergebnisse als gleitender Fünfjahresdurchschnitt dargestellt. Eine wesentliche Ursache für den Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee ist der Stickstoffüberschuss in der Landwirtschaft, der im Indikator <a href="https://dns-indikatoren.de/2-1-a/">2.1.a </a>erfasst wird. Neben Stickstoff trägt auch Phosphor zur Eutrophierung bei. Die Phosphorbelastung der Flüsse wird im Indikator <a href="https://dns-indikatoren.de/6-1-a/">6.1.a</a> gesondert betrachtet.<br /><br />Seit Beginn der Zeitreihe zeigt die abflussgewichtete Stickstoffkonzentration aller Nord- und Ostseezuflüsse einen rückläufigen Trend. Der Rückgang ist bei den Nordseezuflüssen deutlicher ausgeprägt als bei den Ostseezuflüssen. Im Durchschnitt der Jahre 2019&nbsp;bis 2023&nbsp;lag die Konzentration der Nordseezuflüsse bei 2,7&nbsp;mg/l und damit wiederholt unter dem politisch festgelegten Zielwert von 2,8&nbsp;mg/l. Die Ostseezuflüsse wiesen im selben Zeitraum eine durchschnittliche Konzentration von 3,0&nbsp;mg/l auf und überschritten damit deutlich die Obergrenze von 2,6&nbsp;mg/l.<br /><br />Im Unterschied zum aggregierten Indikator 14.1.a <i>Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee</i> ist für das Erreichen eines guten ökologischen Zustands gemäß der Oberflächengewässerverordnung (OGewV) erforderlich, dass jeder einzelne Fluss den jeweiligen Bewirtschaftungszielwert einhält. Dieses Ziel wird derzeit weder für die Nordsee- noch für die Ostseezuflüsse erreicht.<br /><br />Von den großen Ostseezuflüssen erreichte im Fünfjahresmittel 2019&nbsp;bis 2023&nbsp;lediglich die Warnow mit 2,15&nbsp;mg/l den Bewirtschaftungszielwert von 2,6&nbsp;mg/l. Peene (2,80&nbsp;mg/l) und Trave (3,56&nbsp;mg/l) lagen jeweils über dem Zielwert. Die kleinen Ostseezuflüsse wiesen im gleichen Zeitraum teils deutlich höhere mittlere Stickstoffkonzentrationen auf&nbsp;–&nbsp;mit Werten von bis zu 6,2&nbsp;mg/l (Duvenbaek) liegt die Belastung zum Teil um ein Vielfaches über dem Zielwert der Ostseezuflüsse. Insgesamt erfüllt nur etwa ein Fünftel der kleinen Flüsse diese Vorgabe.<br /><br />Bei den Nordseezuflüssen erreichten im Zeitraum 2019&nbsp;bis 2023&nbsp;lediglich der Rhein (2,5&nbsp;mg/l) und der Bongsieler Kanal (2,6&nbsp;mg/l) den Bewirtschaftungszielwert von 2,8&nbsp;mg/l und trugen damit maßgeblich dazu bei, dass der abflussgewichtete Mittelwert unter dem politisch festgelegten Zielwert blieb. Unter den großen Nordseezuflüssen wiesen Weser (3,5&nbsp;mg/l) und Ems (4,0&nbsp;mg/l) die höchsten Stickstoffkonzentrationen auf. Die kleineren Nordseezuflüsse lagen im Fünfjahresdurchschnitt zwischen 2,6&nbsp;mg/l (Bongsieler Kanal) und 3,5&nbsp;mg/l (Aarlau).<br /><br /><small><sup>1</sup> Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br /><sup>2</sup> Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</small></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #0a97d9; font-size: large">14.1.a Nährstoffeinträge in Küsten- und Meeresgewässer &#8209; Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</b><br /><br />Die Indikatoren basieren auf Messdaten zu Stickstoffkonzentrationen und Wasserabflüssen kleiner und großer Zuflüsse der Nord-<sup>1</sup> und Ostsee<sup>2</sup> . Die Daten werden vom Umweltbundesamt (UBA) unter Einbeziehung der Angaben der Bundesländer beziehungsweise der Flussgebietsgemeinschaften zusammengestellt. Berücksichtigt werden auch kleinere Flüsse, die nicht direkt in die Nord- oder Ostsee münden, sondern zuvor in größere Flüsse einfließen. Die Messstellen sind dann so gewählt, dass jeweils die letzte Messstation vor dem Zusammenfluss in die Auswertung einbezogen wird um Doppelerfassungen zu vermeiden. Zusätzlich wird der Rhein in die Betrachtung einbezogen, obwohl er nicht in Deutschland mündet. Die entsprechenden Werte werden an der Messstelle im Klever Ortsteil Bimmen erhoben, an der der Rhein Deutschland verlässt.<br /><br />Die Stickstoffkonzentrationen der einzelnen Flüsse werden abflussgewichtet gemittelt, sodass Flüsse mit hohen Abflussmengen den Gesamtdurchschnitt stärker beeinflussen als solche mit geringem Abfluss. Um zu verhindern, dass einzelne Extremereignisse wie Hochwasser oder Dürre, die punktuell zu sehr hohen oder sehr niedrigen Stickstoffeinträgen führen können, die langfristige Entwicklung verzerren, werden die Ergebnisse als gleitender Fünfjahresdurchschnitt dargestellt. Eine wesentliche Ursache für den Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee ist der Stickstoffüberschuss in der Landwirtschaft, der im Indikator <a href="https://dns-indikatoren.de/2-1-a/">2.1.a </a>erfasst wird. Neben Stickstoff trägt auch Phosphor zur Eutrophierung bei. Die Phosphorbelastung der Flüsse wird im Indikator <a href="https://dns-indikatoren.de/6-1-a/">6.1.a</a> gesondert betrachtet.<br /><br />Seit Beginn der Zeitreihe zeigt die abflussgewichtete Stickstoffkonzentration aller Nord- und Ostseezuflüsse einen rückläufigen Trend. Der Rückgang ist bei den Nordseezuflüssen deutlicher ausgeprägt als bei den Ostseezuflüssen. Im Durchschnitt der Jahre 2019&nbsp;bis 2023&nbsp;lag die Konzentration der Nordseezuflüsse bei 2,7&nbsp;mg/l und damit wiederholt unter dem politisch festgelegten Zielwert von 2,8&nbsp;mg/l. Die Ostseezuflüsse wiesen im selben Zeitraum eine durchschnittliche Konzentration von 3,0&nbsp;mg/l auf und überschritten damit deutlich die Obergrenze von 2,6&nbsp;mg/l.<br /><br />Im Unterschied zum aggregierten Indikator 14.1.a <i>Stickstoffeintrag über die Zuflüsse in Nord- und Ostsee</i> ist für das Erreichen eines guten ökologischen Zustands gemäß der Oberflächengewässerverordnung (OGewV) erforderlich, dass jeder einzelne Fluss den jeweiligen Bewirtschaftungszielwert einhält. Dieses Ziel wird derzeit weder für die Nordsee- noch für die Ostseezuflüsse erreicht.<br /><br />Von den großen Ostseezuflüssen erreichte im Fünfjahresmittel 2019&nbsp;bis 2023&nbsp;lediglich die Warnow mit 2,15&nbsp;mg/l den Bewirtschaftungszielwert von 2,6&nbsp;mg/l. Peene (2,80&nbsp;mg/l) und Trave (3,56&nbsp;mg/l) lagen jeweils über dem Zielwert. Die kleinen Ostseezuflüsse wiesen im gleichen Zeitraum teils deutlich höhere mittlere Stickstoffkonzentrationen auf&nbsp;–&nbsp;mit Werten von bis zu 6,2&nbsp;mg/l (Duvenbaek) liegt die Belastung zum Teil um ein Vielfaches über dem Zielwert der Ostseezuflüsse. Insgesamt erfüllt nur etwa ein Fünftel der kleinen Flüsse diese Vorgabe.<br /><br />Bei den Nordseezuflüssen erreichten im Zeitraum 2019&nbsp;bis 2023&nbsp;lediglich der Rhein (2,5&nbsp;mg/l) und der Bongsieler Kanal (2,6&nbsp;mg/l) den Bewirtschaftungszielwert von 2,8&nbsp;mg/l und trugen damit maßgeblich dazu bei, dass der abflussgewichtete Mittelwert unter dem politisch festgelegten Zielwert blieb. Unter den großen Nordseezuflüssen wiesen Weser (3,5&nbsp;mg/l) und Ems (4,0&nbsp;mg/l) die höchsten Stickstoffkonzentrationen auf. Die kleineren Nordseezuflüsse lagen im Fünfjahresdurchschnitt zwischen 2,6&nbsp;mg/l (Bongsieler Kanal) und 3,5&nbsp;mg/l (Aarlau).<br /><br /><small><sup>1</sup> Eider, Elbe, Ems, Weser, Rhein, Treene, Aarlau, Bongsieler Kanal und Miele.<br /><sup>2</sup> Peene, Trave, Warnow, Langballigau, Füsinger Au, Koseler Au, Schwentine, Kossau, Goddesdorfer Au, Oldenburger Graben, Aalbeck, Schwartau, Lippingau, Hagener Au, Barthe, Duvenbaek, Hellbach, Maurine, Recknitz, Ryck, Stepenitz, Uecker, Wallensteingraben und Zarow.</small></p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2517,19 +2431,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2543,8 +2462,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3281,151 +3200,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt nach Angaben der Länder und Flussgebietsgemeinschaften</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-eutrophierung-der-meere" target="_blank">
+                Eutrophierung von Nord- und Ostsee durch Stickstoff <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-eutrophierung-der-meere" target="_blank" onclick="return confirm_alert('des UBA', 'De');">
-                      Eutrophierung von Nord- und Ostsee durch Stickstoff <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3491,6 +3369,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3498,11 +3377,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3513,18 +3392,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3538,12 +3417,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

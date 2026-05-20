@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-5">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/5/" aria-label=" 5" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
-              alt="Geschlechtergleichheit - Ziel 5"
-              id="goal-5"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-5">
+    <div class="container">
+        <div class="row">
             
-              Indikator 5.1.g
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/5/" aria-label=" 5" title=" 5">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                        alt="Geschlechtergleichheit - Ziel 5"
+                        id="goal-5"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 5.1.g
+                        
+                        <span class="lead-copy">Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_5-1-g'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Zusagen für Geschlechtergleichstellung berücksichtigende Projektmittel in der deutschen Entwicklungszusammenarbeit"
   data-charttitles="null"
-  data-chartsubtitle="Anteil an allen neu zugesagten Projektmitteln von Projekten der deutschen Entwicklungszusammenarbeit"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit&quot;}]"
   data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:85,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:4.691,&quot;xMax&quot;:5.309,&quot;yMin&quot;:0,&quot;yMax&quot;:85,&quot;borderColor&quot;:&quot;#ff3a21&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:5,&quot;yValue&quot;:93.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;85&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -521,62 +511,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -589,12 +577,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Zusagen für Geschlechtergleichstellung berücksichtigende Projektmittel in der deutschen Entwicklungszusammenarbeit</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Anteil an allen neu zugesagten Projektmitteln von Projekten der deutschen Entwicklungszusammenarbeit</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Zusagen für Geschlechtergleichstellung berücksichtigende Projektmittel in der deutschen Entwicklungszusammenarbeit
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -609,51 +597,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -685,51 +667,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a>, <a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -817,197 +793,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die neu zugesagten Projektmittel von Projekten der deutschen Entwicklungszusammenarbeit, die Gleichstellung mitberücksichtigen (in %) dar.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die neu zugesagten Projektmittel von Projekten der deutschen Entwicklungszusammenarbeit, die Gleichstellung mitberücksichtigen (in %) dar.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Die Bundesregierung setzt sich international für die Gleichstellung der Geschlechter ein und arbeitet dafür mit verschiedenen Partnern zusammen. Gleiche Rechte, gleiche Pflichten, gleiche Chancen und gleiche Macht für Frauen und Männer sind explizite Ziele deutscher Entwicklungspolitik. Dabei ist es wichtig, neben Vorhaben, deren Hauptziel die Gleichstellung der Geschlechter ist, auch großvolumige Vorhaben etwa für Verkehrsinfrastruktur, soziale Sicherung, Gesundheit, Bildung etc. zu fördern, die Gleichstellungsaspekte als Nebenziel integrieren und so die gesamte Bevölkerung erreichen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Die Bundesregierung setzt sich international für die Gleichstellung der Geschlechter ein und arbeitet dafür mit verschiedenen Partnern zusammen. Gleiche Rechte, gleiche Pflichten, gleiche Chancen und gleiche Macht für Frauen und Männer sind explizite Ziele deutscher Entwicklungspolitik. Dabei ist es wichtig, neben Vorhaben, deren Hauptziel die Gleichstellung der Geschlechter ist, auch großvolumige Vorhaben etwa für Verkehrsinfrastruktur, soziale Sicherung, Gesundheit, Bildung etc. zu fördern, die Gleichstellungsaspekte als Nebenziel integrieren und so die gesamte Bevölkerung erreichen.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Anstieg des Anteils der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit bis 2030 auf ab dann mindestens 85 %</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Anstieg des Anteils der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit bis 2030 auf ab dann mindestens 85 %</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Der Anteil der Projektmittel der deutschen Entwicklungszusammenarbeit, die die Geschlechtergleichstellung berücksichtigen, soll bis 2030 auf mindestens 85 % gesteigert werden (bezogen auf neu zugesagte Projektmittel).<br />• Die aktuelle Entwicklung verläuft in Richtung der Zielvorgabe. Eine abschließende Bewertung des Indikators 5.1.g ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Der Anteil der Projektmittel der deutschen Entwicklungszusammenarbeit, die die Geschlechtergleichstellung berücksichtigen, soll bis 2030 auf mindestens 85 % gesteigert werden (bezogen auf neu zugesagte Projektmittel).<br />• Die aktuelle Entwicklung verläuft in Richtung der Zielvorgabe. Eine abschließende Bewertung des Indikators 5.1.g ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1793,20 +1719,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1823,25 +1754,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #ff3a21; font-size: large">5.1.g Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit</b><br /><br />Die Förderung der Geschlechtergleichstellung ist ein Bestandteil der deutschen Entwicklungszusammenarbeit (EZ), der durch die Zuweisung von Projektmitteln umgesetzt wird, die auf dieses Ziel ausgerichtet sind. Der Anteil der Mittel, die in Projekten der deutschen EZ der Förderung der Geschlechtergleichstellung zugewiesen werden, ist ein Indikator für die Umsetzung nationaler und internationaler Verpflichtungen zur Gleichstellung der Geschlechter.<br /><br />Seit 1997&nbsp;ist die OECD-DAC-Kennung (Entwicklungsausschuss der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung) für Geschlechtergleichstellung (GG-Kennung) verbindlich, um sicherzustellen, dass Geschlechteraspekte in der internationalen Entwicklungszusammenarbeit berücksichtigt werden. Die GG-Kennung unterscheidet zwischen Projekten mit der Kennung GG1&nbsp;und GG2. GG2-Projekte verfolgen die Gleichstellung der Geschlechter als Hauptziel, wobei die Förderung der Geschlechtergleichstellung und die Bekämpfung geschlechtsspezifischer Diskriminierung wesentliche Ziele des Vorhabens sind. Projekte mit der Kennung GG1&nbsp;berücksichtigen Geschlechteraspekte als wichtige, jedoch sekundäre Zielsetzung. Um sicherzustellen, dass Geschlechtergerechtigkeit auch in GG1-Projekten relevant ist, verlangt die OECD bei der Vergabe der GG1-Kennung eine Genderanalyse sowie das Vorhandensein von mindestens einem relevanten Output-Indikator.<br /><br />In den Indikator werden sowohl GG1- als auch GG2-Projekte einbezogen. Während GG2-Projekte eine stärkere Fokussierung auf Geschlechtergleichstellung aufweisen, zeigen GG1-Projekte häufig eine größere Breitenwirksamkeit. GG1-Projekte beinhalten viele großvolumige Vorhaben zum Beispiel in den Bereichen Verkehrsinfrastruktur, soziale Sicherung, Gesundheit und Bildung, bei denen Gleichstellungsaspekte als Nebenziel integriert sind, um die gesamte Bevölkerung zu erreichen.<br /><br />In den Jahren 2019&nbsp;bis 2022&nbsp;lag der Anteil der neu zugesagten Projektmittel deutscher EZ bei denen Geschlechtergleichstellung berücksichtigt wurde zwischen 40&nbsp;% und 50&nbsp;%. Im Jahr 2023&nbsp;stieg der Anteil deutlich an und belief sich zuletzt auf 73,2&nbsp;%.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #ff3a21; font-size: large">5.1.g Anteil der Geschlechtergleichstellung berücksichtigenden Projektmittel in der deutschen Entwicklungszusammenarbeit</b><br /><br />Die Förderung der Geschlechtergleichstellung ist ein Bestandteil der deutschen Entwicklungszusammenarbeit (EZ), der durch die Zuweisung von Projektmitteln umgesetzt wird, die auf dieses Ziel ausgerichtet sind. Der Anteil der Mittel, die in Projekten der deutschen EZ der Förderung der Geschlechtergleichstellung zugewiesen werden, ist ein Indikator für die Umsetzung nationaler und internationaler Verpflichtungen zur Gleichstellung der Geschlechter.<br /><br />Seit 1997&nbsp;ist die OECD-DAC-Kennung (Entwicklungsausschuss der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung) für Geschlechtergleichstellung (GG-Kennung) verbindlich, um sicherzustellen, dass Geschlechteraspekte in der internationalen Entwicklungszusammenarbeit berücksichtigt werden. Die GG-Kennung unterscheidet zwischen Projekten mit der Kennung GG1&nbsp;und GG2. GG2-Projekte verfolgen die Gleichstellung der Geschlechter als Hauptziel, wobei die Förderung der Geschlechtergleichstellung und die Bekämpfung geschlechtsspezifischer Diskriminierung wesentliche Ziele des Vorhabens sind. Projekte mit der Kennung GG1&nbsp;berücksichtigen Geschlechteraspekte als wichtige, jedoch sekundäre Zielsetzung. Um sicherzustellen, dass Geschlechtergerechtigkeit auch in GG1-Projekten relevant ist, verlangt die OECD bei der Vergabe der GG1-Kennung eine Genderanalyse sowie das Vorhandensein von mindestens einem relevanten Output-Indikator.<br /><br />In den Indikator werden sowohl GG1- als auch GG2-Projekte einbezogen. Während GG2-Projekte eine stärkere Fokussierung auf Geschlechtergleichstellung aufweisen, zeigen GG1-Projekte häufig eine größere Breitenwirksamkeit. GG1-Projekte beinhalten viele großvolumige Vorhaben zum Beispiel in den Bereichen Verkehrsinfrastruktur, soziale Sicherung, Gesundheit und Bildung, bei denen Gleichstellungsaspekte als Nebenziel integriert sind, um die gesamte Bevölkerung zu erreichen.<br /><br />In den Jahren 2019&nbsp;bis 2022&nbsp;lag der Anteil der neu zugesagten Projektmittel deutscher EZ bei denen Geschlechtergleichstellung berücksichtigt wurde zwischen 40&nbsp;% und 50&nbsp;%. Im Jahr 2023&nbsp;stieg der Anteil deutlich an und belief sich zuletzt auf 73,2&nbsp;%.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2635,19 +2561,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2661,8 +2592,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3399,98 +3330,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmz.png" alt="Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmz.png" alt="Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3556,6 +3479,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3567,8 +3491,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4317,98 +4241,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/oecd.png" alt="Organisation für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Organisation für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/oecd.png" alt="Organisation für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Organisation für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.oecd.org/" target="_blank" onclick="return confirm_alert('der OECD', 'De')">Organisation für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4462,6 +4378,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4469,11 +4386,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4484,18 +4401,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4509,12 +4426,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

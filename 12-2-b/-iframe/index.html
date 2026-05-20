@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-12">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/12/" aria-label=" 12" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
-              alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
-              id="goal-12"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-12">
+    <div class="container">
+        <div class="row">
             
-              Indikator 12.2.b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/12/" aria-label=" 12" title=" 12">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
+                        alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
+                        id="goal-12"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 12.2.b
+                        
+                        <span class="lead-copy">Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-12" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_12-2-b'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen"
   data-charttitles="[{&quot;series&quot;:&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Produktionen audiovisueller Medien, bei denen ökologische Standards eingehalten wurden&quot;,&quot;title&quot;:&quot;Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;},{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;,&quot;title&quot;:&quot;Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;,&quot;title&quot;:&quot;Anzahl zertifizierter Einrichtungen&quot;},{&quot;series&quot;:&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Produktionen audiovisueller Medien, bei denen ökologische Standards eingehalten wurden&quot;,&quot;title&quot;:&quot;Produktionen audiovisueller Medien, bei denen ökologische Standards eingehalten wurden&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anzahl&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen&quot;,&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Produktionen audiovisueller Medien, bei denen ökologische Standards eingehalten wurden&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -531,62 +521,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -599,12 +587,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Anzahl zertifizierter Einrichtungen</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -619,54 +607,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a>, <a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a>, <a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a>, <a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a>, <a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a>, <a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a>, <a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a>, <a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a>, <a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a>, <a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a>, <a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -698,54 +680,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a>, <a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a>, <a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a>, <a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a>, <a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a>, <a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a>, <a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a>, <a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a>, <a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a>, <a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a>, <a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -833,197 +809,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die Anzahl der nachhaltigkeitszertifizierten Kultur- und Medieneinrichtungen dar.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die Anzahl der nachhaltigkeitszertifizierten Kultur- und Medieneinrichtungen dar.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Kultur- und Medieneinrichtungen mit einem nachweisbaren Beitrag zur Nachhaltigkeit haben einen erfolgreichen internen Transformationsprozess durchgeführt und tragen darüber hinaus angesichts ihrer besonderen kommunikativen Funktion mit ihren Narrativen auch zur gesellschaftlichen Sensibilisierung in verschiedenen soziokulturellen Milieus bei.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Kultur- und Medieneinrichtungen mit einem nachweisbaren Beitrag zur Nachhaltigkeit haben einen erfolgreichen internen Transformationsprozess durchgeführt und tragen darüber hinaus angesichts ihrer besonderen kommunikativen Funktion mit ihren Narrativen auch zur gesellschaftlichen Sensibilisierung in verschiedenen soziokulturellen Milieus bei.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Erhöhung der Anzahl der Kultureinrichtungen mit entsprechenden Zertifikaten bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Erhöhung der Anzahl der Kultureinrichtungen mit entsprechenden Zertifikaten bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Anzahl nachhaltigkeitszertifizierter Kultur- und Medieneinrichtungen soll erhöht werden.<br />• Eine Bewertung des Indikators 12.2.b ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Anzahl nachhaltigkeitszertifizierter Kultur- und Medieneinrichtungen soll erhöht werden.<br />• Eine Bewertung des Indikators 12.2.b ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1809,20 +1735,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1839,25 +1770,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #bf8b2e; font-size: large">12.2.b Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</b><br /><br />Der Indikator erfasst die Anzahl der Kultur- und Medieneinrichtungen, die eine Nachhaltigkeitszertifizierung erhalten haben. Da nicht das gesamte Spektrum aller Kultur- und Medieneinrichtungen erfasst werden kann, beschränkt sich der Indikator auf öffentlich geförderte Einrichtungen in den Bereichen Theater, Konzerthäuser und Orchester, Bibliotheken, Archive, Museen und Kunsthallen, Besucherzentren, Musikclubs, Festivals, Veranstaltungshäuser und öffentlich zugängliche Kulturerbestätten. Kulturelle Bildungseinrichtungen wie Musikschulen werden nicht berücksichtigt.<br /><br />Angesichts der Heterogenität der Kultur- und Medienlandschaft konzentriert sich der Indikator auf Zertifikate und Managementsysteme, die verschiedene Aspekte der Nachhaltigkeit abdecken. Hierzu zählen unter anderem der Deutsche Nachhaltigkeitskodex (DNK), Ökoprofit, Gemeinwohl-Ökonomie, KlimaBilanzKultur (KBK) und KlimaBilanzKultur+&nbsp;(KBK+), Eco Management and Audit Scheme (EMAS) sowie die Anwendung folgender Managementsysteme: ISO 14001&nbsp;(internationale Umweltmanagementsystemnorm), ISO 20121-24&nbsp;(Nachhaltigkeitsmanagementsysteme für Veranstaltungen), ISO 50001&nbsp;(internationale Energiemanagementnorm) und ISO 50005&nbsp;(Leitlinien für eine stufenweise Einführung von Energiemanagementsystemen). Kultur- und Medieneinrichtungen, die mindestens eines dieser Zertifikate oder Managementsysteme erfüllen, werden zusammengefasst.<br /><br />Aufgrund der Vielzahl an Zertifikaten und Managementsystemen kann es zu Überschneidungen mit anderen Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS) kommen, wie beispielsweise Indikator <a href="https://dns-indikatoren.de/8-6">8.6</a>) <i>Freiwillige Nachhaltigkeitsberichterstattung von Unternehmen nach dem Deutschen Nachhaltigkeitskodex (DNK)</i> und Indikator <a href="https://dns-indikatoren.de/12-2-a">12.2.a</a>) <i>Anzahl von EMAS-zertifizierten Unternehmen</i>. Die ungewichtete Summierung über sowohl größenmäßig als auch hinsichtlich ihrer Ausrichtung sehr heterogene Kultur- und Medieneinrichtungen, die sich teils unterschiedlich ausgerichteten Zertifikaten und Managementsystemen verpflichtet haben, schränkt die Aussagekraft des Indikators hinsichtlich der sozialen und ökologischen Ausrichtung der Kulturproduktion ein. Der Indikator ermöglicht höchstens eine zukünftige Einschätzung, ob sich das Engagement von Kultur- und Medieneinrichtungen in Bezug auf Nachhaltigkeitsthemen im Allgemeinen erhöht.<br /><br />Zudem gibt die Berufung auf ein Zertifikat oder Managementsystem nur indirekt Aufschluss über den tatsächlichen Umfang der ökologischen und sozialen Auswirkung des Kulturbetriebs. Die berücksichtigten Zertifikate und Managementsysteme beziehen sich größtenteils nicht explizit auf den kulturellen Bereich, sondern behandeln allgemeine Aspekte des nachhaltigen Wirtschaftens und Produzierens. Der Indikator berücksichtigt nicht den Schutz von Kultur oder einen nachhaltigen Umgang mit kulturellen Inhalten, sondern beleuchtet die Nachhaltigkeitsaspekte der kulturellen Einrichtungen. Eine besondere kommunikative Funktion der Kultur, die zur gesellschaftlichen Sensibilisierung in verschiedenen soziokulturellen Milieus beitragen soll, wird durch den Indikator nur indirekt berücksichtigt, da die genannten Zertifizierungen nicht die inhaltlichen Aussagen der Kulturprodukte, sondern deren Produktion und Bereitstellung fokussieren. Auch kann nicht zwangsläufig darauf geschlossen werden, dass die Zielgruppen kultureller Einrichtungen durch eine nachhaltige Ausrichtung derselben tatsächlich in ihren Handlungen beeinflusst werden. Vielmehr könnte ein nachhaltiges Kulturangebot vermehrt ein Milieu ansprechen, das ohnehin bereits für die jeweiligen Themen sensibilisiert ist.<br /><br />Im Jahr 2024&nbsp;wurden 77&nbsp;Kultur- und Medieneinrichtungen mit mindestens einem Nachhaltigkeitszertifikat erfasst. Die genaue Grundgesamtheit der öffentlich geförderten Kultur- und Medieneinrichtungen in Deutschland ist nicht bekannt, jedoch existieren allein fast 9&nbsp;000&nbsp;Bibliotheken, über 6&nbsp;000&nbsp;Museen und mehr als 600&nbsp;Spielstätten öffentlicher Theater. Dies verdeutlicht, dass die absolute Anzahl der nachhaltigkeitszertifizierten Kultur- und Medieneinrichtungen in relativer Betrachtung im Promillebereich liegt, was auf ein erhebliches Steigerungspotenzial in diesem Bereich hinweist.<br /><br />Aus verschiedenen Gründen sind audiovisuelle Produkte nicht im Indikator enthalten. Für die Produktion von deutschen Kino-, TV- und Online-/Video on Demand-Produktionen existieren ökologische Standards, die Aspekte wie Energieeinsatz, Transport, Unterbringung und Verpflegung sowie den Einsatz und die Nutzung von Material betreffen. Seit dem 1. März 2023&nbsp;ist die Einhaltung dieser Standards verpflichtend, um eine Förderung aus Bundesmitteln zu erhalten. In den ersten sechs Monaten nach Einführung der verpflichtenden Einhaltung wurde diese für insgesamt 82&nbsp;audiovisuelle Produktionen nachgewiesen. Im Zeitraum vom 1. September 2023&nbsp;bis zum 30. August 2024&nbsp;folgten weitere 234&nbsp;Produktionen.<br /><br />Die Datenerhebung begann erst im Jahr 2024. Daher ist es zum jetzigen Zeitpunkt noch nicht möglich, den Indikator in Bezug auf das politisch festgelegte Ziel, die Anzahl nachhaltigkeitszertifizierter Kultur- und Medieneinrichtungen zu steigern, zu bewerten.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #bf8b2e; font-size: large">12.2.b Nachhaltigkeitszertifizierte Kultur- und Medieneinrichtungen</b><br /><br />Der Indikator erfasst die Anzahl der Kultur- und Medieneinrichtungen, die eine Nachhaltigkeitszertifizierung erhalten haben. Da nicht das gesamte Spektrum aller Kultur- und Medieneinrichtungen erfasst werden kann, beschränkt sich der Indikator auf öffentlich geförderte Einrichtungen in den Bereichen Theater, Konzerthäuser und Orchester, Bibliotheken, Archive, Museen und Kunsthallen, Besucherzentren, Musikclubs, Festivals, Veranstaltungshäuser und öffentlich zugängliche Kulturerbestätten. Kulturelle Bildungseinrichtungen wie Musikschulen werden nicht berücksichtigt.<br /><br />Angesichts der Heterogenität der Kultur- und Medienlandschaft konzentriert sich der Indikator auf Zertifikate und Managementsysteme, die verschiedene Aspekte der Nachhaltigkeit abdecken. Hierzu zählen unter anderem der Deutsche Nachhaltigkeitskodex (DNK), Ökoprofit, Gemeinwohl-Ökonomie, KlimaBilanzKultur (KBK) und KlimaBilanzKultur+&nbsp;(KBK+), Eco Management and Audit Scheme (EMAS) sowie die Anwendung folgender Managementsysteme: ISO 14001&nbsp;(internationale Umweltmanagementsystemnorm), ISO 20121-24&nbsp;(Nachhaltigkeitsmanagementsysteme für Veranstaltungen), ISO 50001&nbsp;(internationale Energiemanagementnorm) und ISO 50005&nbsp;(Leitlinien für eine stufenweise Einführung von Energiemanagementsystemen). Kultur- und Medieneinrichtungen, die mindestens eines dieser Zertifikate oder Managementsysteme erfüllen, werden zusammengefasst.<br /><br />Aufgrund der Vielzahl an Zertifikaten und Managementsystemen kann es zu Überschneidungen mit anderen Indikatoren der Deutschen Nachhaltigkeitsstrategie (DNS) kommen, wie beispielsweise Indikator <a href="https://dns-indikatoren.de/8-6">8.6</a>) <i>Freiwillige Nachhaltigkeitsberichterstattung von Unternehmen nach dem Deutschen Nachhaltigkeitskodex (DNK)</i> und Indikator <a href="https://dns-indikatoren.de/12-2-a">12.2.a</a>) <i>Anzahl von EMAS-zertifizierten Unternehmen</i>. Die ungewichtete Summierung über sowohl größenmäßig als auch hinsichtlich ihrer Ausrichtung sehr heterogene Kultur- und Medieneinrichtungen, die sich teils unterschiedlich ausgerichteten Zertifikaten und Managementsystemen verpflichtet haben, schränkt die Aussagekraft des Indikators hinsichtlich der sozialen und ökologischen Ausrichtung der Kulturproduktion ein. Der Indikator ermöglicht höchstens eine zukünftige Einschätzung, ob sich das Engagement von Kultur- und Medieneinrichtungen in Bezug auf Nachhaltigkeitsthemen im Allgemeinen erhöht.<br /><br />Zudem gibt die Berufung auf ein Zertifikat oder Managementsystem nur indirekt Aufschluss über den tatsächlichen Umfang der ökologischen und sozialen Auswirkung des Kulturbetriebs. Die berücksichtigten Zertifikate und Managementsysteme beziehen sich größtenteils nicht explizit auf den kulturellen Bereich, sondern behandeln allgemeine Aspekte des nachhaltigen Wirtschaftens und Produzierens. Der Indikator berücksichtigt nicht den Schutz von Kultur oder einen nachhaltigen Umgang mit kulturellen Inhalten, sondern beleuchtet die Nachhaltigkeitsaspekte der kulturellen Einrichtungen. Eine besondere kommunikative Funktion der Kultur, die zur gesellschaftlichen Sensibilisierung in verschiedenen soziokulturellen Milieus beitragen soll, wird durch den Indikator nur indirekt berücksichtigt, da die genannten Zertifizierungen nicht die inhaltlichen Aussagen der Kulturprodukte, sondern deren Produktion und Bereitstellung fokussieren. Auch kann nicht zwangsläufig darauf geschlossen werden, dass die Zielgruppen kultureller Einrichtungen durch eine nachhaltige Ausrichtung derselben tatsächlich in ihren Handlungen beeinflusst werden. Vielmehr könnte ein nachhaltiges Kulturangebot vermehrt ein Milieu ansprechen, das ohnehin bereits für die jeweiligen Themen sensibilisiert ist.<br /><br />Im Jahr 2024&nbsp;wurden 77&nbsp;Kultur- und Medieneinrichtungen mit mindestens einem Nachhaltigkeitszertifikat erfasst. Die genaue Grundgesamtheit der öffentlich geförderten Kultur- und Medieneinrichtungen in Deutschland ist nicht bekannt, jedoch existieren allein fast 9&nbsp;000&nbsp;Bibliotheken, über 6&nbsp;000&nbsp;Museen und mehr als 600&nbsp;Spielstätten öffentlicher Theater. Dies verdeutlicht, dass die absolute Anzahl der nachhaltigkeitszertifizierten Kultur- und Medieneinrichtungen in relativer Betrachtung im Promillebereich liegt, was auf ein erhebliches Steigerungspotenzial in diesem Bereich hinweist.<br /><br />Aus verschiedenen Gründen sind audiovisuelle Produkte nicht im Indikator enthalten. Für die Produktion von deutschen Kino-, TV- und Online-/Video on Demand-Produktionen existieren ökologische Standards, die Aspekte wie Energieeinsatz, Transport, Unterbringung und Verpflegung sowie den Einsatz und die Nutzung von Material betreffen. Seit dem 1. März 2023&nbsp;ist die Einhaltung dieser Standards verpflichtend, um eine Förderung aus Bundesmitteln zu erhalten. In den ersten sechs Monaten nach Einführung der verpflichtenden Einhaltung wurde diese für insgesamt 82&nbsp;audiovisuelle Produktionen nachgewiesen. Im Zeitraum vom 1. September 2023&nbsp;bis zum 30. August 2024&nbsp;folgten weitere 234&nbsp;Produktionen.<br /><br />Die Datenerhebung begann erst im Jahr 2024. Daher ist es zum jetzigen Zeitpunkt noch nicht möglich, den Indikator in Bezug auf das politisch festgelegte Ziel, die Anzahl nachhaltigkeitszertifizierter Kultur- und Medieneinrichtungen zu steigern, zu bewerten.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2651,19 +2577,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2677,8 +2608,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3415,98 +3346,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/dnk.png" alt="Deutscher Nachhaltigkeitskodex" title=" Klicken Sie hier um zur Homepage der Organisation Deutscher Nachhaltigkeitskodex zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/dnk.png" alt="Deutscher Nachhaltigkeitskodex" title=" Klicken Sie hier um zur Homepage der Organisation Deutscher Nachhaltigkeitskodex zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.deutscher-nachhaltigkeitskodex.de/" target="_blank" onclick="return confirm_alert('des DNK', 'De')">Deutscher Nachhaltigkeitskodex</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3572,6 +3495,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3583,8 +3507,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4333,98 +4257,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/oeko.png" alt="Ökoprofit" title=" Klicken Sie hier um zur Homepage der Organisation Ökoprofit zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/oeko.png" alt="Ökoprofit" title=" Klicken Sie hier um zur Homepage der Organisation Ökoprofit zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.oekoprofit.info/" target="_blank" onclick="return confirm_alert('von Ökoprofit', 'De')">Ökoprofit</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4478,6 +4394,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4489,8 +4406,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5251,92 +5168,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gwoe.png" alt="Gemeinwohl-Ökonomie" title=" Klicken Sie hier um zur Homepage der Organisation Gemeinwohl-Ökonomie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gwoe.png" alt="Gemeinwohl-Ökonomie" title=" Klicken Sie hier um zur Homepage der Organisation Gemeinwohl-Ökonomie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://germany.econgood.org/" target="_blank" onclick="return confirm_alert('der Gemeinwohl-Ökonomie', 'De')">Gemeinwohl-Ökonomie</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5380,6 +5285,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5391,8 +5297,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 4</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -6163,145 +6069,100 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gc.png" alt="Green Culture Anlaufstelle" title=" Klicken Sie hier um zur Homepage der Organisation Green Culture Anlaufstelle zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gc.png" alt="Green Culture Anlaufstelle" title=" Klicken Sie hier um zur Homepage der Organisation Green Culture Anlaufstelle zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.greenculture.info/" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De')">Green Culture Anlaufstelle</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.kmk.org/fileadmin/pdf/PresseUndAktuelles/2023/Anleitung_zum_CO2-Kulturrechner.pdf" target="_blank">
+                KlimaBilanzKultur und KlimaBilanzKultur+ <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.kmk.org/fileadmin/pdf/PresseUndAktuelles/2023/Anleitung_zum_CO2-Kulturrechner.pdf" target="_blank" onclick="return confirm_alert('der Green Culture Anlaufstelle', 'De');">
-                      KlimaBilanzKultur und KlimaBilanzKultur+ <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -6335,6 +6196,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -6346,8 +6208,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 5</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -7128,92 +6990,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/emas.png" alt="Umweltmanagementsystem" title=" Klicken Sie hier um zur Homepage der Organisation Umweltmanagementsystem zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/emas.png" alt="Umweltmanagementsystem" title=" Klicken Sie hier um zur Homepage der Organisation Umweltmanagementsystem zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.emas.de/was-ist-emas" target="_blank" onclick="return confirm_alert('des EMAS', 'De')">Umweltmanagementsystem</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -7237,6 +7087,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -7248,8 +7099,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 6</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -8040,145 +7891,100 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gs.png" alt="Green Shooting" title=" Klicken Sie hier um zur Homepage der Organisation Green Shooting zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/gs.png" alt="Green Shooting" title=" Klicken Sie hier um zur Homepage der Organisation Green Shooting zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.green-motion.org/" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De')">Green Shooting</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.green-motion.org/files/16_green_motion/Dokumente/20241209_OEkologische_Standards_UEbergangsfassung_Januar_2025.pdf" target="_blank">
+                Ökologische Standards für deutsche Kino-, TV- und Online-/Vod-Produktionen <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.green-motion.org/files/16_green_motion/Dokumente/20241209_OEkologische_Standards_UEbergangsfassung_Januar_2025.pdf" target="_blank" onclick="return confirm_alert('des Green Shooting', 'De');">
-                      Ökologische Standards für deutsche Kino-, TV- und Online-/Vod-Produktionen <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -8192,6 +7998,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -8199,11 +8006,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -8214,16 +8021,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -8237,12 +8044,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

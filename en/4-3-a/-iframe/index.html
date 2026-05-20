@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-4">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/4/" aria-label=" 4" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
-              alt="Quality education - Goal 4"
-              id="goal-4"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-4">
+    <div class="container">
+        <div class="row">
             
-              Indicator 4.3.a
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/4/" aria-label=" 4" title=" 4">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
+                        alt="Quality education - Goal 4"
+                        id="goal-4"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Participation in education and training</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 4.3.a
+                        
+                        <span class="lead-copy">Participation in education and training</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-4" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_4-3-a'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Participation in education and training"
   data-charttitles="null"
-  data-chartsubtitle="Proportion of the population aged 25 to 64"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Participation in continuing education&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:65,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;xValue&quot;:16,&quot;yValue&quot;:65,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#c5192d&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:15.9,&quot;yValue&quot;:60.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;65&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -695,62 +685,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -763,12 +751,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Participation in education and training</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Proportion of the population aged 25 to 64</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Participation in education and training
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -783,51 +771,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Measures that include attendance at general and vocational schools and universities as well as participation in general or vocational training courses in the form of courses, seminars, conferences or private tuition.<br>• The 2007, 2011, 2016 and 2022 data are based on the results of the AES.<br>• AES: Adult Education Survey.<br>• The 2010, 2012, 2014, 2018 and 2020 data are based on a special evaluation and are not publicly available.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -859,51 +838,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Measures that include attendance at general and vocational schools and universities as well as participation in general or vocational training courses in the form of courses, seminars, conferences or private tuition.<br>• The 2007, 2011, 2016 and 2022 data are based on the results of the AES.<br>• AES: Adult Education Survey.<br>• The 2010, 2012, 2014, 2018 and 2020 data are based on a special evaluation and are not publicly available.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -991,197 +961,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the proportion of the population aged 25 to 64 (in %) who have participated in formal or non-formal education or training in the 12 months prior to the survey. Formal education and training is defined as education provided through the system of schools, colleges, universities and other formal educational institutions. Non-formal education and training includes all organised and sustained learning activities that are not part of formal education.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Participation in education and training</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the proportion of the population aged 25 to 64 (in %) who have participated in formal or non-formal education or training in the 12 months prior to the survey. Formal education and training is defined as education provided through the system of schools, colleges, universities and other formal educational institutions. Non-formal education and training includes all organised and sustained learning activities that are not part of formal education.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Continuing education is important in view of the changes in the economy, the labour market and society. With its National Continuing Education Strategy, the German government has already set itself the goal of attracting more employees and companies to continuing education and training in 2022.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Continuing education is important in view of the changes in the economy, the labour market and society. With its National Continuing Education Strategy, the German government has already set itself the goal of attracting more employees and companies to continuing education and training in 2022.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Increase to 65% by 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Increase to 65% by 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Target with specific target value</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Target with specific target value</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>Participation in education and training should be increased to at least 65% by 2030.<br />• According to the target formulation, the six-year average trend – despite a slight deterioration in 2022 – shows an upward movement. If this trend continues, the politically defined target would already be achieved by 2027. Indicator 4.3.a is therefore assessed as <b>sun</b> for 2022.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="If the trend from 2022&nbsp;had continued, the target value would have been reached or missed by less than 5% of the difference between the target value and the value at that time." alt="Weathersymbol: Sun" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>Participation in education and training should be increased to at least 65% by 2030.<br />• According to the target formulation, the six-year average trend – despite a slight deterioration in 2022 – shows an upward movement. If this trend continues, the politically defined target would already be achieved by 2027. Indicator 4.3.a is therefore assessed as <b>sun</b> for 2022.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="If the trend from 2022&nbsp;had continued, the target value would have been reached or missed by less than 5% of the difference between the target value and the value at that time." alt="Weathersymbol: Sun" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1967,20 +1887,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1997,25 +1922,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #c5192d; font-size: large">4.3.a Participation in education and training</b><br /><br />The indicator measures the proportion of the population aged 25&nbsp;to 64&nbsp;who participated in formal or non-formal education or training activities in the twelve months prior to the survey. Formal education includes educational activities in schools, colleges and universities that follow a defined curriculum, lead to a qualification recognised in the national qualification framework such as the Abitur, Bachelor's or Master's degree, and last at least six months. Non-formal education refers to organised learning activities outside the formal education system, such as vocational training, workshops or online courses, which impart specific skills or knowledge but do not lead to a formal qualification.<br /><br />The data for the indicator is sourced from the Adult Education Survey (AES), a Europe-wide coordinated survey that captures the continuing education behaviour of the adult population. It records the extent to which adults participate in formal or non-formal learning activities, the types of education or training they pursue, and their reasons for participating or not participating in further education. The survey is mandatory for all EU member states and is conducted every six years. In the intervening years, national surveys are conducted in Germany, which from 2025&nbsp;onwards will take place every three years (previously every two years).<br /><br />Since the first survey in 2007, the share of 25- to 64-year-olds participating in further education has steadily increased from 45% to 62% in 2020. Since 2016, the participation rates of men and women in this age group have been nearly identical. The most recent survey in 2022&nbsp;recorded a slight decline to 60%, which may be linked to the COVID-19&nbsp;pandemic and associated restrictions, such as the absence of in-person courses. A similar decline was also observed in other surveys related to continuing education. Compared to the EU average of 46.6%, Germany remains well above the European benchmark.<br /><br />Non-formal education or training accounted for the vast majority of the indicator value. In 2022, 57.8% of respondents reported participating in such activities, while only 7.4% were engaged in formal education. The total exceeds the overall indicator value because 5.2% of respondents participated in both formal education and non-formal learning activities.<br /><br />Among the non-formal education and training courses undertaken, the subject area <i>Business, Administration and Law</i> was the most represented at 25.4%, followed by <i>Services</i> (18.9%), <i>Health and Welfare</i> (14.3%), and <i>Information and Communication Technologies</i> (14.0%).<br /><br />An analysis of the results by age group reveals that participation in further education significantly declines with age. While 70.5% of those aged 25&nbsp;to 34&nbsp;participated in education or training, the figures dropped to 61.8% for those aged 35&nbsp;to 44, 60.1% for those aged 45&nbsp;to 54, and 51.5% for those aged 55&nbsp;to 64.<br /><br />The indicator makes no distinction regarding the nature of the education or training undertaken. For example, Master's degree programmes are counted in the same way as one-off short workshops attended purely out of personal interest. As a result, the indicator provides a good overall picture of the quantitative scope of participation in education and training but does not allow conclusions to be drawn about the duration or quality of the activities undertaken.<br /><br />Despite the recent decline, the average trend over the past years has been positive, suggesting that the politically set target of 65% participation in education and training may be achievable by 2027, provided the recent average trend continues.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #c5192d; font-size: large">4.3.a Participation in education and training</b><br /><br />The indicator measures the proportion of the population aged 25&nbsp;to 64&nbsp;who participated in formal or non-formal education or training activities in the twelve months prior to the survey. Formal education includes educational activities in schools, colleges and universities that follow a defined curriculum, lead to a qualification recognised in the national qualification framework such as the Abitur, Bachelor's or Master's degree, and last at least six months. Non-formal education refers to organised learning activities outside the formal education system, such as vocational training, workshops or online courses, which impart specific skills or knowledge but do not lead to a formal qualification.<br /><br />The data for the indicator is sourced from the Adult Education Survey (AES), a Europe-wide coordinated survey that captures the continuing education behaviour of the adult population. It records the extent to which adults participate in formal or non-formal learning activities, the types of education or training they pursue, and their reasons for participating or not participating in further education. The survey is mandatory for all EU member states and is conducted every six years. In the intervening years, national surveys are conducted in Germany, which from 2025&nbsp;onwards will take place every three years (previously every two years).<br /><br />Since the first survey in 2007, the share of 25- to 64-year-olds participating in further education has steadily increased from 45% to 62% in 2020. Since 2016, the participation rates of men and women in this age group have been nearly identical. The most recent survey in 2022&nbsp;recorded a slight decline to 60%, which may be linked to the COVID-19&nbsp;pandemic and associated restrictions, such as the absence of in-person courses. A similar decline was also observed in other surveys related to continuing education. Compared to the EU average of 46.6%, Germany remains well above the European benchmark.<br /><br />Non-formal education or training accounted for the vast majority of the indicator value. In 2022, 57.8% of respondents reported participating in such activities, while only 7.4% were engaged in formal education. The total exceeds the overall indicator value because 5.2% of respondents participated in both formal education and non-formal learning activities.<br /><br />Among the non-formal education and training courses undertaken, the subject area <i>Business, Administration and Law</i> was the most represented at 25.4%, followed by <i>Services</i> (18.9%), <i>Health and Welfare</i> (14.3%), and <i>Information and Communication Technologies</i> (14.0%).<br /><br />An analysis of the results by age group reveals that participation in further education significantly declines with age. While 70.5% of those aged 25&nbsp;to 34&nbsp;participated in education or training, the figures dropped to 61.8% for those aged 35&nbsp;to 44, 60.1% for those aged 45&nbsp;to 54, and 51.5% for those aged 55&nbsp;to 64.<br /><br />The indicator makes no distinction regarding the nature of the education or training undertaken. For example, Master's degree programmes are counted in the same way as one-off short workshops attended purely out of personal interest. As a result, the indicator provides a good overall picture of the quantitative scope of participation in education and training but does not allow conclusions to be drawn about the duration or quality of the activities undertaken.<br /><br />Despite the recent decline, the average trend over the past years has been positive, suggesting that the politically set target of 65% participation in education and training may be achievable by 2027, provided the recent average trend continues.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2809,19 +2729,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2835,8 +2760,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3573,151 +3498,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/EN/Themes/Society-Environment/Education-Research-Culture/Continuing-Education/_node.html" target="_blank">
+                Continuing education and training <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/EN/Themes/Society-Environment/Education-Research-Culture/Continuing-Education/_node.html" target="_blank">
-                    Continuing education and training <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3783,6 +3667,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3794,8 +3679,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4544,151 +4429,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/eurostat.png" alt="Statistical Office of the European Union" title=" Click here to visit the homepage of the organizationStatistical Office of the European Union" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/eurostat.png" alt="Statistical Office of the European Union" title=" Click here to visit the homepage of the organizationStatistical Office of the European Union" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://ec.europa.eu/eurostat/databrowser/view/trng_aes_100/default/table?category=educ.educ_part.trng.trng_aes_12m.trng_aes_12m0" target="_blank">
+                Participation rate in education and training by sex - Eurostat table [trng_aes_100] <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://ec.europa.eu/eurostat/databrowser/view/trng_aes_100/default/table?category=educ.educ_part.trng.trng_aes_12m.trng_aes_12m0" target="_blank" onclick="return confirm_alert('Eurostat', 'En');">
-                      Participation rate in education and training by sex - Eurostat table [trng_aes_100] <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4742,6 +4586,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4753,8 +4598,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5515,92 +5360,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmbfsfj.png" alt="Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth" title=" Click here to visit the homepage of the organizationFederal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bmbfsfj.png" alt="Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth" title=" Click here to visit the homepage of the organizationFederal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmfsfj.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth', 'En')">Federal Ministry of Education, Family Affairs, Senior Citizens, Women and Youth</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5644,6 +5477,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5651,11 +5485,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -5666,18 +5500,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -5691,12 +5525,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

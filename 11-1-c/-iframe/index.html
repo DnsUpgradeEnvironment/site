@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-11">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/11/" aria-label=" 11" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png"
-              alt="Nachhaltige Städte und Gemeinden - Ziel 11"
-              id="goal-11"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-11">
+    <div class="container">
+        <div class="row">
             
-              Indikator 11.1.c
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/11/" aria-label=" 11" title=" 11">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/11.png"
+                        alt="Nachhaltige Städte und Gemeinden - Ziel 11"
+                        id="goal-11"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Siedlungsdichte</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 11.1.c
+                        
+                        <span class="lead-copy">Siedlungsdichte</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-11" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_11-1-c'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Einwohnerinnen und Einwohner pro Quadratkilometer Siedlungs- und Verkehrsfläche"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Siedlungsdichte&quot;},{&quot;field&quot;:&quot;Verstädterungsgrad&quot;,&quot;value&quot;:&quot;Nicht-ländliche Gebiete&quot;},{&quot;field&quot;:&quot;Verstädterungsgrad&quot;,&quot;value&quot;:&quot;Ländliche Gebiete&quot;}]"
   data-graphlimits="[{&quot;unit&quot;:&quot;2000 = 100&quot;,&quot;minimum&quot;:70.0,&quot;maximum&quot;:110.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:15.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;2000 = 100&quot;,&quot;Einwohner/-innen pro km² Siedlungs- und Verkehrsfläche&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;degree of urbanisation&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Nicht-ländliche Gebiete&quot;,&quot;Ländliche Gebiete&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Verstädterungsgrad&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;unit&quot;:&quot;2000 = 100&quot;,&quot;step&quot;:5.0},{&quot;unit&quot;:&quot;Einwohner/-innen pro km² Siedlungs- und Verkehrsfläche&quot;,&quot;step&quot;:500.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1193,62 +1183,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1261,12 +1249,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Einwohnerinnen und Einwohner pro Quadratkilometer Siedlungs- und Verkehrsfläche</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Einwohnerinnen und Einwohner pro Quadratkilometer Siedlungs- und Verkehrsfläche
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1281,57 +1269,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>10.03.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Ab dem Berichtsjahr 2016 basiert die amtliche Flächenerhebung auf dem Amtlichen Liegenschaftskataster-Informationssystem (ALKIS).<br>• Mit der Umstellung der Dokumentation zur Modellierung der Geoinformationen des amtlichen Vermessungswesens von Version 6.0.1 auf 7.1.2 im Jahr 2023 wurde das Nutzungsartenverzeichnis nochmals erweitert. Dadurch ist der Vergleich zu den Vorjahren beeinträchtigt und die Berechnung von Veränderungen erschwert. Die nach der Umstellung ermittelte Siedlungs- und Verkehrsfläche enthält weitgehend dieselben Nutzungsarten wie zuvor. <br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Die Angaben zu den Jahreswerten und dem geleitenden Durchschnitt für die Jahre 2020 bis 2022 sind korrigiert worden. Für den genannten Zeitraum wurden im größeren Umfang von der Vermessungsverwaltung Umklassifizierungen von Vegetations- zu Verkehrsflächen vorgenommen, die keiner Veränderung der Flächennutzung  in der Realität entsprechen. Die vorliegenden Ergebnisse sind um diese Umklassifizierungen bereinigt.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1363,57 +1339,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>10.03.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Ab dem Berichtsjahr 2016 basiert die amtliche Flächenerhebung auf dem Amtlichen Liegenschaftskataster-Informationssystem (ALKIS).<br>• Mit der Umstellung der Dokumentation zur Modellierung der Geoinformationen des amtlichen Vermessungswesens von Version 6.0.1 auf 7.1.2 im Jahr 2023 wurde das Nutzungsartenverzeichnis nochmals erweitert. Dadurch ist der Vergleich zu den Vorjahren beeinträchtigt und die Berechnung von Veränderungen erschwert. Die nach der Umstellung ermittelte Siedlungs- und Verkehrsfläche enthält weitgehend dieselben Nutzungsarten wie zuvor. <br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Die Angaben zu den Jahreswerten und dem geleitenden Durchschnitt für die Jahre 2020 bis 2022 sind korrigiert worden. Für den genannten Zeitraum wurden im größeren Umfang von der Vermessungsverwaltung Umklassifizierungen von Vegetations- zu Verkehrsflächen vorgenommen, die keiner Veränderung der Flächennutzung  in der Realität entsprechen. Die vorliegenden Ergebnisse sind um diese Umklassifizierungen bereinigt.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1501,197 +1465,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die Entwicklung der Bevölkerung pro Quadratkilometer Siedlungs- und Verkehrsfläche im Vergleich zum Basisjahr 2000 dar.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Siedlungsdichte</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die Entwicklung der Bevölkerung pro Quadratkilometer Siedlungs- und Verkehrsfläche im Vergleich zum Basisjahr 2000 dar.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Der Indikator gibt Hinweise auf die Effizienz der Siedlungsflächennutzung. Er soll die Auswirkungen von flächensparenden Maßnahmen beim Neubau und bei der Innenentwicklung, wie der Reduzierung von Wohnungs- und Gewerbeleerstand sowie Nachverdichtungen und Erhöhung der Baudichte widerspiegeln.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Der Indikator gibt Hinweise auf die Effizienz der Siedlungsflächennutzung. Er soll die Auswirkungen von flächensparenden Maßnahmen beim Neubau und bei der Innenentwicklung, wie der Reduzierung von Wohnungs- und Gewerbeleerstand sowie Nachverdichtungen und Erhöhung der Baudichte widerspiegeln.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Keine Verringerung der Siedlungsdichte</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Keine Verringerung der Siedlungsdichte</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Anzahl der Einwohnerinnen und Einwohner pro Quadratkilometer Siedlungs- und Verkehrsfläche soll gesteigert werden.<br />• Da der Wert des Indikators 11.1.c im Jahr 2023 gesunken, im Durchschnitt der letzten sechs Jahre jedoch leicht gestiegen ist, wird der Indikator 11.1.c für das Jahr 2023 mit <b>leicht bewölkt</b> bewertet.<br />• Datenstand bei Bewertung: 10.03.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="Die durchschnittliche Entwicklung zielte in 2023&nbsp;in die richtige Richtung, im vorangegangenen Jahr ergab sich jedoch eine Entwicklung in die falsche Richtung oder gar keine Veränderung." alt="Wettersymbol Leicht bewölkt" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Anzahl der Einwohnerinnen und Einwohner pro Quadratkilometer Siedlungs- und Verkehrsfläche soll gesteigert werden.<br />• Da der Wert des Indikators 11.1.c im Jahr 2023 gesunken, im Durchschnitt der letzten sechs Jahre jedoch leicht gestiegen ist, wird der Indikator 11.1.c für das Jahr 2023 mit <b>leicht bewölkt</b> bewertet.<br />• Datenstand bei Bewertung: 10.03.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="Die durchschnittliche Entwicklung zielte in 2023&nbsp;in die richtige Richtung, im vorangegangenen Jahr ergab sich jedoch eine Entwicklung in die falsche Richtung oder gar keine Veränderung." alt="Wettersymbol Leicht bewölkt" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2477,20 +2391,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2507,25 +2426,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #fd9d24; font-size: large">11.1.c Siedlungsdichte</b><br /><br />Die Siedlungsdichte beschreibt das Verhältnis der Einwohnerzahl zur Siedlungs- und Verkehrsfläche (SuV) und unterscheidet sich damit von der Bevölkerungsdichte, die sich auf die Gesamtfläche des Bundesgebiets bezieht. Zur Siedlungsfläche zählen neben Wohnbauflächen auch Flächen mit speziellen Nutzungen wie Krankenhäuser, Schulen, Industrie- und Gewerbegebiete, Mischgebiete sowie Sport-, Freizeit- und Erholungsflächen. Sowohl Veränderungen der Einwohnerzahl als auch Ausdehnungen der SuV wirken sich auf die Siedlungsdichte aus.<br /><br />Die Siedlungsdichte variiert deutlich zwischen <i>ländlichen</i> und <i>nicht-ländlichen</i> Gebieten. Die Einteilung erfolgt nach der Typisierung des Thünen-Instituts, das Kreise und kreisfreie Städte anhand von Kriterien wie Siedlungsdichte, Anteil land- und forstwirtschaftlich genutzter Flächen sowie Erreichbarkeit größerer Zentren klassifiziert. Da die Definition von <i>ländlich</i> auch die Siedlungsdichte berücksichtigt, sind Unterschiede im Indikator zwischen ländlichen und nicht-ländlichen Gebieten teilweise durch die Klassifikation selbst bedingt. So kann ein Anstieg der Siedlungsdichte in einem ländlichen Gebiet dazu führen, dass dieses künftig als nicht-ländlich eingestuft wird.<br /><br />Zwischen 2000&nbsp;und 2011&nbsp;nahm die Siedlungsdichte in beiden Gebietstypen ab&nbsp;–&nbsp;in ländlichen Gebieten um 12&nbsp;%, in nicht-ländlichen um 5&nbsp;%. Seit 2011&nbsp;liegt der Indikatorwert für Deutschland insgesamt relativ konstant bei etwa 1&nbsp;670&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV, was etwa 90&nbsp;% des Werts von 2000&nbsp;entspricht. In nicht-ländlichen Gebieten steigt die Siedlungsdichte seit 2011&nbsp;wieder an und erreichte 2023&nbsp;mit 3&nbsp;384&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV nahezu das Niveau von 2000.<br /><br />Ein Vergleich der Entwicklungen von SuV und Bevölkerungszahlen zeigt unterschiedliche Trends der beiden Einflussfaktoren: Während die SuV seit 2000&nbsp;kontinuierlich gewachsen ist, ging die Bevölkerung zwischen 2000&nbsp;und 2011&nbsp;zunächst zurück, was den Rückgang der Siedlungsdichte erklärt. Seit 2011&nbsp;steigen die Bevölkerungszahlen wieder, weshalb der Indikator seitdem weitgehend konstant geblieben ist. Der Anteil der SuV an der jeweiligen Gesamtfläche liegt 2023&nbsp;in ländlichen Gebieten mit 12,3&nbsp;% deutlich unter dem in nicht-ländlichen Gebieten mit 36,8&nbsp;%. Der Flächenzuwachs der SuV betrifft beide Gebietstypen, fiel jedoch in ländlichen Gebieten mit 17,4&nbsp;% (2023&nbsp;im Vergleich zu 2000) deutlich stärker aus als in nicht-ländlichen mit 9,3&nbsp;%. Gleichzeitig war der Bevölkerungsanstieg seit 2011&nbsp;in ländlichen Gebieten schwächer, weshalb die Siedlungsdichte dort leicht zurückging.<br /><br />Nach der Definition des Thünen-Instituts lebten 2023&nbsp;rund 43&nbsp;% der Bevölkerung in nicht-ländlichen und 57&nbsp;% in ländlichen Gebieten. Gleichzeitig entfielen rund 80&nbsp;% der Siedlungs- und Verkehrsfläche auf ländliche Gebiete. Das politisch festgelegte Ziel sieht vor, die Anzahl der Einwohnerinnen und Einwohner pro Quadratkilometer SuV zu erhöhen. Aufgrund der stagnierenden Entwicklung in den letzten Jahren wird dieses Ziel jedoch nicht oder nur in geringem Maße erreicht.<br /><br />Datengrundlage sind die Bevölkerungsstatistik sowie die Flächenerhebung nach Art der tatsächlichen Nutzung (amtliche Flächenstatistik) des Statistischen Bundesamts. Die Länder harmonisieren ihre Liegenschaftskataster, was in den letzten Jahren zu Neuzuordnungen von Flächen führte&nbsp;–&nbsp;auch ohne tatsächliche Nutzungsänderungen. Im Jahr 2016&nbsp;wurde ein neuer Nutzungsartenkatalog eingeführt, was Auswirkungen auf die amtliche Flächenstatistik hatte und die Vergleichbarkeit mit den Vorjahren erschwert. Um dennoch aussagekräftige Zeitvergleiche zu ermöglichen, wurden die Daten auf Basis des Zensus 2011&nbsp;und der Flächenerhebung 2016&nbsp;rückgerechnet.<br /><br />Eine erneute Erweiterung des Nutzungsartenverzeichnisses erfolgte 2023&nbsp;mit der Einführung einer neuen Modellierung der Geoinformationen des amtlichen Vermessungswesens (GEOInfoDok), die mit geänderten Modellierungskriterien für die tatsächliche Nutzung einherging. Um Beeinträchtigungen des Flächenindikators durch diesen Methodenwechsel möglichst gering zu halten, werden Effekte, die keiner realen Veränderung entsprechen, aus der Berechnung herausgenommen. Da die Migration zur neuen GEOInfoDok in den Landesvermessungsverwaltungen zu unterschiedlichen Zeitpunkten abgeschlossen wird, können diese Effekte je nach Bundesland zu unterschiedlichen Zeitpunkten auftreten und sich über mehrere Jahre hinweg auf die Ergebnisse auswirken. Mittelfristig wird der Methodenwechsel zu deutlichen Qualitätsverbesserungen in der Flächenstatistik führen.<br /><br />Der Indikator weist inhaltliche Querbezüge zum Indikator <a href="https://dns-indikatoren.de/11-1-a">11.1.a</a> <i>Anstieg der Siedlungs- und Verkehrsfläche</i> auf.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #fd9d24; font-size: large">11.1.c Siedlungsdichte</b><br /><br />Die Siedlungsdichte beschreibt das Verhältnis der Einwohnerzahl zur Siedlungs- und Verkehrsfläche (SuV) und unterscheidet sich damit von der Bevölkerungsdichte, die sich auf die Gesamtfläche des Bundesgebiets bezieht. Zur Siedlungsfläche zählen neben Wohnbauflächen auch Flächen mit speziellen Nutzungen wie Krankenhäuser, Schulen, Industrie- und Gewerbegebiete, Mischgebiete sowie Sport-, Freizeit- und Erholungsflächen. Sowohl Veränderungen der Einwohnerzahl als auch Ausdehnungen der SuV wirken sich auf die Siedlungsdichte aus.<br /><br />Die Siedlungsdichte variiert deutlich zwischen <i>ländlichen</i> und <i>nicht-ländlichen</i> Gebieten. Die Einteilung erfolgt nach der Typisierung des Thünen-Instituts, das Kreise und kreisfreie Städte anhand von Kriterien wie Siedlungsdichte, Anteil land- und forstwirtschaftlich genutzter Flächen sowie Erreichbarkeit größerer Zentren klassifiziert. Da die Definition von <i>ländlich</i> auch die Siedlungsdichte berücksichtigt, sind Unterschiede im Indikator zwischen ländlichen und nicht-ländlichen Gebieten teilweise durch die Klassifikation selbst bedingt. So kann ein Anstieg der Siedlungsdichte in einem ländlichen Gebiet dazu führen, dass dieses künftig als nicht-ländlich eingestuft wird.<br /><br />Zwischen 2000&nbsp;und 2011&nbsp;nahm die Siedlungsdichte in beiden Gebietstypen ab&nbsp;–&nbsp;in ländlichen Gebieten um 12&nbsp;%, in nicht-ländlichen um 5&nbsp;%. Seit 2011&nbsp;liegt der Indikatorwert für Deutschland insgesamt relativ konstant bei etwa 1&nbsp;670&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV, was etwa 90&nbsp;% des Werts von 2000&nbsp;entspricht. In nicht-ländlichen Gebieten steigt die Siedlungsdichte seit 2011&nbsp;wieder an und erreichte 2023&nbsp;mit 3&nbsp;384&nbsp;Einwohnerinnen und Einwohnern pro Quadratkilometer SuV nahezu das Niveau von 2000.<br /><br />Ein Vergleich der Entwicklungen von SuV und Bevölkerungszahlen zeigt unterschiedliche Trends der beiden Einflussfaktoren: Während die SuV seit 2000&nbsp;kontinuierlich gewachsen ist, ging die Bevölkerung zwischen 2000&nbsp;und 2011&nbsp;zunächst zurück, was den Rückgang der Siedlungsdichte erklärt. Seit 2011&nbsp;steigen die Bevölkerungszahlen wieder, weshalb der Indikator seitdem weitgehend konstant geblieben ist. Der Anteil der SuV an der jeweiligen Gesamtfläche liegt 2023&nbsp;in ländlichen Gebieten mit 12,3&nbsp;% deutlich unter dem in nicht-ländlichen Gebieten mit 36,8&nbsp;%. Der Flächenzuwachs der SuV betrifft beide Gebietstypen, fiel jedoch in ländlichen Gebieten mit 17,4&nbsp;% (2023&nbsp;im Vergleich zu 2000) deutlich stärker aus als in nicht-ländlichen mit 9,3&nbsp;%. Gleichzeitig war der Bevölkerungsanstieg seit 2011&nbsp;in ländlichen Gebieten schwächer, weshalb die Siedlungsdichte dort leicht zurückging.<br /><br />Nach der Definition des Thünen-Instituts lebten 2023&nbsp;rund 43&nbsp;% der Bevölkerung in nicht-ländlichen und 57&nbsp;% in ländlichen Gebieten. Gleichzeitig entfielen rund 80&nbsp;% der Siedlungs- und Verkehrsfläche auf ländliche Gebiete. Das politisch festgelegte Ziel sieht vor, die Anzahl der Einwohnerinnen und Einwohner pro Quadratkilometer SuV zu erhöhen. Aufgrund der stagnierenden Entwicklung in den letzten Jahren wird dieses Ziel jedoch nicht oder nur in geringem Maße erreicht.<br /><br />Datengrundlage sind die Bevölkerungsstatistik sowie die Flächenerhebung nach Art der tatsächlichen Nutzung (amtliche Flächenstatistik) des Statistischen Bundesamts. Die Länder harmonisieren ihre Liegenschaftskataster, was in den letzten Jahren zu Neuzuordnungen von Flächen führte&nbsp;–&nbsp;auch ohne tatsächliche Nutzungsänderungen. Im Jahr 2016&nbsp;wurde ein neuer Nutzungsartenkatalog eingeführt, was Auswirkungen auf die amtliche Flächenstatistik hatte und die Vergleichbarkeit mit den Vorjahren erschwert. Um dennoch aussagekräftige Zeitvergleiche zu ermöglichen, wurden die Daten auf Basis des Zensus 2011&nbsp;und der Flächenerhebung 2016&nbsp;rückgerechnet.<br /><br />Eine erneute Erweiterung des Nutzungsartenverzeichnisses erfolgte 2023&nbsp;mit der Einführung einer neuen Modellierung der Geoinformationen des amtlichen Vermessungswesens (GEOInfoDok), die mit geänderten Modellierungskriterien für die tatsächliche Nutzung einherging. Um Beeinträchtigungen des Flächenindikators durch diesen Methodenwechsel möglichst gering zu halten, werden Effekte, die keiner realen Veränderung entsprechen, aus der Berechnung herausgenommen. Da die Migration zur neuen GEOInfoDok in den Landesvermessungsverwaltungen zu unterschiedlichen Zeitpunkten abgeschlossen wird, können diese Effekte je nach Bundesland zu unterschiedlichen Zeitpunkten auftreten und sich über mehrere Jahre hinweg auf die Ergebnisse auswirken. Mittelfristig wird der Methodenwechsel zu deutlichen Qualitätsverbesserungen in der Flächenstatistik führen.<br /><br />Der Indikator weist inhaltliche Querbezüge zum Indikator <a href="https://dns-indikatoren.de/11-1-a">11.1.a</a> <i>Anstieg der Siedlungs- und Verkehrsfläche</i> auf.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3319,19 +3233,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3345,8 +3264,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4083,257 +4002,150 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=33111-02-01-4&bypass=true&levelindex=1&levelid=1713517838976#abreadcrumb" target="_blank">
+                Siedlungsfläche <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=33111-02-01-4&bypass=true&levelindex=1&levelid=1713517838976#abreadcrumb" target="_blank">
-                    Siedlungsfläche <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=33111-03-01-4&bypass=true&levelindex=1&levelid=1713517838976#abreadcrumb" target="_blank">
+                Verkehrsfläche <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=33111-03-01-4&bypass=true&levelindex=1&levelid=1713517838976#abreadcrumb" target="_blank">
-                    Verkehrsfläche <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=12411-01-01-4&bypass=true&levelindex=1&levelid=1713517974290#abreadcrumb" target="_blank">
+                Bevölkerung <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.regionalstatistik.de/genesis//online?operation=table&code=12411-01-01-4&bypass=true&levelindex=1&levelid=1713517974290#abreadcrumb" target="_blank">
-                    Bevölkerung <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
+      
+      
       
         
           
@@ -4399,6 +4211,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4406,11 +4219,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4421,18 +4234,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4446,12 +4259,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

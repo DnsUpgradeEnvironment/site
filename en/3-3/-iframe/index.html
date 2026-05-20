@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/3/" aria-label=" 3" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png"
-              alt="Good health and well-being - Goal 3"
-              id="goal-3"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-3">
+    <div class="container">
+        <div class="row">
             
-              Indicator 3.3
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/3/" aria-label=" 3" title=" 3">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/3.png"
+                        alt="Good health and well-being - Goal 3"
+                        id="goal-3"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Proportion of countries supported by Germany in pandemic prevention, preparedness, and response (PPR) that have made progress in the Global Health Security Index (GHSI), relative to the total number of countries supported by Germany in the area of PPR</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 3.3
+                        
+                        <span class="lead-copy">Proportion of countries supported by Germany in pandemic prevention, preparedness, and response (PPR) that have made progress in the Global Health Security Index (GHSI), relative to the total number of countries supported by Germany in the area of PPR</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-3" role="main">
   
 
@@ -310,21 +310,16 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_3-3'
   data-id="3-3"
   data-country="Deutschland"
-  data-charttitle="Expenditure and commitments for global pandemic prevention and response"
+  data-charttitle="Expenditure and commitments for global pandemic prevention and response!"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -332,25 +327,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Germany’s contribution to global pandemic prevention and response&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Separate amount devoted to curbing the COVID-19 pandemic&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation="Time series"
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:300.5,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:8.685,&quot;xMax&quot;:9.315,&quot;yMin&quot;:0,&quot;yMax&quot;:300.5,&quot;borderColor&quot;:&quot;#2d5f21&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:9,&quot;yValue&quot;:400.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;300,5&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Million euros&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Germany’s contribution to global pandemic prevention and response&quot;,&quot;Separate amount devoted to curbing the COVID-19 pandemic&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:100.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -398,62 +388,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -466,12 +454,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Expenditure and commitments for global pandemic prevention and response</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Expenditure and commitments for global pandemic prevention and response!
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -486,54 +474,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a>, <a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a>, <a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a>, <a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a>, <a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• All data provisional.<br>• The data is based on a special evaluation and is not publicly available.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -565,54 +544,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a>, <a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a>, <a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a>, <a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a>, <a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a>, <a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• All data provisional.<br>• The data is based on a special evaluation and is not publicly available.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -700,149 +670,127 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p style="opacity: 0.5">The indicator covers expenditure and pledges made by Germany for global pandemic prevention and response programmes. It excludes programmes designed to contain the COVID-19&nbsp;pandemic. To make the indicator more informative, its impact will be assessed by the time of the next edition of the German National Sustainability Strategy with a view to developing it into an output indicator. </p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Proportion of countries supported by Germany in pandemic prevention, preparedness, and response (PPR) that have made progress in the Global Health Security Index (GHSI), relative to the total number of countries supported by Germany in the area of PPR</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p style="opacity: 0.5">The indicator covers expenditure and pledges made by Germany for global pandemic prevention and response programmes. It excludes programmes designed to contain the COVID-19&nbsp;pandemic. To make the indicator more informative, its impact will be assessed by the time of the next edition of the German National Sustainability Strategy with a view to developing it into an output indicator. </p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p style="opacity: 0.5">The COVID-19&nbsp;pandemic has shown what far-reaching effects cross-border health hazards have on people and economies throughout the world. Accordingly, supporting pandemic prevention and response programmes is a major contribution to global health, particularly in countries of the Global South. The aim is therefore to increase Germany’s contribution to global pandemic prevention and response substantially from its 2019&nbsp;level in the period up to 2030. </p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p style="opacity: 0.5">The COVID-19&nbsp;pandemic has shown what far-reaching effects cross-border health hazards have on people and economies throughout the world. Accordingly, supporting pandemic prevention and response programmes is a major contribution to global health, particularly in countries of the Global South. The aim is therefore to increase Germany’s contribution to global pandemic prevention and response substantially from its 2019&nbsp;level in the period up to 2030. </p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
-        
-          
       
-        
-          
       
         
           
       
+      
+      
         
           
       
-        
       
-
-      
-      
-
-
       
         
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p><a href="https://dns-indikatoren.de/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="If the trend from 2021 had continued, the target value would have been reached or missed by less than 5% of the difference between the target value and the value at that time." alt="Weathersymbol: Sun" /></a></p>
+          
+      
+      
+      
+        
+          
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p><a href="https://dns-indikatoren.de/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="If the trend from 2021 had continued, the target value would have been reached or missed by less than 5% of the difference between the target value and the value at that time." alt="Weathersymbol: Sun" /></a></p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -1626,20 +1574,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1656,25 +1609,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p style="opacity: 0.5"><b>Text from the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indicator Report 2022&nbsp;</a></b><br /><br />The data for the indicator come from special analyses of the relevant budget headings and commitment appropriations from the Federal Foreign Office (AA), the Federal Ministry of Education and Research (BMBF), the Federal Ministry of Health (BMG) and the Federal Ministry for Economic Cooperation and Development (BMZ). Programmes are taken into account in the analyses whose objectives fall directly under the heading of pandemic prevention and response or who are primarily intended to enhance relevant capabilities in the field of health care. The programmes cover matters such as the pandemic prevention and response functions of the World Health Organization (WHO), sanitation, One Health (that is, in interdisciplinary cooperation between human and veterinary medicine and the environmental sector), vaccination infrastructure and research and development, both at home and abroad, in so far as the R&amp;D findings and innovations also benefit the countries of the Global South. <br /><br />Additionally, programmes launched in response to the COVID-19&nbsp;pandemic have also been taken into account. The latter include among others WHO programmes and activities, humanitarian aid, vaccine development, crisis response and emergency assistance and loans to help health services in countries of the Global South to respond to the crisis. <br /><br />As regards the figures, it should be noted that it is not possible to draw hard and fast lines between the content of programmes, since the indicator field is closely interlinked with numerous other areas of the health system. The indicator therefore takes account of a range of programmes, such as Germany’s contribution to the WHO to support its emergency programme and to provide flexible initial funding for crisis response measures through the Contingency Fund for Emergencies, support for a vaccination programme for the reduction of child mortality in the East African Community, improvement of drinking water supply and sanitation in Burkina Faso and a biosecurity cooperation programme. Besides the thematic prioritisation, it should also be noted that some of the programmes are focused on general reinforcement of global coordination and organisational capacity and therefore do not exclusively benefit countries of the Global South.<br /><br />Nor can a precise line be drawn between preventive and reactive measures. Developing preventive capacity may, for example, enhance responsiveness to a pandemic situation, while reactive measures may contribute to capacity-building in the long term. To avoid a statistical outlier resulting from the response to the COVID-19&nbsp;pandemic, these expenditure items and pledges are not part of the indicators but are shown separately in the chart.<br /><br />The amounts of expenditure and pledges that are displayed, moreover, say nothing about the success of the programmes. The indicator represents Germany’s monetary contribution to pandemic prevention and response. A more extensive assessment would be needed to gauge the impact of that contribution. In view of the foregoing provisos, therefore, the recorded figures are not by any means a full reflection of the German expenditure and pledges that directly or indirectly influence the pandemic prevention and response effort.<br /><br />Between 2015&nbsp;and 2021, expenditure and pledges for pandemic prevention and response rose from EUR 147.9&nbsp;million to EUR 369.7&nbsp;million (provisional figure) and were thus &#8209; in line with the Federal Government's target &#8209; significantly above the 2019&nbsp;figure. The separately reported expenditures on COVID-19&nbsp;pandemic containment were 842.7&nbsp;million euros in 2021, higher than in the first year of the pandemic (743.7&nbsp;million euros).</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p style="opacity: 0.5"><b>Text from the <a href="https://dns-indikatoren.de/assets/Publikationen/Indikatorenberichte/2022.pdf">Indicator Report 2022&nbsp;</a></b><br /><br />The data for the indicator come from special analyses of the relevant budget headings and commitment appropriations from the Federal Foreign Office (AA), the Federal Ministry of Education and Research (BMBF), the Federal Ministry of Health (BMG) and the Federal Ministry for Economic Cooperation and Development (BMZ). Programmes are taken into account in the analyses whose objectives fall directly under the heading of pandemic prevention and response or who are primarily intended to enhance relevant capabilities in the field of health care. The programmes cover matters such as the pandemic prevention and response functions of the World Health Organization (WHO), sanitation, One Health (that is, in interdisciplinary cooperation between human and veterinary medicine and the environmental sector), vaccination infrastructure and research and development, both at home and abroad, in so far as the R&amp;D findings and innovations also benefit the countries of the Global South. <br /><br />Additionally, programmes launched in response to the COVID-19&nbsp;pandemic have also been taken into account. The latter include among others WHO programmes and activities, humanitarian aid, vaccine development, crisis response and emergency assistance and loans to help health services in countries of the Global South to respond to the crisis. <br /><br />As regards the figures, it should be noted that it is not possible to draw hard and fast lines between the content of programmes, since the indicator field is closely interlinked with numerous other areas of the health system. The indicator therefore takes account of a range of programmes, such as Germany’s contribution to the WHO to support its emergency programme and to provide flexible initial funding for crisis response measures through the Contingency Fund for Emergencies, support for a vaccination programme for the reduction of child mortality in the East African Community, improvement of drinking water supply and sanitation in Burkina Faso and a biosecurity cooperation programme. Besides the thematic prioritisation, it should also be noted that some of the programmes are focused on general reinforcement of global coordination and organisational capacity and therefore do not exclusively benefit countries of the Global South.<br /><br />Nor can a precise line be drawn between preventive and reactive measures. Developing preventive capacity may, for example, enhance responsiveness to a pandemic situation, while reactive measures may contribute to capacity-building in the long term. To avoid a statistical outlier resulting from the response to the COVID-19&nbsp;pandemic, these expenditure items and pledges are not part of the indicators but are shown separately in the chart.<br /><br />The amounts of expenditure and pledges that are displayed, moreover, say nothing about the success of the programmes. The indicator represents Germany’s monetary contribution to pandemic prevention and response. A more extensive assessment would be needed to gauge the impact of that contribution. In view of the foregoing provisos, therefore, the recorded figures are not by any means a full reflection of the German expenditure and pledges that directly or indirectly influence the pandemic prevention and response effort.<br /><br />Between 2015&nbsp;and 2021, expenditure and pledges for pandemic prevention and response rose from EUR 147.9&nbsp;million to EUR 369.7&nbsp;million (provisional figure) and were thus &#8209; in line with the Federal Government's target &#8209; significantly above the 2019&nbsp;figure. The separately reported expenditures on COVID-19&nbsp;pandemic containment were 842.7&nbsp;million euros in 2021, higher than in the first year of the pandemic (743.7&nbsp;million euros).</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2468,19 +2416,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2494,8 +2447,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3232,98 +3185,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/aa.png" alt="Federal Foreign Office" title=" Click here to visit the homepage of the organizationFederal Foreign Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/aa.png" alt="Federal Foreign Office" title=" Click here to visit the homepage of the organizationFederal Foreign Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.auswaertiges-amt.de/en" target="_blank" onclick="return confirm_alert('the Federal Foreign Office', 'En')">Federal Foreign Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3389,6 +3334,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3400,8 +3346,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4150,98 +4096,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmftr.png" alt="Federal Ministry of Research, Technology and Space" title=" Click here to visit the homepage of the organizationFederal Ministry of Research, Technology and Space" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmftr.png" alt="Federal Ministry of Research, Technology and Space" title=" Click here to visit the homepage of the organizationFederal Ministry of Research, Technology and Space" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmbf.de/bmbf/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Research, Technology and Space', 'En')">Federal Ministry of Research, Technology and Space</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4295,6 +4233,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4306,8 +4245,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5068,92 +5007,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmg.png" alt="Federal Ministry of Health" title=" Click here to visit the homepage of the organizationFederal Ministry of Health" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmg.png" alt="Federal Ministry of Health" title=" Click here to visit the homepage of the organizationFederal Ministry of Health" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bundesgesundheitsministerium.de/en/" target="_blank" onclick="return confirm_alert('the Federal Ministry of Health', 'En')">Federal Ministry of Health</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5197,6 +5124,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5208,8 +5136,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 4</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5980,92 +5908,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmz.png" alt="Federal Ministry of Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry of Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')"><img src="https://dns-indikatoren.de/public/OrgImgEn/bmz.png" alt="Federal Ministry of Economic Cooperation and Development" title=" Click here to visit the homepage of the organizationFederal Ministry of Economic Cooperation and Development" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/en" target="_blank" onclick="return confirm_alert('the Federal Ministry of Economic Cooperation and Development', 'En')">Federal Ministry of Economic Cooperation and Development</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -6099,6 +6015,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -6106,11 +6023,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -6121,18 +6038,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -6146,12 +6063,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

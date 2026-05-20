@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-4">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/4/" aria-label=" 4" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
-              alt="Quality education - Goal 4"
-              id="goal-4"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-4">
+    <div class="container">
+        <div class="row">
             
-              Indicator 4.2.a, b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/4/" aria-label=" 4" title=" 4">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/4.png"
+                        alt="Quality education - Goal 4"
+                        id="goal-4"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">All-day care for children</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 4.2.ab
+                        
+                        <span class="lead-copy">All-day care for children</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-4" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_4-2-ab'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Ganztagsbetreuung für Kinder"
   data-charttitles="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;title&quot;:&quot;All-day care for children&quot;},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;title&quot;:&quot;All-day care for children&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;title&quot;:&quot;a) 0 to 2-year-old children&quot;},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;title&quot;:&quot;b) 3 to 5-year-old children&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="null"
   data-graphlimits="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation="Type of care"
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;value&quot;:35,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;value&quot;:70,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:18.67,&quot;xMax&quot;:19.33,&quot;yMin&quot;:0,&quot;yMax&quot;:35,&quot;borderColor&quot;:&quot;#c5192d&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:18.67,&quot;xMax&quot;:19.33,&quot;yMin&quot;:0,&quot;yMax&quot;:70,&quot;borderColor&quot;:&quot;#c5192d&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;a) 0 to 2-year-olds&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:19,&quot;yValue&quot;:45.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;35&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;series&quot;:&quot;b) 3 to 5-year-olds&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:19,&quot;yValue&quot;:80.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;70&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) 0 to 2-year-olds&quot;,&quot;b) 3 to 5-year-olds&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;type of care&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Day care centres&quot;,&quot;Day care&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Type of care&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1231,62 +1221,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1299,12 +1287,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">All-day care for children</h4>
-          <h6 id="chart-heading" class="chart-subtitle">a) 0 to 2-year-old children</h6>
+          <h4 id="chart-heading" class="chart-title">
+            All-day care for children
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1319,57 +1307,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>26.09.2024</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          <dd>All-day childcare: Childcare for more than seven hours.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+
+        
+        <dt>Note:</dt>
+        <dd>All-day childcare: Childcare for more than seven hours.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1401,57 +1380,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>26.09.2024</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Note</u>:</dt>
-          <dd>All-day childcare: Childcare for more than seven hours.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
+        
+
+        
+        <dt>Note:</dt>
+        <dd>All-day childcare: Childcare for more than seven hours.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1539,197 +1509,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicators shows the proportion of children in all-day care on 1 March as a percentage of all children in the same age group on 31 December of the previous year. All-day care corresponds to a continuous contractually agreed care period of more than seven hours per day. Childcare for school children is not included. Indicator 4.2.a refers to the group of 0 to 2-year-old children, indicator 4.2.b to the group of 3 to 5-year-old children.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>All-day care for children</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicators shows the proportion of children in all-day care on 1 March as a percentage of all children in the same age group on 31 December of the previous year. All-day care corresponds to a continuous contractually agreed care period of more than seven hours per day. Childcare for school children is not included. Indicator 4.2.a refers to the group of 0 to 2-year-old children, indicator 4.2.b to the group of 3 to 5-year-old children.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>An increase in the proportion of children in all-day care is desirable, as needs-based childcare options improve the compatibility of family and career. They also make an important contribution to equal opportunities, gender equality and integration.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>An increase in the proportion of children in all-day care is desirable, as needs-based childcare options improve the compatibility of family and career. They also make an important contribution to equal opportunities, gender equality and integration.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>4.2.a: Increase to 35% by 2030<br />4.2.b: Increase to 70% by 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>4.2.a: Increase to 35% by 2030<br />4.2.b: Increase to 70% by 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>4.2.a: Target with specific target value<br />4.2.b: Target with specific target value</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>4.2.a: Target with specific target value<br />4.2.b: Target with specific target value</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>By 2030, the proportion of children aged 0 to 2 years (4.2.a) in all-day care should be increased to at least 35%, and the proportion of children aged 3 to 5 years (4.2.b) in all-day care to at least 70%.<br />• According to the target formulation, the six-year average trend for indicator 4.2.a – despite stagnation in recent years – shows movement in the desired direction. If this trend continues, the indicator is expected to increase slightly, but the politically defined target for 2030 will still be significantly missed. Indicator 4.2.a is therefore assessed as <b>cloud</b> for 2024.<br />• By contrast, the proportion for indicator 4.2.b slightly declined between 2019 and 2024, moving contrary to the desired direction. Indicator 4.2.b is assessed as <b>thunderstorm</b> for 2024.<br />• Data status at assessment: 26/09/2024.<br /><br />4.2.a: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Although the indicator has in 2024&nbsp;been moving in the desired direction toward the target, if the trend had to continued, the target would have been missed in the target year by more than 20% of the difference between the target value and the value at that time." alt="Weathersymbol: cloud" /></a><br />4.2.b: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2024&nbsp;the distance to the target was constantly high or had increased. Thus, the indicator did not develop in the desired direction." alt="Weathersymbol: Thuder strom" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>By 2030, the proportion of children aged 0 to 2 years (4.2.a) in all-day care should be increased to at least 35%, and the proportion of children aged 3 to 5 years (4.2.b) in all-day care to at least 70%.<br />• According to the target formulation, the six-year average trend for indicator 4.2.a – despite stagnation in recent years – shows movement in the desired direction. If this trend continues, the indicator is expected to increase slightly, but the politically defined target for 2030 will still be significantly missed. Indicator 4.2.a is therefore assessed as <b>cloud</b> for 2024.<br />• By contrast, the proportion for indicator 4.2.b slightly declined between 2019 and 2024, moving contrary to the desired direction. Indicator 4.2.b is assessed as <b>thunderstorm</b> for 2024.<br />• Data status at assessment: 26/09/2024.<br /><br />4.2.a: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Although the indicator has in 2024&nbsp;been moving in the desired direction toward the target, if the trend had to continued, the target would have been missed in the target year by more than 20% of the difference between the target value and the value at that time." alt="Weathersymbol: cloud" /></a><br />4.2.b: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2024&nbsp;the distance to the target was constantly high or had increased. Thus, the indicator did not develop in the desired direction." alt="Weathersymbol: Thuder strom" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2515,20 +2435,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2545,25 +2470,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #c5192d; font-size: large">4.2.a, b All-day care for children</b><br /><br />These indicators represent the proportion of children in all-day childcare as of the reference date 1&nbsp;March&nbsp;–&nbsp;relative to all children in the same age group as of 31&nbsp;December of the previous year. All-day childcare is defined as care contractually agreed for more than seven hours per day. The actual duration of care utilised may differ from the contractual agreement. Care periods of up to seven hours per day&nbsp;–&nbsp;which can also support better work-family reconciliation&nbsp;–&nbsp;are not included. For this topic, care arrangements for children aged six and above are also relevant; additional data on this is provided, for example, by surveys conducted by the Standing Conference of the Ministers of Education and Cultural Affairs (Kultusministerkonferenz, see final section).<br /><br />Both children in day-care centres and those in publicly funded childminding are included, provided they do not simultaneously attend a day-care centre or all-day school. The care of school-age children is not considered. Indicator 4.2.a refers to children aged 0&nbsp;to 2&nbsp;years, and indicator 4.2.b to children aged 3&nbsp;to 5&nbsp;years. The data for these indicators is drawn from the annual statistics of the Federal Statistical Office on children and staff in child day-care centres and publicly funded childminding.<br /><br />In 2024, 20.0% of children under the age of three (nursery age) and 47.0% of children aged three to five (pre-school age) had a contractually agreed all-day childcare arrangement in a day-care centre or through childminding. This means that since 2006&nbsp;(6.5%), the proportion of children under three in all-day care has more than tripled, and for those aged three to five (22.1%), more than doubled. Since around 2015&nbsp;(18.1% and 43.9%, respectively), the rate of increase has slowed considerably. For children aged three to five, the proportions have even declined slightly since 2020. In absolute terms, the number of children under six receiving all-day care in child day-care centres or through childminding amounted to 1.61&nbsp;million in 2024. Additionally, around 1.48&nbsp;million children under six had a contractually agreed part-time care arrangement of up to seven hours per day.<br /><br />In 2023, 29% of children under six cared for in child day-care centres or in publicly funded childminding had a migration background&nbsp;–&nbsp;that is, at least one parent was of foreign origin. The care rate in this group was 50.4%, compared to 72.4% for children without a migration background.<br /><br />A clear divide remains in 2024&nbsp;between the former territory of the Federal Republic and the new Länder in terms of all-day childcare provision. Among children aged 0&nbsp;to 2, care rates in the new Länder ranged from 39.2% (Brandenburg) to 53.9% (Thüringen), while in the states of the former territory of the Federal Republic they ranged from 10.9% (Bayern) to 28.7% (Saarland). A similar pattern is evident for children aged 3&nbsp;to 5: in the new Länder, rates ranged from 64.8% (Brandenburg) to 91.9% (Thüringen), whereas in the states of the former territory of the Federal Republic they ranged from 23.3% (Baden-Württemberg) to 63.8% (Saarland).<br /><br />Childcare for school-age children is also significantly shaped by after-school care centres (Horte) and all-day schools. In 2023, 15,889&nbsp;children aged 5&nbsp;to 13&nbsp;were in all-day care at after-school centres, and 534,491&nbsp;in part-time care (excluding lesson time). In the 2023/2024&nbsp;school year, the proportion of pupils attending all-day education at general education schools was 48.9%, across all school types&nbsp;–&nbsp;including pupils older than 13. At primary schools, 50.0% of children received all-day care in the same school year.<br /><br />Compared to 2006, the number of pupils in all-day schooling rose significantly in 2024&nbsp;–&nbsp;from just under 1.5&nbsp;million to 3.8&nbsp;million at general education schools overall, and from 0.4&nbsp;million to 1.5&nbsp;million at primary schools.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #c5192d; font-size: large">4.2.a, b All-day care for children</b><br /><br />These indicators represent the proportion of children in all-day childcare as of the reference date 1&nbsp;March&nbsp;–&nbsp;relative to all children in the same age group as of 31&nbsp;December of the previous year. All-day childcare is defined as care contractually agreed for more than seven hours per day. The actual duration of care utilised may differ from the contractual agreement. Care periods of up to seven hours per day&nbsp;–&nbsp;which can also support better work-family reconciliation&nbsp;–&nbsp;are not included. For this topic, care arrangements for children aged six and above are also relevant; additional data on this is provided, for example, by surveys conducted by the Standing Conference of the Ministers of Education and Cultural Affairs (Kultusministerkonferenz, see final section).<br /><br />Both children in day-care centres and those in publicly funded childminding are included, provided they do not simultaneously attend a day-care centre or all-day school. The care of school-age children is not considered. Indicator 4.2.a refers to children aged 0&nbsp;to 2&nbsp;years, and indicator 4.2.b to children aged 3&nbsp;to 5&nbsp;years. The data for these indicators is drawn from the annual statistics of the Federal Statistical Office on children and staff in child day-care centres and publicly funded childminding.<br /><br />In 2024, 20.0% of children under the age of three (nursery age) and 47.0% of children aged three to five (pre-school age) had a contractually agreed all-day childcare arrangement in a day-care centre or through childminding. This means that since 2006&nbsp;(6.5%), the proportion of children under three in all-day care has more than tripled, and for those aged three to five (22.1%), more than doubled. Since around 2015&nbsp;(18.1% and 43.9%, respectively), the rate of increase has slowed considerably. For children aged three to five, the proportions have even declined slightly since 2020. In absolute terms, the number of children under six receiving all-day care in child day-care centres or through childminding amounted to 1.61&nbsp;million in 2024. Additionally, around 1.48&nbsp;million children under six had a contractually agreed part-time care arrangement of up to seven hours per day.<br /><br />In 2023, 29% of children under six cared for in child day-care centres or in publicly funded childminding had a migration background&nbsp;–&nbsp;that is, at least one parent was of foreign origin. The care rate in this group was 50.4%, compared to 72.4% for children without a migration background.<br /><br />A clear divide remains in 2024&nbsp;between the former territory of the Federal Republic and the new Länder in terms of all-day childcare provision. Among children aged 0&nbsp;to 2, care rates in the new Länder ranged from 39.2% (Brandenburg) to 53.9% (Thüringen), while in the states of the former territory of the Federal Republic they ranged from 10.9% (Bayern) to 28.7% (Saarland). A similar pattern is evident for children aged 3&nbsp;to 5: in the new Länder, rates ranged from 64.8% (Brandenburg) to 91.9% (Thüringen), whereas in the states of the former territory of the Federal Republic they ranged from 23.3% (Baden-Württemberg) to 63.8% (Saarland).<br /><br />Childcare for school-age children is also significantly shaped by after-school care centres (Horte) and all-day schools. In 2023, 15,889&nbsp;children aged 5&nbsp;to 13&nbsp;were in all-day care at after-school centres, and 534,491&nbsp;in part-time care (excluding lesson time). In the 2023/2024&nbsp;school year, the proportion of pupils attending all-day education at general education schools was 48.9%, across all school types&nbsp;–&nbsp;including pupils older than 13. At primary schools, 50.0% of children received all-day care in the same school year.<br /><br />Compared to 2006, the number of pupils in all-day schooling rose significantly in 2024&nbsp;–&nbsp;from just under 1.5&nbsp;million to 3.8&nbsp;million at general education schools overall, and from 0.4&nbsp;million to 1.5&nbsp;million at primary schools.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3357,19 +3277,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3383,8 +3308,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4121,204 +4046,130 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Soziales/Kindertagesbetreuung/_inhalt.html#sprg234640" target="_blank">
+                Children and persons working in day care facilities and in publicly funded day care for children (only available in German) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Soziales/Kindertagesbetreuung/_inhalt.html#sprg234640" target="_blank">
-                    Children and persons working in day care facilities and in publicly funded day care for children (only available in German) <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Soziales/Kindertagesbetreuung/kindertagesbetreuung-karte.html;#karte3" target="_blank">
+                Child day care statistics maps (only available in German) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Soziales/Kindertagesbetreuung/kindertagesbetreuung-karte.html;#karte3" target="_blank">
-                    Child day care statistics maps (only available in German) <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4384,6 +4235,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4391,11 +4243,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4406,18 +4258,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4431,12 +4283,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

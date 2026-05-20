@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-15">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/15/" aria-label=" 15" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png"
-              alt="Leben an Land - Ziel 15"
-              id="goal-15"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-15">
+    <div class="container">
+        <div class="row">
             
-              Indikator 15.3
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/15/" aria-label=" 15" title=" 15">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/15.png"
+                        alt="Leben an Land - Ziel 15"
+                        id="goal-15"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Bodenversiegelungsgrad</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 15.3
+                        
+                        <span class="lead-copy">Bodenversiegelungsgrad</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-15" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_15-3'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Bodenversiegelungsgrad"
   data-charttitles="null"
-  data-chartsubtitle="Bedeckung der Bodenoberfläche mit wasserundurchlässigem Material"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="null"
   data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:10.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="false"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:10.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:1.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -633,62 +623,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -701,12 +689,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Bodenversiegelungsgrad</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Bedeckung der Bodenoberfläche mit wasserundurchlässigem Material</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Bodenversiegelungsgrad
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -721,54 +709,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Seit dem Berichtsjahr 2018 liegen Daten in einer höheren Auflösung vor, sodass die Bodenversiegelung ab 2018 räumlich detaillierter und realistischer abgebildet wird. Dadurch ist eine Vergleichbarkeit mit den Vorjahren nur eingeschränkt möglich (Zeitreihenbruch).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -800,54 +779,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Seit dem Berichtsjahr 2018 liegen Daten in einer höheren Auflösung vor, sodass die Bodenversiegelung ab 2018 räumlich detaillierter und realistischer abgebildet wird. Dadurch ist eine Vergleichbarkeit mit den Vorjahren nur eingeschränkt möglich (Zeitreihenbruch).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -935,197 +905,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Bodenversiegelungsgrad stellt die Bedeckung der Bodenoberfläche mit wasserundurchlässigem Material (in %) aufgrund von Stadtentwicklung und Infrastrukturausbau dar. Der Indikator wird auf Basis von Fernerkundungsdaten berechnet.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Bodenversiegelungsgrad</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Bodenversiegelungsgrad stellt die Bedeckung der Bodenoberfläche mit wasserundurchlässigem Material (in %) aufgrund von Stadtentwicklung und Infrastrukturausbau dar. Der Indikator wird auf Basis von Fernerkundungsdaten berechnet.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Boden ist eine wichtige natürliche Ressource. Seine Versiegelung ist eine der gravierendsten Formen der Bodendegradation. Versiegelte Böden wirken sich negativ auf die biologische Vielfalt, die Kohlenstoffspeicherung, die hydrologischen Eigenschaften des Bodens, die Ökosystemleistungen und den Ressourcenschutz aus. Es ist ein elementarer Baustein einer nachhaltigen Bodenbewirtschaftung, die Bodendegradation zu reduzieren.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Boden ist eine wichtige natürliche Ressource. Seine Versiegelung ist eine der gravierendsten Formen der Bodendegradation. Versiegelte Böden wirken sich negativ auf die biologische Vielfalt, die Kohlenstoffspeicherung, die hydrologischen Eigenschaften des Bodens, die Ökosystemleistungen und den Ressourcenschutz aus. Es ist ein elementarer Baustein einer nachhaltigen Bodenbewirtschaftung, die Bodendegradation zu reduzieren.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Sinkende Zunahme der Bodenversiegelung</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Sinkende Zunahme der Bodenversiegelung</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Zunahme des Bodenversiegelungsgrads soll gesenkt werden.<br />• Eine Bewertung des Indikators 15.3 ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Zunahme des Bodenversiegelungsgrads soll gesenkt werden.<br />• Eine Bewertung des Indikators 15.3 ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1911,20 +1831,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1941,25 +1866,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #56c02b; font-size: large">15.3&nbsp;Bodenversiegelungsgrad</b><br /><br />Die künstliche Versiegelung von Bodenflächen führt zu einer Beeinträchtigung natürlicher Bodenfunktionen. Neben Auswirkungen auf die Biodiversität, das Mikroklima und die Bodenfauna kann über versiegelte Flächen kein Niederschlagswasser versickern, was einerseits zum Absinken des Grundwasserspiegels beitragen und andererseits das Entwässerungssystem bei Starkregenereignissen überlasten kann. Eine Fläche gilt als versiegelt, wenn sie bebaut, betoniert, asphaltiert, gepflastert oder auf andere Art dauerhaft wasserundurchlässig ist. Versiegelte Flächen finden sich vor allem in Wohngebieten, auf Verkehrsflächen sowie in Industrie- und Gewerbegebieten. Auch versiegelte Teile von Flächen wie Kleingärten, Friedhöfen, Sport- und Erholungsgebieten oder Campingplätzen werden erfasst.<br /><br />Unversiegelte Flächen umfassen unter anderem Baustellen (sofern keine erkennbare Bebauung vorhanden ist), Bergwerke, Steinbrüche, Torfabbaugebiete, Sandgruben sowie natürliche, künstliche und kultivierte bewachsene Flächen, unbegrünte oder spärlich bewachsene Flächen, landwirtschaftlich genutzte Felder und Ackerland, Weinberge, Obstplantagen und Rasenflächen aller Art, die sportlich genutzt werden, sowie Wälder. Zusätzlich zählen Gletscher-, Schnee- und Wasserflächen zu den unversiegelten Flächen.<br /><br />Der Indikator wird auf Basis von Daten des europäischen Copernicus-Programms berechnet. Für die Erstellung des Datensatzes werden Satellitendaten automatisiert ausgewertet, wobei für jede betrachtete Flächenzelle der Anteil der versiegelten Fläche bestimmt und anschließend der Mittelwert für ganz Deutschland gebildet wird. Der Datensatz basiert ausschließlich auf Informationen, die sich aus der Fernerkundung der Erdoberfläche ableiten lassen. Informationen aus Katastern oder ähnlichen Quellen werden nicht in den Datensatz einbezogen. Diese Vorgehensweise kann zu Ungenauigkeiten führen, da versiegelte Flächen möglicherweise nicht als solche identifiziert werden, zum Beispiel wenn sie sich unter einem geschlossenen Kronendach befinden. Ein umgekehrter Effekt tritt bei Photovoltaik-Freiflächenanlagen (Solarparks) auf, die als versiegelte Fläche erfasst werden, obwohl sie in der Regel auf unversiegeltem Boden errichtet sind. Bahnschotterflächen können methodisch nicht eindeutig zugeordnet werden. Innerorts lassen sich diese Flächen aus den Fernerkundungsdaten nicht eindeutig von anderen Infrastrukturflächen unterscheiden und werden daher der versiegelten Fläche zugeordnet, während sie außerorts als unversiegelte Fläche betrachtet werden.<br /><br />Der Indikator stellt ausschließlich den Anteil der versiegelten Fläche dar. Es wird nicht berücksichtigt, inwieweit die nicht versiegelte Fläche die gewünschten Eigenschaften hinsichtlich der Wasserdurchlässigkeit aufweist. So werden naturgemäß nahezu wasserundurchlässige Flächen wie Fels- sowie Lehm- und Tonböden als unversiegelte Flächen gezählt. Dies gilt ebenso für landwirtschaftliche Flächen, die durch intensiven Maschinenverkehr zumindest zeitweise stark verdichtet sein können.<br /><br />Im Jahr 2006&nbsp;und 2009&nbsp;lag der Versiegelungsgrad bei 4,2&nbsp;% der Gesamtfläche Deutschlands und stieg bis 2015&nbsp;nur marginal auf 4,3&nbsp;% an. 2018&nbsp;betrug der Versiegelungsgrad 5,2&nbsp;%. Dieser Anstieg resultiert jedoch weniger aus einem tatsächlichen Anstieg. Vielmehr liegen der Auswertung ab dem Jahr 2018&nbsp;deutlich hochauflösendere Satellitenbilder zugrunde, wodurch die Bodenversiegelung räumlich detaillierter und realistischer erfasst werden kann. Insbesondere auf Siedlungsflächen hat die Bodenversiegelung nicht nur erheblichen Einfluss auf das Bereitstellungspotenzial, sondern auch auf die direkte Nachfrage von verschiedenen Ökosystemleistungen wie beispielsweise lokale Kühlung.<br /><br />Daher berechnet das Statistische Bundesamt in den <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/oekosystemgesamtrechnungen/_inhalt.html">Ökosystemrechnungen</a> die Bodenversiegelung separat für Siedlungsflächen und Verkehrsinfrastrukturflächen (Ökosystemabteilung A01&nbsp;der Flächenbilanz der Ökosysteme). Im Jahr 2018&nbsp;betrug der Bodenversiegelungsgrad auf diesen Flächen 42,5&nbsp;%. Durch die deutlich höhere räumliche Auflösung der Satellitendaten ab dem Jahr 2018&nbsp;ist eine Interpretation im Zeitverlauf mit den vorherigen Ergebnissen nicht sinnvoll möglich. Daher kann das politisch festgelegte Ziel, die Zunahme des Bodenversiegelungsgrads zu verringern, noch nicht bewertet werden.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #56c02b; font-size: large">15.3&nbsp;Bodenversiegelungsgrad</b><br /><br />Die künstliche Versiegelung von Bodenflächen führt zu einer Beeinträchtigung natürlicher Bodenfunktionen. Neben Auswirkungen auf die Biodiversität, das Mikroklima und die Bodenfauna kann über versiegelte Flächen kein Niederschlagswasser versickern, was einerseits zum Absinken des Grundwasserspiegels beitragen und andererseits das Entwässerungssystem bei Starkregenereignissen überlasten kann. Eine Fläche gilt als versiegelt, wenn sie bebaut, betoniert, asphaltiert, gepflastert oder auf andere Art dauerhaft wasserundurchlässig ist. Versiegelte Flächen finden sich vor allem in Wohngebieten, auf Verkehrsflächen sowie in Industrie- und Gewerbegebieten. Auch versiegelte Teile von Flächen wie Kleingärten, Friedhöfen, Sport- und Erholungsgebieten oder Campingplätzen werden erfasst.<br /><br />Unversiegelte Flächen umfassen unter anderem Baustellen (sofern keine erkennbare Bebauung vorhanden ist), Bergwerke, Steinbrüche, Torfabbaugebiete, Sandgruben sowie natürliche, künstliche und kultivierte bewachsene Flächen, unbegrünte oder spärlich bewachsene Flächen, landwirtschaftlich genutzte Felder und Ackerland, Weinberge, Obstplantagen und Rasenflächen aller Art, die sportlich genutzt werden, sowie Wälder. Zusätzlich zählen Gletscher-, Schnee- und Wasserflächen zu den unversiegelten Flächen.<br /><br />Der Indikator wird auf Basis von Daten des europäischen Copernicus-Programms berechnet. Für die Erstellung des Datensatzes werden Satellitendaten automatisiert ausgewertet, wobei für jede betrachtete Flächenzelle der Anteil der versiegelten Fläche bestimmt und anschließend der Mittelwert für ganz Deutschland gebildet wird. Der Datensatz basiert ausschließlich auf Informationen, die sich aus der Fernerkundung der Erdoberfläche ableiten lassen. Informationen aus Katastern oder ähnlichen Quellen werden nicht in den Datensatz einbezogen. Diese Vorgehensweise kann zu Ungenauigkeiten führen, da versiegelte Flächen möglicherweise nicht als solche identifiziert werden, zum Beispiel wenn sie sich unter einem geschlossenen Kronendach befinden. Ein umgekehrter Effekt tritt bei Photovoltaik-Freiflächenanlagen (Solarparks) auf, die als versiegelte Fläche erfasst werden, obwohl sie in der Regel auf unversiegeltem Boden errichtet sind. Bahnschotterflächen können methodisch nicht eindeutig zugeordnet werden. Innerorts lassen sich diese Flächen aus den Fernerkundungsdaten nicht eindeutig von anderen Infrastrukturflächen unterscheiden und werden daher der versiegelten Fläche zugeordnet, während sie außerorts als unversiegelte Fläche betrachtet werden.<br /><br />Der Indikator stellt ausschließlich den Anteil der versiegelten Fläche dar. Es wird nicht berücksichtigt, inwieweit die nicht versiegelte Fläche die gewünschten Eigenschaften hinsichtlich der Wasserdurchlässigkeit aufweist. So werden naturgemäß nahezu wasserundurchlässige Flächen wie Fels- sowie Lehm- und Tonböden als unversiegelte Flächen gezählt. Dies gilt ebenso für landwirtschaftliche Flächen, die durch intensiven Maschinenverkehr zumindest zeitweise stark verdichtet sein können.<br /><br />Im Jahr 2006&nbsp;und 2009&nbsp;lag der Versiegelungsgrad bei 4,2&nbsp;% der Gesamtfläche Deutschlands und stieg bis 2015&nbsp;nur marginal auf 4,3&nbsp;% an. 2018&nbsp;betrug der Versiegelungsgrad 5,2&nbsp;%. Dieser Anstieg resultiert jedoch weniger aus einem tatsächlichen Anstieg. Vielmehr liegen der Auswertung ab dem Jahr 2018&nbsp;deutlich hochauflösendere Satellitenbilder zugrunde, wodurch die Bodenversiegelung räumlich detaillierter und realistischer erfasst werden kann. Insbesondere auf Siedlungsflächen hat die Bodenversiegelung nicht nur erheblichen Einfluss auf das Bereitstellungspotenzial, sondern auch auf die direkte Nachfrage von verschiedenen Ökosystemleistungen wie beispielsweise lokale Kühlung.<br /><br />Daher berechnet das Statistische Bundesamt in den <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/oekosystemgesamtrechnungen/_inhalt.html">Ökosystemrechnungen</a> die Bodenversiegelung separat für Siedlungsflächen und Verkehrsinfrastrukturflächen (Ökosystemabteilung A01&nbsp;der Flächenbilanz der Ökosysteme). Im Jahr 2018&nbsp;betrug der Bodenversiegelungsgrad auf diesen Flächen 42,5&nbsp;%. Durch die deutlich höhere räumliche Auflösung der Satellitendaten ab dem Jahr 2018&nbsp;ist eine Interpretation im Zeitverlauf mit den vorherigen Ergebnissen nicht sinnvoll möglich. Daher kann das politisch festgelegte Ziel, die Zunahme des Bodenversiegelungsgrads zu verringern, noch nicht bewertet werden.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2753,19 +2673,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2779,8 +2704,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3517,98 +3442,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/cop.png" alt="Europäisches Copernikus-Programm" title=" Klicken Sie hier um zur Homepage der Organisation Europäisches Copernikus-Programm zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/cop.png" alt="Europäisches Copernikus-Programm" title=" Klicken Sie hier um zur Homepage der Organisation Europäisches Copernikus-Programm zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.copernicus.eu/de/ueber-copernicus" target="_blank" onclick="return confirm_alert('des Europäischen Copernikus-Programms', 'De')">Europäisches Copernikus-Programm</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3674,6 +3591,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3685,8 +3603,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4435,151 +4353,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/oekosystemgesamtrechnungen/_inhalt.html" target="_blank">
+                Ökosystemrechnungen <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/oekosystemgesamtrechnungen/_inhalt.html" target="_blank">
-                    Ökosystemrechnungen <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4633,6 +4510,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4640,11 +4518,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4655,18 +4533,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4680,12 +4558,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

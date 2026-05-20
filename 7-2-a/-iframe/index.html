@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-7">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/7/" aria-label=" 7" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png"
-              alt="Bezahlbare und saubere Energie - Ziel 7"
-              id="goal-7"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-7">
+    <div class="container">
+        <div class="row">
             
-              Indikator 7.2.a
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/7/" aria-label=" 7" title=" 7">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/7.png"
+                        alt="Bezahlbare und saubere Energie - Ziel 7"
+                        id="goal-7"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Anteil erneuerbarer Energien am Bruttoendenergieverbrauch</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 7.2.a
+                        
+                        <span class="lead-copy">Anteil erneuerbarer Energien am Bruttoendenergieverbrauch</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-7" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_7-2-a'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Erneuerbare Energien (Erzeugung) am Bruttoendenergieverbrauch"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Anteil erneuerbarer Energien am Bruttoendenergieverbrauch&quot;}]"
   data-graphlimits="[{&quot;minimum&quot;:0.0,&quot;maximum&quot;:70.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:18,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2020&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:41,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:45,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2040&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:60,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2050&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;xValue&quot;:15,&quot;yValue&quot;:18,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#fcc30b&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:20,&quot;yValue&quot;:41,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#fcc30b&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:21,&quot;yValue&quot;:45,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#fcc30b&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:22,&quot;yValue&quot;:60,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#fcc30b&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:15,&quot;yValue&quot;:25.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;18&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:20,&quot;yValue&quot;:48.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;41&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:21,&quot;yValue&quot;:52.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;45&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:22,&quot;yValue&quot;:67.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;60&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -795,62 +785,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -863,12 +851,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Erneuerbare Energien (Erzeugung) am Bruttoendenergieverbrauch</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Erneuerbare Energien (Erzeugung) am Bruttoendenergieverbrauch
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -883,57 +871,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a>, <a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a>, <a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>10.03.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>2023 und 2024 vorläufige Daten.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>2023 und 2024 vorläufige Daten.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -965,57 +944,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a>, <a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a>, <a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>10.03.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>2023 und 2024 vorläufige Daten.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>2023 und 2024 vorläufige Daten.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1103,197 +1073,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil erneuerbarer Energien am Bruttoendenergieverbrauch (in %) dar. Der Indikator setzt die Erzeugung erneuerbarer Energien in Relation zum Bruttoendenergieverbrauch. Der Bruttoendenergieverbrauch umfasst den Energieverbrauch beim Letztverbraucher, die Übertragungsverluste sowie den Eigenverbrauch der Energiegewinnungsbereiche.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Anteil erneuerbarer Energien am Bruttoendenergieverbrauch</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil erneuerbarer Energien am Bruttoendenergieverbrauch (in %) dar. Der Indikator setzt die Erzeugung erneuerbarer Energien in Relation zum Bruttoendenergieverbrauch. Der Bruttoendenergieverbrauch umfasst den Energieverbrauch beim Letztverbraucher, die Übertragungsverluste sowie den Eigenverbrauch der Energiegewinnungsbereiche.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Die Reserven fossiler Energieträger wie Öl und Gas sind begrenzt. Darüber hinaus ist ihre Nutzung mit der Emission von Treibhausgasen verbunden. Ein Umstieg auf erneuerbare Energien, die sich als natürliche Energiequellen ständig regenerieren, verringert die energetisch bedingten Emissionen und folglich das Ausmaß des Klimawandels. Zusätzlich werden die Abhängigkeit von Energieimporten und der Ressourcenverbrauch gemindert sowie technische Innovationen gefördert.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Die Reserven fossiler Energieträger wie Öl und Gas sind begrenzt. Darüber hinaus ist ihre Nutzung mit der Emission von Treibhausgasen verbunden. Ein Umstieg auf erneuerbare Energien, die sich als natürliche Energiequellen ständig regenerieren, verringert die energetisch bedingten Emissionen und folglich das Ausmaß des Klimawandels. Zusätzlich werden die Abhängigkeit von Energieimporten und der Ressourcenverbrauch gemindert sowie technische Innovationen gefördert.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Anstieg auf 41 % bis 2030, auf 45 % bis 2040 und auf 60 % bis 2050</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Anstieg auf 41 % bis 2030, auf 45 % bis 2040 und auf 60 % bis 2050</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Für den Indikator 7.2.a sind verschiedene Zielwerte definiert, die in unterschiedlichen Jahren erreicht werden sollen. Für die Bewertung des Indikators ist das nächstliegende Ziel relevant. Demnach soll der Anteil der erneuerbaren Energien am Bruttoendenergieverbrauch bis 2030 auf mindestens 41 % gesteigert werden.<br />• Zwar steigt der Indikatorwert, doch bei Beibehaltung der durchschnittlichen Steigerung der letzten sechs Jahre würde der politisch festgelegte Zielwert 2030 deutlich verfehlt. Der Indikator 7.2.a wird daher für das Jahr 2024 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 10.03.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Indikator entwickelte sich in 2024&nbsp;zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung wäre das Ziel im Zieljahr aber um mehr als 20&nbsp;% der Differenz zwischen Zielwert und dem Wert aus 2024&nbsp;verfehlt worden." alt="Wettersymbol Wolke" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Für den Indikator 7.2.a sind verschiedene Zielwerte definiert, die in unterschiedlichen Jahren erreicht werden sollen. Für die Bewertung des Indikators ist das nächstliegende Ziel relevant. Demnach soll der Anteil der erneuerbaren Energien am Bruttoendenergieverbrauch bis 2030 auf mindestens 41 % gesteigert werden.<br />• Zwar steigt der Indikatorwert, doch bei Beibehaltung der durchschnittlichen Steigerung der letzten sechs Jahre würde der politisch festgelegte Zielwert 2030 deutlich verfehlt. Der Indikator 7.2.a wird daher für das Jahr 2024 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 10.03.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Indikator entwickelte sich in 2024&nbsp;zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung wäre das Ziel im Zieljahr aber um mehr als 20&nbsp;% der Differenz zwischen Zielwert und dem Wert aus 2024&nbsp;verfehlt worden." alt="Wettersymbol Wolke" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2079,20 +1999,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2109,25 +2034,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #fcc30b; font-size: large">7.2.a Anteil erneuerbarer Energien am Bruttoendenergieverbrauch</b><br /><br />Bei diesem Indikator werden der aus erneuerbaren Energiequellen in Deutschland erzeugte Strom (unter anderem aus Wasserkraft, Windkraft an Land und auf See, Solarenergie), die Wärme (unter anderem aus Geothermie, Biomasse oder biogenen Abfällen) sowie regenerative Kraftstoffe in Relation zum Bruttoendenergieverbrauch aller Energieträger in Deutschland gesetzt. Der Bruttoendenergieverbrauch setzt sich zusammen aus dem gesamten Energieverbrauch bei den Letztverbrauchern sowie den Übertragungsverlusten und dem Eigenverbrauch bei der Energiegewinnung. Er berücksichtigt sowohl in Deutschland erzeugte als auch importierte Energieträger.<br /><br />Der Indikator wird von der Arbeitsgruppe Erneuerbare Energien-Statistik (AGEE-Stat) berechnet. Die Berechnung erfolgt gemäß der Berichterstattung der Erneuerbare-Energien-Richtlinie der Europäischen Union (EU) (bis 2020&nbsp;Richtlinie 2009/28/EG, ab 2021&nbsp;Richtlinie 2018/2001), die aufgrund des jährlich schwankenden Dargebots bei Wasser- und Windkraft einen Durchschnittswert über mehrere Jahre vorsieht. Das politisch festgelegte Ziel, im Jahr 2020&nbsp;einen Anteil von 18&nbsp;% erneuerbarer Energien am Bruttoendenergieverbrauch zu erreichen, wurde mit 19,1&nbsp;% sogar übertroffen. Im Jahr 2024&nbsp;lag der Anteil erneuerbarer Energien bei 22,4&nbsp;%. Wird der aktuelle Verlauf des Indikators fortgesetzt, wird das nächste Ziel&nbsp;–&nbsp;41&nbsp;% im Jahr 2030&nbsp;(Zielwert gemäß nationalem Energie- und Klimaschutzplan (NECP), August 2024)&nbsp;–&nbsp;jedoch deutlich verfehlt.<br /><br />Im längerfristigen Vergleich seit 2005&nbsp;hat sich der Wert dieses Indikators von ursprünglich 7,2&nbsp;% hingegen deutlich erhöht. Der Einsatz erneuerbarer Energien variiert je nach Bereich deutlich. Im Jahr 2024&nbsp;betrug der Anteil erneuerbarer Energien am Bruttostromverbrauch 54,4&nbsp;%, am Endenergieverbrauch für Wärme und Kälte 18,1&nbsp;% sowie im Verkehr 7,2&nbsp;%.<br /><br />Der Indikator weist Querbezüge zu den Indikatoren <a href="https://dns-indikatoren.de/13-1-a/">13.1.a</a> <i>Treibhausgasemissionen</i>, <a href="https://dns-indikatoren.de/3-2-a/">3.2.a</a> <i>Emissionen von Luftschadstoffen</i> sowie <a href="https://dns-indikatoren.de/7-2-b/">7.2.b</a> <i>Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch</i> auf.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #fcc30b; font-size: large">7.2.a Anteil erneuerbarer Energien am Bruttoendenergieverbrauch</b><br /><br />Bei diesem Indikator werden der aus erneuerbaren Energiequellen in Deutschland erzeugte Strom (unter anderem aus Wasserkraft, Windkraft an Land und auf See, Solarenergie), die Wärme (unter anderem aus Geothermie, Biomasse oder biogenen Abfällen) sowie regenerative Kraftstoffe in Relation zum Bruttoendenergieverbrauch aller Energieträger in Deutschland gesetzt. Der Bruttoendenergieverbrauch setzt sich zusammen aus dem gesamten Energieverbrauch bei den Letztverbrauchern sowie den Übertragungsverlusten und dem Eigenverbrauch bei der Energiegewinnung. Er berücksichtigt sowohl in Deutschland erzeugte als auch importierte Energieträger.<br /><br />Der Indikator wird von der Arbeitsgruppe Erneuerbare Energien-Statistik (AGEE-Stat) berechnet. Die Berechnung erfolgt gemäß der Berichterstattung der Erneuerbare-Energien-Richtlinie der Europäischen Union (EU) (bis 2020&nbsp;Richtlinie 2009/28/EG, ab 2021&nbsp;Richtlinie 2018/2001), die aufgrund des jährlich schwankenden Dargebots bei Wasser- und Windkraft einen Durchschnittswert über mehrere Jahre vorsieht. Das politisch festgelegte Ziel, im Jahr 2020&nbsp;einen Anteil von 18&nbsp;% erneuerbarer Energien am Bruttoendenergieverbrauch zu erreichen, wurde mit 19,1&nbsp;% sogar übertroffen. Im Jahr 2024&nbsp;lag der Anteil erneuerbarer Energien bei 22,4&nbsp;%. Wird der aktuelle Verlauf des Indikators fortgesetzt, wird das nächste Ziel&nbsp;–&nbsp;41&nbsp;% im Jahr 2030&nbsp;(Zielwert gemäß nationalem Energie- und Klimaschutzplan (NECP), August 2024)&nbsp;–&nbsp;jedoch deutlich verfehlt.<br /><br />Im längerfristigen Vergleich seit 2005&nbsp;hat sich der Wert dieses Indikators von ursprünglich 7,2&nbsp;% hingegen deutlich erhöht. Der Einsatz erneuerbarer Energien variiert je nach Bereich deutlich. Im Jahr 2024&nbsp;betrug der Anteil erneuerbarer Energien am Bruttostromverbrauch 54,4&nbsp;%, am Endenergieverbrauch für Wärme und Kälte 18,1&nbsp;% sowie im Verkehr 7,2&nbsp;%.<br /><br />Der Indikator weist Querbezüge zu den Indikatoren <a href="https://dns-indikatoren.de/13-1-a/">13.1.a</a> <i>Treibhausgasemissionen</i>, <a href="https://dns-indikatoren.de/3-2-a/">3.2.a</a> <i>Emissionen von Luftschadstoffen</i> sowie <a href="https://dns-indikatoren.de/7-2-b/">7.2.b</a> <i>Anteil des Stroms aus erneuerbaren Energiequellen am Bruttostromverbrauch</i> auf.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2921,19 +2841,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2947,8 +2872,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3685,151 +3610,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ageestat.png" alt="Arbeitsgruppe Erneuerbare Energien-Statistik" title=" Klicken Sie hier um zur Homepage der Organisation Arbeitsgruppe Erneuerbare Energien-Statistik zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ageestat.png" alt="Arbeitsgruppe Erneuerbare Energien-Statistik" title=" Klicken Sie hier um zur Homepage der Organisation Arbeitsgruppe Erneuerbare Energien-Statistik zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Arbeitsgruppe/arbeitsgruppe_ee.html" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De')">Arbeitsgruppe Erneuerbare Energien-Statistik</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.umweltbundesamt.de/themen/klima-energie/erneuerbare-energien/erneuerbare-energien-in-zahlen/arbeitsgruppe-erneuerbare-energien-statistik" target="_blank">
+                Arbeitsgruppe Erneuerbare Energien-Statistik <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.umweltbundesamt.de/themen/klima-energie/erneuerbare-energien/erneuerbare-energien-in-zahlen/arbeitsgruppe-erneuerbare-energien-statistik" target="_blank" onclick="return confirm_alert('der AGEE-Stat', 'De');">
-                      Arbeitsgruppe Erneuerbare Energien-Statistik <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3895,6 +3779,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3906,8 +3791,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4656,204 +4541,130 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmwe.png" alt="Bundesministerium für Wirtschaft und Energie" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für Wirtschaft und Energie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmwe.png" alt="Bundesministerium für Wirtschaft und Energie" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für Wirtschaft und Energie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Zeitreihen/zeitreihen.html" target="_blank">
+                Entwicklung der erneuerbaren Energien in Deutschland <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.erneuerbare-energien.de/EE/Navigation/DE/Service/Erneuerbare_Energien_in_Zahlen/Zeitreihen/zeitreihen.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De');">
-                      Entwicklung der erneuerbaren Energien in Deutschland <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.bmwk.de/Redaktion/DE/Dossier/erneuerbare-energien#entwicklung-in-zahlen" target="_blank">
+                Erneuerbare Energien <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.bmwk.de/Redaktion/DE/Dossier/erneuerbare-energien#entwicklung-in-zahlen" target="_blank" onclick="return confirm_alert('des BMWE', 'De');">
-                      Erneuerbare Energien <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4907,6 +4718,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4914,11 +4726,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4929,18 +4741,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4954,12 +4766,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

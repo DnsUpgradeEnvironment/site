@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-12">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/12/" aria-label=" 12" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png"
-              alt="Responsible consumption and production - Goal 12"
-              id="goal-12"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-12">
+    <div class="container">
+        <div class="row">
             
-              Indicator 12.1.b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/12/" aria-label=" 12" title=" 12">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/12.png"
+                        alt="Responsible consumption and production - Goal 12"
+                        id="goal-12"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Global environmental impact by private household consumption</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 12.1.b
+                        
+                        <span class="lead-copy">Global environmental impact by private household consumption</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-12" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_12-1-b'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Global environmental impact by private household consumption"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;ba) Direct and indirect use of raw materials&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;bb) Direct and indirect energy consumption&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;bc) Direct and indirect CO₂ emissions&quot;}]"
   data-graphlimits="[{&quot;minimum&quot;:80.0,&quot;maximum&quot;:120.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:5.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;2010 = 100&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;ba) Direct and indirect use of raw materials&quot;,&quot;bb) Direct and indirect energy consumption&quot;,&quot;bc) Direct and indirect CO₂ emissions&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Global environmental impact by private household consumption</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Global environmental impact by private household consumption
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,57 +467,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>05.05.2025</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Due to methodological changes, the results from 2016 are only comparable with previous years to a limited extent.<br>• 2022 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -561,57 +537,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>05.05.2025</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Due to methodological changes, the results from 2016 are only comparable with previous years to a limited extent.<br>• 2022 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -699,197 +663,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the global environmental impact of private household consumption compared to the base year 2010. Specifically, these are the domestic and foreign use of raw materials (12.1.ba), energy consumption (12.1.bb) and carbon dioxide (CO₂) emissions (12.1.bc) in connection with the production and consumption of all goods for the consumption activities of domestic private households.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Global environmental impact by private household consumption</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the global environmental impact of private household consumption compared to the base year 2010. Specifically, these are the domestic and foreign use of raw materials (12.1.ba), energy consumption (12.1.bb) and carbon dioxide (CO₂) emissions (12.1.bc) in connection with the production and consumption of all goods for the consumption activities of domestic private households.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Private households account for a significant proportion of an economy’s resource consumption through their consumption activities. However, this consumption is not only domestic, but also takes place indirectly abroad through the production of imported goods. The indicator therefore provides information on the global environmental impact of the consumption activities of private households. By reducing energy consumption, for example, resources are saved at home and abroad and climate-damaging carbon dioxide emissions are avoided.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Private households account for a significant proportion of an economy’s resource consumption through their consumption activities. However, this consumption is not only domestic, but also takes place indirectly abroad through the production of imported goods. The indicator therefore provides information on the global environmental impact of the consumption activities of private households. By reducing energy consumption, for example, resources are saved at home and abroad and climate-damaging carbon dioxide emissions are avoided.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>12.1.ba: Steady reduction<br />12.1.bb: Steady reduction<br />12.1.bc: Steady reduction</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>12.1.ba: Steady reduction<br />12.1.bb: Steady reduction<br />12.1.bc: Steady reduction</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>12.1.ba: Directional target<br />12.1.bb: Directional target<br />12.1.bc: Directional target</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>12.1.ba: Directional target<br />12.1.bb: Directional target<br />12.1.bc: Directional target</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The global environmental impact of private household consumption should be reduced across all three areas: raw material use, energy consumption, and CO₂ emissions.<br />• According to the target formulation, all three indicators show a decline on average over the past six years, indicating development in the desired direction. In the most recent year (2022), the value of indicator 12.1.ba also decreased; it is therefore assessed as <b>sun</b> for 2022. However, the values of indicators 12.1.bb and 12.1.bc increased between 2020 and 2021, so both are assessed as <b>slightly cloudy</b> for 2021.<br />• Data status at assessment: 05/05/2025.<br /><br />12.1.ba: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="In 2022&nbsp;both the average value and the previous annual change pointed in the right direction." alt="Weathersymbol: Sun" /></a><br />12.1.bb: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="In 2021&nbsp;the average development aimed in the right direction, but in the previous year there had been a development in the wrong direction or no change at all." alt="Weathersymbol: Clouded sun" /></a><br />12.1.bc: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="In 2021&nbsp;the average development aimed in the right direction, but in the previous year there had been a development in the wrong direction or no change at all." alt="Weathersymbol: Clouded sun" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The global environmental impact of private household consumption should be reduced across all three areas: raw material use, energy consumption, and CO₂ emissions.<br />• According to the target formulation, all three indicators show a decline on average over the past six years, indicating development in the desired direction. In the most recent year (2022), the value of indicator 12.1.ba also decreased; it is therefore assessed as <b>sun</b> for 2022. However, the values of indicators 12.1.bb and 12.1.bc increased between 2020 and 2021, so both are assessed as <b>slightly cloudy</b> for 2021.<br />• Data status at assessment: 05/05/2025.<br /><br />12.1.ba: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="In 2022&nbsp;both the average value and the previous annual change pointed in the right direction." alt="Weathersymbol: Sun" /></a><br />12.1.bb: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="In 2021&nbsp;the average development aimed in the right direction, but in the previous year there had been a development in the wrong direction or no change at all." alt="Weathersymbol: Clouded sun" /></a><br />12.1.bc: <a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="In 2021&nbsp;the average development aimed in the right direction, but in the previous year there had been a development in the wrong direction or no change at all." alt="Weathersymbol: Clouded sun" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1675,20 +1589,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1705,25 +1624,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #bf8b2e; font-size: large">12.1.b Global environmental impact by private household consumption</b><br /><br />The environmental impact of private household consumption cannot be fully captured by a single indicator. Therefore, the analysis is based on three key influencing factors: raw material use (indicator 12.1.ba), energy consumption (indicator 12.1.bb), and CO₂ emissions resulting from private household consumption (indicator 12.1.bc).<br /><br />The underlying data is sourced from the System of Environmental-Economic Accounting (SEEA). The SEEA quantifies the environmental impacts associated with the production of goods for private household consumption using an input-output model. Private households consume resources both directly and indirectly. Accordingly, the three indicators account for both direct and indirect consumption and capture environmental impacts both within Germany and those occurring abroad due to production processes for goods consumed in Germany.<br /><br />Direct consumption includes, for instance, the use of natural gas for heating, fuel consumption in road transport, and the direct consumption of food. Indirect consumption arises along the entire production and supply chain&nbsp;–&nbsp;for example, during the manufacture, processing, and transport of consumer goods&nbsp;–&nbsp;and involves both domestic and foreign resource and energy use, as well as CO₂ emissions.<br /><br />There are close interrelations between raw material use, energy consumption, and CO₂ emissions. The use of fossil fuels such as coal, crude oil, or natural gas for electricity and heat generation leads not only to resource and energy use but also to CO₂ emissions. All three indicators are presented in comparison to the reference year 2010.<br /><br /><b>12.1.ba Use of raw materials</b><br /><br />Raw materials are categorised into abiotic and biotic resources. Abiotic resources include fossil fuels such as coal, crude oil, and natural gas, as well as non-energy raw materials like ores and other mineral resources, including sand, gravel, limestone, clay, silica sands, salt, and fertiliser minerals. Biotic raw materials encompass plant-based products from agriculture and forestry as well as wild animals obtained through hunting or fishing. By contrast, products of animal husbandry such as meat, milk, or eggs are classified as economic goods rather than raw materials. Water is not considered a separate raw material, as its quantitative dominance would overshadow the presentation of other raw material groups. However, the water content of biotic raw materials is included as part of the respective resource.<br /><br />Total raw material use for private household consumption remained largely stable from 2010&nbsp;but began to decline after 2016, amounting to a preliminary figure of 555&nbsp;million tonnes in 2022. This corresponds to a reduction to 89.2% of the 2010&nbsp;level.<br /><br />A more detailed analysis reveals that the use of abiotic raw materials fell by 12.1% since 2010, while the use of biotic raw materials declined by 7.1%. In 2022, approximately 60.5% of abiotic resource consumption was attributable to fossil fuels. Their use fell by 14.1% since 2010. The consumption of ores decreased by 25.8%, while the use of other mineral resources increased by 17.2%.<br /><br /><b>12.1.bb Energy consumption</b><br /><br />The data on energy consumption also includes transformation, storage, and transmission losses, such as those arising during electricity and district heating generation in the context of indirect consumption. The indicator is influenced by both changes in consumption behaviour and efficiency improvements in energy supply.<br /><br />Since 2010, energy consumption resulting from private household consumption has been on a downward trend. By 2021, it had decreased by 14.3% to 8,509&nbsp;petajoules. Approximately 45% of this energy use is attributable to direct household consumption, while 55% stems from indirect energy use incurred during the production of goods demanded by households. Compared to 2010, the decline in direct energy consumption was smaller than in indirect consumption.<br /><br />Energy consumption is broken down into the categories of residential energy use (direct), mobility, energy goods, other products, food, services, and trade. The largest share is accounted for by residential energy use (direct), representing 30% of total household energy consumption&nbsp;–&nbsp;equivalent to 2,554&nbsp;petajoules in 2021&nbsp;–&nbsp;followed by mobility at 20%.<br /><br />Between 2010&nbsp;and 2021, energy consumption per household fell by 16.9% to 208&nbsp;gigajoules. Per capita, this equates to a decline of 15.8% to 102&nbsp;gigajoules.<br /><br /><b>12.1.bc CO₂ emissions</b><br /><br />In 2021, CO₂ emissions from private household consumption amounted to 540&nbsp;million tonnes, representing a 16.9% decrease compared to 2010. As with energy consumption, direct emissions&nbsp;–&nbsp;down by 9.8%&nbsp;–&nbsp;declined less sharply than indirect emissions, which are generated during the production and transport of consumer goods. These decreased by 20.8%. In 2021, consumption activities resulted in 13.2&nbsp;tonnes of CO₂ emissions per household&nbsp;–&nbsp;a reduction of 19.4% compared to 2010.<br /><br /><b>Interpretation of indicators and methodological notes</b><br /><br />The indicators on global environmental impacts relate to private household consumption across the entire economy and are normalised to the year 2010. They do not refer to the number of individuals or households.<br /><br />When interpreting the results, it is important to note that, in addition to efficiency gains and changes in consumption behaviour, demographic developments&nbsp;–&nbsp;such as population growth or an increase in the number of households&nbsp;–&nbsp;can also influence CO₂ emissions as well as raw material and energy use. For instance, a growing population can result in absolute consumption and emissions not decreasing&nbsp;–&nbsp;or even increasing&nbsp;–&nbsp;despite efficiency improvements or shifts in consumer behaviour.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #bf8b2e; font-size: large">12.1.b Global environmental impact by private household consumption</b><br /><br />The environmental impact of private household consumption cannot be fully captured by a single indicator. Therefore, the analysis is based on three key influencing factors: raw material use (indicator 12.1.ba), energy consumption (indicator 12.1.bb), and CO₂ emissions resulting from private household consumption (indicator 12.1.bc).<br /><br />The underlying data is sourced from the System of Environmental-Economic Accounting (SEEA). The SEEA quantifies the environmental impacts associated with the production of goods for private household consumption using an input-output model. Private households consume resources both directly and indirectly. Accordingly, the three indicators account for both direct and indirect consumption and capture environmental impacts both within Germany and those occurring abroad due to production processes for goods consumed in Germany.<br /><br />Direct consumption includes, for instance, the use of natural gas for heating, fuel consumption in road transport, and the direct consumption of food. Indirect consumption arises along the entire production and supply chain&nbsp;–&nbsp;for example, during the manufacture, processing, and transport of consumer goods&nbsp;–&nbsp;and involves both domestic and foreign resource and energy use, as well as CO₂ emissions.<br /><br />There are close interrelations between raw material use, energy consumption, and CO₂ emissions. The use of fossil fuels such as coal, crude oil, or natural gas for electricity and heat generation leads not only to resource and energy use but also to CO₂ emissions. All three indicators are presented in comparison to the reference year 2010.<br /><br /><b>12.1.ba Use of raw materials</b><br /><br />Raw materials are categorised into abiotic and biotic resources. Abiotic resources include fossil fuels such as coal, crude oil, and natural gas, as well as non-energy raw materials like ores and other mineral resources, including sand, gravel, limestone, clay, silica sands, salt, and fertiliser minerals. Biotic raw materials encompass plant-based products from agriculture and forestry as well as wild animals obtained through hunting or fishing. By contrast, products of animal husbandry such as meat, milk, or eggs are classified as economic goods rather than raw materials. Water is not considered a separate raw material, as its quantitative dominance would overshadow the presentation of other raw material groups. However, the water content of biotic raw materials is included as part of the respective resource.<br /><br />Total raw material use for private household consumption remained largely stable from 2010&nbsp;but began to decline after 2016, amounting to a preliminary figure of 555&nbsp;million tonnes in 2022. This corresponds to a reduction to 89.2% of the 2010&nbsp;level.<br /><br />A more detailed analysis reveals that the use of abiotic raw materials fell by 12.1% since 2010, while the use of biotic raw materials declined by 7.1%. In 2022, approximately 60.5% of abiotic resource consumption was attributable to fossil fuels. Their use fell by 14.1% since 2010. The consumption of ores decreased by 25.8%, while the use of other mineral resources increased by 17.2%.<br /><br /><b>12.1.bb Energy consumption</b><br /><br />The data on energy consumption also includes transformation, storage, and transmission losses, such as those arising during electricity and district heating generation in the context of indirect consumption. The indicator is influenced by both changes in consumption behaviour and efficiency improvements in energy supply.<br /><br />Since 2010, energy consumption resulting from private household consumption has been on a downward trend. By 2021, it had decreased by 14.3% to 8,509&nbsp;petajoules. Approximately 45% of this energy use is attributable to direct household consumption, while 55% stems from indirect energy use incurred during the production of goods demanded by households. Compared to 2010, the decline in direct energy consumption was smaller than in indirect consumption.<br /><br />Energy consumption is broken down into the categories of residential energy use (direct), mobility, energy goods, other products, food, services, and trade. The largest share is accounted for by residential energy use (direct), representing 30% of total household energy consumption&nbsp;–&nbsp;equivalent to 2,554&nbsp;petajoules in 2021&nbsp;–&nbsp;followed by mobility at 20%.<br /><br />Between 2010&nbsp;and 2021, energy consumption per household fell by 16.9% to 208&nbsp;gigajoules. Per capita, this equates to a decline of 15.8% to 102&nbsp;gigajoules.<br /><br /><b>12.1.bc CO₂ emissions</b><br /><br />In 2021, CO₂ emissions from private household consumption amounted to 540&nbsp;million tonnes, representing a 16.9% decrease compared to 2010. As with energy consumption, direct emissions&nbsp;–&nbsp;down by 9.8%&nbsp;–&nbsp;declined less sharply than indirect emissions, which are generated during the production and transport of consumer goods. These decreased by 20.8%. In 2021, consumption activities resulted in 13.2&nbsp;tonnes of CO₂ emissions per household&nbsp;–&nbsp;a reduction of 19.4% compared to 2010.<br /><br /><b>Interpretation of indicators and methodological notes</b><br /><br />The indicators on global environmental impacts relate to private household consumption across the entire economy and are normalised to the year 2010. They do not refer to the number of individuals or households.<br /><br />When interpreting the results, it is important to note that, in addition to efficiency gains and changes in consumption behaviour, demographic developments&nbsp;–&nbsp;such as population growth or an increase in the number of households&nbsp;–&nbsp;can also influence CO₂ emissions as well as raw material and energy use. For instance, a growing population can result in absolute consumption and emissions not decreasing&nbsp;–&nbsp;or even increasing&nbsp;–&nbsp;despite efficiency improvements or shifts in consumer behaviour.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2517,19 +2431,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2543,8 +2462,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3281,257 +3200,150 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/EN/Themes/Society-Environment/Environment/Environmental-Economic-Accounting/_node.html" target="_blank">
+                Environmental Economic Accounting <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/EN/Themes/Society-Environment/Environment/Environmental-Economic-Accounting/_node.html" target="_blank">
-                    Environmental Economic Accounting <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/rohstoffe-materialfluesse-wasser/_inhalt.html#_47vjyakwy" target="_blank">
+                Statistical Report - Raw material equivalents (only available in German) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/rohstoffe-materialfluesse-wasser/_inhalt.html#_47vjyakwy" target="_blank">
-                    Statistical Report - Raw material equivalents (only available in German) <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/energiefluesse-emissionen/Publikationen/Downloads/statistischer-bericht-ugr-energiefluesse-emissionen-5859006217005.html" target="_blank">
+                Statistical Report - Indirect CO₂-emissions and indirekt energy flows <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Umwelt/UGR/energiefluesse-emissionen/Publikationen/Downloads/statistischer-bericht-ugr-energiefluesse-emissionen-5859006217005.html" target="_blank">
-                    Statistical Report - Indirect CO₂-emissions and indirekt energy flows <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
+      
+      
       
         
           
@@ -3597,6 +3409,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3604,11 +3417,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3619,18 +3432,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3644,12 +3457,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-16">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/16/" aria-label=" 16" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png"
-              alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16"
-              id="goal-16"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-16">
+    <div class="container">
+        <div class="row">
             
-              Indikator 16.3.a, b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/16/" aria-label=" 16" title=" 16">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/16.png"
+                        alt="Frieden, Gerechtigkeit und starke Institutionen - Ziel 16"
+                        id="goal-16"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 16.3.ab
+                        
+                        <span class="lead-copy">Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-16" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_16-3-ab'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit"
   data-charttitles="[{&quot;series&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;,&quot;title&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;},{&quot;series&quot;:&quot;b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI&quot;,&quot;title&quot;:&quot;b) Corruption Perceptions Index in den Partnerländern der deutschen Entwicklungszusammenarbeit&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;,&quot;title&quot;:&quot;Indexwert des jeweiligen Jahres&quot;},{&quot;series&quot;:&quot;b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI&quot;,&quot;title&quot;:&quot;Partnerländer, mit verbesserter Bewertung gegenüber 2012&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI&quot;}]"
   data-graphlimits="[{&quot;series&quot;:&quot;a) Corruption Perceptions Index in Deutschland&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anzahl&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) Corruption Perceptions Index in Deutschland&quot;,&quot;b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -947,62 +937,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1015,12 +1003,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">a) Corruption Perceptions Index in Deutschland</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Indexwert des jeweiligen Jahres</h6>
+          <h4 id="chart-heading" class="chart-title">
+            a) Corruption Perceptions Index in Deutschland
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1035,27 +1023,22 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a>, <a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
-        
-
-        
-          <dt><u>Datenstand</u>:</dt>
-          <dd>14.02.2025</dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a>, <a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
@@ -1065,32 +1048,28 @@ data-event-label="Change to Table tab"
         <dt
           data-for-series="b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI"
           data-for-unit=""
-        ><u>Anmerkungen</u>:</dt>
+        >Anmerkungen:</dt>
         <dd
           data-for-series="b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI"
           data-for-unit=""
         ><br>• Länderliste für die bilaterale staatliche Entwicklungszusammenarbeit des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung wurde 2023 aktualisiert. Daten der Zeitreihe sind entsprechend korrigiert.<br>• 2023 und 2024 ohne Afghanistan, da die Zusammenarbeit ausgesetzt wurde.</dd>
         
         
-        
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1122,27 +1101,22 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a>, <a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
-        
-
-        
-          <dt><u>Datenstand</u>:</dt>
-          <dd>14.02.2025</dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a>, <a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
@@ -1152,32 +1126,28 @@ data-event-label="Change to Table tab"
         <dt
           data-for-series="b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI"
           data-for-unit=""
-        ><u>Anmerkungen</u>:</dt>
+        >Anmerkungen:</dt>
         <dd
           data-for-series="b) Anzahl der Partnerländern der deutschen Entwicklungszusammenarbeit mit verbessertem CPI"
           data-for-unit=""
         ><br>• Länderliste für die bilaterale staatliche Entwicklungszusammenarbeit des Bundesministeriums für wirtschaftliche Zusammenarbeit und Entwicklung wurde 2023 aktualisiert. Daten der Zeitreihe sind entsprechend korrigiert.<br>• 2023 und 2024 ohne Afghanistan, da die Zusammenarbeit ausgesetzt wurde.</dd>
         
         
-        
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1265,197 +1235,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Die Indikatoren stellen den Korruptionswahrnehmungsindex (Corruption Perceptions Index, CPI) von Transparency International für Deutschland (16.3.a) sowie die Anzahl der Partnerländer der deutschen Entwicklungszusammenarbeit, deren CPI sich im Vergleich zum Jahr 2012 verbessert hat (16.3.b), dar. Der CPI misst, wie stark Korruption im öffentlichen Sektor in einem Land wahrgenommen wird.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Die Indikatoren stellen den Korruptionswahrnehmungsindex (Corruption Perceptions Index, CPI) von Transparency International für Deutschland (16.3.a) sowie die Anzahl der Partnerländer der deutschen Entwicklungszusammenarbeit, deren CPI sich im Vergleich zum Jahr 2012 verbessert hat (16.3.b), dar. Der CPI misst, wie stark Korruption im öffentlichen Sektor in einem Land wahrgenommen wird.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Korruption untergräbt das Vertrauen in Institutionen sowie politische Maßnahmen zur Steigerung der Nachhaltigkeit und behindert soziale Gerechtigkeit. Ein niedriger Korruptionsgrad fördert hingegen eine transparente Regierungsführung, effiziente Ressourcennutzung und stabile wirtschaftliche Rahmenbedingungen. Korruption soll daher sowohl in Deutschland, als auch in den Partnerländern der deutschen Entwicklungszusammenarbeit bekämpft werden.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Korruption untergräbt das Vertrauen in Institutionen sowie politische Maßnahmen zur Steigerung der Nachhaltigkeit und behindert soziale Gerechtigkeit. Ein niedriger Korruptionsgrad fördert hingegen eine transparente Regierungsführung, effiziente Ressourcennutzung und stabile wirtschaftliche Rahmenbedingungen. Korruption soll daher sowohl in Deutschland, als auch in den Partnerländern der deutschen Entwicklungszusammenarbeit bekämpft werden.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>16.3.a: Verbesserung gegenüber 2012 bis 2030<br />16.3.b: Verbesserung gegenüber 2012 bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>16.3.a: Verbesserung gegenüber 2012 bis 2030<br />16.3.b: Verbesserung gegenüber 2012 bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>16.3.a: Zielrichtungsvorgabe<br />16.3.b: Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>16.3.a: Zielrichtungsvorgabe<br />16.3.b: Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>16.3.a: Der Korruptionswahrnehmungsindex in Deutschland soll gesteigert werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 16.3.a für das Jahr 2024 mit <b>Gewitter</b> bewertet. Der Indikatorwert ist im Jahr 2023 gesunken und entwickelte sich im Durchschnitt der letzten sechs Jahre nicht in die gewünschte Richtung.<br />• Datenstand bei Bewertung: 14.02.2025.<br /><br />16.3.b: Die Anzahl der Partnerländer der deutschen Entwicklungszusammenarbeit mit einem gegenüber 2012 verbesserten Korruptionswahrnehmungsindex soll gesteigert werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 16.3.b für das Jahr 2024 mit <b>Gewitter</b> bewertet. Der Indikatorwert ist im Jahr 2024 gesunken und entwickelte sich im Durchschnitt der letzten sechs Jahre nicht in die gewünschte Richtung.<br />• Datenstand bei Bewertung: 14.02.2025.<br /><br />16.3.a: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2024&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a><br />16.3.b: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2024&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>16.3.a: Der Korruptionswahrnehmungsindex in Deutschland soll gesteigert werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 16.3.a für das Jahr 2024 mit <b>Gewitter</b> bewertet. Der Indikatorwert ist im Jahr 2023 gesunken und entwickelte sich im Durchschnitt der letzten sechs Jahre nicht in die gewünschte Richtung.<br />• Datenstand bei Bewertung: 14.02.2025.<br /><br />16.3.b: Die Anzahl der Partnerländer der deutschen Entwicklungszusammenarbeit mit einem gegenüber 2012 verbesserten Korruptionswahrnehmungsindex soll gesteigert werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 16.3.b für das Jahr 2024 mit <b>Gewitter</b> bewertet. Der Indikatorwert ist im Jahr 2024 gesunken und entwickelte sich im Durchschnitt der letzten sechs Jahre nicht in die gewünschte Richtung.<br />• Datenstand bei Bewertung: 14.02.2025.<br /><br />16.3.a: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2024&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a><br />16.3.b: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2024&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2241,20 +2161,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2271,25 +2196,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #00689d; font-size: large">16.3.a, b Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</b><br /><br />Der Korruptionswahrnehmungsindex (Corruption Perceptions Index, CPI) ist ein zusammengesetzter Indikator (Kompositindikator), der für jedes Land die Ergebnisse verschiedener Experten- und Unternehmensbefragungen zur subjektiv wahrgenommenen Korruption im öffentlichen Sektor zusammenfasst. Transparency International erstellt den CPI, sobald für ein Land mindestens drei unterschiedliche Befragungen zu Korruptionseinschätzung vorliegen. Die zugrundeliegenden Befragungen und deren Methodiken können dabei im Zeitverlauf variieren und basieren auf unterschiedlichen Korruptionsdefinitionen. Zudem können die Ergebnisse dadurch beeinflusst sein, dass den Befragten die Ergebnisse des CPI-Werts oder der zugrunde liegenden Teilstudien aus früheren Jahren bekannt sind und diese somit die Grundlage der Wahrnehmung bilden können. Diese Faktoren sowie die unterschiedliche Wahrnehmung schränken die Vergleichbarkeit der Ergebnisse sowohl über die Zeit (Längsschnitt) als auch zwischen den Ländern (Querschnitt) ein. Das Joint Research Centre (JRC) der Europäischen Kommission weist in einer Analyse darauf hin, dass bei der Interpretation der Ergebnisse die statistische Signifikanz von Veränderungen stets zu berücksichtigen ist. Selbst bei signifikanten Unterschieden sollte der Indikator jedoch mit Vorsicht interpretiert werden.<br /><br />Deutschland hat sich seit 2012&nbsp;von 79&nbsp;auf 75&nbsp;Punkte im Jahr 2024&nbsp;verschlechtert. Im Vergleich zum Höchststand von 81&nbsp;Punkten in den Jahren 2015&nbsp;bis 2017&nbsp;entspricht dies einem Rückgang um sechs Punkte. Aktuell belegt Deutschland Rang 15&nbsp;von insgesamt 180&nbsp;bewerteten Ländern. Die Veränderung gegenüber 2012&nbsp;ist bei einem Signifikanzniveau von 10&nbsp;% als statistisch signifikant einzustufen. Auch das Statistische Bundesamt erhebt im Rahmen seiner Zufriedenheitsbefragung zu behördlichen Dienstleistungen Daten zur Wahrnehmung von Korruption. Im Jahr 2023&nbsp;gaben 11,6&nbsp;% der Bevölkerung an, bei Kontakten mit öffentlichen Stellen den Eindruck gehabt zu haben, dass Bedienstete bestechlich seien. Damit liegt der Wert deutlich über den Vorjahren: Im Vergleich zu 2021&nbsp;(3,9&nbsp;%) hat sich der Wert verdreifacht. Bei den befragten Unternehmen blieb der Wert hingegen über die Jahre weitgehend konstant: Im Jahr 2023&nbsp;äußerten 3,4&nbsp;% von ihnen den Eindruck, Beschäftigte des öffentlichen Dienstes seien bestechlich.<br /><br />Die Polizeiliche Kriminalstatistik (PKS) erfasst alle der Polizei bekannt gewordenen strafrechtlichen Sachverhalte. Im Jahr 2024&nbsp;wurden insgesamt 976&nbsp;Fälle von Vorteilsannahme, Vorteilsgewährung sowie Bestechlichkeit und Bestechung im öffentlichen Sektor registriert. Damit lag der Wert zwar unter dem Vorjahreswert von 1&nbsp;094&nbsp;Fällen (2023), blieb jedoch weiterhin deutlich über dem Durchschnitt der Jahre 2020&nbsp;bis 2023, der bei 842&nbsp;Fällen liegt. Darüber hinaus erfasst die PKS auch Fälle im geschäftlichen Bereich. Im Jahr 2024&nbsp;wurden 197&nbsp;Fälle von <i>Bestechlichkeit und Bestechung im geschäftlichen Verkehr und im Gesundheitswesen</i> registriert&nbsp;–&nbsp;deutlich weniger als im Vorjahr mit 369&nbsp;Fällen (2023). Zudem erfasst die PKS sogenannte Begleitdelikte der Korruption, darunter Betrug, Untreue, Urkundenfälschung, wettbewerbsbeschränkende Absprachen bei Ausschreibungen, Strafvereitelung, Falschbeurkundung im Amt sowie die Verletzung des Dienstgeheimnisses.<br /><br />Mit Blick auf die deutsche Entwicklungszusammenarbeit haben sich im Jahr 2024&nbsp;im Vergleich zu 2012&nbsp;insgesamt 32&nbsp;der 63&nbsp;vom CPI erfassten Partnerländer verbessert. Die Anzahl der sich positiv entwickelten Partnerländer stieg im Beobachtungszeitraum überwiegend an, mit leichten Rückgängen in den Jahren 2018, 2022&nbsp;sowie im aktuellen Berichtsjahr gegenüber 2023. Eine statistisch signifikante Verbesserung gegenüber 2012&nbsp;(Signifikanzniveau 10&nbsp;%) verzeichneten im Jahr 2024&nbsp;insgesamt 21&nbsp;Partnerländer der deutschen Entwicklungszusammenarbeit.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #00689d; font-size: large">16.3.a, b Corruption Perceptions Index in Deutschland sowie in den Partnerländern der deutschen Entwicklungszusammenarbeit</b><br /><br />Der Korruptionswahrnehmungsindex (Corruption Perceptions Index, CPI) ist ein zusammengesetzter Indikator (Kompositindikator), der für jedes Land die Ergebnisse verschiedener Experten- und Unternehmensbefragungen zur subjektiv wahrgenommenen Korruption im öffentlichen Sektor zusammenfasst. Transparency International erstellt den CPI, sobald für ein Land mindestens drei unterschiedliche Befragungen zu Korruptionseinschätzung vorliegen. Die zugrundeliegenden Befragungen und deren Methodiken können dabei im Zeitverlauf variieren und basieren auf unterschiedlichen Korruptionsdefinitionen. Zudem können die Ergebnisse dadurch beeinflusst sein, dass den Befragten die Ergebnisse des CPI-Werts oder der zugrunde liegenden Teilstudien aus früheren Jahren bekannt sind und diese somit die Grundlage der Wahrnehmung bilden können. Diese Faktoren sowie die unterschiedliche Wahrnehmung schränken die Vergleichbarkeit der Ergebnisse sowohl über die Zeit (Längsschnitt) als auch zwischen den Ländern (Querschnitt) ein. Das Joint Research Centre (JRC) der Europäischen Kommission weist in einer Analyse darauf hin, dass bei der Interpretation der Ergebnisse die statistische Signifikanz von Veränderungen stets zu berücksichtigen ist. Selbst bei signifikanten Unterschieden sollte der Indikator jedoch mit Vorsicht interpretiert werden.<br /><br />Deutschland hat sich seit 2012&nbsp;von 79&nbsp;auf 75&nbsp;Punkte im Jahr 2024&nbsp;verschlechtert. Im Vergleich zum Höchststand von 81&nbsp;Punkten in den Jahren 2015&nbsp;bis 2017&nbsp;entspricht dies einem Rückgang um sechs Punkte. Aktuell belegt Deutschland Rang 15&nbsp;von insgesamt 180&nbsp;bewerteten Ländern. Die Veränderung gegenüber 2012&nbsp;ist bei einem Signifikanzniveau von 10&nbsp;% als statistisch signifikant einzustufen. Auch das Statistische Bundesamt erhebt im Rahmen seiner Zufriedenheitsbefragung zu behördlichen Dienstleistungen Daten zur Wahrnehmung von Korruption. Im Jahr 2023&nbsp;gaben 11,6&nbsp;% der Bevölkerung an, bei Kontakten mit öffentlichen Stellen den Eindruck gehabt zu haben, dass Bedienstete bestechlich seien. Damit liegt der Wert deutlich über den Vorjahren: Im Vergleich zu 2021&nbsp;(3,9&nbsp;%) hat sich der Wert verdreifacht. Bei den befragten Unternehmen blieb der Wert hingegen über die Jahre weitgehend konstant: Im Jahr 2023&nbsp;äußerten 3,4&nbsp;% von ihnen den Eindruck, Beschäftigte des öffentlichen Dienstes seien bestechlich.<br /><br />Die Polizeiliche Kriminalstatistik (PKS) erfasst alle der Polizei bekannt gewordenen strafrechtlichen Sachverhalte. Im Jahr 2024&nbsp;wurden insgesamt 976&nbsp;Fälle von Vorteilsannahme, Vorteilsgewährung sowie Bestechlichkeit und Bestechung im öffentlichen Sektor registriert. Damit lag der Wert zwar unter dem Vorjahreswert von 1&nbsp;094&nbsp;Fällen (2023), blieb jedoch weiterhin deutlich über dem Durchschnitt der Jahre 2020&nbsp;bis 2023, der bei 842&nbsp;Fällen liegt. Darüber hinaus erfasst die PKS auch Fälle im geschäftlichen Bereich. Im Jahr 2024&nbsp;wurden 197&nbsp;Fälle von <i>Bestechlichkeit und Bestechung im geschäftlichen Verkehr und im Gesundheitswesen</i> registriert&nbsp;–&nbsp;deutlich weniger als im Vorjahr mit 369&nbsp;Fällen (2023). Zudem erfasst die PKS sogenannte Begleitdelikte der Korruption, darunter Betrug, Untreue, Urkundenfälschung, wettbewerbsbeschränkende Absprachen bei Ausschreibungen, Strafvereitelung, Falschbeurkundung im Amt sowie die Verletzung des Dienstgeheimnisses.<br /><br />Mit Blick auf die deutsche Entwicklungszusammenarbeit haben sich im Jahr 2024&nbsp;im Vergleich zu 2012&nbsp;insgesamt 32&nbsp;der 63&nbsp;vom CPI erfassten Partnerländer verbessert. Die Anzahl der sich positiv entwickelten Partnerländer stieg im Beobachtungszeitraum überwiegend an, mit leichten Rückgängen in den Jahren 2018, 2022&nbsp;sowie im aktuellen Berichtsjahr gegenüber 2023. Eine statistisch signifikante Verbesserung gegenüber 2012&nbsp;(Signifikanzniveau 10&nbsp;%) verzeichneten im Jahr 2024&nbsp;insgesamt 21&nbsp;Partnerländer der deutschen Entwicklungszusammenarbeit.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3083,19 +3003,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3109,8 +3034,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3847,151 +3772,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ta.png" alt="Transparency International e.V." title=" Klicken Sie hier um zur Homepage der Organisation Transparency International e.V. zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ta.png" alt="Transparency International e.V." title=" Klicken Sie hier um zur Homepage der Organisation Transparency International e.V. zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.transparency.de/" target="_blank" onclick="return confirm_alert('von Transparency International', 'De')">Transparency International e.V.</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.transparency.org/en/cpi/2024/index/deu" target="_blank">
+                Corruption Perceptions Index (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.transparency.org/en/cpi/2024/index/deu" target="_blank" onclick="return confirm_alert('von Transparency International', 'De');">
-                      Corruption Perceptions Index (nicht auf Deutsch verfügbar) <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4057,6 +3941,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4068,8 +3953,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4818,151 +4703,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmz.png" alt="Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmz.png" alt="Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmz.de/de" target="_blank" onclick="return confirm_alert('des BMZ', 'De')">Bundesministerium für wirtschaftliche Zusammenarbeit und Entwicklung</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.bmz.de/de/laender" target="_blank">
+                Partnerländer deutscher Entwicklungszusammenarbeit <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.bmz.de/de/laender" target="_blank" onclick="return confirm_alert('des BMZ', 'De');">
-                      Partnerländer deutscher Entwicklungszusammenarbeit <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5016,6 +4860,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5023,11 +4868,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -5038,16 +4883,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -5061,12 +4906,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

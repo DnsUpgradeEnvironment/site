@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-10">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/10/" aria-label=" 10" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png"
-              alt="Weniger Ungleichheiten - Ziel 10"
-              id="goal-10"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-10">
+    <div class="container">
+        <div class="row">
             
-              Indikator 10.1
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/10/" aria-label=" 10" title=" 10">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/10.png"
+                        alt="Weniger Ungleichheiten - Ziel 10"
+                        id="goal-10"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Ausländische Schulabsolvierende</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 10.1
+                        
+                        <span class="lead-copy">Ausländische Schulabsolvierende</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-10" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_10-1'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Ausländische Schulabsolvierende"
   data-charttitles="[{&quot;series&quot;:&quot;Deutsche&quot;,&quot;title&quot;:&quot;Deutsche Schulabsolvierende&quot;},{&quot;series&quot;:&quot;Ausländer&quot;,&quot;title&quot;:&quot;Ausländische Schulabsolvierende&quot;},{&quot;series&quot;:&quot;Differenz&quot;,&quot;title&quot;:&quot;Differenz der Anteile deutscher und ausländischer Schulabsolvierenden&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;Deutsche&quot;,&quot;title&quot;:&quot;Anteil an allen deutschen Schulabsolvierenden und -abgehenden&quot;},{&quot;series&quot;:&quot;Ausländer&quot;,&quot;title&quot;:&quot;Anteil an allen ausländischen Schulabsolvierenden und -abgehenden&quot;},{&quot;series&quot;:&quot;Differenz&quot;,&quot;title&quot;:&quot;zwischen deutschen und ausländischen Schulabgehenden und -absolvierenden&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Ausländer&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Deutsche&quot;}]"
   data-graphlimits="[{&quot;series&quot;:&quot;Deutsche&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;Ausländer&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;Differenz&quot;,&quot;minimum&quot;:-10.0,&quot;maximum&quot;:50.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;series&quot;:&quot;Differenz&quot;,&quot;value&quot;:0,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;Differenz&quot;,&quot;xValue&quot;:28,&quot;yValue&quot;:0,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#dd1367&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;Differenz&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:28,&quot;yValue&quot;:4.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;0&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;Prozentpunkte&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Ausländer&quot;,&quot;Deutsche&quot;,&quot;Differenz&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;Deutsche&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;Ausländer&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;Differenz&quot;,&quot;step&quot;:2.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -2169,62 +2159,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -2237,12 +2225,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Deutsche Schulabsolvierende</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Anteil an allen deutschen Schulabsolvierenden und -abgehenden</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Deutsche Schulabsolvierende
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -2257,54 +2245,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>05.11.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -2336,54 +2315,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>05.11.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -2471,197 +2441,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil ausländischer Schulabsolvierender an allen ausländischen Schulabsolvierenden und ‑abgehenden eines Jahrgangs (in %) dar. Als Schulabsolvierende gelten Personen, die die allgemeinbildenden Schulen mit mindestens einem Ersten Schulabschluss verlassen, während Schulabgehende diejenigen Personen meint, die die Schule ohne Schulabschluss verlassen.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Ausländische Schulabsolvierende</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil ausländischer Schulabsolvierender an allen ausländischen Schulabsolvierenden und ‑abgehenden eines Jahrgangs (in %) dar. Als Schulabsolvierende gelten Personen, die die allgemeinbildenden Schulen mit mindestens einem Ersten Schulabschluss verlassen, während Schulabgehende diejenigen Personen meint, die die Schule ohne Schulabschluss verlassen.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Die Integration der in Deutschland lebenden Ausländerinnen und Ausländer ist eine wichtige Voraussetzung für den sozialen Zusammenhalt unserer Gesellschaft. Grundbedingung für eine erfolgreiche Integration ist eine ausreichende schulische Qualifizierung, die berufliche Ausbildungs- und Erwerbsmöglichkeiten eröffnet.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Die Integration der in Deutschland lebenden Ausländerinnen und Ausländer ist eine wichtige Voraussetzung für den sozialen Zusammenhalt unserer Gesellschaft. Grundbedingung für eine erfolgreiche Integration ist eine ausreichende schulische Qualifizierung, die berufliche Ausbildungs- und Erwerbsmöglichkeiten eröffnet.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Erhöhung des Anteils der ausländischen Schulabsolvierenden mit mindestens Hauptschulabschluss und Angleichung an die Quote deutscher Schulabsolvierender bis 2030<sup>1</sup><br /><small><sup>1</sup> Die Bezeichnungen der Schulabschlüsse wurden zum Berichtsjahr 2024/25 gemäß der <i>Vereinbarung über die Schularten und Bildungsgänge im Sekundarbereich I</i> (Beschluss der Kultusministerkonferenz vom 03.12.1993 in der Fassung vom 07.10.2022) angepasst.</small></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Erhöhung des Anteils der ausländischen Schulabsolvierenden mit mindestens Hauptschulabschluss und Angleichung an die Quote deutscher Schulabsolvierender bis 2030<sup>1</sup><br /><small><sup>1</sup> Die Bezeichnungen der Schulabschlüsse wurden zum Berichtsjahr 2024/25 gemäß der <i>Vereinbarung über die Schularten und Bildungsgänge im Sekundarbereich I</i> (Beschluss der Kultusministerkonferenz vom 03.12.1993 in der Fassung vom 07.10.2022) angepasst.</small></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Kombination aus Zielrichtungsvorgabe und Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Kombination aus Zielrichtungsvorgabe und Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Indikator 10.1 weist zwei, zeitgleich zu erfüllende Ziele auf: Zum einen soll der Anteil der ausländischen Schulabsolvierenden an allen ausländischen Schulabsolvierenden und ‑abgehenden gesteigert werden, zum anderen soll die Differenz zum entsprechenden Anteil der deutschen Schulabsolvierenden bis 2030 auf höchstens 0 Prozentpunkte verringert werden.<br />• Das erste Teilziel würde mit <b>leicht bewölkt</b> bewertet, da die jüngste Entwicklung im Jahr 2023 zwar in die gewünschte Richtung weist, die durchschnittliche Entwicklung der Jahre 2018 bis 2023 jedoch in die entgegengesetzte Richtung verlief. Das zweite Teilziel würde mit <b>Wolke</b> bewertet, da die Entwicklung zwar grundsätzlich in die gewünschte Richtung deutet, die politisch festgelegte Zielgröße von 0 Prozentpunkten bis 2030 bei einer Fortsetzung der aktuellen Entwicklung jedoch deutlich verfehlt würde.<br />• Bei Indikatoren mit mehreren zeitgleich zu erfüllenden Zielvorgaben gilt, dass die jeweils schlechteste Bewertung der Teilziele für die Gesamtbewertung des Indikators maßgeblich ist. Entsprechend wird der Indikator 10.1 für das Jahr 2023 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 05.11.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Hier sind die unterschiedlichen Zieltypen der beiden, zeitgleich zu erreichenden, Ziele kombiniert worden." alt="Wettersymbol Wolke" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Indikator 10.1 weist zwei, zeitgleich zu erfüllende Ziele auf: Zum einen soll der Anteil der ausländischen Schulabsolvierenden an allen ausländischen Schulabsolvierenden und ‑abgehenden gesteigert werden, zum anderen soll die Differenz zum entsprechenden Anteil der deutschen Schulabsolvierenden bis 2030 auf höchstens 0 Prozentpunkte verringert werden.<br />• Das erste Teilziel würde mit <b>leicht bewölkt</b> bewertet, da die jüngste Entwicklung im Jahr 2023 zwar in die gewünschte Richtung weist, die durchschnittliche Entwicklung der Jahre 2018 bis 2023 jedoch in die entgegengesetzte Richtung verlief. Das zweite Teilziel würde mit <b>Wolke</b> bewertet, da die Entwicklung zwar grundsätzlich in die gewünschte Richtung deutet, die politisch festgelegte Zielgröße von 0 Prozentpunkten bis 2030 bei einer Fortsetzung der aktuellen Entwicklung jedoch deutlich verfehlt würde.<br />• Bei Indikatoren mit mehreren zeitgleich zu erfüllenden Zielvorgaben gilt, dass die jeweils schlechteste Bewertung der Teilziele für die Gesamtbewertung des Indikators maßgeblich ist. Entsprechend wird der Indikator 10.1 für das Jahr 2023 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 05.11.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Hier sind die unterschiedlichen Zieltypen der beiden, zeitgleich zu erreichenden, Ziele kombiniert worden." alt="Wettersymbol Wolke" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -3447,20 +3367,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3477,25 +3402,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #dd1367; font-size: large">10.1&nbsp;Ausländische Schulabsolvierende</b><br /><br />Der Indikator stellt den Anteil der ausländischen Schulabsolvierenden an der Gesamtheit der ausländischen Schulabsolvierenden und &#8209;abgehenden eines Jahrgangs dar. Als Absolvierende gelten Schülerinnen und Schüler, die die jeweilige Schulart mit einem Abschluss verlassen haben. Eingeschlossen sind auch jene, die auf eine andere allgemeinbildende Schulart wechseln, um einen zusätzlichen Abschluss zu erwerben. Als Ausländerinnen und Ausländer gelten alle Personen, die nicht Deutsche im Sinne des Artikels 116&nbsp;Absatz 1&nbsp;des Grundgesetzes (GG) sind, das heißt die nicht die deutsche Staatsangehörigkeit besitzen. Hierzu zählen auch Staatenlose sowie Personen mit ungeklärter Staatsangehörigkeit. Personen mit deutscher Staatsangehörigkeit, die zugleich eine weitere Staatsangehörigkeit besitzen, werden nicht zur ausländischen Bevölkerung gerechnet.<br /><br />Im Jahr 2023&nbsp;lag der Anteil der ausländischen Schulabsolvierenden an allen ausländischen Schulabgehenden und &#8209;absolvierenden bei 82,3&nbsp;%. Damit ist der Anteil im Vergleich zum Vorjahr das dritte Jahr in Folge zurückgegangen. Bei geschlechtsspezifischer Betrachtung lag der Anteil der ausländischen Absolventinnen an allen weiblichen ausländischen Schulabgehenden und &#8209;absolvierenden bei 85,2&nbsp;%, während der Anteil der Absolventen an allen männlichen ausländischen Schulabgehenden und &#8209;absolvierenden bei 79,7&nbsp;% lag. Der Anteil deutscher Schulabsolvierender an allen deutschen Schulabgehenden und &#8209;absolvierenden lag zuletzt bei 94,2&nbsp;% und zeigt sich über die vergangenen fünfzehn Jahre hinweg sehr stabil.<br /><br />Der Unterschied zwischen dem Anteil ausländischer und dem Anteil deutscher Schulabsolvierender erreichte im Jahr 2013&nbsp;mit 6,1&nbsp;Prozentpunkten seinen bislang geringsten Wert. Infolge des erhöhten Zuzugs Geflüchteter in den Jahren 2015/2016&nbsp;vergrößerte sich dieser Abstand jedoch wieder deutlich und stieg sogar über das Niveau von 1996&nbsp;(11,8&nbsp;Prozentpunkte) hinaus. Den bislang höchsten Abstand verzeichnete das Jahr 2017&nbsp;mit 13,0&nbsp;Prozentpunkten. Nachdem sich der Abstand im Jahr 2020&nbsp;vorübergehend auf 9,6&nbsp;Prozentpunkte verringerte, lag er im Jahr 2023&nbsp;erneut bei 11,9&nbsp;Prozentpunkten. Das politisch festgelegte Ziel, den Anteil ausländischer Schulabsolvierender mit mindestens einem Ersten Schulabschluss (ehemals: Hauptschulabschluss) zu erhöhen, wurde im Jahr 2023&nbsp;ebenso verfehlt wie das Ziel, diesen Anteil an das Niveau der deutschen Schulabsolvierender anzugleichen.<br /><br />Betrachtet man neben den reinen Anteilen auch das erreichte Abschlussniveau, so zeigt sich, dass 30,9&nbsp;% der ausländischen Schulabsolvierenden allgemeinbildender Schulen des Jahrgangs 2023&nbsp;den Ersten Schulabschluss erwarben, 39,0&nbsp;% mit einem Mittleren Abschluss die Schule verließen und 12,3&nbsp;% die Fachhochschulreife oder die Allgemeine Hochschulreife erreichten. Bei den deutschen Schulabsolvierenden lag der Anteil beim Ersten Schulabschluss bei 14,9&nbsp;%, beim Mittleren Abschluss bei 43,5&nbsp;% und bei der Fachhochschulreife oder Allgemeinen Hochschulreife bei 35,9&nbsp;%. Insbesondere bei den höheren Bildungsabschlüssen sind ausländische Jugendlichen damit im Vergleich zu ihren deutschen Mitschülerinnen und Mitschülern deutlich unterrepräsentiert.<br /><br />Datengrundlage des Indikators bilden die durch das Statistische Bundesamt zusammengeführten Schulstatistiken der einzelnen Bundesländer. Dabei handelt es sich in der Regel um Totalerhebungen mit Auskunftspflicht. Die Aggregation der Länderergebnisse zum Bundesergebnis wird durch die unterschiedliche Bildungspolitik der Länder beeinflusst&nbsp;–&nbsp;etwa hinsichtlich der Versetzungsregelungen oder der Ausgestaltung von Bildungsgängen im Bereich der beruflichen Schulen. Diese Unterschiede können auch durch formale Regelungen zur Vereinheitlichung der Zuordnungen nur eingeschränkt ausgeglichen werden.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #dd1367; font-size: large">10.1&nbsp;Ausländische Schulabsolvierende</b><br /><br />Der Indikator stellt den Anteil der ausländischen Schulabsolvierenden an der Gesamtheit der ausländischen Schulabsolvierenden und &#8209;abgehenden eines Jahrgangs dar. Als Absolvierende gelten Schülerinnen und Schüler, die die jeweilige Schulart mit einem Abschluss verlassen haben. Eingeschlossen sind auch jene, die auf eine andere allgemeinbildende Schulart wechseln, um einen zusätzlichen Abschluss zu erwerben. Als Ausländerinnen und Ausländer gelten alle Personen, die nicht Deutsche im Sinne des Artikels 116&nbsp;Absatz 1&nbsp;des Grundgesetzes (GG) sind, das heißt die nicht die deutsche Staatsangehörigkeit besitzen. Hierzu zählen auch Staatenlose sowie Personen mit ungeklärter Staatsangehörigkeit. Personen mit deutscher Staatsangehörigkeit, die zugleich eine weitere Staatsangehörigkeit besitzen, werden nicht zur ausländischen Bevölkerung gerechnet.<br /><br />Im Jahr 2023&nbsp;lag der Anteil der ausländischen Schulabsolvierenden an allen ausländischen Schulabgehenden und &#8209;absolvierenden bei 82,3&nbsp;%. Damit ist der Anteil im Vergleich zum Vorjahr das dritte Jahr in Folge zurückgegangen. Bei geschlechtsspezifischer Betrachtung lag der Anteil der ausländischen Absolventinnen an allen weiblichen ausländischen Schulabgehenden und &#8209;absolvierenden bei 85,2&nbsp;%, während der Anteil der Absolventen an allen männlichen ausländischen Schulabgehenden und &#8209;absolvierenden bei 79,7&nbsp;% lag. Der Anteil deutscher Schulabsolvierender an allen deutschen Schulabgehenden und &#8209;absolvierenden lag zuletzt bei 94,2&nbsp;% und zeigt sich über die vergangenen fünfzehn Jahre hinweg sehr stabil.<br /><br />Der Unterschied zwischen dem Anteil ausländischer und dem Anteil deutscher Schulabsolvierender erreichte im Jahr 2013&nbsp;mit 6,1&nbsp;Prozentpunkten seinen bislang geringsten Wert. Infolge des erhöhten Zuzugs Geflüchteter in den Jahren 2015/2016&nbsp;vergrößerte sich dieser Abstand jedoch wieder deutlich und stieg sogar über das Niveau von 1996&nbsp;(11,8&nbsp;Prozentpunkte) hinaus. Den bislang höchsten Abstand verzeichnete das Jahr 2017&nbsp;mit 13,0&nbsp;Prozentpunkten. Nachdem sich der Abstand im Jahr 2020&nbsp;vorübergehend auf 9,6&nbsp;Prozentpunkte verringerte, lag er im Jahr 2023&nbsp;erneut bei 11,9&nbsp;Prozentpunkten. Das politisch festgelegte Ziel, den Anteil ausländischer Schulabsolvierender mit mindestens einem Ersten Schulabschluss (ehemals: Hauptschulabschluss) zu erhöhen, wurde im Jahr 2023&nbsp;ebenso verfehlt wie das Ziel, diesen Anteil an das Niveau der deutschen Schulabsolvierender anzugleichen.<br /><br />Betrachtet man neben den reinen Anteilen auch das erreichte Abschlussniveau, so zeigt sich, dass 30,9&nbsp;% der ausländischen Schulabsolvierenden allgemeinbildender Schulen des Jahrgangs 2023&nbsp;den Ersten Schulabschluss erwarben, 39,0&nbsp;% mit einem Mittleren Abschluss die Schule verließen und 12,3&nbsp;% die Fachhochschulreife oder die Allgemeine Hochschulreife erreichten. Bei den deutschen Schulabsolvierenden lag der Anteil beim Ersten Schulabschluss bei 14,9&nbsp;%, beim Mittleren Abschluss bei 43,5&nbsp;% und bei der Fachhochschulreife oder Allgemeinen Hochschulreife bei 35,9&nbsp;%. Insbesondere bei den höheren Bildungsabschlüssen sind ausländische Jugendlichen damit im Vergleich zu ihren deutschen Mitschülerinnen und Mitschülern deutlich unterrepräsentiert.<br /><br />Datengrundlage des Indikators bilden die durch das Statistische Bundesamt zusammengeführten Schulstatistiken der einzelnen Bundesländer. Dabei handelt es sich in der Regel um Totalerhebungen mit Auskunftspflicht. Die Aggregation der Länderergebnisse zum Bundesergebnis wird durch die unterschiedliche Bildungspolitik der Länder beeinflusst&nbsp;–&nbsp;etwa hinsichtlich der Versetzungsregelungen oder der Ausgestaltung von Bildungsgängen im Bereich der beruflichen Schulen. Diese Unterschiede können auch durch formale Regelungen zur Vereinheitlichung der Zuordnungen nur eingeschränkt ausgeglichen werden.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -4289,19 +4209,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -4315,8 +4240,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5053,204 +4978,130 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=21111-0004&bypass=true&levelindex=1&levelid=1660810680251&language=de" target="_blank">
+                Absolventen und Abgänger: Deutschland – GENESIS online 21111-0004 <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=21111-0004&bypass=true&levelindex=1&levelid=1660810680251&language=de" target="_blank">
-                    Absolventen und Abgänger: Deutschland – GENESIS online 21111-0004 <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Schulen/_inhalt.html#_jq2v0kmyn" target="_blank">
+                Statistischer Bericht – Allgemeinbildende Schulen <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bildung-Forschung-Kultur/Schulen/_inhalt.html#_jq2v0kmyn" target="_blank">
-                    Statistischer Bericht – Allgemeinbildende Schulen <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5316,6 +5167,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5323,11 +5175,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -5338,18 +5190,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -5363,12 +5215,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

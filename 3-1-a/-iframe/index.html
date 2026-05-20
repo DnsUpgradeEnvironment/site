@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/3/" aria-label=" 3" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png"
-              alt="Gesundheit und Wohlergehen - Ziel 3"
-              id="goal-3"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-3">
+    <div class="container">
+        <div class="row">
             
-              Indikator 3.1.a
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/3/" aria-label=" 3" title=" 3">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png"
+                        alt="Gesundheit und Wohlergehen - Ziel 3"
+                        id="goal-3"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Durch Prävention und Behandlung vermeidbare Sterblichkeit</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 3.1.a
+                        
+                        <span class="lead-copy">Durch Prävention und Behandlung vermeidbare Sterblichkeit</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-3" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_3-1-a'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Durch Prävention und Behandlung vermeidbare Sterblichkeit"
   data-charttitles="null"
-  data-chartsubtitle="Vermeidbare Todesfälle der unter 75-jährigen Bevölkerung"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Durch Prävention und Behandlung vermeidbare Sterblichkeit&quot;},{&quot;field&quot;:&quot;Geschlecht&quot;,&quot;value&quot;:&quot;Weiblich&quot;},{&quot;field&quot;:&quot;Geschlecht&quot;,&quot;value&quot;:&quot;Männlich&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:200,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;xValue&quot;:11,&quot;yValue&quot;:200,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#4c9f38&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:10.9,&quot;yValue&quot;:230.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;200&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Je 100 000 Einwohner/-innen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;type of treatment&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Durch Prävention vermeidbare Sterblichkeit&quot;,&quot;Durch Behandlung vermeidbare Sterblichkeit&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Art der Maßnahme&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -619,62 +609,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -687,12 +675,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Durch Prävention und Behandlung vermeidbare Sterblichkeit</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Vermeidbare Todesfälle der unter 75-jährigen Bevölkerung</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Durch Prävention und Behandlung vermeidbare Sterblichkeit
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -707,57 +695,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>03.09.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Altersstandardisiert: Europäische Standardbevölkerung 2013.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Altersstandardisiert: Europäische Standardbevölkerung 2013.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -789,57 +768,48 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>03.09.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Altersstandardisiert: Europäische Standardbevölkerung 2013.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Altersstandardisiert: Europäische Standardbevölkerung 2013.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -927,197 +897,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die vermeidbaren Todesfälle der weiblichen und männlichen unter 75-jährigen Bevölkerung, bezogen auf 100 000 Einwohnerinnen und Einwohner der europäischen Standardbevölkerung 2013 unter 75 Jahren (unter Ausschluss der unter 1-Jährigen) dar. Der Indikator unterscheidet zwischen behandelbarer und prävenierbarer Sterblichkeit, deren Summe die vermeidbare Sterblichkeit ergibt.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Durch Prävention und Behandlung vermeidbare Sterblichkeit</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die vermeidbaren Todesfälle der weiblichen und männlichen unter 75-jährigen Bevölkerung, bezogen auf 100 000 Einwohnerinnen und Einwohner der europäischen Standardbevölkerung 2013 unter 75 Jahren (unter Ausschluss der unter 1-Jährigen) dar. Der Indikator unterscheidet zwischen behandelbarer und prävenierbarer Sterblichkeit, deren Summe die vermeidbare Sterblichkeit ergibt.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Durch Vorbeugung, Früherkennung beziehungsweise eine optimale Behandlung sind Todesfälle vermeidbar. Der Indikator ist damit ein Maß für die Qualität des Gesundheitssystems und das Gesundheitsverhalten der Bevölkerung mit Blick darauf, in welchem Umfang Sterbefälle auftreten, die bei angemessener Prävention bzw. Behandlung in einer bestimmten Altersgruppe grundsätzlich hätten verhindert werden können.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Durch Vorbeugung, Früherkennung beziehungsweise eine optimale Behandlung sind Todesfälle vermeidbar. Der Indikator ist damit ein Maß für die Qualität des Gesundheitssystems und das Gesundheitsverhalten der Bevölkerung mit Blick darauf, in welchem Umfang Sterbefälle auftreten, die bei angemessener Prävention bzw. Behandlung in einer bestimmten Altersgruppe grundsätzlich hätten verhindert werden können.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Senkung auf 200 Todesfälle je 100 000 Einwohnerinnen und Einwohner bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Senkung auf 200 Todesfälle je 100 000 Einwohnerinnen und Einwohner bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die durch Prävention und Behandlung vermeidbare Sterblichkeit soll bis 2030 auf höchstens 200 Todesfälle je 100 000 Einwohnerinnen und Einwohner gesenkt werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 3.1.a für das Jahr 2021 mit <b>Gewitter</b> bewertet. Im Mittel der letzten sechs Jahre ist der Indikatorwert gestiegen und hat sich somit nicht in die gewünschte Richtung entwickelt.<br />• Datenstand bei Bewertung: 03.09.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Der Abstand zum Ziel war in 2021&nbsp;konstant hoch oder hat sich vergrößert. Der Indikator entwickelte sich also nicht in die gewünschte Richtung." alt="Wettersymbol Blitz" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die durch Prävention und Behandlung vermeidbare Sterblichkeit soll bis 2030 auf höchstens 200 Todesfälle je 100 000 Einwohnerinnen und Einwohner gesenkt werden.<br />• Ausgehend von der Zielformulierung wird der Indikator 3.1.a für das Jahr 2021 mit <b>Gewitter</b> bewertet. Im Mittel der letzten sechs Jahre ist der Indikatorwert gestiegen und hat sich somit nicht in die gewünschte Richtung entwickelt.<br />• Datenstand bei Bewertung: 03.09.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Der Abstand zum Ziel war in 2021&nbsp;konstant hoch oder hat sich vergrößert. Der Indikator entwickelte sich also nicht in die gewünschte Richtung." alt="Wettersymbol Blitz" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1903,20 +1823,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1933,25 +1858,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #4c9f38; font-size: large">3.1.a Durch Prävention und Behandlung vermeidbare Sterblichkeit</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator <i>Durch Prävention und Behandlung vermeidbare Sterblichkeit</i> soll Rückschlüsse auf die Qualität des Gesundheitssystems, insbesondere auf die Effizienz von Präventionsprogrammen und frühzeitigen diagnostischen Maßnahmen ermöglichen. Durch Behandlung vermeidbare Todesfälle sind solche, die durch rechtzeitige und wirksame medizinische Maßnahmen hätten vermieden werden können. Dies umfasst sowohl Sekundärprävention als auch therapeutische Behandlungen nach dem Auftreten von Krankheiten oder Verletzungen, die die Sterblichkeit (Letalität) verringern.<br /><br />Die durch Prävention vermeidbare Sterblichkeit betrifft vorwiegend Todesfälle, die durch wirksame Maßnahmen im Bereich der öffentlichen Gesundheit und der Primärprävention hätten vermieden werden können. Hierbei handelt es sich um Maßnahmen, die vor dem Auftreten von Krankheiten oder Verletzungen ergriffen werden, um die Zahl neuer Erkrankungsfälle (Inzidenz) zu reduzieren. Die Identifizierung und Minderung der zugrunde liegenden Risikofaktoren wie ungesunde Ernährung (siehe <i>Adipositasquoten</i> Indikatoren <a href="https://dns-indikatoren.de/3-1-e/">3.1.e</a> und <a href="https://dns-indikatoren.de/3-1-f/">3.1.f</a>), Tabakkonsum (siehe <i>Raucherquoten</i> Indikatoren <a href="https://dns-indikatoren.de/3-1-cd/">3.1.c</a> und <a href="https://dns-indikatoren.de/3-1-cd/">3.1.d</a>), Alkoholkonsum und Bewegungsmangel ist entscheidend, um die Zahl vermeidbarer Todesfälle zu reduzieren und die allgemeine Gesundheitslage der Bevölkerung zu verbessern.<br /><br />Die genauen Todesursachen, die gemäß diesen Definitionen als vermeidbar gelten, wurden 2018&nbsp;von der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) sowie dem Statistisches Amt der Europäischen Union (Eurostat) in Zusammenarbeit mit einer Expertengruppe festgelegt und 2019&nbsp;überarbeitet. Dazu gehören eine Reihe von Infektionskrankheiten (darunter auch COVID-19), verschiedene Arten bösartiger Neubildungen, endokrine und Stoffwechselerkrankungen sowie bestimmte Erkrankungen des Nervensystems, des Kreislaufsystems, der Atemwege, des Verdauungssystems und des Urogenitalsystems sowie Erkrankungen im Zusammenhang mit Schwangerschaft, Geburt und der perinatalen Periode, eine Reihe von angeborenen Missbildungen, Nebenwirkungen medizinischer und chirurgischer Behandlungen, Verletzungen sowie alkohol- und drogenbedingte Störungen. Einige Todesfälle, wie beispielsweise bei ischämischen Herzerkrankungen, sind sowohl durch Prävention als auch durch Behandlung vermeidbar. Zur Vermeidung von Doppelzählungen werden diese Todesfälle der Kategorie <i>durch Prävention vermeidbare Sterblichkeit</i> zugeordnet, da eine erfolgreiche Prävention die Behandlung überflüssig machen würde.<br /><br />Der Indikator berücksichtigt ausschließlich Todesfälle von Personen unter 75&nbsp;Jahren. Um die Vergleichbarkeit zu gewährleisten, bezieht sich der Indikator auf die europäische Standardbevölkerung dieser Altersklasse. Dies dient dazu, Verzerrungen der Ergebnisse durch unterschiedliche Altersstrukturen zwischen Ländern oder durch demographische Veränderungen im Zeitverlauf zu vermeiden. Die Datengrundlage für die Berechnung des Indikators ist die Todesursachenstatistik des Statistischen Bundesamtes, in der alle amtlichen Todesbescheinigungen systematisch erfasst und ausgewertet werden.<br /><br /><b>Entwicklung</b><br /><br />Die vermeidbare Gesamtmortalität ist seit 2011&nbsp;tendenziell rückläufig. Zwischen 2011&nbsp;und 2019&nbsp;sank die durch Prävention und Behandlung vermeidbare Sterblichkeit von 258&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner auf 231&nbsp;im Jahr 2019&nbsp;(–10,4&nbsp;%). In den folgenden Jahren stieg der Indikator aufgrund der COVID-19-Pandemie an und erreichte 2021&nbsp;wieder den Wert von 2012. Dies spiegelt sich auch in der Verteilung der einzelnen Todesursachen wider. Auf europäischer Ebene waren COVID-19-Infektionen die häufigste Ursache für vermeidbare Todesfälle, gefolgt von ischämischen Herzkrankheiten und Lungenkrebs.<br /><br />Bei der getrennten Betrachtung der durch Prävention und der durch Behandlung vermeidbaren Sterblichkeit zeigt sich, dass etwa zwei Drittel der vermeidbaren Todesfälle durch präventive Maßnahmen und ein Drittel durch medizinische Maßnahmen hätten vermieden werden können. Diese Verteilung ist jedoch zum Teil auch auf die zuvor beschriebene Zuordnung bestimmter Todesursachen zurückzuführen, die sowohl durch präventive Maßnahmen vermeidbar als auch behandelbar gewesen wären.<br /><br />Die geschlechtsspezifische Analyse des Indikators zeigte einen deutlichen Unterschied zwischen Männern und Frauen. Bei Männern lag die vermeidbare Sterblichkeit bei 336&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohner, während sie bei Frauen mit 174&nbsp;vermeidbaren Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen etwa halb so hoch war. Der Unterschied resultierte überwiegend aus den präventiv vermeidbaren Todesursachen, was darauf hindeutet, dass Männer weniger Vorsorge betreiben und von Präventionsprogrammen schlechter erreicht werden als Frauen. Bei den durch Behandlung vermeidbaren Todesfällen war der Unterschied weniger ausgeprägt.<br /><br />Das politisch festgelegte Ziel, die durch Prävention und Behandlung vermeidbare Sterblichkeit bis 2030&nbsp;auf höchstens 200&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner zu senken, wäre bei Fortsetzung der Entwicklung vor der COVID-19-Pandemie erreichbar gewesen. Der pandemiebedingte Anstieg hat jedoch die generell positive Entwicklung des Indikators beeinträchtigt.<br /><br />Im europäischen Vergleich lag Deutschland mit einer vermeidbaren Sterblichkeit von 253&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner im Jahr 2021&nbsp;im Mittelfeld und deutlich unter dem EU-Durchschnitt von 294&nbsp;Todesfällen. Die niedrigsten Raten fanden sich in Spanien (195&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) und Schweden (177&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner). In vielen osteuropäischen Ländern wie Bulgarien (685&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) und Rumänien (695&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) waren die Raten deutlich höher.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #4c9f38; font-size: large">3.1.a Durch Prävention und Behandlung vermeidbare Sterblichkeit</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Der Indikator <i>Durch Prävention und Behandlung vermeidbare Sterblichkeit</i> soll Rückschlüsse auf die Qualität des Gesundheitssystems, insbesondere auf die Effizienz von Präventionsprogrammen und frühzeitigen diagnostischen Maßnahmen ermöglichen. Durch Behandlung vermeidbare Todesfälle sind solche, die durch rechtzeitige und wirksame medizinische Maßnahmen hätten vermieden werden können. Dies umfasst sowohl Sekundärprävention als auch therapeutische Behandlungen nach dem Auftreten von Krankheiten oder Verletzungen, die die Sterblichkeit (Letalität) verringern.<br /><br />Die durch Prävention vermeidbare Sterblichkeit betrifft vorwiegend Todesfälle, die durch wirksame Maßnahmen im Bereich der öffentlichen Gesundheit und der Primärprävention hätten vermieden werden können. Hierbei handelt es sich um Maßnahmen, die vor dem Auftreten von Krankheiten oder Verletzungen ergriffen werden, um die Zahl neuer Erkrankungsfälle (Inzidenz) zu reduzieren. Die Identifizierung und Minderung der zugrunde liegenden Risikofaktoren wie ungesunde Ernährung (siehe <i>Adipositasquoten</i> Indikatoren <a href="https://dns-indikatoren.de/3-1-e/">3.1.e</a> und <a href="https://dns-indikatoren.de/3-1-f/">3.1.f</a>), Tabakkonsum (siehe <i>Raucherquoten</i> Indikatoren <a href="https://dns-indikatoren.de/3-1-cd/">3.1.c</a> und <a href="https://dns-indikatoren.de/3-1-cd/">3.1.d</a>), Alkoholkonsum und Bewegungsmangel ist entscheidend, um die Zahl vermeidbarer Todesfälle zu reduzieren und die allgemeine Gesundheitslage der Bevölkerung zu verbessern.<br /><br />Die genauen Todesursachen, die gemäß diesen Definitionen als vermeidbar gelten, wurden 2018&nbsp;von der Organisation für wirtschaftliche Zusammenarbeit und Entwicklung (OECD) sowie dem Statistisches Amt der Europäischen Union (Eurostat) in Zusammenarbeit mit einer Expertengruppe festgelegt und 2019&nbsp;überarbeitet. Dazu gehören eine Reihe von Infektionskrankheiten (darunter auch COVID-19), verschiedene Arten bösartiger Neubildungen, endokrine und Stoffwechselerkrankungen sowie bestimmte Erkrankungen des Nervensystems, des Kreislaufsystems, der Atemwege, des Verdauungssystems und des Urogenitalsystems sowie Erkrankungen im Zusammenhang mit Schwangerschaft, Geburt und der perinatalen Periode, eine Reihe von angeborenen Missbildungen, Nebenwirkungen medizinischer und chirurgischer Behandlungen, Verletzungen sowie alkohol- und drogenbedingte Störungen. Einige Todesfälle, wie beispielsweise bei ischämischen Herzerkrankungen, sind sowohl durch Prävention als auch durch Behandlung vermeidbar. Zur Vermeidung von Doppelzählungen werden diese Todesfälle der Kategorie <i>durch Prävention vermeidbare Sterblichkeit</i> zugeordnet, da eine erfolgreiche Prävention die Behandlung überflüssig machen würde.<br /><br />Der Indikator berücksichtigt ausschließlich Todesfälle von Personen unter 75&nbsp;Jahren. Um die Vergleichbarkeit zu gewährleisten, bezieht sich der Indikator auf die europäische Standardbevölkerung dieser Altersklasse. Dies dient dazu, Verzerrungen der Ergebnisse durch unterschiedliche Altersstrukturen zwischen Ländern oder durch demographische Veränderungen im Zeitverlauf zu vermeiden. Die Datengrundlage für die Berechnung des Indikators ist die Todesursachenstatistik des Statistischen Bundesamtes, in der alle amtlichen Todesbescheinigungen systematisch erfasst und ausgewertet werden.<br /><br /><b>Entwicklung</b><br /><br />Die vermeidbare Gesamtmortalität ist seit 2011&nbsp;tendenziell rückläufig. Zwischen 2011&nbsp;und 2019&nbsp;sank die durch Prävention und Behandlung vermeidbare Sterblichkeit von 258&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner auf 231&nbsp;im Jahr 2019&nbsp;(–10,4&nbsp;%). In den folgenden Jahren stieg der Indikator aufgrund der COVID-19-Pandemie an und erreichte 2021&nbsp;wieder den Wert von 2012. Dies spiegelt sich auch in der Verteilung der einzelnen Todesursachen wider. Auf europäischer Ebene waren COVID-19-Infektionen die häufigste Ursache für vermeidbare Todesfälle, gefolgt von ischämischen Herzkrankheiten und Lungenkrebs.<br /><br />Bei der getrennten Betrachtung der durch Prävention und der durch Behandlung vermeidbaren Sterblichkeit zeigt sich, dass etwa zwei Drittel der vermeidbaren Todesfälle durch präventive Maßnahmen und ein Drittel durch medizinische Maßnahmen hätten vermieden werden können. Diese Verteilung ist jedoch zum Teil auch auf die zuvor beschriebene Zuordnung bestimmter Todesursachen zurückzuführen, die sowohl durch präventive Maßnahmen vermeidbar als auch behandelbar gewesen wären.<br /><br />Die geschlechtsspezifische Analyse des Indikators zeigte einen deutlichen Unterschied zwischen Männern und Frauen. Bei Männern lag die vermeidbare Sterblichkeit bei 336&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohner, während sie bei Frauen mit 174&nbsp;vermeidbaren Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen etwa halb so hoch war. Der Unterschied resultierte überwiegend aus den präventiv vermeidbaren Todesursachen, was darauf hindeutet, dass Männer weniger Vorsorge betreiben und von Präventionsprogrammen schlechter erreicht werden als Frauen. Bei den durch Behandlung vermeidbaren Todesfällen war der Unterschied weniger ausgeprägt.<br /><br />Das politisch festgelegte Ziel, die durch Prävention und Behandlung vermeidbare Sterblichkeit bis 2030&nbsp;auf höchstens 200&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner zu senken, wäre bei Fortsetzung der Entwicklung vor der COVID-19-Pandemie erreichbar gewesen. Der pandemiebedingte Anstieg hat jedoch die generell positive Entwicklung des Indikators beeinträchtigt.<br /><br />Im europäischen Vergleich lag Deutschland mit einer vermeidbaren Sterblichkeit von 253&nbsp;Todesfällen je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner im Jahr 2021&nbsp;im Mittelfeld und deutlich unter dem EU-Durchschnitt von 294&nbsp;Todesfällen. Die niedrigsten Raten fanden sich in Spanien (195&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) und Schweden (177&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner). In vielen osteuropäischen Ländern wie Bulgarien (685&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) und Rumänien (695&nbsp;Todesfälle je 100&nbsp;000&nbsp;Einwohnerinnen und Einwohner) waren die Raten deutlich höher.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2745,19 +2665,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2771,8 +2696,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3509,151 +3434,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/eurostat.png" alt="Statistisches Amt der Europäischen Union" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Amt der Europäischen Union zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/eurostat.png" alt="Statistisches Amt der Europäischen Union" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Amt der Europäischen Union zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/de/home" target="_blank" onclick="return confirm_alert('von Eurostat', 'De')">Statistisches Amt der Europäischen Union</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://ec.europa.eu/eurostat/databrowser/view/hlth_cd_apr/default/table?lang=de&category=hlth.hlth_cdeath.hlth_cd_pbt" target="_blank">
+                Durch Behandlung und Prävention vermeidbare Sterblichkeit von Einwohnern - Eurostat-Tabelle [hlth_cd_apr] <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://ec.europa.eu/eurostat/databrowser/view/hlth_cd_apr/default/table?lang=de&category=hlth.hlth_cdeath.hlth_cd_pbt" target="_blank" onclick="return confirm_alert('von Eurostat', 'De');">
-                      Durch Behandlung und Prävention vermeidbare Sterblichkeit von Einwohnern - Eurostat-Tabelle [hlth_cd_apr] <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3719,6 +3603,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3726,11 +3611,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3741,18 +3626,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3766,12 +3651,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

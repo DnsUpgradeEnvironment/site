@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-4">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/4/" aria-label=" 4" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png"
-              alt="Hochwertige Bildung - Ziel 4"
-              id="goal-4"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-4">
+    <div class="container">
+        <div class="row">
             
-              Indikator 4.1.c
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/4/" aria-label=" 4" title=" 4">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/4.png"
+                        alt="Hochwertige Bildung - Ziel 4"
+                        id="goal-4"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 4.1.c
+                        
+                        <span class="lead-copy">Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-4" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_4-1-c'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)"
   data-charttitles="null"
-  data-chartsubtitle="Anteil an allen allgemeinbildenden und berufsbildenden Schulen"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="null"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -473,62 +463,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -541,12 +529,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Anteil an allen allgemeinbildenden und berufsbildenden Schulen</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -561,51 +549,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -637,51 +619,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></dd>
         
 
         
 
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-          <dt><u>Anmerkung</u>:</dt>
-          <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+        <dt>Anmerkung:</dt>
+        <dd>Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
 
         
 
-        
-        
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -769,197 +745,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil der allgemeinbildenden und berufsbildenden Schulen (in %) dar, der über mindestens eine Zertifizierung im Bereich Bildung für nachhaltige Entwicklung (aus einem, von den Kultusministerien der Länder definierten Set aus BNE-Labeln) verfügt. Die BNE-Label sollen ein besonderes Engagement der Schulen für eine Verankerung von Bildung für nachhaltige Entwicklung (BNE) im Unterricht und in der Schulentwicklung kennzeichnen.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil der allgemeinbildenden und berufsbildenden Schulen (in %) dar, der über mindestens eine Zertifizierung im Bereich Bildung für nachhaltige Entwicklung (aus einem, von den Kultusministerien der Länder definierten Set aus BNE-Labeln) verfügt. Die BNE-Label sollen ein besonderes Engagement der Schulen für eine Verankerung von Bildung für nachhaltige Entwicklung (BNE) im Unterricht und in der Schulentwicklung kennzeichnen.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Das Konzept von Bildung für nachhaltige Entwicklung (BNE) hat zum Ziel, Schülerinnen und Schüler zur aktiven Gestaltung einer ökologisch verträglichen, wirtschaftlich leistungsfähigen und sozial gerechten Umwelt unter Berücksichtigung globaler Aspekte, demokratischer Grundprinzipien und kultureller Vielfalt zu befähigen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Das Konzept von Bildung für nachhaltige Entwicklung (BNE) hat zum Ziel, Schülerinnen und Schüler zur aktiven Gestaltung einer ökologisch verträglichen, wirtschaftlich leistungsfähigen und sozial gerechten Umwelt unter Berücksichtigung globaler Aspekte, demokratischer Grundprinzipien und kultureller Vielfalt zu befähigen.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Kontinuierlicher Anstieg</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Kontinuierlicher Anstieg</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Der Anteil von Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung) soll gesteigert werden.<br />• Eine Bewertung des Indikators 4.1.c ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Der Anteil von Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung) soll gesteigert werden.<br />• Eine Bewertung des Indikators 4.1.c ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1745,20 +1671,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1775,25 +1706,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #c5192d; font-size: large">4.1.c Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</b><br /><br />Schulen, die nachhaltige Prinzipien in ihren Unterricht und ihre Schulentwicklung einbeziehen, können ihr Engagement durch verschiedene BNE-Labels zertifizieren lassen. Der Indikator <i>Schulen mit BNE-Label</i>, der vom Bundesministerium für Bildung und Forschung (BMBF) und der Ständigen Konferenz der Kultusminister der Länder (KMK) eingeführt wurde, erfasst den Anteil der Schulen, die mit bestimmten BNE-Labeln ausgezeichnet sind. Die erste Erhebung dieses Indikators fand zwischen Juli und November 2024&nbsp;statt. Dabei wurden 27&nbsp;verschiedene BNE-Labels berücksichtigt, davon werden sieben bundesweit und 20&nbsp;nur in einzelnen Bundesländern vergeben. Die Auswahl der Labels erfolgt nach festgelegten Kriterien, die die Verankerung von BNE in der Schul- und Unterrichtsentwicklung widerspiegeln sollen.<br /><br />Die Ergebnisse der Erhebung für das Schuljahr 2023/2024&nbsp;zeigen, dass 3&nbsp;556&nbsp;von insgesamt 29&nbsp;988&nbsp;öffentlichen und privaten allgemein- und berufsbildenden Schulen in Deutschland mit BNE-Labels ausgezeichnet sind, was etwa 11,9&nbsp;% der Schulen entspricht. Schulen mit mehreren BNE-Zertifikaten werden dabei nur einmal als eine BNE-zertifizierte Schule gezählt. Die nächste Erhebung ist für das Schuljahr 2025/2026&nbsp;geplant.<br /><br />Die Kriterien für die Berücksichtigung und die Vorauswahl der BNE-Labels wurden von einer Arbeitsgruppe aus Vertreterinnen und Vertretern von Bund, Ländern und der Wissenschaft erarbeitet. Um als BNE-Label anerkannt zu werden, müssen die Labels Anforderungen erfüllen, die gewährleisten sollen, dass die Verankerung von Bildung für nachhaltige Entwicklung (BNE) im Unterricht über die grundlegenden Vorgaben im Lehrplan hinausgeht und als Bestandteil der gesamten Schulentwicklung im Rahmen eines ganzheitlichen Ansatzes (Whole School Approach) berücksichtigt wird. Zu den bundesweit anerkannten BNE-Labels gehören unter anderem das Club-of-Rome-Schulen-Label, Fairtrade Schools, die Naturpark-Schule, Schools for Earth, die Umweltschule in Europa&nbsp;–&nbsp;Internationale Nachhaltigkeitsschule, die UNESCO-Projektschulen und das Verbraucherschulen (Gold)-Label. Eine Veränderung der berücksichtigten Labels sowohl in Bezug auf ihre inhaltlichen Anforderungen als auch den quantitativen Umfang der insgesamt berücksichtigten Labels wird künftig, trotz der festgelegten Auswahlkriterien, die Aussagekraft des Indikators im Zeitverlauf beeinflussen.<br /><br />Die qualitative Aussagekraft des Indikators ist aufgrund der heterogenen Struktur des Label-Systems eingeschränkt, da die verschiedenen Labels unterschiedliche Vergabekriterien aufweisen und somit kein einheitliches Niveau der BNE-Verankerung garantiert werden kann. Der Indikator liefert zudem keine direkte Aussage über den Erfolg der Bildung für nachhaltige Entwicklung oder die tatsächlich vermittelten Kenntnisse. Aus der reinen Anzahl der ausgezeichneten Schulen lässt sich daher nicht unmittelbar auf die Qualität der BNE-Umsetzung schließen. Auch ist mit diesem Indikatoren keine Aussage zu dem Anteil der Schülerinnen und Schüler an BNE zertifizierten Schulen möglich.<br /><br />Das politisch festgelegte Ziel, den Anteil der Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung) zu steigern, kann derzeit nicht bewertet werden, da noch keine Daten im Zeitverlauf vorliegen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #c5192d; font-size: large">4.1.c Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung)</b><br /><br />Schulen, die nachhaltige Prinzipien in ihren Unterricht und ihre Schulentwicklung einbeziehen, können ihr Engagement durch verschiedene BNE-Labels zertifizieren lassen. Der Indikator <i>Schulen mit BNE-Label</i>, der vom Bundesministerium für Bildung und Forschung (BMBF) und der Ständigen Konferenz der Kultusminister der Länder (KMK) eingeführt wurde, erfasst den Anteil der Schulen, die mit bestimmten BNE-Labeln ausgezeichnet sind. Die erste Erhebung dieses Indikators fand zwischen Juli und November 2024&nbsp;statt. Dabei wurden 27&nbsp;verschiedene BNE-Labels berücksichtigt, davon werden sieben bundesweit und 20&nbsp;nur in einzelnen Bundesländern vergeben. Die Auswahl der Labels erfolgt nach festgelegten Kriterien, die die Verankerung von BNE in der Schul- und Unterrichtsentwicklung widerspiegeln sollen.<br /><br />Die Ergebnisse der Erhebung für das Schuljahr 2023/2024&nbsp;zeigen, dass 3&nbsp;556&nbsp;von insgesamt 29&nbsp;988&nbsp;öffentlichen und privaten allgemein- und berufsbildenden Schulen in Deutschland mit BNE-Labels ausgezeichnet sind, was etwa 11,9&nbsp;% der Schulen entspricht. Schulen mit mehreren BNE-Zertifikaten werden dabei nur einmal als eine BNE-zertifizierte Schule gezählt. Die nächste Erhebung ist für das Schuljahr 2025/2026&nbsp;geplant.<br /><br />Die Kriterien für die Berücksichtigung und die Vorauswahl der BNE-Labels wurden von einer Arbeitsgruppe aus Vertreterinnen und Vertretern von Bund, Ländern und der Wissenschaft erarbeitet. Um als BNE-Label anerkannt zu werden, müssen die Labels Anforderungen erfüllen, die gewährleisten sollen, dass die Verankerung von Bildung für nachhaltige Entwicklung (BNE) im Unterricht über die grundlegenden Vorgaben im Lehrplan hinausgeht und als Bestandteil der gesamten Schulentwicklung im Rahmen eines ganzheitlichen Ansatzes (Whole School Approach) berücksichtigt wird. Zu den bundesweit anerkannten BNE-Labels gehören unter anderem das Club-of-Rome-Schulen-Label, Fairtrade Schools, die Naturpark-Schule, Schools for Earth, die Umweltschule in Europa&nbsp;–&nbsp;Internationale Nachhaltigkeitsschule, die UNESCO-Projektschulen und das Verbraucherschulen (Gold)-Label. Eine Veränderung der berücksichtigten Labels sowohl in Bezug auf ihre inhaltlichen Anforderungen als auch den quantitativen Umfang der insgesamt berücksichtigten Labels wird künftig, trotz der festgelegten Auswahlkriterien, die Aussagekraft des Indikators im Zeitverlauf beeinflussen.<br /><br />Die qualitative Aussagekraft des Indikators ist aufgrund der heterogenen Struktur des Label-Systems eingeschränkt, da die verschiedenen Labels unterschiedliche Vergabekriterien aufweisen und somit kein einheitliches Niveau der BNE-Verankerung garantiert werden kann. Der Indikator liefert zudem keine direkte Aussage über den Erfolg der Bildung für nachhaltige Entwicklung oder die tatsächlich vermittelten Kenntnisse. Aus der reinen Anzahl der ausgezeichneten Schulen lässt sich daher nicht unmittelbar auf die Qualität der BNE-Umsetzung schließen. Auch ist mit diesem Indikatoren keine Aussage zu dem Anteil der Schülerinnen und Schüler an BNE zertifizierten Schulen möglich.<br /><br />Das politisch festgelegte Ziel, den Anteil der Schulen mit BNE-Label (Bildung für nachhaltige Entwicklung) zu steigern, kann derzeit nicht bewertet werden, da noch keine Daten im Zeitverlauf vorliegen.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2587,19 +2513,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2613,8 +2544,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3351,98 +3282,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/kmk.png" alt="Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt" title=" Klicken Sie hier um zur Homepage der Organisation Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/kmk.png" alt="Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt" title=" Klicken Sie hier um zur Homepage der Organisation Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.kmk.org/" target="_blank" onclick="return confirm_alert('der Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt', 'De')">Kultusministerien der Länder in Zusammenarbeit mit dem Hessischen Statistischen Landesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3508,6 +3431,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3515,11 +3439,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3530,16 +3454,16 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3553,12 +3477,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-11">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/11/" aria-label=" 11" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png"
-              alt="Sustainable cities &amp; communities - Goal 11"
-              id="goal-11"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-11">
+    <div class="container">
+        <div class="row">
             
-              Indicator 11.2.c
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/11/" aria-label=" 11" title=" 11">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/11.png"
+                        alt="Sustainable cities &amp; communities - Goal 11"
+                        id="goal-11"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Accessibility of medium-sized and large cities by public transport</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 11.2.c
+                        
+                        <span class="lead-copy">Accessibility of medium-sized and large cities by public transport</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-11" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_11-2-c'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Accessibility of medium-sized and large cities by public transport"
   data-charttitles="null"
-  data-chartsubtitle="Travelling time"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;For the medium-sized and major cities of the year in question&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:11.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Minutes&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;For the medium-sized and major cities of the year in question&quot;,&quot;For the medium-sized and major cities of 2012&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Accessibility of medium-sized and large cities by public transport</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Travelling time</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Accessibility of medium-sized and large cities by public transport
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,54 +467,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• Due to changes in the methodology and calculation basis, a comparison of the data for the 2024 survey year with previous years is only possible to a limited extent (break in time series).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -558,54 +537,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• The data is based on a special evaluation and is not publicly available.<br>• Due to changes in the methodology and calculation basis, a comparison of the data for the 2024 survey year with previous years is only possible to a limited extent (break in time series).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -693,197 +663,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the population-weighted average travel time by public transport to the nearest medium or regional centre (in minutes).</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Accessibility of medium-sized and large cities by public transport</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the population-weighted average travel time by public transport to the nearest medium or regional centre (in minutes).</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Mobility is an important factor in enabling people to participate in society. Accordingly, space and transport should be designed in such a way that there are good mobility options for the entire population and appropriate connections to medium-sized or regional centres.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Mobility is an important factor in enabling people to participate in society. Accordingly, space and transport should be designed in such a way that there are good mobility options for the entire population and appropriate connections to medium-sized or regional centres.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Reduction of average travel time by public transport</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Reduction of average travel time by public transport</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Directional target</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Directional target</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The average travel time by public transport to the nearest medium or regional centre should be reduced.<br />• The current trend is moving in the direction of the target. An assessment of indicator 11.2.c is not possible. Too few data points.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The average travel time by public transport to the nearest medium or regional centre should be reduced.<br />• The current trend is moving in the direction of the target. An assessment of indicator 11.2.c is not possible. Too few data points.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1669,20 +1589,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1699,25 +1624,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #fd9d24; font-size: large">11.2.c Accessibility of medium-sized and large cities by public transport</b><br /><br />The indicator is calculated by the Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR). Public transport is defined as services accessible to everyone upon payment of a fare. Flexible service forms such as demand-responsive minibuses, which operate without fixed stops and timetables upon request, are not taken into account. The population-weighted average travel time to the nearest medium- or upper-order centre was 23.5&nbsp;minutes in 2012. By 2020, this had decreased to 20.5&nbsp;minutes and further declined to 17.7&nbsp;minutes in 2024. This corresponds to a reduction of 24.7% over the period from 2012&nbsp;to 2024.<br /><br />However, the comparability of the results is limited due to changes in methodology and calculation bases over time. On the one hand, the number of medium- and upper-order centres considered has varied. On the other hand, from 2024&nbsp;onwards, travel times have no longer been calculated from every stop, but for the first time from every inhabited 100×100-metre grid cell. For this purpose, the entire national territory was divided into grid cells of this size, and residency was verified using registered addresses.<br /><br />Furthermore, in major cities, district and neighbourhood centres are now also included as destinations. In addition, updated data sources on timetables and transport networks as well as the results of the 2022&nbsp;Census at grid cell level have been incorporated into the analyses. The basis for the accessibility analyses by public transport are nationwide timetable data in GTFS format (scheduled timetable data), which are aggregated via the DELFI Integration Platform (DIP) from the regional information systems and made available on the <a href="https://www.opendata-oepnv.de/ht/de/willkommen">Open Data ÖPNV platform</a>. Based on this, the shortest travel times to the nearest medium- or upper-order centre during the morning peak period were determined.<br /><br />The definition of the time window for the morning peak period varied by reporting year: in 2012, connections with arrival times between 06:00&nbsp;and 09:00&nbsp;were considered; in 2020, between 06:00&nbsp;and 12:00. For 2024, the start time or journey commencement was set to 8&nbsp;October 2024&nbsp;at 08:00&nbsp;–&nbsp;a working day outside school holidays. The frequency of services and connections outside the respective time windows are not included in the indicator calculation.<br /><br />In addition to travel times, access times to departure stops were also considered. For this purpose, a nationwide street and path network based on OpenStreetMap was used, modelling access, egress, and transfer routes. Different travel speeds were assumed&nbsp;–&nbsp;approximately 3.6&nbsp;km/h for pedestrians and 18&nbsp;km/h for cyclists&nbsp;–&nbsp;allowing the representation of various travel modes.<br /><br />The classification of a location as a medium- or upper-order centre is carried out by the Landesplanungsbehörden of the Länder. This classification is primarily based on the provision of goods, services and infrastructure that are not available in the surrounding lower-order centres. Examples include specialist medical practices, hospitals, cultural institutions as well as secondary schools and universities. Up to and including 2024, each medium- or upper-order centre&nbsp;–&nbsp;including in large cities&nbsp;–&nbsp;was represented by only one destination point (city centre).<br /><br />In 2024, in all upper-order centres with more than 250,000&nbsp;inhabitants, an additional 107&nbsp;central locations at district or neighbourhood level were included alongside the city centre. The basis for this was commuter and mobile phone data interconnections at grid cell level, the Central Shopping District (infas 360), as well as cluster analyses based on Points-of-Interest data from the Federal Agency for Cartography and Geodesy (BKG). Only locations with a catchment area of at least 50,000&nbsp;inhabitants, where medium-order functions can be comprehensively provided, were included. By including these additional central locations as destinations, a more differentiated picture of accessibility within major cities emerges. This provides a significantly more realistic depiction of public service provision with regard to medium-order functions.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #fd9d24; font-size: large">11.2.c Accessibility of medium-sized and large cities by public transport</b><br /><br />The indicator is calculated by the Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR). Public transport is defined as services accessible to everyone upon payment of a fare. Flexible service forms such as demand-responsive minibuses, which operate without fixed stops and timetables upon request, are not taken into account. The population-weighted average travel time to the nearest medium- or upper-order centre was 23.5&nbsp;minutes in 2012. By 2020, this had decreased to 20.5&nbsp;minutes and further declined to 17.7&nbsp;minutes in 2024. This corresponds to a reduction of 24.7% over the period from 2012&nbsp;to 2024.<br /><br />However, the comparability of the results is limited due to changes in methodology and calculation bases over time. On the one hand, the number of medium- and upper-order centres considered has varied. On the other hand, from 2024&nbsp;onwards, travel times have no longer been calculated from every stop, but for the first time from every inhabited 100×100-metre grid cell. For this purpose, the entire national territory was divided into grid cells of this size, and residency was verified using registered addresses.<br /><br />Furthermore, in major cities, district and neighbourhood centres are now also included as destinations. In addition, updated data sources on timetables and transport networks as well as the results of the 2022&nbsp;Census at grid cell level have been incorporated into the analyses. The basis for the accessibility analyses by public transport are nationwide timetable data in GTFS format (scheduled timetable data), which are aggregated via the DELFI Integration Platform (DIP) from the regional information systems and made available on the <a href="https://www.opendata-oepnv.de/ht/de/willkommen">Open Data ÖPNV platform</a>. Based on this, the shortest travel times to the nearest medium- or upper-order centre during the morning peak period were determined.<br /><br />The definition of the time window for the morning peak period varied by reporting year: in 2012, connections with arrival times between 06:00&nbsp;and 09:00&nbsp;were considered; in 2020, between 06:00&nbsp;and 12:00. For 2024, the start time or journey commencement was set to 8&nbsp;October 2024&nbsp;at 08:00&nbsp;–&nbsp;a working day outside school holidays. The frequency of services and connections outside the respective time windows are not included in the indicator calculation.<br /><br />In addition to travel times, access times to departure stops were also considered. For this purpose, a nationwide street and path network based on OpenStreetMap was used, modelling access, egress, and transfer routes. Different travel speeds were assumed&nbsp;–&nbsp;approximately 3.6&nbsp;km/h for pedestrians and 18&nbsp;km/h for cyclists&nbsp;–&nbsp;allowing the representation of various travel modes.<br /><br />The classification of a location as a medium- or upper-order centre is carried out by the Landesplanungsbehörden of the Länder. This classification is primarily based on the provision of goods, services and infrastructure that are not available in the surrounding lower-order centres. Examples include specialist medical practices, hospitals, cultural institutions as well as secondary schools and universities. Up to and including 2024, each medium- or upper-order centre&nbsp;–&nbsp;including in large cities&nbsp;–&nbsp;was represented by only one destination point (city centre).<br /><br />In 2024, in all upper-order centres with more than 250,000&nbsp;inhabitants, an additional 107&nbsp;central locations at district or neighbourhood level were included alongside the city centre. The basis for this was commuter and mobile phone data interconnections at grid cell level, the Central Shopping District (infas 360), as well as cluster analyses based on Points-of-Interest data from the Federal Agency for Cartography and Geodesy (BKG). Only locations with a catchment area of at least 50,000&nbsp;inhabitants, where medium-order functions can be comprehensively provided, were included. By including these additional central locations as destinations, a more differentiated picture of accessibility within major cities emerges. This provides a significantly more realistic depiction of public service provision with regard to medium-order functions.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2511,19 +2431,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2537,8 +2462,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3275,98 +3200,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bbsr.png" alt="Federal Institute for Research on Building, Urban Affairs and Spatial Development" title=" Click here to visit the homepage of the organizationFederal Institute for Research on Building, Urban Affairs and Spatial Development" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bbsr.png" alt="Federal Institute for Research on Building, Urban Affairs and Spatial Development" title=" Click here to visit the homepage of the organizationFederal Institute for Research on Building, Urban Affairs and Spatial Development" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bbsr.bund.de/BBSR/EN/home/_node.html" target="_blank" onclick="return confirm_alert('the Federal Institute for Research on Building, Urban Affairs and Spatial Development', 'En')">Federal Institute for Research on Building, Urban Affairs and Spatial Development</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3432,6 +3349,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3439,11 +3357,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3454,18 +3372,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3479,12 +3397,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

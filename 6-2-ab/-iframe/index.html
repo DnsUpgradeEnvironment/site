@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-6">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/6/" aria-label=" 6" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
-              alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
-              id="goal-6"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-6">
+    <div class="container">
+        <div class="row">
             
-              Indikator 6.2.a, b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/6/" aria-label=" 6" title=" 6">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
+                        alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
+                        id="goal-6"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 6.2.ab
+                        
+                        <span class="lead-copy">Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-6" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_6-2-ab'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Durch deutsche Entwicklungszusammenarbeit geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit"
   data-charttitles="null"
-  data-chartsubtitle="Anzahl erreichter Menschen"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;a) Mit einer neuen oder verbesserten Trinkwasserversorgung&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;b) Mit einer neuen oder verbesserten Basissanitärversorgung oder Abwasserbehandlung&quot;},{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Mit einem neuen oder hochwertigeren Zugang zur Trinkwasserversorgung oder Anschluss zur Sanitärversorgung&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:6,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel a) Trinkwasserversorgung&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:4,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel b) Sanitärversorgung&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:6.5,&quot;xMax&quot;:11,&quot;yMin&quot;:6,&quot;yMax&quot;:6,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#167187&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:6.5,&quot;xMax&quot;:11,&quot;yMin&quot;:4,&quot;yMax&quot;:4,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#7cd7ed&quot;,&quot;preset&quot;:&quot;target_points&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:6.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Millionen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Mit einem neuen oder hochwertigeren Zugang zur Trinkwasserversorgung oder Anschluss zur Sanitärversorgung&quot;,&quot;a) Mit einer neuen oder verbesserten Trinkwasserversorgung&quot;,&quot;b) Mit einer neuen oder verbesserten Basissanitärversorgung oder Abwasserbehandlung&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:5.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Durch deutsche Entwicklungszusammenarbeit geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Anzahl erreichter Menschen</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Durch deutsche Entwicklungszusammenarbeit geförderter Zugang zu Trinkwasser- und Sanitärversorgung weltweit
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,54 +467,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></dd>
-        
-
-        
-          <dt><u>Datenstand</u>:</dt>
-          <dd>17.01.2025</dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Aufgrund methodischer Änderungen sind die Ergebnisse ab 2019 nur eingeschränkt mit den Vorjahren vergleichbar (Zeitreihenbruch).<br>• Ab 2019 wird die Zeitreihe für die Bereiche Trinkwasserversorgung und Sanitärversorgung getrennt ausgewiesen.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -558,54 +534,42 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></dd>
-        
-
-        
-          <dt><u>Datenstand</u>:</dt>
-          <dd>17.01.2025</dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></dd>
         
 
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Aufgrund methodischer Änderungen sind die Ergebnisse ab 2019 nur eingeschränkt mit den Vorjahren vergleichbar (Zeitreihenbruch).<br>• Ab 2019 wird die Zeitreihe für die Bereiche Trinkwasserversorgung und Sanitärversorgung getrennt ausgewiesen.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -693,197 +657,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Die Indikatoren stellen die Anzahl der erreichten Menschen (in Millionen) dar, die im jeweiligen Berichtsjahr direkt durch deutsche Unterstützung (FZ-Zusagen) Neuzugang oder verbesserten Zugang zu Trinkwasser- (6.2.a) und/oder Sanitärversorgung bzw. seit 2022 Basissanitärversorgung oder Abwasserbehandlung (6.2.b) erhalten haben.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Die Indikatoren stellen die Anzahl der erreichten Menschen (in Millionen) dar, die im jeweiligen Berichtsjahr direkt durch deutsche Unterstützung (FZ-Zusagen) Neuzugang oder verbesserten Zugang zu Trinkwasser- (6.2.a) und/oder Sanitärversorgung bzw. seit 2022 Basissanitärversorgung oder Abwasserbehandlung (6.2.b) erhalten haben.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Eine unzureichende Versorgung mit Trinkwasser und sanitären Einrichtungen hat weitreichende Auswirkungen auf die Ernährung, die Gesundheit des Menschen sowie auf eine nachhaltige wirtschaftliche Entwicklung in Partnerländern. Die Bundesregierung fördert daher im Rahmen der internationalen Zusammenarbeit Projekte, die einen Zugang zu Trinkwasser- und Sanitärversorgung ermöglichen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Eine unzureichende Versorgung mit Trinkwasser und sanitären Einrichtungen hat weitreichende Auswirkungen auf die Ernährung, die Gesundheit des Menschen sowie auf eine nachhaltige wirtschaftliche Entwicklung in Partnerländern. Die Bundesregierung fördert daher im Rahmen der internationalen Zusammenarbeit Projekte, die einen Zugang zu Trinkwasser- und Sanitärversorgung ermöglichen.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>6.2.a: 6 Millionen Menschen pro Jahr bis 2030<br />6.2.b: 4 Millionen Menschen pro Jahr bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>6.2.a: 6 Millionen Menschen pro Jahr bis 2030<br />6.2.b: 4 Millionen Menschen pro Jahr bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>6.2.a: Gleichbleibende Zielvorgabe in jedem Jahr<br />6.2.b: Gleichbleibende Zielvorgabe in jedem Jahr</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>6.2.a: Gleichbleibende Zielvorgabe in jedem Jahr<br />6.2.b: Gleichbleibende Zielvorgabe in jedem Jahr</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>6.2.a: Die Anzahl von Menschen, die durch deutsche Entwicklungszusammenarbeit eine neue oder verbesserte Trinkwasserversorgung erhalten, soll jedes Jahr mindestens 6 Millionen betragen.<br />• Eine Bewertung des Indikators 6.2.a ist nicht möglich. Zu wenig Datenpunkte.<br /><br />6.2.b: Die Anzahl von Menschen, die durch deutsche Entwicklungszusammenarbeit eine neue oder verbesserte Basissanitärversorgung oder Abwasserbehandlung erhalten, soll jedes Jahr mindestens 4 Millionen betragen.<br />• Eine Bewertung des Indikators 6.2.b ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>6.2.a: Die Anzahl von Menschen, die durch deutsche Entwicklungszusammenarbeit eine neue oder verbesserte Trinkwasserversorgung erhalten, soll jedes Jahr mindestens 6 Millionen betragen.<br />• Eine Bewertung des Indikators 6.2.a ist nicht möglich. Zu wenig Datenpunkte.<br /><br />6.2.b: Die Anzahl von Menschen, die durch deutsche Entwicklungszusammenarbeit eine neue oder verbesserte Basissanitärversorgung oder Abwasserbehandlung erhalten, soll jedes Jahr mindestens 4 Millionen betragen.<br />• Eine Bewertung des Indikators 6.2.b ist nicht möglich. Zu wenig Datenpunkte.<br /><br /></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1669,20 +1583,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1699,25 +1618,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #26bde2; font-size: large">6.2.a, b Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</b><br /><br />Die beiden Indikatoren zur Entwicklungszusammenarbeit im Bereich Trinkwasser- und Sanitärversorgung basieren auf Angaben der Kreditanstalt für Wiederaufbau (KfW). Erfasst wird die Anzahl der Menschen, die durch Förderprojekte der KfW erreicht wurden, sofern diese auf Mandaten deutscher Ressorts beruhen. Nicht berücksichtigt werden Projekte, die die KfW im Auftrag und mit finanziellen Mitteln der Europäischen Union (EU) oder anderer Geberländer umsetzt. Ebenso bleiben Projekte anderer Akteure&nbsp;–&nbsp;etwa der Deutschen Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, der Bundesländer oder privater Organisationen&nbsp;–&nbsp;unberücksichtigt.<br /><br />Beide Indikatoren beziehen sich ausschließlich auf die jeweiligen Plangrößen neuer Finanzierungszusagen (Finanzierungs- und Darlehensverträge) für Projekte im Bereich Trinkwasser- und Sanitärversorgung zum Zeitpunkt des Vertragsabschlusses zwischen der KfW und dem jeweiligen Partnerland. Die KfW schätzt dabei, wie viele Menschen nach Abschluss der Bauvorhaben künftig von einem neuen oder verbesserten Zugang zu Trinkwasser- und Sanitärversorgung profitieren können. Ob diese Menschen tatsächlich erreicht werden, lässt sich jedoch erst nach Inbetriebnahme der Infrastruktur verlässlich feststellen und wird in den Indikatoren nicht erfasst. Da eine Person sowohl einen neuen oder verbesserten Zugang zur Trinkwasserversorgung als auch zur Sanitärversorgung erhalten kann, sind Mehrfachzählungen zwischen den beiden Indikatoren sowie über den Zeitverlauf hinweg möglich.<br /><br />Die von der KfW zugesagten Mittel bestehen aus Zuschüssen und Darlehen, die entweder aus dem Bundeshaushalt finanziert oder über den Kapitalmarkt aufgenommen werden. Empfänger dieser Mittel sind in der Regel Entwicklungs- und Schwellenländer, wodurch ein Bezug zum Indikator <a href="https://dns-indikatoren.de/17-1/">17.1</a> <i>Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen</i> besteht.<br /><br />Im Jahr 2019&nbsp;wurden Methodik und Datengrundlage der Indikatoren überarbeitet. Bis dahin wurden sowohl direkt erreichte Menschen&nbsp;–&nbsp;beispielsweise über einen Hausanschluss&nbsp;–&nbsp;als auch indirekt erreichte Menschen&nbsp;–&nbsp;etwa die Gesamtbevölkerung eines Landes, das durch ein Sektorreformprogramm unterstützt wurde&nbsp;–&nbsp;erfasst. Seit der Umstellung werden ausschließlich direkt erreichte Menschen berücksichtigt. Zur Einordnung des Verhältnisses von direkt zu indirekt erreichten Menschen: Im Jahr 2017&nbsp;wurden insgesamt 28,6&nbsp;Millionen Menschen erreicht, davon 19,1&nbsp;Millionen direkt. Im Jahr 2018&nbsp;waren es 15,2&nbsp;Millionen direkt von insgesamt 60,3&nbsp;Millionen erreichten Menschen.<br /><br />Eine weitere methodische Änderung betrifft die Berücksichtigung von erreichten Menschen bei multilateralen Projekten: Seit der Umstellung wird deren Anzahl anteilig entsprechend dem deutschen Finanzierungsanteil an der Gesamtmaßnahme erfasst. Bis 2018&nbsp;lagen die Plangrößen der KfW für die Anzahl der Menschen, die mit deutscher Unterstützung Zugang zu Trinkwasser- und Sanitärversorgung erhalten sollten, durchweg über dem politisch festgelegten Ziel von 10&nbsp;Millionen Menschen pro Jahr. Mit Einführung der überarbeiteten Methodik wurde die Zielgröße für einen neuen oder verbesserten Zugang zur Trinkwasserversorgung auf 6&nbsp;Millionen Menschen jährlich angepasst.<br /><br />Im Jahr 2023&nbsp;lag die entsprechende Plangröße bei 10,2&nbsp;Millionen Menschen&nbsp;–&nbsp;und übertraf damit das Ziel, wie bereits in den vier Jahren zuvor, deutlich. Seit 2019&nbsp;liegt der Zielwert für die Anzahl der Menschen mit einem neuen oder verbesserten Zugang zur Basissanitärversorgung beziehungsweise Abwasserbehandlung bei 4&nbsp;Millionen Menschen pro Jahr. Dieser Zielwert wurde bislang nur in den Jahren 2019&nbsp;und 2022&nbsp;überschritten. Für das Jahr 2023&nbsp;liegt die entsprechende Plangröße bei 3,0&nbsp;Millionen erreichten Menschen.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #26bde2; font-size: large">6.2.a, b Entwicklungszusammenarbeit für Trinkwasser- und Sanitärversorgung</b><br /><br />Die beiden Indikatoren zur Entwicklungszusammenarbeit im Bereich Trinkwasser- und Sanitärversorgung basieren auf Angaben der Kreditanstalt für Wiederaufbau (KfW). Erfasst wird die Anzahl der Menschen, die durch Förderprojekte der KfW erreicht wurden, sofern diese auf Mandaten deutscher Ressorts beruhen. Nicht berücksichtigt werden Projekte, die die KfW im Auftrag und mit finanziellen Mitteln der Europäischen Union (EU) oder anderer Geberländer umsetzt. Ebenso bleiben Projekte anderer Akteure&nbsp;–&nbsp;etwa der Deutschen Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH, der Bundesländer oder privater Organisationen&nbsp;–&nbsp;unberücksichtigt.<br /><br />Beide Indikatoren beziehen sich ausschließlich auf die jeweiligen Plangrößen neuer Finanzierungszusagen (Finanzierungs- und Darlehensverträge) für Projekte im Bereich Trinkwasser- und Sanitärversorgung zum Zeitpunkt des Vertragsabschlusses zwischen der KfW und dem jeweiligen Partnerland. Die KfW schätzt dabei, wie viele Menschen nach Abschluss der Bauvorhaben künftig von einem neuen oder verbesserten Zugang zu Trinkwasser- und Sanitärversorgung profitieren können. Ob diese Menschen tatsächlich erreicht werden, lässt sich jedoch erst nach Inbetriebnahme der Infrastruktur verlässlich feststellen und wird in den Indikatoren nicht erfasst. Da eine Person sowohl einen neuen oder verbesserten Zugang zur Trinkwasserversorgung als auch zur Sanitärversorgung erhalten kann, sind Mehrfachzählungen zwischen den beiden Indikatoren sowie über den Zeitverlauf hinweg möglich.<br /><br />Die von der KfW zugesagten Mittel bestehen aus Zuschüssen und Darlehen, die entweder aus dem Bundeshaushalt finanziert oder über den Kapitalmarkt aufgenommen werden. Empfänger dieser Mittel sind in der Regel Entwicklungs- und Schwellenländer, wodurch ein Bezug zum Indikator <a href="https://dns-indikatoren.de/17-1/">17.1</a> <i>Anteil öffentlicher Entwicklungsausgaben am Bruttonationaleinkommen</i> besteht.<br /><br />Im Jahr 2019&nbsp;wurden Methodik und Datengrundlage der Indikatoren überarbeitet. Bis dahin wurden sowohl direkt erreichte Menschen&nbsp;–&nbsp;beispielsweise über einen Hausanschluss&nbsp;–&nbsp;als auch indirekt erreichte Menschen&nbsp;–&nbsp;etwa die Gesamtbevölkerung eines Landes, das durch ein Sektorreformprogramm unterstützt wurde&nbsp;–&nbsp;erfasst. Seit der Umstellung werden ausschließlich direkt erreichte Menschen berücksichtigt. Zur Einordnung des Verhältnisses von direkt zu indirekt erreichten Menschen: Im Jahr 2017&nbsp;wurden insgesamt 28,6&nbsp;Millionen Menschen erreicht, davon 19,1&nbsp;Millionen direkt. Im Jahr 2018&nbsp;waren es 15,2&nbsp;Millionen direkt von insgesamt 60,3&nbsp;Millionen erreichten Menschen.<br /><br />Eine weitere methodische Änderung betrifft die Berücksichtigung von erreichten Menschen bei multilateralen Projekten: Seit der Umstellung wird deren Anzahl anteilig entsprechend dem deutschen Finanzierungsanteil an der Gesamtmaßnahme erfasst. Bis 2018&nbsp;lagen die Plangrößen der KfW für die Anzahl der Menschen, die mit deutscher Unterstützung Zugang zu Trinkwasser- und Sanitärversorgung erhalten sollten, durchweg über dem politisch festgelegten Ziel von 10&nbsp;Millionen Menschen pro Jahr. Mit Einführung der überarbeiteten Methodik wurde die Zielgröße für einen neuen oder verbesserten Zugang zur Trinkwasserversorgung auf 6&nbsp;Millionen Menschen jährlich angepasst.<br /><br />Im Jahr 2023&nbsp;lag die entsprechende Plangröße bei 10,2&nbsp;Millionen Menschen&nbsp;–&nbsp;und übertraf damit das Ziel, wie bereits in den vier Jahren zuvor, deutlich. Seit 2019&nbsp;liegt der Zielwert für die Anzahl der Menschen mit einem neuen oder verbesserten Zugang zur Basissanitärversorgung beziehungsweise Abwasserbehandlung bei 4&nbsp;Millionen Menschen pro Jahr. Dieser Zielwert wurde bislang nur in den Jahren 2019&nbsp;und 2022&nbsp;überschritten. Für das Jahr 2023&nbsp;liegt die entsprechende Plangröße bei 3,0&nbsp;Millionen erreichten Menschen.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2511,19 +2425,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2537,8 +2456,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3275,98 +3194,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/kfw.png" alt="Kreditanstalt für Wiederaufbau" title=" Klicken Sie hier um zur Homepage der Organisation Kreditanstalt für Wiederaufbau zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/kfw.png" alt="Kreditanstalt für Wiederaufbau" title=" Klicken Sie hier um zur Homepage der Organisation Kreditanstalt für Wiederaufbau zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.kfw.de/kfw.de.html" target="_blank" onclick="return confirm_alert('der KfW', 'De')">Kreditanstalt für Wiederaufbau</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3432,6 +3343,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3439,11 +3351,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3454,18 +3366,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3479,12 +3391,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

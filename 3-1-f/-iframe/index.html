@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/3/" aria-label=" 3" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png"
-              alt="Gesundheit und Wohlergehen - Ziel 3"
-              id="goal-3"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-3">
+    <div class="container">
+        <div class="row">
             
-              Indikator 3.1.f
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/3/" aria-label=" 3" title=" 3">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/3.png"
+                        alt="Gesundheit und Wohlergehen - Ziel 3"
+                        id="goal-3"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Adipositasquote von Erwachsenen</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 3.1.f
+                        
+                        <span class="lead-copy">Adipositasquote von Erwachsenen</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-3" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_3-1-f'
@@ -312,38 +310,30 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Adipositasquote von Erwachsenen"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
-  data-showmap="false"
+  data-showmap="true"
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Adipositasquote von Erwachsenen&quot;},{&quot;field&quot;:&quot;Geschlecht&quot;,&quot;value&quot;:&quot;Weiblich&quot;},{&quot;field&quot;:&quot;Geschlecht&quot;,&quot;value&quot;:&quot;Männlich&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
-  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;18 bis unter 20 Jahre&quot;,&quot;20 bis unter 25 Jahre&quot;,&quot;25 bis unter 30 Jahre&quot;,&quot;30 bis unter 35 Jahre&quot;,&quot;35 bis unter 40 Jahre&quot;,&quot;40 bis unter 45 Jahre&quot;,&quot;45 bis unter 50 Jahre&quot;,&quot;50 bis unter 55 Jahre&quot;,&quot;55 bis unter 60 Jahre&quot;,&quot;60 bis unter 65 Jahre&quot;,&quot;65 bis unter 70 Jahre&quot;,&quot;70 bis unter 75 Jahre&quot;,&quot;75 Jahre und älter&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Altersklasse&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
+  data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;COMMENT_OBS_0&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;.&quot;,&quot;p&quot;,&quot;&quot;]},&quot;title&quot;:&quot;COMMENT_OBS_0&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Weiblich&quot;,&quot;Männlich&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Geschlecht&quot;},{&quot;name&quot;:&quot;länder&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Baden-Württemberg&quot;,&quot;Bayern&quot;,&quot;Berlin&quot;,&quot;Brandenburg&quot;,&quot;Bremen&quot;,&quot;Hamburg&quot;,&quot;Hessen&quot;,&quot;Mecklenburg-Vorpommern&quot;,&quot;Niedersachsen&quot;,&quot;Nordrhein-Westfalen&quot;,&quot;Rheinland-Pfalz&quot;,&quot;Saarland&quot;,&quot;Sachsen&quot;,&quot;Sachsen-Anhalt&quot;,&quot;Schleswig-Holstein&quot;,&quot;Thüringen&quot;,&quot;&quot;]},&quot;title&quot;:&quot;länder&quot;},{&quot;name&quot;:&quot;GeoCode&quot;,&quot;type&quot;:&quot;string&quot;,&quot;title&quot;:&quot;GeoCode&quot;},{&quot;name&quot;:&quot;age group&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;18 bis unter 20 Jahre&quot;,&quot;20 bis unter 25 Jahre&quot;,&quot;25 bis unter 30 Jahre&quot;,&quot;30 bis unter 35 Jahre&quot;,&quot;35 bis unter 40 Jahre&quot;,&quot;40 bis unter 45 Jahre&quot;,&quot;45 bis unter 50 Jahre&quot;,&quot;50 bis unter 55 Jahre&quot;,&quot;55 bis unter 60 Jahre&quot;,&quot;60 bis unter 65 Jahre&quot;,&quot;65 bis unter 70 Jahre&quot;,&quot;70 bis unter 75 Jahre&quot;,&quot;75 Jahre und älter&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Altersklasse&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:2.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -390,7 +380,11 @@ layout-indicator-iframe
         
         
         
-        <th scope="col" class="table-value">Units</th>
+        <th scope="col">Units</th>
+        
+        
+        
+        <th scope="col" class="table-value">GeoCode</th>
         
         
       </thead>
@@ -407,7 +401,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -423,7 +421,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -439,7 +441,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -455,7 +461,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -471,7 +481,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -487,7 +501,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
+          
+          
+          
+          <td class="table-value"></td>
           
           
         </tr>
@@ -503,263 +521,11 @@ layout-indicator-iframe
           
           
           
-          <td class="table-value">Prozent</td>
+          <td>Prozent</td>
           
           
-        </tr>
-        
-        <tr>
           
-          
-          <td>2000</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2001</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2002</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2004</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2006</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2007</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2008</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2010</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2011</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2012</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2014</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2015</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2016</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2018</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2019</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
-          
-          
-        </tr>
-        
-        <tr>
-          
-          
-          <td>2020</td>
-          
-          
-          
-          <td></td>
-          
-          
-          
-          <td class="table-value">Prozent</td>
+          <td class="table-value"></td>
           
           
         </tr>
@@ -793,62 +559,85 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
-  
-</ul>
+        
+      >Tabelle</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        map
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-mapview"
+          data-bs-target="#mapview"
+          aria-controls="mapview"
+          data-no-disagg="true"
+          data-on="click"
+data-event-category="Tab change"
+data-event-action="Change data view"
+data-event-label="Change to Map tab"
 
+        
+      >Karte</button>
+    </li>
+    
+  </ul>
+  
     <div class="tab-content data-view">
     
       
@@ -861,12 +650,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Adipositasquote von Erwachsenen</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Adipositasquote von Erwachsenen
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -881,54 +670,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Altersstandardisierung: Neue Europabevölkerung.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Die nächste Datenaktualisierung (Berichtsjahr 2025) ist im Laufe des Jahres 2026 geplant.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -960,57 +740,104 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Altersstandardisierung: Neue Europabevölkerung.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• Die nächste Datenaktualisierung (Berichtsjahr 2025) ist im Laufe des Jahres 2026 geplant.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
+
+        </div>
+      
+    
+      
+        <div role="tabpanel" class="tab-pane " id="mapview" class="map">
+          
+<h4 id="map-heading" class="map-title">Adipositasquote von Erwachsenen</h4>
+<div id="map" aria-describedby="table-alternative">
+  <img class="map-loading-image" src="/site/assets/img/loading.gif" alt="Karte wird geladen" />
+</div>
+
+
+
+
+<div id="mapFooter" class="table-footer-text">
+  <h5 class="sr-only">Chart details</h5>
+    <dl>
+        
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        
+
+        
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
+        
+
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
+        <dd class="data-controlled-footer-field unit-from-data"></dd>
+
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
+        
+
+        
+
+        
+
+        
+        
+        <dt
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        >Anmerkung:</dt>
+        <dd
+          class="data-controlled-footer-field"
+          data-ts-attribute="COMMENT_TS"
+        ></dd>
+        
+        
+    </dl>
+    
+</div>
+
 
         </div>
       
@@ -1095,197 +922,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil der Erwachsenen (ab 18 Jahren) mit Adipositas an allen Personen derselben Altersgruppe (in %) dar. Als adipös gelten dabei ‑ der Klassifikation der Weltgesundheitsorganisation (WHO) folgend ‑ Personen, deren Body-Mass-Index (BMI), der sich aus dem Verhältnis von Körpergewicht zum Quadrat der Körpergröße berechnet, größer/gleich 30 ist.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Adipositasquote von Erwachsenen</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil der Erwachsenen (ab 18 Jahren) mit Adipositas an allen Personen derselben Altersgruppe (in %) dar. Als adipös gelten dabei ‑ der Klassifikation der Weltgesundheitsorganisation (WHO) folgend ‑ Personen, deren Body-Mass-Index (BMI), der sich aus dem Verhältnis von Körpergewicht zum Quadrat der Körpergröße berechnet, größer/gleich 30 ist.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Adipositas ist maßgeblich beteiligt an der Entstehung von Zivilisationskrankheiten wie Herz-Kreislauf-Erkrankungen, Diabetes oder Gelenkschäden. Neben den gesundheitlichen Folgen wirkt sich Adipositas auch in volkswirtschaftlicher und sozialer Hinsicht belastend aus.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Adipositas ist maßgeblich beteiligt an der Entstehung von Zivilisationskrankheiten wie Herz-Kreislauf-Erkrankungen, Diabetes oder Gelenkschäden. Neben den gesundheitlichen Folgen wirkt sich Adipositas auch in volkswirtschaftlicher und sozialer Hinsicht belastend aus.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Anstieg dauerhaft stoppen</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Anstieg dauerhaft stoppen</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Zielrichtungsvorgabe</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Zielrichtungsvorgabe</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Der Anteil von Erwachsenen mit Adipositas soll sinken oder konstant bleiben.<br />• Ausgehend von der Zielformulierung wurde das politisch festgelegte Ziel des Indikators 3.1.f weder im letzten Jahr 2021 noch im Durchschnitt der letzten sechs Jahre erreicht. Der Indikator 3.1.f wird daher für das Jahr 2021 mit <b>Gewitter</b> bewertet.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2021&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Der Anteil von Erwachsenen mit Adipositas soll sinken oder konstant bleiben.<br />• Ausgehend von der Zielformulierung wurde das politisch festgelegte Ziel des Indikators 3.1.f weder im letzten Jahr 2021 noch im Durchschnitt der letzten sechs Jahre erreicht. Der Indikator 3.1.f wird daher für das Jahr 2021 mit <b>Gewitter</b> bewertet.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="Weder Durchschnittswert noch die vorherige Veränderung deuten in 2021&nbsp;in die richtige Richtung." alt="Wettersymbol Blitz" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2071,20 +1848,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2101,25 +1883,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #4c9f38; font-size: large">3.1.f Adipositasquote von Erwachsenen</b><br /><br />Der Body-Mass-Index (BMI) dient als Richtwert zur Einschätzung von Übergewicht und insbesondere Adipositas. Er berechnet sich aus dem Verhältnis des Körpergewichts zum Quadrat der Körpergröße (in der Einheit kg/m²). Dabei bleiben individuelle Unterschiede im Körperbau, alters- und geschlechtsspezifische Merkmale sowie die Zusammensetzung der Körpermasse unberücksichtigt. Nach der Klassifikation der Weltgesundheitsorganisation (WHO) gelten Personen mit einem BMI ab 25&nbsp;als übergewichtig und ab einem BMI von 30&nbsp;als adipös.<br /><br />Die Datengrundlage des Indikators bilden Angaben zu Körpergewicht und Körpergröße, die alle vier Jahre freiwillig im Rahmen des Mikrozensus bei 1&nbsp;% der Gesamtbevölkerung erhoben werden. Bei Selbstauskünften&nbsp;–&nbsp;wie im Mikrozensus&nbsp;–&nbsp;wird das Körpergewicht im Vergleich zu gemessenen Werten häufig unterschätzt, während die Körpergröße tendenziell überschätzt wird. Daher ist davon auszugehen, dass der daraus berechnete BMI in der Regel niedriger ausfällt als der Wert auf Basis von Messdaten. Zur Vergleichbarkeit von Daten aus unterschiedlichen Jahren und Regionen sowie zur Vermeidung altersstruktureller Verzerrungen wurden die Ergebnisse altersstandardisiert auf Grundlage der neuen Europäischen Standardbevölkerung berechnet.<br /><br />Im Jahr 2021&nbsp;waren 15,4&nbsp;% der Bevölkerung ab 18&nbsp;Jahren adipös. Der Anteil adipöser Männer lag mit 17,3&nbsp;% über dem der Frauen, von denen 13,3&nbsp;% betroffen waren. Im Jahr 1999&nbsp;lag der Anteil noch bei 10,7&nbsp;%. Auch damals waren Frauen (10,2&nbsp;%) etwas seltener von Adipositas betroffen als Männer (11,1&nbsp;%). Die Adipositasquote bei Erwachsenen ist somit gestiegen und entwickelt sich entgegen dem politisch festgelegten Ziel der Deutschen Nachhaltigkeitsstrategie. Weitere 33,6&nbsp;% der Bevölkerung ab 18&nbsp;Jahren wiesen im Jahr 2021&nbsp;einen BMI zwischen 25&nbsp;und unter 30&nbsp;auf. Insgesamt galten damit 49&nbsp;% der Erwachsenen als übergewichtig (BMI ab 25). Der Anteil übergewichtiger Frauen lag mit 38,7&nbsp;% deutlich unter dem der Männer, von denen 58,5&nbsp;% betroffen waren.<br /><br />Der Anteil adipöser Personen steigt mit zunehmendem Lebensalter und nimmt erst im höheren Alter wieder ab. Im Jahr 2021&nbsp;waren 5,3&nbsp;% der 20- bis unter 25-jährigen Frauen adipös. In der Altersgruppe der 30- bis unter 35-Jährigen lag der Anteil bereits bei 12,3&nbsp;%. Den höchsten Wert bei den Frauen verzeichnete die Altersgruppe der 70- bis unter 75-Jährigen mit 20,1&nbsp;%. Bei den Männern lag die Adipositasquote in allen Altersgruppen unter 75&nbsp;Jahren über der der gleichaltrigen Frauen. Die höchsten Werte wurden bei den 45- bis unter 50-Jährigen sowie bei den 60- bis unter 65-Jährigen mit jeweils 23,5&nbsp;% verzeichnet. In der Altersgruppe ab 75&nbsp;Jahren waren Frauen (16,3&nbsp;%) und Männer (16,1&nbsp;%) nahezu gleich häufig adipös.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #4c9f38; font-size: large">3.1.f Adipositasquote von Erwachsenen</b><br /><br />Der Body-Mass-Index (BMI) dient als Richtwert zur Einschätzung von Übergewicht und insbesondere Adipositas. Er berechnet sich aus dem Verhältnis des Körpergewichts zum Quadrat der Körpergröße (in der Einheit kg/m²). Dabei bleiben individuelle Unterschiede im Körperbau, alters- und geschlechtsspezifische Merkmale sowie die Zusammensetzung der Körpermasse unberücksichtigt. Nach der Klassifikation der Weltgesundheitsorganisation (WHO) gelten Personen mit einem BMI ab 25&nbsp;als übergewichtig und ab einem BMI von 30&nbsp;als adipös.<br /><br />Die Datengrundlage des Indikators bilden Angaben zu Körpergewicht und Körpergröße, die alle vier Jahre freiwillig im Rahmen des Mikrozensus bei 1&nbsp;% der Gesamtbevölkerung erhoben werden. Bei Selbstauskünften&nbsp;–&nbsp;wie im Mikrozensus&nbsp;–&nbsp;wird das Körpergewicht im Vergleich zu gemessenen Werten häufig unterschätzt, während die Körpergröße tendenziell überschätzt wird. Daher ist davon auszugehen, dass der daraus berechnete BMI in der Regel niedriger ausfällt als der Wert auf Basis von Messdaten. Zur Vergleichbarkeit von Daten aus unterschiedlichen Jahren und Regionen sowie zur Vermeidung altersstruktureller Verzerrungen wurden die Ergebnisse altersstandardisiert auf Grundlage der neuen Europäischen Standardbevölkerung berechnet.<br /><br />Im Jahr 2021&nbsp;waren 15,4&nbsp;% der Bevölkerung ab 18&nbsp;Jahren adipös. Der Anteil adipöser Männer lag mit 17,3&nbsp;% über dem der Frauen, von denen 13,3&nbsp;% betroffen waren. Im Jahr 1999&nbsp;lag der Anteil noch bei 10,7&nbsp;%. Auch damals waren Frauen (10,2&nbsp;%) etwas seltener von Adipositas betroffen als Männer (11,1&nbsp;%). Die Adipositasquote bei Erwachsenen ist somit gestiegen und entwickelt sich entgegen dem politisch festgelegten Ziel der Deutschen Nachhaltigkeitsstrategie. Weitere 33,6&nbsp;% der Bevölkerung ab 18&nbsp;Jahren wiesen im Jahr 2021&nbsp;einen BMI zwischen 25&nbsp;und unter 30&nbsp;auf. Insgesamt galten damit 49&nbsp;% der Erwachsenen als übergewichtig (BMI ab 25). Der Anteil übergewichtiger Frauen lag mit 38,7&nbsp;% deutlich unter dem der Männer, von denen 58,5&nbsp;% betroffen waren.<br /><br />Der Anteil adipöser Personen steigt mit zunehmendem Lebensalter und nimmt erst im höheren Alter wieder ab. Im Jahr 2021&nbsp;waren 5,3&nbsp;% der 20- bis unter 25-jährigen Frauen adipös. In der Altersgruppe der 30- bis unter 35-Jährigen lag der Anteil bereits bei 12,3&nbsp;%. Den höchsten Wert bei den Frauen verzeichnete die Altersgruppe der 70- bis unter 75-Jährigen mit 20,1&nbsp;%. Bei den Männern lag die Adipositasquote in allen Altersgruppen unter 75&nbsp;Jahren über der der gleichaltrigen Frauen. Die höchsten Werte wurden bei den 45- bis unter 50-Jährigen sowie bei den 60- bis unter 65-Jährigen mit jeweils 23,5&nbsp;% verzeichnet. In der Altersgruppe ab 75&nbsp;Jahren waren Frauen (16,3&nbsp;%) und Männer (16,1&nbsp;%) nahezu gleich häufig adipös.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2913,19 +2690,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2939,8 +2721,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3677,98 +3459,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3834,6 +3608,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3841,11 +3616,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3856,16 +3631,25 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.zoomshowhide@0.1.0/dist/leaflet-zoom-show-hide.js" integrity="sha384-+Ae+bvCvR9gwQHFyh60GUfdqhUAL+S/O5mLeAkmkv2yBQxeLxm3gvLEzYPoXBwbT" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/1.4.0/chroma.min.js" integrity="sha384-cU7kVmimPTBpe76764qMxEdujXzlgSm15cCQe6FXFud5DiV4vrJQHUK9S0Lo2cqT" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.js" integrity="sha384-vOZkQA9epgnqbXkNdVSlxfyhrOSzYBsL3s3b2CQYn05H6lzrbrb368uBSRSUTAiv" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/socib/Leaflet.TimeDimension@fa36ffee7f6390aadce8c055ca7c60ede7c2134c/dist/leaflet.timedimension.min.js" integrity="sha384-xQ62+wlP0nHf7UhZ81djmqLn+7arwKiMk/dJk+smi+rJhaXPZAeFPX4bEiD9twIy" crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js" integrity="sha384-btJhAWztz7ttA6ibFC5ppM39nkCPK6CWzRVmsaLcDn37mA3x1TzF1DbFwa6tJpTN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/torfsen/leaflet.zoomhome@84a0291e80244ed9301cbc09d55850f0af53e602/dist/leaflet.zoomhome.min.js" integrity="sha384-UH2Ux7vOhzo5dH5kWWPmpvCCRCiS0hQ12YQN6qTUJXOpx+HpKePItLNSSm2AxKjF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-search@2.9.7/dist/leaflet-search.min.js" integrity="sha384-C/UzSz5aXmLxJwe/b9I0CIv+cfLcGIXmfl40m9+kyJhlgNxvWT6+WRjCbA8Eflf/" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3879,12 +3663,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

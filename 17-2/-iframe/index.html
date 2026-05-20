@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-17">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/17/" aria-label=" 17" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png"
-              alt="Partnerschaften zur Erreichung der Ziele - Ziel 17"
-              id="goal-17"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-17">
+    <div class="container">
+        <div class="row">
             
-              Indikator 17.2
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/17/" aria-label=" 17" title=" 17">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/17.png"
+                        alt="Partnerschaften zur Erreichung der Ziele - Ziel 17"
+                        id="goal-17"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 17.2
+                        
+                        <span class="lead-copy">Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-17" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_17-2'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="bar"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation="Zeitreihe"
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:237000,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:14.5,&quot;xMax&quot;:19,&quot;yMin&quot;:237000,&quot;yMax&quot;:237000,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#cbc8c8&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:16.0,&quot;yValue&quot;:255000.0,&quot;backgroundColor&quot;:&quot;rgba(203, 200, 200, 0.7)&quot;,&quot;borderRadius&quot;:5,&quot;content&quot;:[&quot;Ziel: 237 000&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Anzahl&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Studierende aus LDCs&quot;,&quot;Studierende aus den übrigen Entwicklungs- und Schwellenländern&quot;,&quot;Forschende aus LDCs&quot;,&quot;Forschende aus den übrigen Entwicklungs- und Schwellenländern&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Zeitreihe&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:0.0}]"
-  data-graphstepsize="null"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -729,62 +719,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -797,12 +785,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -817,57 +805,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>13.09.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Das Ziel entspricht einer Steigerung der Anzahl an Studierenden und Forschenden um 10 % gegenüber 2015 in 2020.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• LDC: Least Developed Countries (am wenigsten entwickelte Länder).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -899,57 +875,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>13.09.2024</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Das Ziel entspricht einer Steigerung der Anzahl an Studierenden und Forschenden um 10 % gegenüber 2015 in 2020.<br>• Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.<br>• LDC: Least Developed Countries (am wenigsten entwickelte Länder).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1037,197 +1001,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt die Anzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern pro Jahr bzw. Semester dar. Die Anzahl der Studierenden und Forschenden aus den am wenigsten entwickelten Ländern (Least Developed Countries, LDCs) wird gesondert ausgewiesen.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt die Anzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern pro Jahr bzw. Semester dar. Die Anzahl der Studierenden und Forschenden aus den am wenigsten entwickelten Ländern (Least Developed Countries, LDCs) wird gesondert ausgewiesen.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Wissen ist nicht nur auf nationaler Ebene, sondern auch im globalen Maßstab ein zentraler Treiber nachhaltiger Entwicklung. Die Stärkung des internationalen Wissensaustauschs durch Deutschland ist hierfür eine wichtige Maßnahme.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Wissen ist nicht nur auf nationaler Ebene, sondern auch im globalen Maßstab ein zentraler Treiber nachhaltiger Entwicklung. Die Stärkung des internationalen Wissensaustauschs durch Deutschland ist hierfür eine wichtige Maßnahme.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Steigerung der Anzahl um 10 % von 2015 bis 2020, anschließend Verstetigung</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Steigerung der Anzahl um 10 % von 2015 bis 2020, anschließend Verstetigung</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Gleichbleibende Zielvorgabe in jedem Jahr</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Gleichbleibende Zielvorgabe in jedem Jahr</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Die Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern soll jedes Jahr mindestens 237 000 betragen.<br />• Ausgehend von der Zielformulierung entspricht die Steigerung der Anzahl um 10 % des Wertes von 2015 einer Gesamtzahl von 237 000 Studierenden und Forschenden, die seit 2020 jedes Jahr zu halten ist. Der politisch festgelegte Zielwert wurde 2023 erreicht und die durchschnittliche Entwicklung der letzten sechs Jahre deutet in die gewünschte Richtung. Der Indikator 17.2 wird daher für das Jahr 2023 mit <b>Sonne</b> bewertet.<br />• Datenstand bei Bewertung: 13.09.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Der Zielwert oder ein besserer Wert wurde in 2023&nbsp;erreicht und die durchschnittliche Veränderung deutete nicht in Richtung einer Verschlechterung." alt="Wettersymbol Sonne" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Die Anzahl der Studierenden und Forschenden aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern soll jedes Jahr mindestens 237 000 betragen.<br />• Ausgehend von der Zielformulierung entspricht die Steigerung der Anzahl um 10 % des Wertes von 2015 einer Gesamtzahl von 237 000 Studierenden und Forschenden, die seit 2020 jedes Jahr zu halten ist. Der politisch festgelegte Zielwert wurde 2023 erreicht und die durchschnittliche Entwicklung der letzten sechs Jahre deutet in die gewünschte Richtung. Der Indikator 17.2 wird daher für das Jahr 2023 mit <b>Sonne</b> bewertet.<br />• Datenstand bei Bewertung: 13.09.2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Sonne.png" title="Der Zielwert oder ein besserer Wert wurde in 2023&nbsp;erreicht und die durchschnittliche Veränderung deutete nicht in Richtung einer Verschlechterung." alt="Wettersymbol Sonne" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2013,20 +1927,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2043,25 +1962,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #19486a; font-size: large">17.2&nbsp;Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</b><br /><br />Die Datengrundlage des Indikators bilden die Studierendenstatistik sowie die Statistik des Hochschulpersonals des Statistischen Bundesamtes. Beide basieren auf Vollerhebungen, die auf Verwaltungsdaten der Hochschulen beruhen. Der Indikator umfasst die Studierenden des jeweiligen Wintersemesters. Die Daten zu den Forschenden werden jeweils zum Stichtag 1. Dezember erhoben. Als Forschende gelten das haupt- und nebenberuflich tätige wissenschaftliche Personal an deutschen Hochschulen, studentische Hilfskräfte bleiben unberücksichtigt. Promotionsstudierende, die zugleich als wissenschaftliches Personal tätig sind, können im Indikator zu Doppelzählungen führen.<br /><br />Im Jahr 2023&nbsp;betrug die Gesamtzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen rund 349&nbsp;000. Dabei stellten die Studierenden mit einem Anteil von 91,3&nbsp;% den überwiegenden Teil des Indikators. Im Wintersemester 2023/24&nbsp;waren 318&nbsp;663&nbsp;Studierende aus Entwicklungs- und Schwellenländern an deutschen Hochschulen eingeschrieben. Dies entspricht einem Anteil von 11,1&nbsp;% an allen Immatrikulierten. Die meisten Studierenden aus Entwicklungs- und Schwellenländern kamen aus Indien (49&nbsp;483), China (42&nbsp;190) und der Türkei (35&nbsp;559).<br /><br />Seit dem Wintersemester 2005/06&nbsp;(134&nbsp;462&nbsp;Studierende) ist die Anzahl der Studierenden aus Entwicklungs- und Schwellenländern kontinuierlich gestiegen&nbsp;–&nbsp;einzig im Wintersemester 2007/08&nbsp;wurde ein Rückgang verzeichnet. Im Vergleich zum Vorjahr (rund 307&nbsp;000&nbsp;Studierende im Wintersemester 2022/23) stieg die Anzahl im Wintersemester 2023/24&nbsp;um 3,8&nbsp;%. Unter den Studierenden befanden sich 19&nbsp;505&nbsp;aus den am wenigsten entwickelten Ländern (Least Developed Countries, LDCs), was einem Zuwachs von 6,5&nbsp;% gegenüber dem Vorjahressemester entspricht.<br /><br />Insgesamt lag der Frauenanteil unter den Studierenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen bei 42,0&nbsp;%; Werden ausschließlich Studierende aus den LDCs betrachtet, so liegt er mit 31,2&nbsp;% deutlich niedriger. Das Geschlechterverhältnis bei Studierenden aus europäischen (54,3&nbsp;% weiblich) und amerikanischen (50,6&nbsp;% weiblich) Entwicklungs- und Schwellenländern ist annähernd ausgewogen. Unter den Studierenden aus afrikanischen Entwicklungs- und Schwellenländern sind hingegen lediglich 34,5&nbsp;% Frauen.<br /><br />Im Jahr 2023&nbsp;gehörten rund 30&nbsp;000&nbsp;Forschende aus Entwicklungs- und Schwellenländern zum wissenschaftlichen Personal an deutschen Hochschulen. Dies entspricht einem Anteil von 7,1&nbsp;% am gesamten wissenschaftlichen Personal. Damit liegt der Anteil von Forschenden aus Entwicklungs- und Schwellenländern deutlich unter dem entsprechenden Anteil der Studierenden. Im Vergleich zum Vorjahr stieg die Anzahl um 7,8&nbsp;%, seit 2005&nbsp;hat sie sich vervierfacht. Aus den LDCs kamen 2023&nbsp;insgesamt 1&nbsp;190&nbsp;Forschende&nbsp;–&nbsp;das entspricht 0,3&nbsp;% des gesamten wissenschaftlichen Personals (Vorjahr: 1&nbsp;070).<br /><br />Bei allen genannten Werten und Vergleichen mit Vorjahren ist zu beachten, dass Veränderungen auch auf eine veränderte Zuordnung von Ländern zu den Gruppen der LDCs beziehungsweise der Entwicklungs- und Schwellenländer zurückzuführen sein können. Das politisch festgelegte Ziel, die Anzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern gegenüber 2015&nbsp;(215&nbsp;000) um 10&nbsp;% zu erhöhen, wurde bereits im Jahr 2017&nbsp;erreicht. Seitdem wird auch die angestrebte Verstetigung dieser Anzahl erzielt.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #19486a; font-size: large">17.2&nbsp;Studierende und Forschende aus Entwicklungsländern sowie aus am wenigsten entwickelten Ländern</b><br /><br />Die Datengrundlage des Indikators bilden die Studierendenstatistik sowie die Statistik des Hochschulpersonals des Statistischen Bundesamtes. Beide basieren auf Vollerhebungen, die auf Verwaltungsdaten der Hochschulen beruhen. Der Indikator umfasst die Studierenden des jeweiligen Wintersemesters. Die Daten zu den Forschenden werden jeweils zum Stichtag 1. Dezember erhoben. Als Forschende gelten das haupt- und nebenberuflich tätige wissenschaftliche Personal an deutschen Hochschulen, studentische Hilfskräfte bleiben unberücksichtigt. Promotionsstudierende, die zugleich als wissenschaftliches Personal tätig sind, können im Indikator zu Doppelzählungen führen.<br /><br />Im Jahr 2023&nbsp;betrug die Gesamtzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen rund 349&nbsp;000. Dabei stellten die Studierenden mit einem Anteil von 91,3&nbsp;% den überwiegenden Teil des Indikators. Im Wintersemester 2023/24&nbsp;waren 318&nbsp;663&nbsp;Studierende aus Entwicklungs- und Schwellenländern an deutschen Hochschulen eingeschrieben. Dies entspricht einem Anteil von 11,1&nbsp;% an allen Immatrikulierten. Die meisten Studierenden aus Entwicklungs- und Schwellenländern kamen aus Indien (49&nbsp;483), China (42&nbsp;190) und der Türkei (35&nbsp;559).<br /><br />Seit dem Wintersemester 2005/06&nbsp;(134&nbsp;462&nbsp;Studierende) ist die Anzahl der Studierenden aus Entwicklungs- und Schwellenländern kontinuierlich gestiegen&nbsp;–&nbsp;einzig im Wintersemester 2007/08&nbsp;wurde ein Rückgang verzeichnet. Im Vergleich zum Vorjahr (rund 307&nbsp;000&nbsp;Studierende im Wintersemester 2022/23) stieg die Anzahl im Wintersemester 2023/24&nbsp;um 3,8&nbsp;%. Unter den Studierenden befanden sich 19&nbsp;505&nbsp;aus den am wenigsten entwickelten Ländern (Least Developed Countries, LDCs), was einem Zuwachs von 6,5&nbsp;% gegenüber dem Vorjahressemester entspricht.<br /><br />Insgesamt lag der Frauenanteil unter den Studierenden aus Entwicklungs- und Schwellenländern an deutschen Hochschulen bei 42,0&nbsp;%; Werden ausschließlich Studierende aus den LDCs betrachtet, so liegt er mit 31,2&nbsp;% deutlich niedriger. Das Geschlechterverhältnis bei Studierenden aus europäischen (54,3&nbsp;% weiblich) und amerikanischen (50,6&nbsp;% weiblich) Entwicklungs- und Schwellenländern ist annähernd ausgewogen. Unter den Studierenden aus afrikanischen Entwicklungs- und Schwellenländern sind hingegen lediglich 34,5&nbsp;% Frauen.<br /><br />Im Jahr 2023&nbsp;gehörten rund 30&nbsp;000&nbsp;Forschende aus Entwicklungs- und Schwellenländern zum wissenschaftlichen Personal an deutschen Hochschulen. Dies entspricht einem Anteil von 7,1&nbsp;% am gesamten wissenschaftlichen Personal. Damit liegt der Anteil von Forschenden aus Entwicklungs- und Schwellenländern deutlich unter dem entsprechenden Anteil der Studierenden. Im Vergleich zum Vorjahr stieg die Anzahl um 7,8&nbsp;%, seit 2005&nbsp;hat sie sich vervierfacht. Aus den LDCs kamen 2023&nbsp;insgesamt 1&nbsp;190&nbsp;Forschende&nbsp;–&nbsp;das entspricht 0,3&nbsp;% des gesamten wissenschaftlichen Personals (Vorjahr: 1&nbsp;070).<br /><br />Bei allen genannten Werten und Vergleichen mit Vorjahren ist zu beachten, dass Veränderungen auch auf eine veränderte Zuordnung von Ländern zu den Gruppen der LDCs beziehungsweise der Entwicklungs- und Schwellenländer zurückzuführen sein können. Das politisch festgelegte Ziel, die Anzahl der Studierenden und Forschenden aus Entwicklungs- und Schwellenländern gegenüber 2015&nbsp;(215&nbsp;000) um 10&nbsp;% zu erhöhen, wurde bereits im Jahr 2017&nbsp;erreicht. Seitdem wird auch die angestrebte Verstetigung dieser Anzahl erzielt.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2855,19 +2769,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2881,8 +2800,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3619,98 +3538,90 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3776,6 +3687,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3783,11 +3695,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3798,18 +3710,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3823,12 +3735,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

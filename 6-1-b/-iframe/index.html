@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-6">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/6/" aria-label=" 6" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
-              alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
-              id="goal-6"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-6">
+    <div class="container">
+        <div class="row">
             
-              Indikator 6.1.b
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/6/" aria-label=" 6" title=" 6">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/6.png"
+                        alt="Sauberes Wasser und Sanitäreinrichtungen - Ziel 6"
+                        id="goal-6"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Nitrat im Grundwasser</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 6.1.b
+                        
+                        <span class="lead-copy">Nitrat im Grundwasser</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-6" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_6-1-b'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Nitrat im Grundwasser"
   data-charttitles="null"
-  data-chartsubtitle="Messstellen, an denen der Schwellenwert eingehalten wird"
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Zeitreihe&quot;,&quot;value&quot;:&quot;Nitrat im Grundwasser&quot;}]"
   data-graphlimits="[{&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:100,&quot;label&quot;:{&quot;content&quot;:&quot;Jährliches Ziel&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;type&quot;:&quot;line&quot;,&quot;xMin&quot;:0,&quot;xMax&quot;:16,&quot;yMin&quot;:100,&quot;yMax&quot;:100,&quot;borderDash&quot;:[4,4],&quot;borderColor&quot;:&quot;#26bde2&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:7.0,&quot;yValue&quot;:93.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Jährliches Ziel: 100&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -681,62 +671,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -749,12 +737,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Nitrat im Grundwasser</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Messstellen, an denen der Schwellenwert eingehalten wird</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Nitrat im Grundwasser
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -769,54 +757,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Quelldaten auf Basis von Daten der Bund/Länder-Arbeitsgemeinschaft Wasser.<br>• Basis EUA-Messnetz: Schwellenwert 50 Milligramm Nitrat pro Liter im Jahresmittel.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -848,54 +827,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• Quelldaten auf Basis von Daten der Bund/Länder-Arbeitsgemeinschaft Wasser.<br>• Basis EUA-Messnetz: Schwellenwert 50 Milligramm Nitrat pro Liter im Jahresmittel.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -983,197 +953,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil der Messstellen (in %) dar, an denen der Grenzwert von 50 Milligramm pro Liter Nitrat im Grundwasser im Jahresmittel eingehalten wird.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Nitrat im Grundwasser</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil der Messstellen (in %) dar, an denen der Grenzwert von 50 Milligramm pro Liter Nitrat im Grundwasser im Jahresmittel eingehalten wird.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Grundwasser ist ein wesentliches Element des Naturhaushaltes. Es ist Teil des Wasserkreislaufs und erfüllt wichtige ökologische Funktionen. Grundwasser ist auch die wichtigste Trinkwasserressource Deutschlands. Erhöhte Nitratgehalte beeinträchtigen jedoch die Ökologie der Gewässer.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Grundwasser ist ein wesentliches Element des Naturhaushaltes. Es ist Teil des Wasserkreislaufs und erfüllt wichtige ökologische Funktionen. Grundwasser ist auch die wichtigste Trinkwasserressource Deutschlands. Erhöhte Nitratgehalte beeinträchtigen jedoch die Ökologie der Gewässer.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Einhaltung oder Unterschreitung des Nitrat-Schwellenwertes von 50 Milligramm pro Liter an allen Messstellen bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Einhaltung oder Unterschreitung des Nitrat-Schwellenwertes von 50 Milligramm pro Liter an allen Messstellen bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Gleichbleibende Zielvorgabe in jedem Jahr</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Gleichbleibende Zielvorgabe in jedem Jahr</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Der Anteil von Messstellen, an denen der Schwellenwert für Nitrat im Grundwasser eingehalten wird, soll jedes Jahr 100 % betragen.<br />• Ausgehend von der Zielformulierung wurde das politisch festgelegte Ziel im Jahr 2023 wiederholt nicht erreicht. Da die durchschnittliche Entwicklung des Indikators in den letzten sechs Jahren jedoch in die gewünschte Richtung weist, wird der Indikator 6.1.b für das Jahr 2023 mit <b>Wolke</b> bewertet.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Zielwert wurde in 2023&nbsp;nicht erreicht, aber die durchschnittliche Entwicklung wies in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Der Anteil von Messstellen, an denen der Schwellenwert für Nitrat im Grundwasser eingehalten wird, soll jedes Jahr 100 % betragen.<br />• Ausgehend von der Zielformulierung wurde das politisch festgelegte Ziel im Jahr 2023 wiederholt nicht erreicht. Da die durchschnittliche Entwicklung des Indikators in den letzten sechs Jahren jedoch in die gewünschte Richtung weist, wird der Indikator 6.1.b für das Jahr 2023 mit <b>Wolke</b> bewertet.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Zielwert wurde in 2023&nbsp;nicht erreicht, aber die durchschnittliche Entwicklung wies in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1959,20 +1879,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1989,25 +1914,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #26bde2; font-size: large">6.1.b Nitrat im Grundwasser</b><br /><br />Nitrate (NO₃) sind Stickstoffverbindungen, die in gewissen Konzentrationen von Natur aus im Boden vorkommen aber auch durch menschliche Einträge in die Umwelt gelangen. Der Nitratgehalt im Grundwasser wird von den Bundesländern zur Berichterstattung an die Europäische Umweltagentur (EUA) über den Zustand des Grundwassers in Deutschland erhoben. Grundlage hierfür ist das sogenannte EUA-Messnetz, das aus speziell ausgewählten Messstellen besteht. Dieses Messstellennetz umfasst gut 1&nbsp;200&nbsp;repräsentative Messstellen. Die Daten werden vom Umweltbundesamt auf Basis der Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA) zusammengestellt.<br /><br />Der Indikator stellt dar, an wie vielen der insgesamt erfassten Messstellen der vorgegebene Schwellenwert eingehalten wurde. Das natürlich im Boden vorkommende Nitrat trägt dabei zwischen 0&nbsp;und maximal 10&nbsp;Milligramm pro Liter zur Konzentration im Grundwasser insgesamt bei. Konzentrationen zwischen 10&nbsp;und 25&nbsp;Milligramm pro Liter weisen auf eine geringe bis mittlere Belastung hin. Werte im Bereich von 25&nbsp;bis 50&nbsp;Milligramm pro Liter zeigen eine starke Belastung des Grundwassers an. Wird der Schwellenwert der Grundwasserverordnung von 50&nbsp;Milligramm pro Liter überschritten&nbsp;–&nbsp;auf dem auch dieser Indikator beruht&nbsp;–&nbsp;gilt das Grundwasser als chemisch beeinträchtigt und ist ohne Aufbereitung nicht als Trinkwasser nutzbar.<br /><br />Wie auch Indikator <a href="https://dns-indikatoren.de/6-1-a/">6.1.a</a> zum Phosphorgehalt in Fließgewässern liefert dieser Indikator keinen Hinweis auf das Ausmaß der Über- oder Unterschreitungen des Grenzwertes. So kann die Nitratbelastung an einzelnen Messstellen zwar deutlich zurückgegangen sein&nbsp;–&nbsp;liegt sie jedoch weiterhin oberhalb des Schwellenwertes von 50&nbsp;Milligramm pro Liter, wird diese Verbesserung im Indikator nicht erfasst. Umgekehrt fließen auch steigende Nitratkonzentrationen, die unterhalb des Grenzwertes bleiben, nicht in die Bewertung ein. Bei der Interpretation ist zudem zu berücksichtigen, dass Maßnahmen zur Verringerung der Nitratbelastung häufig erst mit zeitlicher Verzögerung Wirkung zeigen, da das Sickerwasser mehrere Jahre benötigen kann, um das Grundwasser zu erreichen.<br /><br />Im Jahr 2023&nbsp;wurde der Grenzwert von höchstens 50&nbsp;Milligramm Nitrat pro Liter an 85,0&nbsp;% aller Messstellen eingehalten. Seit 2008&nbsp;ist der Anteil der Messstellen, die diesen Grenzwert einhalten, nahezu unverändert geblieben. Damit wurde das politisch festgelegte Ziel, den Grenzwert an allen Messstellen einzuhalten, nicht erreicht&nbsp;–&nbsp;und eine Entwicklung des Indikators in diese Richtung ist bislang nicht erkennbar. An 18,0&nbsp;% der Messstellen lagen die Nitratkonzentrationen im Bereich zwischen 25&nbsp;und 50&nbsp;Milligramm pro Liter. Auch wenn sich dieser Wert auf Konzentrationen unterhalb des Grenzwertes bezieht, deutet er dennoch auf eine erhöhte Belastung hin. Auch dieser Anteil ist über die Jahre weitgehend konstant geblieben.<br /><br />Die Belastung des Grundwassers mit Nitrat entsteht vor allem durch die Auswaschung von Nitrat aus verschiedenen stickstoffhaltigen Düngemitteln. Dazu gehören neben Wirtschaftsdüngern wie Jauche oder Gülle auch Mineraldünger, die insbesondere im intensiven Ackerbau eingesetzt werden. In den letzten Jahren werden zudem verstärkt Gärreste, ein Nebenprodukt von Biogasanlagen, als Dünger in der Landwirtschaft genutzt. Eine nicht am Bedarf der Pflanzen orientierte Düngung kann in all diesen Fällen zu erhöhten Nitratwerten im Grundwasser führen. Daher besteht auch eine Beziehung zwischen der Entwicklung des <i>Stickstoffüberschuss der Landwirtschaft</i> (Indikator <a href="https://dns-indikatoren.de/2-1-a/">2.1.a</a>) und der Nitratbelastung des Grundwassers.<br /><br />Um den konkreten Einfluss der landwirtschaftlichen Nutzung auf die Nitratbelastung der Gewässer zu untersuchen, erfolgt eine separate Nitrat-Berichterstattung an die Europäische Union (EU). Dafür werden aus dem EUA-Messnetz jene Messstellen ausgewählt, deren Einzugsgebiet überwiegend landwirtschaftlich genutzt wird. In diesem speziellen Messnetz liegt die Nitratbelastung daher über dem Durchschnittswert des Indikators 6.1.b.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #26bde2; font-size: large">6.1.b Nitrat im Grundwasser</b><br /><br />Nitrate (NO₃) sind Stickstoffverbindungen, die in gewissen Konzentrationen von Natur aus im Boden vorkommen aber auch durch menschliche Einträge in die Umwelt gelangen. Der Nitratgehalt im Grundwasser wird von den Bundesländern zur Berichterstattung an die Europäische Umweltagentur (EUA) über den Zustand des Grundwassers in Deutschland erhoben. Grundlage hierfür ist das sogenannte EUA-Messnetz, das aus speziell ausgewählten Messstellen besteht. Dieses Messstellennetz umfasst gut 1&nbsp;200&nbsp;repräsentative Messstellen. Die Daten werden vom Umweltbundesamt auf Basis der Angaben der Bund/Länder-Arbeitsgemeinschaft Wasser (LAWA) zusammengestellt.<br /><br />Der Indikator stellt dar, an wie vielen der insgesamt erfassten Messstellen der vorgegebene Schwellenwert eingehalten wurde. Das natürlich im Boden vorkommende Nitrat trägt dabei zwischen 0&nbsp;und maximal 10&nbsp;Milligramm pro Liter zur Konzentration im Grundwasser insgesamt bei. Konzentrationen zwischen 10&nbsp;und 25&nbsp;Milligramm pro Liter weisen auf eine geringe bis mittlere Belastung hin. Werte im Bereich von 25&nbsp;bis 50&nbsp;Milligramm pro Liter zeigen eine starke Belastung des Grundwassers an. Wird der Schwellenwert der Grundwasserverordnung von 50&nbsp;Milligramm pro Liter überschritten&nbsp;–&nbsp;auf dem auch dieser Indikator beruht&nbsp;–&nbsp;gilt das Grundwasser als chemisch beeinträchtigt und ist ohne Aufbereitung nicht als Trinkwasser nutzbar.<br /><br />Wie auch Indikator <a href="https://dns-indikatoren.de/6-1-a/">6.1.a</a> zum Phosphorgehalt in Fließgewässern liefert dieser Indikator keinen Hinweis auf das Ausmaß der Über- oder Unterschreitungen des Grenzwertes. So kann die Nitratbelastung an einzelnen Messstellen zwar deutlich zurückgegangen sein&nbsp;–&nbsp;liegt sie jedoch weiterhin oberhalb des Schwellenwertes von 50&nbsp;Milligramm pro Liter, wird diese Verbesserung im Indikator nicht erfasst. Umgekehrt fließen auch steigende Nitratkonzentrationen, die unterhalb des Grenzwertes bleiben, nicht in die Bewertung ein. Bei der Interpretation ist zudem zu berücksichtigen, dass Maßnahmen zur Verringerung der Nitratbelastung häufig erst mit zeitlicher Verzögerung Wirkung zeigen, da das Sickerwasser mehrere Jahre benötigen kann, um das Grundwasser zu erreichen.<br /><br />Im Jahr 2023&nbsp;wurde der Grenzwert von höchstens 50&nbsp;Milligramm Nitrat pro Liter an 85,0&nbsp;% aller Messstellen eingehalten. Seit 2008&nbsp;ist der Anteil der Messstellen, die diesen Grenzwert einhalten, nahezu unverändert geblieben. Damit wurde das politisch festgelegte Ziel, den Grenzwert an allen Messstellen einzuhalten, nicht erreicht&nbsp;–&nbsp;und eine Entwicklung des Indikators in diese Richtung ist bislang nicht erkennbar. An 18,0&nbsp;% der Messstellen lagen die Nitratkonzentrationen im Bereich zwischen 25&nbsp;und 50&nbsp;Milligramm pro Liter. Auch wenn sich dieser Wert auf Konzentrationen unterhalb des Grenzwertes bezieht, deutet er dennoch auf eine erhöhte Belastung hin. Auch dieser Anteil ist über die Jahre weitgehend konstant geblieben.<br /><br />Die Belastung des Grundwassers mit Nitrat entsteht vor allem durch die Auswaschung von Nitrat aus verschiedenen stickstoffhaltigen Düngemitteln. Dazu gehören neben Wirtschaftsdüngern wie Jauche oder Gülle auch Mineraldünger, die insbesondere im intensiven Ackerbau eingesetzt werden. In den letzten Jahren werden zudem verstärkt Gärreste, ein Nebenprodukt von Biogasanlagen, als Dünger in der Landwirtschaft genutzt. Eine nicht am Bedarf der Pflanzen orientierte Düngung kann in all diesen Fällen zu erhöhten Nitratwerten im Grundwasser führen. Daher besteht auch eine Beziehung zwischen der Entwicklung des <i>Stickstoffüberschuss der Landwirtschaft</i> (Indikator <a href="https://dns-indikatoren.de/2-1-a/">2.1.a</a>) und der Nitratbelastung des Grundwassers.<br /><br />Um den konkreten Einfluss der landwirtschaftlichen Nutzung auf die Nitratbelastung der Gewässer zu untersuchen, erfolgt eine separate Nitrat-Berichterstattung an die Europäische Union (EU). Dafür werden aus dem EUA-Messnetz jene Messstellen ausgewählt, deren Einzugsgebiet überwiegend landwirtschaftlich genutzt wird. In diesem speziellen Messnetz liegt die Nitratbelastung daher über dem Durchschnittswert des Indikators 6.1.b.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2801,19 +2721,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2827,8 +2752,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3565,151 +3490,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-nitrat-im-grundwasser" target="_blank">
+                Nitrat im Grundwasser <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.umweltbundesamt.de/daten/umweltindikatoren/indikator-nitrat-im-grundwasser" target="_blank" onclick="return confirm_alert('des UBA', 'De');">
-                      Nitrat im Grundwasser <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3775,6 +3659,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3782,11 +3667,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -3797,18 +3682,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -3822,12 +3707,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

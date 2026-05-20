@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-5">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/5/" aria-label=" 5" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
-              alt="Geschlechtergleichheit - Ziel 5"
-              id="goal-5"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-5">
+    <div class="container">
+        <div class="row">
             
-              Indikator 5.1.d
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/5/" aria-label=" 5" title=" 5">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/5.png"
+                        alt="Geschlechtergleichheit - Ziel 5"
+                        id="goal-5"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Väterbeteiligung beim Elterngeld</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 5.1.d
+                        
+                        <span class="lead-copy">Väterbeteiligung beim Elterngeld</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-5" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_5-1-d'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Väterbeteiligung beim Elterngeld"
   data-charttitles="[{&quot;series&quot;:&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Männliche Bezieher an allen genommenen Elterngeldmonaten&quot;,&quot;title&quot;:&quot;Väterbeteiligung beim Elterngeld&quot;},{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;title&quot;:&quot;Väterbeteiligung beim Elterngeld&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;title&quot;:&quot;Kinder, deren Väter Elterngeld bezogen haben&quot;},{&quot;series&quot;:&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Männliche Bezieher an allen genommenen Elterngeldmonaten&quot;,&quot;title&quot;:&quot;Männliche Bezieher an allen Elterngeldmonaten&quot;}]"
   data-measurementunit=""
   data-xaxislabel="Geburtsjahr des Kindes"
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;value&quot;:65,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;xValue&quot;:15,&quot;yValue&quot;:65,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;borderColor&quot;:&quot;#ff3a21&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:15,&quot;yValue&quot;:60.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;65&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:7.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Männliche Bezieher an allen genommenen Elterngeldmonaten&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;&lt;u&gt;Zeitreihe des Indikators:&lt;/u&gt; Kinder, deren Väter Elterngeld bezogen haben&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;&lt;u&gt;Zusätzliche Zeitreihe:&lt;/u&gt; Männliche Bezieher an allen genommenen Elterngeldmonaten&quot;,&quot;step&quot;:2.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1069,62 +1059,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1137,12 +1125,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Väterbeteiligung beim Elterngeld</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Kinder, deren Väter Elterngeld bezogen haben</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Väterbeteiligung beim Elterngeld
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1157,57 +1145,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>11.07.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• 01.07.2015: Einführung von ElterngeldPlus und Partnerschaftsbonus.<br>• Für die Auswertung aller abgeschlossenen Leistungsbezüge zu einem bestimmten Geburtszeitraum muss die maximal mögliche Bezugsdauer berücksichtigt werden, sodass Daten nur mit einem größeren zeitlichen Verzug dargestellt werden können.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1239,57 +1215,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquelle</u>:</dt>
-          <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></dd>
         
 
         
-          <dt><u>Datenstand</u>:</dt>
-          <dd>11.07.2025</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Anmerkungen</u>:</dt>
-          <dd><br>• 01.07.2015: Einführung von ElterngeldPlus und Partnerschaftsbonus.<br>• Für die Auswertung aller abgeschlossenen Leistungsbezüge zu einem bestimmten Geburtszeitraum muss die maximal mögliche Bezugsdauer berücksichtigt werden, sodass Daten nur mit einem größeren zeitlichen Verzug dargestellt werden können.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1377,197 +1341,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Der Indikator stellt den Anteil der Kinder (in %) dar, deren Väter Elterngeld bezogen haben.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Väterbeteiligung beim Elterngeld</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Der Indikator stellt den Anteil der Kinder (in %) dar, deren Väter Elterngeld bezogen haben.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Das Elterngeld soll Familien bei einer partnerschaftlichen Aufgabenteilung unterstützen und eine gute Vereinbarkeit von Familie und Beruf für Mütter und Väter erreichen. Besonders mit der Einführung des ElterngeldPlus und des Partnerschaftsbonus soll der gesellschaftliche Wandel geschlechtsstereotyper Rollenbilder von Müttern und Vätern weiter vorangetrieben und letztendlich auch die Gleichstellung am Arbeitsmarkt befördert werden.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Das Elterngeld soll Familien bei einer partnerschaftlichen Aufgabenteilung unterstützen und eine gute Vereinbarkeit von Familie und Beruf für Mütter und Väter erreichen. Besonders mit der Einführung des ElterngeldPlus und des Partnerschaftsbonus soll der gesellschaftliche Wandel geschlechtsstereotyper Rollenbilder von Müttern und Vätern weiter vorangetrieben und letztendlich auch die Gleichstellung am Arbeitsmarkt befördert werden.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>Anstieg auf 65 % bis 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>Anstieg auf 65 % bis 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>Der Anteil von Kindern, deren Väter Elterngeld bezogen haben soll bis 2030 auf mindestens 65 % gesteigert werden.<br />• Ausgehend von der Zielformulierung würde der Wert des Indikators 5.1.d bei Fortsetzung der durchschnittlichen Entwicklung der Jahre 2017 bis 2022 bis 2030 nur auf etwa 56 % ansteigen. Die Differenz zum politisch festgelegten Zielwert wäre damit so groß (über 20 % der Differenz zwischen dem Zielwert und dem Wert aus dem Jahr 2022), dass ein Erreichen des Ziels als unwahrscheinlich gilt. Der Indikator 5.1.d wird für das Jahr 2022 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 11.07.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Indikator entwickelte sich in 2022&nbsp;zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung wäre das Ziel im Zieljahr aber um mehr als 20&nbsp;% der Differenz zwischen Zielwert und dem Wert aus 2022&nbsp;verfehlt worden." alt="Wettersymbol Wolke" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>Der Anteil von Kindern, deren Väter Elterngeld bezogen haben soll bis 2030 auf mindestens 65 % gesteigert werden.<br />• Ausgehend von der Zielformulierung würde der Wert des Indikators 5.1.d bei Fortsetzung der durchschnittlichen Entwicklung der Jahre 2017 bis 2022 bis 2030 nur auf etwa 56 % ansteigen. Die Differenz zum politisch festgelegten Zielwert wäre damit so groß (über 20 % der Differenz zwischen dem Zielwert und dem Wert aus dem Jahr 2022), dass ein Erreichen des Ziels als unwahrscheinlich gilt. Der Indikator 5.1.d wird für das Jahr 2022 mit <b>Wolke</b> bewertet.<br />• Datenstand bei Bewertung: 11.07.2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Indikator entwickelte sich in 2022&nbsp;zwar in die gewünschte Richtung auf das Ziel zu, bei Fortsetzung der Entwicklung wäre das Ziel im Zieljahr aber um mehr als 20&nbsp;% der Differenz zwischen Zielwert und dem Wert aus 2022&nbsp;verfehlt worden." alt="Wettersymbol Wolke" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2353,20 +2267,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2383,25 +2302,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #ff3a21; font-size: large">5.1.d Väterbeteiligung beim Elterngeld</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Das Elterngeld wurde mit Inkrafttreten des Bundeselterngeld- und Elternzeitgesetzes (BEEG) für Kinder eingeführt, die ab dem 1. Januar 2007&nbsp;geboren wurden. Anspruch auf Elterngeld haben Personen mit Wohnsitz oder gewöhnlichem Aufenthalt in Deutschland, die mit dem Kind im selben Haushalt leben, es eigenverantwortlich betreuen und erziehen sowie keiner oder nur einer eingeschränkten Erwerbstätigkeit nachgehen. Die Regelungen gelten gleichermaßen für Mütter und Väter. Auch Ehe- oder Lebenspartnerinnen und &#8209;partner der Eltern sind bei gemeinsamem Haushalt anspruchsberechtigt. In über 99&nbsp;% der Fälle handelt es sich bei den Leistungsbeziehenden um leibliche oder Adoptiveltern.<sup>1</sup><br /><br />Der Indikator basiert auf der vierteljährlich erhobenen Elterngeldstatistik, in der alle bewilligten Elterngeldleistungen erfasst sind. Er stellt den Anteil der Kinder eines bestimmten Geburtsjahrgangs dar, deren Väter Elterngeld bezogen haben&nbsp;–&nbsp;im Verhältnis zu allen Kindern dieses Jahrgangs, für die Elterngeld bezogen wurde. Da ausschließlich Kinder mit Elterngeldanspruch berücksichtigt werden, bleiben beispielsweise Kinder ausländischer Schutzsuchender ohne Anspruch auf Elterngeld unberücksichtigt und haben somit keinen Einfluss auf den Indikator. Die Datengrundlage bilden die abgeschlossenen Elterngeldbezüge pro Geburtsjahrgang. Vollständige Daten liegen daher in der Regel erst etwa zwei Jahre nach Ende des jeweiligen Geburtsjahres vor.<br /><br />Eine Differenzierung nach Art der Partnerschaft (gleich- oder verschiedengeschlechtlich) ist aufgrund der aktuellen Erhebungsmethodik nicht möglich. Es wird daher vereinfachend angenommen, dass jedem Kind genau ein leistungsberechtigter Vater zugeordnet ist. Bis zum 30. Juni 2015&nbsp;war die maximale Bezugsdauer auf 14&nbsp;Monate begrenzt. Für Kinder, die ab dem 1. Juli 2015&nbsp;geboren wurden, können Eltern zwischen verschiedenen Leistungsmodellen wählen oder diese miteinander kombinieren: Basiselterngeld, ElterngeldPlus und Partnerschaftsbonus. Je nach gewähltem Modell kann die Bezugsdauer deutlich variieren.<br /><br />Der Indikator stellt ausschließlich den tatsächlichen Bezug von Elterngeld dar. Er erfasst weder die Bezugsdauer, noch einen möglichen Umfang von Teilzeitbeschäftigung während des Elterngeldbezugs. Seit dem 1. April 2025&nbsp;gelten neue Einkommensgrenzen für den Bezug von Elterngeld. Diese Neuregelung könnte künftig die Entwicklung des Indikators beeinflussen, da voraussichtlich weniger Paare anspruchsberechtigt sein werden.<br /><br /><b>Entwicklung</b><br /><br />Zwischen 2008&nbsp;und 2022&nbsp;ist die Väterbeteiligung beim Elterngeld deutlich gestiegen. Der Anteil der Kinder, deren Väter Elterngeld bezogen, erhöhte sich von 21,2&nbsp;% im Jahr 2008&nbsp;auf 46,3&nbsp;% im Jahr 2021. Die Mütterbeteiligung blieb im selben Zeitraum mit rund 98&nbsp;% konstant auf einem hohen Niveau. Trotz dieses Trends wird das politisch festgelegte Ziel, den Anteil der Kinder mit elterngeldbeziehenden Vätern bis zum Jahr 2030&nbsp;auf mindestens 65&nbsp;% zu erhöhen, bei gleichbleibender Entwicklung voraussichtlich nicht erreicht.<br /><br />Mit dem Anstieg der Väterbeteiligung ging ein leichter Rückgang der durchschnittlichen Bezugsdauer pro Vater einher. Während Väter für Kinder des Geburtsjahrgangs 2008&nbsp;durchschnittlich 3,7&nbsp;Monate Elterngeld bezogen, waren es beim Jahrgang 2022&nbsp;nur noch 3,3&nbsp;Monate. Da sich jedoch insgesamt mehr Väter beteiligten, stieg die Gesamtzahl der von Vätern in Anspruch genommenen Elterngeldmonate an. Bezogen auf alle bezugsberechtigten Väter&nbsp;–&nbsp;also auch auf jene, die keinen Antrag gestellt haben&nbsp;–&nbsp;ergibt sich ein Anstieg der durchschnittlich in Anspruch genommenen Monate von 0,8&nbsp;(2008) auf 1,5&nbsp;Monate (2022).<br /><br />Die durchschnittliche Bezugsdauer bei Müttern (bezogen auf alle bezugsberechtigten Mütter) war im Vergleich deutlich höher: Sie lag für den Geburtsjahrgang 2008&nbsp;bei 11,5&nbsp;Monaten und stieg für den Geburtsjahrgang 2022&nbsp;auf 13,8&nbsp;Monate an.<br /><br />Ein regionaler Vergleich für das Jahr 2022&nbsp;zeigt deutliche Unterschiede in der Väterbeteiligung: Die höchsten Anteile wurden in Sachsen (55,4&nbsp;%) und Bayern (53,8&nbsp;%) verzeichnet, während Bremen (35,0&nbsp;%) und das Saarland (34,8&nbsp;%) die niedrigsten Werte aufwiesen.<br /><br /><small><sup>1</sup> Zur besseren Lesbarkeit wird im Folgenden vereinfacht von <i>Müttern</i> und <i>Vätern</i> gesprochen.</small></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #ff3a21; font-size: large">5.1.d Väterbeteiligung beim Elterngeld</b><br /><br /><b>Inhalt und Methodik</b><br /><br />Das Elterngeld wurde mit Inkrafttreten des Bundeselterngeld- und Elternzeitgesetzes (BEEG) für Kinder eingeführt, die ab dem 1. Januar 2007&nbsp;geboren wurden. Anspruch auf Elterngeld haben Personen mit Wohnsitz oder gewöhnlichem Aufenthalt in Deutschland, die mit dem Kind im selben Haushalt leben, es eigenverantwortlich betreuen und erziehen sowie keiner oder nur einer eingeschränkten Erwerbstätigkeit nachgehen. Die Regelungen gelten gleichermaßen für Mütter und Väter. Auch Ehe- oder Lebenspartnerinnen und &#8209;partner der Eltern sind bei gemeinsamem Haushalt anspruchsberechtigt. In über 99&nbsp;% der Fälle handelt es sich bei den Leistungsbeziehenden um leibliche oder Adoptiveltern.<sup>1</sup><br /><br />Der Indikator basiert auf der vierteljährlich erhobenen Elterngeldstatistik, in der alle bewilligten Elterngeldleistungen erfasst sind. Er stellt den Anteil der Kinder eines bestimmten Geburtsjahrgangs dar, deren Väter Elterngeld bezogen haben&nbsp;–&nbsp;im Verhältnis zu allen Kindern dieses Jahrgangs, für die Elterngeld bezogen wurde. Da ausschließlich Kinder mit Elterngeldanspruch berücksichtigt werden, bleiben beispielsweise Kinder ausländischer Schutzsuchender ohne Anspruch auf Elterngeld unberücksichtigt und haben somit keinen Einfluss auf den Indikator. Die Datengrundlage bilden die abgeschlossenen Elterngeldbezüge pro Geburtsjahrgang. Vollständige Daten liegen daher in der Regel erst etwa zwei Jahre nach Ende des jeweiligen Geburtsjahres vor.<br /><br />Eine Differenzierung nach Art der Partnerschaft (gleich- oder verschiedengeschlechtlich) ist aufgrund der aktuellen Erhebungsmethodik nicht möglich. Es wird daher vereinfachend angenommen, dass jedem Kind genau ein leistungsberechtigter Vater zugeordnet ist. Bis zum 30. Juni 2015&nbsp;war die maximale Bezugsdauer auf 14&nbsp;Monate begrenzt. Für Kinder, die ab dem 1. Juli 2015&nbsp;geboren wurden, können Eltern zwischen verschiedenen Leistungsmodellen wählen oder diese miteinander kombinieren: Basiselterngeld, ElterngeldPlus und Partnerschaftsbonus. Je nach gewähltem Modell kann die Bezugsdauer deutlich variieren.<br /><br />Der Indikator stellt ausschließlich den tatsächlichen Bezug von Elterngeld dar. Er erfasst weder die Bezugsdauer, noch einen möglichen Umfang von Teilzeitbeschäftigung während des Elterngeldbezugs. Seit dem 1. April 2025&nbsp;gelten neue Einkommensgrenzen für den Bezug von Elterngeld. Diese Neuregelung könnte künftig die Entwicklung des Indikators beeinflussen, da voraussichtlich weniger Paare anspruchsberechtigt sein werden.<br /><br /><b>Entwicklung</b><br /><br />Zwischen 2008&nbsp;und 2022&nbsp;ist die Väterbeteiligung beim Elterngeld deutlich gestiegen. Der Anteil der Kinder, deren Väter Elterngeld bezogen, erhöhte sich von 21,2&nbsp;% im Jahr 2008&nbsp;auf 46,3&nbsp;% im Jahr 2021. Die Mütterbeteiligung blieb im selben Zeitraum mit rund 98&nbsp;% konstant auf einem hohen Niveau. Trotz dieses Trends wird das politisch festgelegte Ziel, den Anteil der Kinder mit elterngeldbeziehenden Vätern bis zum Jahr 2030&nbsp;auf mindestens 65&nbsp;% zu erhöhen, bei gleichbleibender Entwicklung voraussichtlich nicht erreicht.<br /><br />Mit dem Anstieg der Väterbeteiligung ging ein leichter Rückgang der durchschnittlichen Bezugsdauer pro Vater einher. Während Väter für Kinder des Geburtsjahrgangs 2008&nbsp;durchschnittlich 3,7&nbsp;Monate Elterngeld bezogen, waren es beim Jahrgang 2022&nbsp;nur noch 3,3&nbsp;Monate. Da sich jedoch insgesamt mehr Väter beteiligten, stieg die Gesamtzahl der von Vätern in Anspruch genommenen Elterngeldmonate an. Bezogen auf alle bezugsberechtigten Väter&nbsp;–&nbsp;also auch auf jene, die keinen Antrag gestellt haben&nbsp;–&nbsp;ergibt sich ein Anstieg der durchschnittlich in Anspruch genommenen Monate von 0,8&nbsp;(2008) auf 1,5&nbsp;Monate (2022).<br /><br />Die durchschnittliche Bezugsdauer bei Müttern (bezogen auf alle bezugsberechtigten Mütter) war im Vergleich deutlich höher: Sie lag für den Geburtsjahrgang 2008&nbsp;bei 11,5&nbsp;Monaten und stieg für den Geburtsjahrgang 2022&nbsp;auf 13,8&nbsp;Monate an.<br /><br />Ein regionaler Vergleich für das Jahr 2022&nbsp;zeigt deutliche Unterschiede in der Väterbeteiligung: Die höchsten Anteile wurden in Sachsen (55,4&nbsp;%) und Bayern (53,8&nbsp;%) verzeichnet, während Bremen (35,0&nbsp;%) und das Saarland (34,8&nbsp;%) die niedrigsten Werte aufwiesen.<br /><br /><small><sup>1</sup> Zur besseren Lesbarkeit wird im Folgenden vereinfacht von <i>Müttern</i> und <i>Vätern</i> gesprochen.</small></p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3195,19 +3109,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3221,8 +3140,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Datenquelle 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3959,151 +3878,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=22922-0011&bypass=true&levelindex=0&levelid=1660642440197#abreadcrumb&language=de" target="_blank">
+                Väterbeteiligung – GENESIS online 22922-0011 <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=22922-0011&bypass=true&levelindex=0&levelid=1660642440197#abreadcrumb&language=de" target="_blank">
-                    Väterbeteiligung – GENESIS online 22922-0011 <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4169,6 +4047,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4176,11 +4055,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4191,18 +4070,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4216,12 +4095,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

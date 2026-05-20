@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -141,9 +143,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -176,7 +177,7 @@ layout-goal
     <h2 class="internet-explorer-message-title">Dieser Internet-Browser wird nicht mehr unterstützt</h2>
     <p class="internet-explorer-message-body">Wir haben festgestellt, dass Sie den Internet Explorer verwenden, um diese Website zu besuchen. Der Internet Explorer wird von Microsoft nicht mehr unterstützt. Aus diesem Grund hat diese Website ebenfalls die Unterstützung für alle Versionen des Internet Explorers eingestellt, einige Bereiche auf dieser Website werden daher nicht oder nur eingeschränkt funktionieren. Bitte verwenden Sie einen modernen Browser wie Edge, Chrome, Firefox oder Safari.</p>
 </div>
-<!-- <div id="disclaimer">
+<div id="disclaimer">
     
 <div class="container">
   <div class="disclaimer-alert">
@@ -187,7 +188,7 @@ layout-goal
   </div>
 </div>
 
-</div> -->
+</div>
 
 <header role="banner" class="">
     <div class="container">
@@ -202,54 +203,42 @@ layout-goal
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav" id="menu"><li class="nav-item ">
     <a class="nav-link" href="/site/">Start</a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-status" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Status
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-status"><li class=" ">
     <a class="dropdown-item" href="/site/status/">Methodik</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/status_summary/">Übersicht</a>
-</li>
-</ul>
-          </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li></ul>
+            </li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-strategy" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Strategie
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-strategy"><li class=" ">
     <a class="dropdown-item" href="/site/strategy/dns/">Deutsche Nachhaltigkeitsstrategie</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/strategy/monitoring/">Monitoring</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/strategy/publications/">Publikationen</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/strategy/links/">Links</a>
-</li>
-</ul>
-          </li><li class="nav-item ">
+</li></ul>
+            </li><li class="nav-item ">
     <a class="nav-link" href="/site/laender/">Bundesländer</a>
-</li>
-<li class="nav-item ">
-    <a class="nav-link" href="https://sdg-indikatoren.de">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
-</li>
-<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+</li><li class="nav-item ">
+    <a class="nav-link" href="/site/menu.1_global_indicators_path">Globale Indikatoren <img class="link_btn" src="https://sdg-indikatoren.de/public/SDG Wheel_Transparent.png" title="Klicken Sie hier um zur Seite der SDG Indikatoren zu gelangen" alt="Link SDG" style="width:24px;height:24px;"/></a>
+</li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="dropdown-menu-1-help" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Hilfe
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdown-menu-1-help"><li class=" ">
     <a class="dropdown-item" href="/site/help/navigation/">Aufbau der Online Plattform</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/help/guidance/">Technische Hinweise</a>
-</li>
-<li class=" ">
+</li><li class=" ">
     <a class="dropdown-item" href="/site/help/faq/">FAQ</a>
-</li>
-</ul>
-          </li></ul>
-
+</li></ul>
+            </li></ul>
+    
                 </div>
                 <div class="header-search-bar">
                     <form class="align-self-lg-end" id="search" action="/site/search/">
@@ -272,66 +261,34 @@ layout-goal
 
 
   <div class="language-toggle-container d-flex">
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
-            <span>
-                Deutsch
-            </span>
-        </li><li class="language-option-en list-inline-item">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/site/en/14/">
                 English
             </a>
         </li></ul>
 </div>
-
 
 
                     <span class="no-js-language-toggle"><div class="language-toggle-container d-flex">
-    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-de list-inline-item" style="opacity:0.3">
-            <span>
-                Deutsch
-            </span>
-        </li><li class="language-option-en list-inline-item">
+    <i class="fa fa-globe language-toggle-globe-links"></i>
+    <ul class="language-toggle-links list-unstyled list-inline"><li class="language-option-en list-inline-item">
             <a class="language-toggle-link" href="/site/en/14/">
                 English
             </a>
         </li></ul>
-</div>
-</span><a title="" aria-label=""
-    data-contrast-switch-to="" href="javascript:void(0)" data-on="click"
+</div></span><a title="" aria-label=""
+    data-contrast-switch-to="" role="button" href="javascript:void(0)" data-on="click"
 data-event-category="Accessibility"
 data-event-action="Change contrast setting"
 data-event-label="high"
 >A</a>
-
                 </div>
             </div>
         </nav>
     </div>
 </header>
 <div id="top" tabindex=-1></div>
-
-
-
-<div class="heading goal-banner goal-14">
-  <div class="container">
-    <div class="row">
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png" alt="Leben unter Wasser - Ziel 14" id="goal-14" class="goal-icon-image goal-icon-image-" />
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 goal-details">
-        <h1 class="titles goal-14">
-          
-              Ozeane, Meere und Meeresressourcen im Sinne nachhaltiger Entwicklung erhalten und nachhaltig nutzen
-          
-        </h1>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
 
 
@@ -349,103 +306,142 @@ data-event-label="high"
   
 </div>
 
-<div id="main-content" class="container goal-indicators goal-14 goal-by-target" role="main">
+<div class="heading goal-banner goal-14">
+    <div class="container">
+        <div class="row">
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/14.png" alt="Leben unter Wasser - Ziel 14" id="goal-14" class="goal-icon-image goal-icon-image-" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 goal-details">
+                <h1>
+                    
+                        Ozeane, Meere und Meeresressourcen im Sinne nachhaltiger Entwicklung erhalten und nachhaltig nutzen
+                    
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="main-content" class="container" role="main">
 
   
 
 
 
-  
-
-  <div class="container">
-    <!--<div class="row justify-content-md-center">-->
-    <div class="row justify-content-around">
-      <div class="col-sm-4 d-grid gap-2">
-        <a href="https://dnsupgradeenvironment.github.io/site/13" class="btn btn-primary btn-block goal-14 navigation-btn text-nowrap" role="button">
-          <b class="d-sm-none d-lg-block"><i class="fa fa-chevron-left" aria-hidden="true"></i> Vorheriges Ziel</b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-left" aria-hidden="true"></i></b>
-        </a>
+  <div class="container g-0 ">
+    <div class="row align-items-end">
+      <div class="col">
+        <h2 class="goal-page-heading"></h2>
       </div>
-
-      <div class="col-sm-4 d-grid gap-2">
-        <a href="https://sustainabledevelopment-germany.github.io//14" class="btn btn-primary btn-block goal-14 navigation-btn" title="" role="button">
-          <b class="btn-label d-sm-none d-lg-block">Globale Indikatoren zu Ziel 14 </b><b class="btn-label d-none d-sm-block d-lg-none">Ziel 14 - Global</b>
-        </a>
-      </div>
-
-      <div class="col-sm-4 d-grid gap-2">
-        <a href="https://dnsupgradeenvironment.github.io/site/15" class="btn btn-primary btn-block goal-14 navigation-btn text-nowrap" role="button">
-          <b class="btn-label d-sm-none d-lg-block">Nächstes Ziel <i class="fa fa-chevron-right" aria-hidden="true"></i></b><b class="d-none d-sm-block d-lg-none"><i class="fa fa-chevron-right" aria-hidden="true"></i></b>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col heading-goal-page">
-        <h2>Indikatorenbereiche und Postulate</h2>
-      </div>
-      <div class="col heading-goal-page" >
-        <h2>Indikatoren</h2>
-      </div>
-    </div>
-
-    
-    
-      <div class="row">
-        <div class="col indicator-cards target goal-target no-gutters">
-          <div class="row range-and-postulate">
-            <span class="indicator-card-number">
-              Meere schützen
-            </span>
-            <p class="postulate">
-              Meere und Meeresressourcen schützen und nachhaltig nutzen
-            </p>
-          </div>
-        </div>
-
-        <div class="col indicator-cards no-gutters">
-
-          
-
-            
-            
-            
-            
-
-            <div class="row" style="margin-bottom: 25px;">
-              
-              <span class="indicator-card-number" >
-                14.1.a
-              </span>
-              <a class="indicator-link-goal-page" href="/site/14-1-a/" >
-                Nährstoffeinträge in Küsten- und Meeresgewässer - Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee
-              </a>
-              
-            </div>
-          
-
-            
-            
-            
-            
-
-            <div class="row" style="margin-bottom: 25px;">
-              
-              <span class="indicator-card-number" >
-                14.1.b
-              </span>
-              <a class="indicator-link-goal-page" href="/site/14-1-b/" >
-                Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee
-              </a>
-              
-            </div>
-          
-          </div>
-        </div>
       
     </div>
+    <hr class="goal-page-column-header-rule">
+    
+      
+      <div class="row align-items-start goal-target">
+          <div class="col-auto goal-page-target-number">
+            <h3 class="goal-target">
+              <span class="target-number"><span class="visually-hidden">Unterziel</span> 14.1</span>
+            </h3>
+          </div>
+          <div class="col goal-page-target-name">
+            <span class="target-name">global_targets.14-1-title</span>
+          </div>
+          
+      </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 14.1.a</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/14-1-a/">Nährstoffeinträge in Küsten- und Meeresgewässer - Stickstoffeintrag über die Zuflüsse in die Ost- und Nordsee</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
+        <span class="visually-hidden"></span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Daten verfügbar</span>
+</span>
+
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+
+          
+          
+          
+          
+
+          <div class="row align-items-start goal-indicator">
+          
+            <div class="col-auto goal-page-indicator-number">
+              <h4>
+                <span class="indicator-number"><span class="visually-hidden">Indikator</span> 14.1.b</span>
+              </h4>
+            </div>
+            <div class="col goal-page-indicator-name">
+              
+              <span class="indicator-name"><a href="/site/14-1-b/">Anteil der nachhaltig befischten Fischbestände in Nord- und Ostsee</a></span>
+              
+
+
+
+
+    <ul class="tags list-unstyled list-inline" aria-label=""><li class="list-inline-item">
+        <span class="visually-hidden"></span>
+        
+
+
+
+<span class="status complete">
+    <span class="status-inner">Daten verfügbar</span>
+</span>
+
+
+        </li></ul>
+
+
+            </div>
+            
+            
+          </div>
+        
+        <hr class="goal-page-target-rule" />
+    
   </div>
+  <a href="#top"></a>
+</div>
+
 
 <footer role="contentinfo">
     <div class="container">
@@ -454,22 +450,18 @@ data-event-label="high"
                 <div id="footerLinks">
                     <ul>
                         <li>
-                            <a href="https://open-sdg.org" target="_blank" onclick="return confirm_alert('von open-sdg', 'De');">
-                              Seite basiert auf Open SDG
-                            </a>
+                            <a href="https://open-sdg.org">Seite basiert auf Open SDG</a>
                         </li>
                         
                         <li>
-                              
-                                
-                                  <a href="mailto:dns-indikatoren@destatis.de">Kontakt</a>
-                                
-                              
-                          </li>
+                            
+                            <a href="mailto:dns-indikatoren@destatis.de" target="_blank">Kontakt</a>
+                            
+                        </li>
                         <li>
-                              <a href="/site/imprint/ ">Im­pres­s­um</a>
-                              
-                          </li>
+                            <a href="/site/imprint/">Im­pres­s­um</a>
+                            
+                        </li>
                         
                         
                         
@@ -486,16 +478,16 @@ data-event-label="high"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -509,12 +501,12 @@ data-event-label="high"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
@@ -522,4 +514,3 @@ data-event-label="high"
 
 </body>
 </html>
-

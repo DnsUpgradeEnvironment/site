@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-10">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/10/" aria-label=" 10" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png"
-              alt="Reduced inequalities - Goal 10"
-              id="goal-10"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-10">
+    <div class="container">
+        <div class="row">
             
-              Indicator 10.2
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/10/" aria-label=" 10" title=" 10">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png"
+                        alt="Reduced inequalities - Goal 10"
+                        id="goal-10"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Gini coefficient of income after social transfers</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 10.2
+                        
+                        <span class="lead-copy">Gini coefficient of income after social transfers</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-10" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_10-2'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany/European Union/Euro-zone"
   data-charttitle="Gini coefficient of income and wealth"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;&lt;u&gt;Time series of the indicator:&lt;/u&gt; Gini coefficient of equivalised disposable income&quot;},{&quot;field&quot;:&quot;Area&quot;,&quot;value&quot;:&quot;Germany&quot;},{&quot;field&quot;:&quot;Area&quot;,&quot;value&quot;:&quot;European Union&quot;},{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;&lt;u&gt;Additional time series:&lt;/u&gt; Gini coefficient of equivalised disposable income before social transfers&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="null"
   data-graphtargetlines="null"
-  data-graphtargetpoints="null"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:12.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Gini coefficient&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;time series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;&lt;u&gt;Time series of the indicator:&lt;/u&gt; Gini coefficient of equivalised disposable income&quot;,&quot;&lt;u&gt;Additional time series:&lt;/u&gt; Gini coefficient of equivalised disposable income before social transfers&quot;,&quot;&lt;u&gt;Additional time series:&lt;/u&gt; Gini coefficient of equivalised market income&quot;,&quot;&lt;u&gt;Additional time series:&lt;/u&gt; Gini coefficient of wealth&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Time series&quot;},{&quot;name&quot;:&quot;area&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Germany&quot;,&quot;European Union&quot;,&quot;Eurozone&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Area&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:3.0}]"
-  data-graphstepsize="[{&quot;step&quot;:0.05}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -391,62 +381,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -459,12 +447,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Gini coefficient of income and wealth</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Gini coefficient of income and wealth
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -479,54 +467,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a>, <a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a>, <a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany/European Union/Euro-zone</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany/European Union/Euro-zone</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• 2022 and 2023 revised data.<br>• The <i>Leben in Europa</i> survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.<br>• Pensions are not categorised as social benefits and are therefore included in time series without social benefits.<br>• Gini coefficient of equivalised disposable income:<br>&nbsp;&nbsp;- For EU: 2019 data estimated by Eurostat.<br>&nbsp;&nbsp;- From 2020: EU-27 (without UK).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -558,54 +537,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data sources</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a>, <a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a>, <a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a>, <a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a>, <a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></dd>
         
 
         
-
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany/European Union/Euro-zone</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany/European Union/Euro-zone</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• 2022 and 2023 revised data.<br>• The <i>Leben in Europa</i> survey (German name of the European Union Statistics on Income and Living Conditions - EU-SILC), which was conducted separately in the past, was integrated as a subsample into the microcensus in 2020. Comparing the data of reference year 2020 with those of previous years is not possible (break in the time series) as the voluntary survey was changed over to a partly compulsory survey and the composition of the sample was changed.<br>• Pensions are not categorised as social benefits and are therefore included in time series without social benefits.<br>• Gini coefficient of equivalised disposable income:<br>&nbsp;&nbsp;- For EU: 2019 data estimated by Eurostat.<br>&nbsp;&nbsp;- From 2020: EU-27 (without UK).</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -693,197 +663,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the distribution of equivalised disposable income using Gini coefficients. The equivalised disposable income is the total income (including social transfers) of a household after taxes and other deductions and therefore the income available for spending and saving.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Gini coefficient of income after social transfers</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the distribution of equivalised disposable income using Gini coefficients. The equivalised disposable income is the total income (including social transfers) of a household after taxes and other deductions and therefore the income available for spending and saving.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Inequality in the distribution of income and wealth is a fundamentally accepted component of a dynamic market economy. However, the spread of income and wealth must remain moderate and social participation must be guaranteed for all.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Inequality in the distribution of income and wealth is a fundamentally accepted component of a dynamic market economy. However, the spread of income and wealth must remain moderate and social participation must be guaranteed for all.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Gini coefficient of income after social transfers to be below the EU figure by 2030</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Gini coefficient of income after social transfers to be below the EU figure by 2030</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Constant target for each year</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Constant target for each year</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>The Gini coefficient of income after social transfers should remain below the corresponding EU value every year.<br />• According to the target formulation, the difference between the EU value and the German value is calculated for each year. For indicator 10.2, due to methodological changes in the survey design, the values from 2020 to 2024 are considered. In 2024, the difference is negative, meaning that the coefficient in Germany exceeds the EU coefficient. The target is therefore not achieved. Since the difference has also narrowed on average over the past five years, indicator 10.2 is assessed as <b>thunderstorm</b> for 2024.<br /><br /><u>Note:</u> The reference to the EU coefficient as the benchmark implies that the indicator may receive a positive assessment even if the Gini coefficient in Germany develops unfavourably. Moreover, the indicator shows that, as both coefficients have remained at comparatively high levels without a clear upward or downward trend, the difference between the German and EU values – as well as the direction of the average development of the German coefficient – are subject to considerable fluctuations. Consequently, even minor changes in the indicator can significantly affect the assessment.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2024&nbsp;the target value was missed and the indicator had not moved towards the target on average over the previous changes." alt="Weathersymbol: Thuder strom" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>The Gini coefficient of income after social transfers should remain below the corresponding EU value every year.<br />• According to the target formulation, the difference between the EU value and the German value is calculated for each year. For indicator 10.2, due to methodological changes in the survey design, the values from 2020 to 2024 are considered. In 2024, the difference is negative, meaning that the coefficient in Germany exceeds the EU coefficient. The target is therefore not achieved. Since the difference has also narrowed on average over the past five years, indicator 10.2 is assessed as <b>thunderstorm</b> for 2024.<br /><br /><u>Note:</u> The reference to the EU coefficient as the benchmark implies that the indicator may receive a positive assessment even if the Gini coefficient in Germany develops unfavourably. Moreover, the indicator shows that, as both coefficients have remained at comparatively high levels without a clear upward or downward trend, the difference between the German and EU values – as well as the direction of the average development of the German coefficient – are subject to considerable fluctuations. Consequently, even minor changes in the indicator can significantly affect the assessment.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Blitz.png" title="In 2024&nbsp;the target value was missed and the indicator had not moved towards the target on average over the previous changes." alt="Weathersymbol: Thuder strom" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -1669,20 +1589,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -1699,25 +1624,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #dd1367; font-size: large">10.2&nbsp;Gini coefficient of income after social transfers</b><br /><br />The Gini coefficient is a measure of relative inequality, taking values between zero and one. Under conditions of perfect equality, it equals zero; under conditions of maximum inequality, it reaches one. In the context of income distribution, a Gini coefficient of one means that all income accrues to a single individual. The lower the value, the more evenly income is distributed.<br /><br />For the calculation of the indicator, the so-called equivalised income is used. This is a needs-adjusted income derived from the total household income and the number and age of household members. Using an equivalence scale, incomes are weighted according to household size and composition. This adjustment ensures that the incomes of individuals from households of different sizes are comparable, as larger households benefit from economies of scale&nbsp;–&nbsp;for example, through the shared use of living space or household appliances.<br /><br />Disposable equivalised income refers to total household income (including social transfers) after deduction of taxes and other compulsory payments. It corresponds to the income available for consumption and saving. This is to be distinguished from equivalised income before social transfers, which measures disposable income excluding government transfers such as unemployment benefits or housing allowances. Pensions are not classified as social transfers in this context and are therefore included in equivalised income before social transfers. The same applies to market equivalised income, which denotes income before deduction of taxes and social contributions and without taking social transfers into account. For all the income concepts mentioned, no breakdown is made by source of income&nbsp;–&nbsp;such as wages and salaries, rental income, or capital gains.<br /><br />The income data are drawn from the annually harmonised European Union Statistics on Income and Living Conditions (EU-SILC). In Germany, this survey was integrated into the microcensus in 2020, accompanied by extensive methodological changes, in order to better meet the requirements for data timeliness and detailed regional breakdowns. As a result, the findings from 2020&nbsp;onwards are not comparable with earlier years. Methodological adjustments are also made to account for the underrepresentation of high-income or high-wealth households, which is common in voluntary sample surveys, in order to ensure international comparability.<br /><br />As in previous years, Germany’s Gini coefficient for disposable equivalised income in 2024, at 0.295, was almost identical to the European Union (EU) average (0.293). This indicates that differences in income distribution between Germany and the EU are small. Nevertheless, in 2024&nbsp;Germany’s value was slightly above the EU average, meaning that the politically defined target was not achieved.<br /><br />The Gini coefficient for disposable equivalised income (0.295) was significantly lower than that for equivalised income before social transfers (0.355). As expected, the value for market equivalised income was higher still, at 0.477. This demonstrates that redistributive mechanisms such as social transfers, social insurance, and the tax system make a substantial contribution to reducing income inequalities in Germany.<br /><br />The Gini coefficient for wealth, based on the European Central Bank’s (ECB) <i>Household Finance and Consumption Survey</i> (HFCS), shows a considerably greater degree of inequality. In 2023, Germany’s wealth Gini stood at 0.724, far exceeding the income-based values. By comparison, the value for the euro area in 2021&nbsp;–&nbsp;the most recent available data&nbsp;–&nbsp;was 0.694, and thus lower than the German figure. Certain influencing factors not captured in the wealth Gini, however, put the appearance of above-average wealth inequality into perspective. For example, future pension and retirement entitlements are excluded from the calculation of net wealth.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #dd1367; font-size: large">10.2&nbsp;Gini coefficient of income after social transfers</b><br /><br />The Gini coefficient is a measure of relative inequality, taking values between zero and one. Under conditions of perfect equality, it equals zero; under conditions of maximum inequality, it reaches one. In the context of income distribution, a Gini coefficient of one means that all income accrues to a single individual. The lower the value, the more evenly income is distributed.<br /><br />For the calculation of the indicator, the so-called equivalised income is used. This is a needs-adjusted income derived from the total household income and the number and age of household members. Using an equivalence scale, incomes are weighted according to household size and composition. This adjustment ensures that the incomes of individuals from households of different sizes are comparable, as larger households benefit from economies of scale&nbsp;–&nbsp;for example, through the shared use of living space or household appliances.<br /><br />Disposable equivalised income refers to total household income (including social transfers) after deduction of taxes and other compulsory payments. It corresponds to the income available for consumption and saving. This is to be distinguished from equivalised income before social transfers, which measures disposable income excluding government transfers such as unemployment benefits or housing allowances. Pensions are not classified as social transfers in this context and are therefore included in equivalised income before social transfers. The same applies to market equivalised income, which denotes income before deduction of taxes and social contributions and without taking social transfers into account. For all the income concepts mentioned, no breakdown is made by source of income&nbsp;–&nbsp;such as wages and salaries, rental income, or capital gains.<br /><br />The income data are drawn from the annually harmonised European Union Statistics on Income and Living Conditions (EU-SILC). In Germany, this survey was integrated into the microcensus in 2020, accompanied by extensive methodological changes, in order to better meet the requirements for data timeliness and detailed regional breakdowns. As a result, the findings from 2020&nbsp;onwards are not comparable with earlier years. Methodological adjustments are also made to account for the underrepresentation of high-income or high-wealth households, which is common in voluntary sample surveys, in order to ensure international comparability.<br /><br />As in previous years, Germany’s Gini coefficient for disposable equivalised income in 2024, at 0.295, was almost identical to the European Union (EU) average (0.293). This indicates that differences in income distribution between Germany and the EU are small. Nevertheless, in 2024&nbsp;Germany’s value was slightly above the EU average, meaning that the politically defined target was not achieved.<br /><br />The Gini coefficient for disposable equivalised income (0.295) was significantly lower than that for equivalised income before social transfers (0.355). As expected, the value for market equivalised income was higher still, at 0.477. This demonstrates that redistributive mechanisms such as social transfers, social insurance, and the tax system make a substantial contribution to reducing income inequalities in Germany.<br /><br />The Gini coefficient for wealth, based on the European Central Bank’s (ECB) <i>Household Finance and Consumption Survey</i> (HFCS), shows a considerably greater degree of inequality. In 2023, Germany’s wealth Gini stood at 0.724, far exceeding the income-based values. By comparison, the value for the euro area in 2021&nbsp;–&nbsp;the most recent available data&nbsp;–&nbsp;was 0.694, and thus lower than the German figure. Certain influencing factors not captured in the wealth Gini, however, put the appearance of above-average wealth inequality into perspective. For example, future pension and retirement entitlements are excluded from the calculation of net wealth.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -2511,19 +2431,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -2537,8 +2462,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3275,151 +3200,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/EN/Themes/Society-Environment/Income-Consumption-Living-Conditions/Living-Conditions-Risk-Poverty/Tables/income-distribution-mz-silc.html" target="_blank">
+                Income distribution (equivalised net income) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/EN/Themes/Society-Environment/Income-Consumption-Living-Conditions/Living-Conditions-Risk-Poverty/Tables/income-distribution-mz-silc.html" target="_blank">
-                    Income distribution (equivalised net income) <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -3485,6 +3369,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -3496,8 +3381,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4246,204 +4131,130 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/eurostat.png" alt="Statistical Office of the European Union" title=" Click here to visit the homepage of the organizationStatistical Office of the European Union" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/eurostat.png" alt="Statistical Office of the European Union" title=" Click here to visit the homepage of the organizationStatistical Office of the European Union" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://ec.europa.eu/eurostat/home" target="_blank" onclick="return confirm_alert('Eurostat', 'En')">Statistical Office of the European Union</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_DI12C/default/table?lang=en&category=livcon.ilc.ilc_ie.ilc_iei" target="_blank">
+                Gini coefficient of equivalised disposable income before social transfers - Eurostat table  [ilc_di12c ] <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_DI12C/default/table?lang=en&category=livcon.ilc.ilc_ie.ilc_iei" target="_blank" onclick="return confirm_alert('Eurostat', 'En');">
-                      Gini coefficient of equivalised disposable income before social transfers - Eurostat table  [ilc_di12c ] <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_DI12/default/table?lang=en&category=livcon.ilc.ilc_ie.ilc_iei" target="_blank">
+                Gini coefficient of equivalised disposable income - Eurostat table  [ilc_di12c] <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://ec.europa.eu/eurostat/databrowser/view/ILC_DI12/default/table?lang=en&category=livcon.ilc.ilc_ie.ilc_iei" target="_blank" onclick="return confirm_alert('Eurostat', 'En');">
-                      Gini coefficient of equivalised disposable income - Eurostat table  [ilc_di12c] <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4497,6 +4308,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4508,8 +4320,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5270,145 +5082,100 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bundesbank.png" alt="German Federal Bank" title=" Click here to visit the homepage of the organizationGerman Federal Bank" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/bundesbank.png" alt="German Federal Bank" title=" Click here to visit the homepage of the organizationGerman Federal Bank" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bundesbank.de/en" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En')">German Federal Bank</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.bundesbank.de/en/bundesbank/research/panel-on-household-finances" target="_blank">
+                Panel on household finances (PHF) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.bundesbank.de/en/bundesbank/research/panel-on-household-finances" target="_blank" onclick="return confirm_alert('the German Federal Bank', 'En');">
-                      Panel on household finances (PHF) <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5452,6 +5219,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5463,8 +5231,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Data source 4</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -6235,145 +6003,100 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/ezb.png" alt="European Central Bank" title=" Click here to visit the homepage of the organizationEuropean Central Bank" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/ezb.png" alt="European Central Bank" title=" Click here to visit the homepage of the organizationEuropean Central Bank" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.ecb.europa.eu/home/languagepolicy/html/index.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En')">European Central Bank</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.ecb.europa.eu/pub/economic-research/research-networks/html/researcher_hfcn.en.html" target="_blank">
+                Household Finance and Consumption Network (HFCN) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.ecb.europa.eu/pub/economic-research/research-networks/html/researcher_hfcn.en.html" target="_blank" onclick="return confirm_alert('the European Central Bank', 'En');">
-                      Household Finance and Consumption Network (HFCN) <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -6407,6 +6130,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -6414,11 +6138,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -6429,18 +6153,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -6454,12 +6178,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

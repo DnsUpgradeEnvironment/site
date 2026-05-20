@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'de',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-12">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/12/" aria-label=" 12" title="Zu den Indikatoren dieses Ziels">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
-              alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
-              id="goal-12"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-12">
+    <div class="container">
+        <div class="row">
             
-              Indikator 12.3.a, b, c
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/12/" aria-label=" 12" title=" 12">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/de/12.png"
+                        alt="Nachhaltige/r Konsum und Produktion - Ziel 12"
+                        id="goal-12"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Nachhaltige Beschaffung</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indikator 12.3.abc
+                        
+                        <span class="lead-copy">Nachhaltige Beschaffung</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-12" role="main">
   
 
@@ -310,8 +310,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_12-3-abc'
@@ -319,12 +317,9 @@ layout-indicator-iframe
   data-country="Deutschland"
   data-charttitle="Nachhaltige Beschaffung"
   data-charttitles="[{&quot;series&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;title&quot;:&quot;Nachhaltige öffentliche Beschaffung&quot;},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;title&quot;:&quot;Nachhaltige öffentliche Beschaffung&quot;},{&quot;series&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;title&quot;:&quot;Nachhaltige öffentliche Beschaffung&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;title&quot;:&quot;a) Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde&quot;},{&quot;series&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;title&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge der öffentlichen Hand&quot;},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;title&quot;:&quot;c) Anteil nachhaltiger Textilbeschaffung der Bundesverwaltung  (exklusive Sondertextilien)&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="[{&quot;series&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;type&quot;:&quot;bar&quot;},{&quot;series&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;type&quot;:&quot;line&quot;},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;type&quot;:&quot;bar&quot;}]"
   data-geocoderegex=""
@@ -332,25 +327,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;}]"
   data-graphlimits="[{&quot;series&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:20.0},{&quot;series&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;minimum&quot;:90.0,&quot;maximum&quot;:110.0},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;value&quot;:50,&quot;label&quot;:{&quot;content&quot;:&quot;Ziel 2026&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;type&quot;:&quot;box&quot;,&quot;xMin&quot;:8.685,&quot;xMax&quot;:9.315,&quot;yMin&quot;:0,&quot;yMax&quot;:50,&quot;borderColor&quot;:&quot;#bf8b2e&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;borderDash&quot;:[1,0],&quot;borderWidth&quot;:2,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:9,&quot;yValue&quot;:60.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Ziel:&quot;,&quot;50&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Jahr&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Prozent&quot;,&quot;2015 = 100&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;a) Nachhaltigkeit in Vergabeverfahren&quot;,&quot;step&quot;:2.0},{&quot;series&quot;:&quot;b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge&quot;,&quot;step&quot;:5.0},{&quot;series&quot;:&quot;c) Nachhaltige Textilbeschaffung&quot;,&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1036,62 +1026,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Grafik</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Grafik</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Tabelle</span></button>
-  </li>
+        
+      >Tabelle</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1104,12 +1092,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Nachhaltige öffentliche Beschaffung</h4>
-          <h6 id="chart-heading" class="chart-subtitle">a) Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde</h6>
+          <h4 id="chart-heading" class="chart-title">
+            Nachhaltige öffentliche Beschaffung
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1124,27 +1112,25 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a>, <a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a>, <a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
@@ -1154,32 +1140,28 @@ data-event-label="Change to Table tab"
         <dt
           data-for-series="b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge"
           data-for-unit=""
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           data-for-series="b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge"
           data-for-unit=""
         >Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
         
-        
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1211,27 +1193,25 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Datenquellen</u>:</dt>
-          <dd><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a>, <a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
+        <dt>Datenquelle:</dt>
+        <dd><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a>, <a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a>, <a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a>, <a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></dd>
         
 
         
-
-        
-          <dt><u>Geographische Abdeckung</u>:</dt>
-          <dd>Deutschland</dd>
+        <dt>Geographische Abdeckung:</dt>
+        <dd>Deutschland</dd>
         
 
-        <dt class="data-controlled-footer-field unit-from-data"><u>Einheit</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Einheit:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
+        
+        <dt>Copyright:</dt>
+        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
         
 
         
@@ -1241,32 +1221,28 @@ data-event-label="Change to Table tab"
         <dt
           data-for-series="b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge"
           data-for-unit=""
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           data-for-series="b) CO₂-Emissionen je Fahrleistungen der Kraftfahrzeuge"
           data-for-unit=""
         >Die Daten basieren auf einer Sonderauswertung und sind nicht öffentlich zugänglich.</dd>
         
         
-        
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Anmerkung</u>:</dt>
+        >Anmerkung:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Statistisches Bundesamt (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1354,197 +1330,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>Diese Übersicht beinhaltet zusätzliche Informationen zu den oben dargestellten Indikatoren, wie eine kurze Definition des Indikators und eine Beschreibung des politisch festgelegten Zielwertes sowie die politische Intention für die Auswahl des Indikators.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>Die Indikatoren stellen Nachhaltigkeit in der öffentlichen Beschaffung exemplarisch anhand der Vergabeverfahren insgesamt (12.3.a), der CO₂-Emissionen von Kraftfahrzeugen (Kfz) (12.3.b) sowie der nachhaltigen Textilbeschaffung (12.3.c) dar. Der Indikator 12.3.a <i>Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde</i> stellt den Anteil an der Gesamtanzahl der Verfahren zur Vergabe öffentlicher Aufträge/Konzessionen mit Berücksichtigung von nachhaltigen Kriterien dar, die für das jeweilige Berichtsjahr an die Vergabestatistik gemeldet wurden (in %). Der Indikator 12.3.b <i>CO₂-Emissionen je Fahrleistungen der Kfz der öffentlichen Hand</i> setzt die CO₂-Emissionen im Vergleich zum Basisjahr 2015 ins Verhältnis zu den entsprechenden Fahrleistungen. Der Indikator 12.3.c stellt die nachhaltige Textilbeschaffung der Bundesverwaltung (exklusive Sondertextilien) (in %) dar.</p>
+      <tr>
+        <th scope="row">Verfügbare Zeitreihenbezeichnung </th>
+        <td>
+          
+            <p>Nachhaltige Beschaffung</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>Die Indikatoren stellen Nachhaltigkeit in der öffentlichen Beschaffung exemplarisch anhand der Vergabeverfahren insgesamt (12.3.a), der CO₂-Emissionen von Kraftfahrzeugen (Kfz) (12.3.b) sowie der nachhaltigen Textilbeschaffung (12.3.c) dar. Der Indikator 12.3.a <i>Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde</i> stellt den Anteil an der Gesamtanzahl der Verfahren zur Vergabe öffentlicher Aufträge/Konzessionen mit Berücksichtigung von nachhaltigen Kriterien dar, die für das jeweilige Berichtsjahr an die Vergabestatistik gemeldet wurden (in %). Der Indikator 12.3.b <i>CO₂-Emissionen je Fahrleistungen der Kfz der öffentlichen Hand</i> setzt die CO₂-Emissionen im Vergleich zum Basisjahr 2015 ins Verhältnis zu den entsprechenden Fahrleistungen. Der Indikator 12.3.c stellt die nachhaltige Textilbeschaffung der Bundesverwaltung (exklusive Sondertextilien) (in %) dar.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>Die öffentliche Hand hat einen wesentlichen Anteil an der Nachfrage von Produkten und Dienstleistungen. Die Ausrichtung der öffentlichen Beschaffung am Leitprinzip der Nachhaltigkeit und die Stärkung von Nachhaltigkeitskriterien bei der öffentlichen Beschaffung sollen daher als Hebel für die Steigerung des Angebots nachhaltiger Produkte wirken.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>Die öffentliche Hand hat einen wesentlichen Anteil an der Nachfrage von Produkten und Dienstleistungen. Die Ausrichtung der öffentlichen Beschaffung am Leitprinzip der Nachhaltigkeit und die Stärkung von Nachhaltigkeitskriterien bei der öffentlichen Beschaffung sollen daher als Hebel für die Steigerung des Angebots nachhaltiger Produkte wirken.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Ziel </th>
+        <td>
+          
+            <p>12.3.a: Deutliche Steigerung des Anteils der Vergaben in der öffentlichen Beschaffung, bei denen Nachhaltigkeitskriterien berücksichtigt werden, so dass dies bis 2030 im Regelfall erfolgt. Dabei ist zu berücksichtigen, dass die Beschaffungen zur Deckung der Bedarfe der Bundeswehr, der Bundespolizei sowie des Zivil- und Katastrophenschutzes nicht zu einer Steigerung beitragen.<br />12.3.b: Signifikante Senkung<br />12.3.c: Steigerung auf 50 % bis 2026</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Ziel </th>
-            <td>
-              
-                <p>12.3.a: Deutliche Steigerung des Anteils der Vergaben in der öffentlichen Beschaffung, bei denen Nachhaltigkeitskriterien berücksichtigt werden, so dass dies bis 2030 im Regelfall erfolgt. Dabei ist zu berücksichtigen, dass die Beschaffungen zur Deckung der Bedarfe der Bundeswehr, der Bundespolizei sowie des Zivil- und Katastrophenschutzes nicht zu einer Steigerung beitragen.<br />12.3.b: Signifikante Senkung<br />12.3.c: Steigerung auf 50 % bis 2026</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Art des Ziels </th>
+        <td>
+          
+            <p>12.3.a: Zielrichtungsvorgabe<br />12.3.b: Zielrichtungsvorgabe<br />12.3.c: Ziel mit konkretem Zielwert</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Art des Ziels </th>
-            <td>
-              
-                <p>12.3.a: Zielrichtungsvorgabe<br />12.3.b: Zielrichtungsvorgabe<br />12.3.c: Ziel mit konkretem Zielwert</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Bewertung </th>
+        <td>
+          
+            <p>12.3.a: Der Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde, soll gesteigert werden.<br />• Die aktuelle Entwicklung weist in Richtung der Zielvorgabe. Eine abschließende Bewertung ist nicht möglich. Zu wenig Datenpunkte.<br /><br />12.3.b: Die CO₂-Emissionen je Fahrleistung der Kraftfahrzeuge der öffentlichen Hand sollen gesenkt werden.<br />• Ausgehend von der Zielformulierung entwickelte sich der Indikator 12.3.b im letzten Jahr (2022) in die gewünschte Richtung. Im Durchschnitt der letzten sechs Jahre entwickelte sich der Indikator jedoch nicht in die gewünschte Richtung. Der Indikator 12.3.b wird daher für das Jahr 2022 mit <b>Wolke</b> bewertet.<br /><br />12.3.c: Der Anteil nachhaltiger Textilbeschaffung der Bundesverwaltung soll bis 2026 auf mindestens 50 % gesteigert werden.<br />• Eine Bewertung des Indikators 12.3.c ist nicht möglich. Keine Datenpunkte.<br /><br />12.3.b: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Durchschnittswert zielte in 2022&nbsp;in die falsche Richtung oder zeigt eine Stagnation an, im vorangegangenen Jahr zeigte sich jedoch eine Wende in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Bewertung </th>
-            <td>
-              
-                <p>12.3.a: Der Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde, soll gesteigert werden.<br />• Die aktuelle Entwicklung weist in Richtung der Zielvorgabe. Eine abschließende Bewertung ist nicht möglich. Zu wenig Datenpunkte.<br /><br />12.3.b: Die CO₂-Emissionen je Fahrleistung der Kraftfahrzeuge der öffentlichen Hand sollen gesenkt werden.<br />• Ausgehend von der Zielformulierung entwickelte sich der Indikator 12.3.b im letzten Jahr (2022) in die gewünschte Richtung. Im Durchschnitt der letzten sechs Jahre entwickelte sich der Indikator jedoch nicht in die gewünschte Richtung. Der Indikator 12.3.b wird daher für das Jahr 2022 mit <b>Wolke</b> bewertet.<br /><br />12.3.c: Der Anteil nachhaltiger Textilbeschaffung der Bundesverwaltung soll bis 2026 auf mindestens 50 % gesteigert werden.<br />• Eine Bewertung des Indikators 12.3.c ist nicht möglich. Keine Datenpunkte.<br /><br />12.3.b: <a href="https://dnsUpgradeEnvironment.github.io/site/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Der Durchschnittswert zielte in 2022&nbsp;in die falsche Richtung oder zeigt eine Stagnation an, im vorangegangenen Jahr zeigte sich jedoch eine Wende in die gewünschte Richtung." alt="Wettersymbol Wolke" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2330,20 +2256,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2360,25 +2291,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Inhalt und Fortschritt </th>
+        <td>
+          
+            <p><b style="color: #bf8b2e; font-size: large">12.3.a, b, c Nachhaltige Beschaffung</b><br /><br />Die öffentliche Hand hat einen nicht unerheblichen Anteil an der Nachfrage nach Produkten und Dienstleistungen. Der komplexe Sachverhalt der nachhaltigen Beschaffung lässt sich nicht mit einem Indikator aussagekräftig abbilden. Daher wird das Thema produktübergreifend durch die Berücksichtigung von Nachhaltigkeitskriterien im Prozess der öffentlichen Beschaffung (Indikator 12.3.a) sowie exemplarisch mit den beiden produktgruppenspezifischen Indikatoren zu CO₂-Emissionen von Kraftfahrzeugen (Kfz) der öffentlichen Hand (Indikator 12.3.b) und der Textilbeschaffung der Bundesverwaltung (Indikator 12.3.c) dargestellt.<br /><br /><b>12.3.a Anteil an Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde</b><br /><br />Der Indikator erfasst den Anteil von Verfahren zur Vergabe öffentlicher Aufträge und Konzessionen, bei denen nachhaltige Kriterien bei der Vergabe berücksichtigt wurden. Der Indikator umfasst alle Auftraggeberebenen (Bundes-, Landes-, Kommunalebene und sonstige Auftraggeber) und basiert auf den an die Vergabestatistik gemeldeten Daten. Die Vergabestatistik wird vom Statistischen Bundesamt im Auftrag des Bundesministeriums für Wirtschaft und Energie (BMWE) durchgeführt. Rechtliche Grundlage dafür ist die Vergabestatistikverordnung (VergStatVO), die auch die Meldung der Berücksichtigung von Nachhaltigkeitskriterien bei der öffentlichen Auftragsvergabe regelt. Diese Kriterien umfassen umweltbezogene, soziale und innovative Aspekte, die bei der Auswahl von Auftragnehmern berücksichtigt werden können.<br /><br />Für den Indikator werden alle Aufträge und Konzessionen berücksichtigt, die an die Vergabestatistik gemeldet werden. Eine Meldepflicht besteht für Aufträge mit einem Volumen ab 25&nbsp;000&nbsp;Euro. Im Jahr 2023&nbsp;wurden knapp 186&nbsp;000&nbsp;Aufträge dieses Volumens und zudem über 9&nbsp;700&nbsp;weitere Aufträge im Bereich zwischen 1&nbsp;000&nbsp;und 25&nbsp;000&nbsp;Euro gemeldet. Zwischen 2021&nbsp;und 2023&nbsp;stieg der Anteil öffentlicher Vergabeverfahren, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde, von 12,6&nbsp;% im Jahr 2021&nbsp;auf 12,8&nbsp;% (+0,2&nbsp;Prozentpunkte) im Jahr 2022&nbsp;und 14,0&nbsp;% (+1,2&nbsp;Prozentpunkte) im Jahr 2023. Dies deutet auf ein wachsendes Engagement der öffentlichen Hand hin, Nachhaltigkeitskriterien bei der öffentlichen Auftragsvergabe zu berücksichtigen.<br /><br />Im Jahr 2023&nbsp;wurden insgesamt über 195&nbsp;000&nbsp;öffentliche Aufträge und Konzessionen an die Vergabestatistik gemeldet. Etwa die Hälfte dieser Aufträge entfiel auf die Kommunalebene, 30&nbsp;% auf die Landesebene und 11&nbsp;% auf den Bund. Das Gesamtvolumen dieser Aufträge belief sich auf 123&nbsp;485&nbsp;Millionen Euro. Die Anzahl der Vergabeverfahren, bei denen Nachhaltigkeitskriterien berücksichtigt wurden, lag bei 27&nbsp;412&nbsp;mit einem Volumen von 28&nbsp;391&nbsp;Millionen Euro. Auf kommunaler Ebene wurden 11&nbsp;% der Aufträge unter Berücksichtigung von Nachhaltigkeitskriterien vergeben, auf Länderebene 20&nbsp;% und auf Bundesebene 13&nbsp;%. Verfahren zur Vergabe öffentliche Aufträge und Konzessionen, bei denen keine Nachhaltigkeitskriterien berücksichtigt wurden, hatten 2023&nbsp;im Durchschnitt ein Finanzvolumen von 570&nbsp;000&nbsp;Euro pro Auftrag. Aufträge und Konzessionen, bei denen Nachhaltigkeitskriterien berücksichtigt wurden, waren mit durchschnittlich 1,0&nbsp;Millionen Euro pro Auftrag deutlich großvolumiger.<br /><br />Die drei Arten von Nachhaltigkeitskriterien wurden unterschiedlich stark berücksichtigt. Umweltbezogene Kriterien fanden bei etwa 23&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von knapp 44&nbsp;Milliarden Euro Berücksichtigung. Soziale Kriterien wurden bei 15&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von 29,5&nbsp;Milliarden Euro berücksichtigt, und innovative Kriterien kamen bei etwa 5&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von 6&nbsp;Milliarden Euro zur Anwendung. Es wurde jedoch bei vielen Aufträgen die Möglichkeit genutzt, mehrere Kriterien gleichzeitig zu nennen.<br /><br />Der Indikator weist derzeit eine Differenz zwischen den gemeldeten Vergaben und der tatsächlichen Gesamtsumme der öffentlichen Beschaffung auf. Durch die bestehende Berichtspflicht wird jedoch erwartet, dass eine umfassendere Abbildung mittelfristig möglich ist. Der Indikator gibt lediglich an, bei wie vielen Vergabeverfahren eine Angabe zur Berücksichtigung von Nachhaltigkeitskriterien gemacht wurde, enthält jedoch keine Einschätzung darüber, wie genau dieser Dokumentationspflicht nachgekommen wird. Der Indikator liefert einen quantitativen Überblick über den Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen Nachhaltigkeitskriterien berücksichtigt werden. Er erfasst jedoch nicht, ob im Rahmen dieser Verfahren tatsächlich das nachhaltigste Produkt ausgewählt wurde oder wie ökologisch, sozial oder innovativ die beschafften Produkte in der Herstellung oder Nutzung sind.<br /><br />Der Indikator liefert außerdem keine Einschätzung darüber, ob Änderungen im Indikator möglicherweise auf ein gesteigertes Nachkommen der Dokumentationspflicht zurückzuführen sind. Zudem ist zu beachten, dass verschiedene Beschaffungsbereiche wie etwa Beschaffungen zur Deckung der Bedarfe der Bundeswehr, der Bundespolizei sowie des Zivil- und Katastrophenschutzes von gesetzlichen oder untergesetzlichen Pflichten zur Berücksichtigung von Nachhaltigkeitskriterien in Vergabeverfahren ausgenommen sein können und deshalb nicht zu einer Steigerung des Indikators beitragen. Das politisch festgelegte Ziel für 2030&nbsp;ist, dass bei öffentlichen Vergabeverfahren in der Regel Nachhaltigkeitskriterien berücksichtigt werden.<br /><br /><b>12.3.b CO₂-Emissionen von handelsüblichen Kraftfahrzeugen der öffentlichen Hand</b><br /><br />Die Daten zu den Kraftfahrzeugen (Kfz) der öffentlichen Hand werden von den Umweltökonomischen Gesamtrechnungen (UGR) des Statistischen Bundesamtes in Zusammenarbeit mit der TREMOD-Datenbank (Transport-Emission-Model) des Instituts für Energie- und Umweltforschung (ifeu) bereitgestellt. Die öffentliche Hand umfasst dabei den Bund, die Länder, Gemeinden, Gemeindeverbände sowie Polizei, Bundesgrenzschutz und Feuerwehren. Zu den Kraftfahrzeugen der öffentlichen Hand zählen alle Personenkraftwagen (Pkw), leichte Nutzfahrzeuge mit einem Gewicht unter 3,5&nbsp;Tonnen sowie Krafträder. Schwere Nutzfahrzeuge und Busse werden nicht erfasst. Der Indikator erfasst ausschließlich die CO₂-Emissionen, die durch den Betrieb der Fahrzeuge anfallen. Emissionen aus der Produktion und Entsorgung der Fahrzeuge werden nicht berücksichtigt. Ebenso werden keine Emissionen aus der Stromproduktion für die Elektromobilität einbezogen, obwohl diese für eine vollständige ökologische Bewertung relevant wären.<br /><br />Die durchschnittlichen CO₂-Emissionen der Kfz der öffentlichen Hand wiesen Schwankungen auf. Zwischen 2015&nbsp;und 2021&nbsp;stiegen die Emissionen von 220&nbsp;auf 227&nbsp;Gramm CO₂ pro Kilometer. Im Jahr 2022&nbsp;wurde ein Rückgang auf 224&nbsp;Gramm CO₂ pro Kilometer verzeichnet, was eine Reduktion von 1,4&nbsp;% im Vergleich zum Vorjahr (Indexwert: 101,6) darstellt, jedoch nicht den politisch festgelegten Zielen zur CO₂-Reduktion entspricht.<br /><br />Im Jahr 2019&nbsp;wurden insgesamt knapp 4&nbsp;Milliarden Kilometer mit Fahrzeugen der öffentlichen Hand zurückgelegt, wobei 874&nbsp;000&nbsp;Tonnen CO₂ emittiert wurden. Sowohl die Fahrleistung als auch die Emissionen sanken während der COVID-19-Pandemie deutlich. Im Jahr 2022&nbsp;lagen sowohl die Fahrleistung als auch die Emissionen etwa 11&nbsp;% unter den Werten von 2019&nbsp;(3,49&nbsp;Milliarden Kilometer und 781&nbsp;000&nbsp;Tonnen CO₂). Besonders stark fielen die Einbrüche bei den Pkw aus (etwa –20&nbsp;%), während die Nutzung von leichten Nutzfahrzeugen nahezu unverändert blieb.<br /><br />Für Fahrzeuge mit Elektroantrieb wird eine Emission von 0&nbsp;Gramm CO₂ angenommen. Entsprechend hat die Elektrifizierung der Kfz-Flotte der öffentlichen Hand einen erheblichen Einfluss auf den Indikator. Der Anteil der Fahrleistung, die mit Elektrofahrzeugen zurückgelegt wurde hat sich seit 2014&nbsp;zwar vervierfacht, lag im Jahr 2022&nbsp;jedoch immer noch bei lediglich 0,15&nbsp;%. Zur Reduzierung der Emissionen wurden mehrere Maßnahmen eingeleitet, darunter die Förderung emissionsarmer Fahrzeuge, die Nutzung technologischer Fortschritte in der Motoreneffizienz und der verstärkte Einsatz alternativer Antriebe. Zudem wurde die Ladeinfrastruktur für Elektrofahrzeuge ausgebaut und es wurden regulatorische Vorgaben wie verbindliche Emissionsgrenzwerte sowie Programme zur Erneuerung der Fahrzeugflotte eingeführt. Weitere Maßnahmen, wie eine verstärkte Nutzung von alternativen Verkehrsmitteln, tragen ebenfalls zur Emissionsreduktion bei. Diese gehen jedoch mit einer reduzierten Fahrleistung einher, was den Indikator sowohl im Zähler als auch im Nenner beeinflusst.<br /><br />Das politisch festgelegte Ziel sieht vor, die CO₂-Emissionen je Fahrleistungen der Kfz der öffentlichen Hand zu senken. Im Durchschnitt der letzten Jahre war jedoch keine klare Tendenz in diese Richtung erkennbar, während sich der Indikator im Jahr 2022&nbsp;in Übereinstimmung mit diesem Ziel entwickelte.<br /><br /><b>12.3.c Nachhaltige Textilbeschaffung der Bundesverwaltung (exklusive Sondertextilien)</b><br /><br />Das Maßnahmenprogramm Nachhaltigkeit der Bundesregierung zielt darauf ab, Nachhaltigkeit als grundlegendes Prinzip im Verwaltungshandeln des Bundes zu etablieren. Es wurde erstmals 2010&nbsp;beschlossen und 2015&nbsp;neu aufgelegt. Es verpflichtet die Bundesbehörden, ihre Tätigkeiten unter ökologischen, sozialen und ökonomischen Gesichtspunkten auszurichten.<br /><br />Im Rahmen dieses Programms hat sich die Bundesregierung verpflichtet, <i>möglichst 50&nbsp;% der Textilien (exklusive Sondertextilien) nach ökologischen und sozialen Kriterien zu beschaffen</i>. Diese Zielsetzung wurde 2021&nbsp;durch den <i>Stufenplan zur Steigerung der nachhaltigen Beschaffung von Textilien</i> konkretisiert, der am 15. März 2023&nbsp;in Kraft trat. Der Stufenplan definiert quantitative Ziele zur Steigerung der nachhaltigen Textilbeschaffung und misst den Fortschritt anhand des finanziellen Gesamtvolumens der durch die Bundesverwaltung beschafften Textilien. Anders als die Zielsetzung im Maßnahmenprogramm bezieht sich der Indikator&nbsp;–&nbsp;und damit das Ziel von 50&nbsp;%&nbsp;–&nbsp;auf das Gesamtvolumen der Textilbeschaffung und nicht auf jede einzelne verpflichtete Behörde und Einrichtung der Bundesverwaltung. Sollten also einzelne Einrichtungen die 50&nbsp;%-Marke nicht erreichen, kann dies durch eine Übererfüllung anderer Behörden ausgeglichen werden.<br /><br />Der Stufenplan basiert auf dem <i>Leitfaden für eine nachhaltige Textilbeschaffung der Bundesverwaltung</i>, der ökologische und soziale Anforderungen für die Beschaffung festlegt. Die Daten zur Berechnung des Anteils nachhaltig beschaffter Textilien am finanziellen Gesamtvolumen sollen künftig durch das Monitoring des Maßnahmenprogramms Nachhaltigkeit erfasst werden. Dieses wird von der Koordinierungsstelle Klimaneutrale Bundesverwaltung (KKB) im Bundesministeriums für Wirtschaft und Energie (BMWE) durchgeführt.<br /><br />Zum Zeitpunkt der Veröffentlichung liegen für den Indikator, der die nachhaltige Textilbeschaffung innerhalb der Bundesverwaltung misst, noch keine Daten vor.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #bf8b2e; font-size: large">12.3.a, b, c Nachhaltige Beschaffung</b><br /><br />Die öffentliche Hand hat einen nicht unerheblichen Anteil an der Nachfrage nach Produkten und Dienstleistungen. Der komplexe Sachverhalt der nachhaltigen Beschaffung lässt sich nicht mit einem Indikator aussagekräftig abbilden. Daher wird das Thema produktübergreifend durch die Berücksichtigung von Nachhaltigkeitskriterien im Prozess der öffentlichen Beschaffung (Indikator 12.3.a) sowie exemplarisch mit den beiden produktgruppenspezifischen Indikatoren zu CO₂-Emissionen von Kraftfahrzeugen (Kfz) der öffentlichen Hand (Indikator 12.3.b) und der Textilbeschaffung der Bundesverwaltung (Indikator 12.3.c) dargestellt.<br /><br /><b>12.3.a Anteil an Vergabeverfahren in der öffentlichen Beschaffung, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde</b><br /><br />Der Indikator erfasst den Anteil von Verfahren zur Vergabe öffentlicher Aufträge und Konzessionen, bei denen nachhaltige Kriterien bei der Vergabe berücksichtigt wurden. Der Indikator umfasst alle Auftraggeberebenen (Bundes-, Landes-, Kommunalebene und sonstige Auftraggeber) und basiert auf den an die Vergabestatistik gemeldeten Daten. Die Vergabestatistik wird vom Statistischen Bundesamt im Auftrag des Bundesministeriums für Wirtschaft und Energie (BMWE) durchgeführt. Rechtliche Grundlage dafür ist die Vergabestatistikverordnung (VergStatVO), die auch die Meldung der Berücksichtigung von Nachhaltigkeitskriterien bei der öffentlichen Auftragsvergabe regelt. Diese Kriterien umfassen umweltbezogene, soziale und innovative Aspekte, die bei der Auswahl von Auftragnehmern berücksichtigt werden können.<br /><br />Für den Indikator werden alle Aufträge und Konzessionen berücksichtigt, die an die Vergabestatistik gemeldet werden. Eine Meldepflicht besteht für Aufträge mit einem Volumen ab 25&nbsp;000&nbsp;Euro. Im Jahr 2023&nbsp;wurden knapp 186&nbsp;000&nbsp;Aufträge dieses Volumens und zudem über 9&nbsp;700&nbsp;weitere Aufträge im Bereich zwischen 1&nbsp;000&nbsp;und 25&nbsp;000&nbsp;Euro gemeldet. Zwischen 2021&nbsp;und 2023&nbsp;stieg der Anteil öffentlicher Vergabeverfahren, bei denen mindestens ein Nachhaltigkeitskriterium berücksichtigt wurde, von 12,6&nbsp;% im Jahr 2021&nbsp;auf 12,8&nbsp;% (+0,2&nbsp;Prozentpunkte) im Jahr 2022&nbsp;und 14,0&nbsp;% (+1,2&nbsp;Prozentpunkte) im Jahr 2023. Dies deutet auf ein wachsendes Engagement der öffentlichen Hand hin, Nachhaltigkeitskriterien bei der öffentlichen Auftragsvergabe zu berücksichtigen.<br /><br />Im Jahr 2023&nbsp;wurden insgesamt über 195&nbsp;000&nbsp;öffentliche Aufträge und Konzessionen an die Vergabestatistik gemeldet. Etwa die Hälfte dieser Aufträge entfiel auf die Kommunalebene, 30&nbsp;% auf die Landesebene und 11&nbsp;% auf den Bund. Das Gesamtvolumen dieser Aufträge belief sich auf 123&nbsp;485&nbsp;Millionen Euro. Die Anzahl der Vergabeverfahren, bei denen Nachhaltigkeitskriterien berücksichtigt wurden, lag bei 27&nbsp;412&nbsp;mit einem Volumen von 28&nbsp;391&nbsp;Millionen Euro. Auf kommunaler Ebene wurden 11&nbsp;% der Aufträge unter Berücksichtigung von Nachhaltigkeitskriterien vergeben, auf Länderebene 20&nbsp;% und auf Bundesebene 13&nbsp;%. Verfahren zur Vergabe öffentliche Aufträge und Konzessionen, bei denen keine Nachhaltigkeitskriterien berücksichtigt wurden, hatten 2023&nbsp;im Durchschnitt ein Finanzvolumen von 570&nbsp;000&nbsp;Euro pro Auftrag. Aufträge und Konzessionen, bei denen Nachhaltigkeitskriterien berücksichtigt wurden, waren mit durchschnittlich 1,0&nbsp;Millionen Euro pro Auftrag deutlich großvolumiger.<br /><br />Die drei Arten von Nachhaltigkeitskriterien wurden unterschiedlich stark berücksichtigt. Umweltbezogene Kriterien fanden bei etwa 23&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von knapp 44&nbsp;Milliarden Euro Berücksichtigung. Soziale Kriterien wurden bei 15&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von 29,5&nbsp;Milliarden Euro berücksichtigt, und innovative Kriterien kamen bei etwa 5&nbsp;000&nbsp;Aufträgen mit einem Gesamtvolumen von 6&nbsp;Milliarden Euro zur Anwendung. Es wurde jedoch bei vielen Aufträgen die Möglichkeit genutzt, mehrere Kriterien gleichzeitig zu nennen.<br /><br />Der Indikator weist derzeit eine Differenz zwischen den gemeldeten Vergaben und der tatsächlichen Gesamtsumme der öffentlichen Beschaffung auf. Durch die bestehende Berichtspflicht wird jedoch erwartet, dass eine umfassendere Abbildung mittelfristig möglich ist. Der Indikator gibt lediglich an, bei wie vielen Vergabeverfahren eine Angabe zur Berücksichtigung von Nachhaltigkeitskriterien gemacht wurde, enthält jedoch keine Einschätzung darüber, wie genau dieser Dokumentationspflicht nachgekommen wird. Der Indikator liefert einen quantitativen Überblick über den Anteil der Vergabeverfahren in der öffentlichen Beschaffung, bei denen Nachhaltigkeitskriterien berücksichtigt werden. Er erfasst jedoch nicht, ob im Rahmen dieser Verfahren tatsächlich das nachhaltigste Produkt ausgewählt wurde oder wie ökologisch, sozial oder innovativ die beschafften Produkte in der Herstellung oder Nutzung sind.<br /><br />Der Indikator liefert außerdem keine Einschätzung darüber, ob Änderungen im Indikator möglicherweise auf ein gesteigertes Nachkommen der Dokumentationspflicht zurückzuführen sind. Zudem ist zu beachten, dass verschiedene Beschaffungsbereiche wie etwa Beschaffungen zur Deckung der Bedarfe der Bundeswehr, der Bundespolizei sowie des Zivil- und Katastrophenschutzes von gesetzlichen oder untergesetzlichen Pflichten zur Berücksichtigung von Nachhaltigkeitskriterien in Vergabeverfahren ausgenommen sein können und deshalb nicht zu einer Steigerung des Indikators beitragen. Das politisch festgelegte Ziel für 2030&nbsp;ist, dass bei öffentlichen Vergabeverfahren in der Regel Nachhaltigkeitskriterien berücksichtigt werden.<br /><br /><b>12.3.b CO₂-Emissionen von handelsüblichen Kraftfahrzeugen der öffentlichen Hand</b><br /><br />Die Daten zu den Kraftfahrzeugen (Kfz) der öffentlichen Hand werden von den Umweltökonomischen Gesamtrechnungen (UGR) des Statistischen Bundesamtes in Zusammenarbeit mit der TREMOD-Datenbank (Transport-Emission-Model) des Instituts für Energie- und Umweltforschung (ifeu) bereitgestellt. Die öffentliche Hand umfasst dabei den Bund, die Länder, Gemeinden, Gemeindeverbände sowie Polizei, Bundesgrenzschutz und Feuerwehren. Zu den Kraftfahrzeugen der öffentlichen Hand zählen alle Personenkraftwagen (Pkw), leichte Nutzfahrzeuge mit einem Gewicht unter 3,5&nbsp;Tonnen sowie Krafträder. Schwere Nutzfahrzeuge und Busse werden nicht erfasst. Der Indikator erfasst ausschließlich die CO₂-Emissionen, die durch den Betrieb der Fahrzeuge anfallen. Emissionen aus der Produktion und Entsorgung der Fahrzeuge werden nicht berücksichtigt. Ebenso werden keine Emissionen aus der Stromproduktion für die Elektromobilität einbezogen, obwohl diese für eine vollständige ökologische Bewertung relevant wären.<br /><br />Die durchschnittlichen CO₂-Emissionen der Kfz der öffentlichen Hand wiesen Schwankungen auf. Zwischen 2015&nbsp;und 2021&nbsp;stiegen die Emissionen von 220&nbsp;auf 227&nbsp;Gramm CO₂ pro Kilometer. Im Jahr 2022&nbsp;wurde ein Rückgang auf 224&nbsp;Gramm CO₂ pro Kilometer verzeichnet, was eine Reduktion von 1,4&nbsp;% im Vergleich zum Vorjahr (Indexwert: 101,6) darstellt, jedoch nicht den politisch festgelegten Zielen zur CO₂-Reduktion entspricht.<br /><br />Im Jahr 2019&nbsp;wurden insgesamt knapp 4&nbsp;Milliarden Kilometer mit Fahrzeugen der öffentlichen Hand zurückgelegt, wobei 874&nbsp;000&nbsp;Tonnen CO₂ emittiert wurden. Sowohl die Fahrleistung als auch die Emissionen sanken während der COVID-19-Pandemie deutlich. Im Jahr 2022&nbsp;lagen sowohl die Fahrleistung als auch die Emissionen etwa 11&nbsp;% unter den Werten von 2019&nbsp;(3,49&nbsp;Milliarden Kilometer und 781&nbsp;000&nbsp;Tonnen CO₂). Besonders stark fielen die Einbrüche bei den Pkw aus (etwa –20&nbsp;%), während die Nutzung von leichten Nutzfahrzeugen nahezu unverändert blieb.<br /><br />Für Fahrzeuge mit Elektroantrieb wird eine Emission von 0&nbsp;Gramm CO₂ angenommen. Entsprechend hat die Elektrifizierung der Kfz-Flotte der öffentlichen Hand einen erheblichen Einfluss auf den Indikator. Der Anteil der Fahrleistung, die mit Elektrofahrzeugen zurückgelegt wurde hat sich seit 2014&nbsp;zwar vervierfacht, lag im Jahr 2022&nbsp;jedoch immer noch bei lediglich 0,15&nbsp;%. Zur Reduzierung der Emissionen wurden mehrere Maßnahmen eingeleitet, darunter die Förderung emissionsarmer Fahrzeuge, die Nutzung technologischer Fortschritte in der Motoreneffizienz und der verstärkte Einsatz alternativer Antriebe. Zudem wurde die Ladeinfrastruktur für Elektrofahrzeuge ausgebaut und es wurden regulatorische Vorgaben wie verbindliche Emissionsgrenzwerte sowie Programme zur Erneuerung der Fahrzeugflotte eingeführt. Weitere Maßnahmen, wie eine verstärkte Nutzung von alternativen Verkehrsmitteln, tragen ebenfalls zur Emissionsreduktion bei. Diese gehen jedoch mit einer reduzierten Fahrleistung einher, was den Indikator sowohl im Zähler als auch im Nenner beeinflusst.<br /><br />Das politisch festgelegte Ziel sieht vor, die CO₂-Emissionen je Fahrleistungen der Kfz der öffentlichen Hand zu senken. Im Durchschnitt der letzten Jahre war jedoch keine klare Tendenz in diese Richtung erkennbar, während sich der Indikator im Jahr 2022&nbsp;in Übereinstimmung mit diesem Ziel entwickelte.<br /><br /><b>12.3.c Nachhaltige Textilbeschaffung der Bundesverwaltung (exklusive Sondertextilien)</b><br /><br />Das Maßnahmenprogramm Nachhaltigkeit der Bundesregierung zielt darauf ab, Nachhaltigkeit als grundlegendes Prinzip im Verwaltungshandeln des Bundes zu etablieren. Es wurde erstmals 2010&nbsp;beschlossen und 2015&nbsp;neu aufgelegt. Es verpflichtet die Bundesbehörden, ihre Tätigkeiten unter ökologischen, sozialen und ökonomischen Gesichtspunkten auszurichten.<br /><br />Im Rahmen dieses Programms hat sich die Bundesregierung verpflichtet, <i>möglichst 50&nbsp;% der Textilien (exklusive Sondertextilien) nach ökologischen und sozialen Kriterien zu beschaffen</i>. Diese Zielsetzung wurde 2021&nbsp;durch den <i>Stufenplan zur Steigerung der nachhaltigen Beschaffung von Textilien</i> konkretisiert, der am 15. März 2023&nbsp;in Kraft trat. Der Stufenplan definiert quantitative Ziele zur Steigerung der nachhaltigen Textilbeschaffung und misst den Fortschritt anhand des finanziellen Gesamtvolumens der durch die Bundesverwaltung beschafften Textilien. Anders als die Zielsetzung im Maßnahmenprogramm bezieht sich der Indikator&nbsp;–&nbsp;und damit das Ziel von 50&nbsp;%&nbsp;–&nbsp;auf das Gesamtvolumen der Textilbeschaffung und nicht auf jede einzelne verpflichtete Behörde und Einrichtung der Bundesverwaltung. Sollten also einzelne Einrichtungen die 50&nbsp;%-Marke nicht erreichen, kann dies durch eine Übererfüllung anderer Behörden ausgeglichen werden.<br /><br />Der Stufenplan basiert auf dem <i>Leitfaden für eine nachhaltige Textilbeschaffung der Bundesverwaltung</i>, der ökologische und soziale Anforderungen für die Beschaffung festlegt. Die Daten zur Berechnung des Anteils nachhaltig beschaffter Textilien am finanziellen Gesamtvolumen sollen künftig durch das Monitoring des Maßnahmenprogramms Nachhaltigkeit erfasst werden. Dieses wird von der Koordinierungsstelle Klimaneutrale Bundesverwaltung (KKB) im Bundesministeriums für Wirtschaft und Energie (BMWE) durchgeführt.<br /><br />Zum Zeitpunkt der Veröffentlichung liegen für den Indikator, der die nachhaltige Textilbeschaffung innerhalb der Bundesverwaltung misst, noch keine Daten vor.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3172,19 +3098,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3198,8 +3129,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 1</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3936,151 +3867,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmwe.png" alt="Bundesministerium für Wirtschaft und Energie" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für Wirtschaft und Energie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/bmwe.png" alt="Bundesministerium für Wirtschaft und Energie" title=" Klicken Sie hier um zur Homepage der Organisation Bundesministerium für Wirtschaft und Energie zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.bmwi.de/Navigation/DE/Home/home.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De')">Bundesministerium für Wirtschaft und Energie</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.bmwk.de/Redaktion/DE/Artikel/Wirtschaft/vergabestatistik.html" target="_blank">
+                Vergabestatistik <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.bmwk.de/Redaktion/DE/Artikel/Wirtschaft/vergabestatistik.html" target="_blank" onclick="return confirm_alert('des BMWE', 'De');">
-                      Vergabestatistik <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4146,6 +4036,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4157,8 +4048,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 2</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -4907,151 +4798,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/destatis.png" alt="Statistisches Bundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Statistisches Bundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/DE/Home/_inhalt.html" target="_blank">Statistisches Bundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link zur <br>Datenquelle </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www-genesis.destatis.de/datenbank/online/statistic/79994/details" target="_blank">
+                Vergabestatistik – GENESIS online 79994 <span class="visuallyhidden">in neuem Fenster öffnen</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link zur <br>Datenquelle </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www-genesis.destatis.de/datenbank/online/statistic/79994/details" target="_blank">
-                    Vergabestatistik – GENESIS online 79994 <span class="visuallyhidden">in neuem Fenster öffnen</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5105,6 +4955,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5116,8 +4967,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 3</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5878,92 +5729,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ifeu.png" alt="Institut für Energie- und Umweltforschung Heidelberg gGmbH" title=" Klicken Sie hier um zur Homepage der Organisation Institut für Energie- und Umweltforschung Heidelberg gGmbH zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/ifeu.png" alt="Institut für Energie- und Umweltforschung Heidelberg gGmbH" title=" Klicken Sie hier um zur Homepage der Organisation Institut für Energie- und Umweltforschung Heidelberg gGmbH zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.ifeu.de/" target="_blank" onclick="return confirm_alert('des ifeu', 'De')">Institut für Energie- und Umweltforschung Heidelberg gGmbH</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -6007,6 +5846,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -6018,8 +5858,8 @@ data-event-label="Change to indicator.sources tab"
       
         <h4>Datenquelle 4</h4>
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -6790,92 +6630,80 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgDe/uba.png" alt="Umweltbundesamt" title=" Klicken Sie hier um zur Homepage der Organisation Umweltbundesamt zu gelangen." style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/" target="_blank" onclick="return confirm_alert('des UBA', 'De')">Umweltbundesamt</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -6909,6 +6737,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -6916,11 +6745,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -6931,18 +6760,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -6956,12 +6785,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Suche';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

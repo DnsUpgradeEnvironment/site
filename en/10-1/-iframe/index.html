@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-10">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/10/" aria-label=" 10" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png"
-              alt="Reduced inequalities - Goal 10"
-              id="goal-10"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-10">
+    <div class="container">
+        <div class="row">
             
-              Indicator 10.1
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/10/" aria-label=" 10" title=" 10">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/10.png"
+                        alt="Reduced inequalities - Goal 10"
+                        id="goal-10"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Foreign school graduates</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 10.1
+                        
+                        <span class="lead-copy">Foreign school graduates</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-10" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_10-1'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Ausländische Schulabsolvierende"
   data-charttitles="[{&quot;series&quot;:&quot;Germans&quot;,&quot;title&quot;:&quot;German school graduates&quot;},{&quot;series&quot;:&quot;Foreigns&quot;,&quot;title&quot;:&quot;Foreign school graduates&quot;},{&quot;series&quot;:&quot;Difference&quot;,&quot;title&quot;:&quot;Difference in the proportion of German and foreign school graduates&quot;}]"
-  data-chartsubtitle=""
-  data-chartsubtitles="[{&quot;series&quot;:&quot;Germans&quot;,&quot;title&quot;:&quot;Share of all German school-leavers&quot;},{&quot;series&quot;:&quot;Foreigns&quot;,&quot;title&quot;:&quot;Share of all foreign school-leavers&quot;},{&quot;series&quot;:&quot;Difference&quot;,&quot;title&quot;:&quot;between german and foreign school leavers&quot;}]"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Foreigns&quot;},{&quot;field&quot;:&quot;Series&quot;,&quot;value&quot;:&quot;Germans&quot;}]"
   data-graphlimits="[{&quot;series&quot;:&quot;Germans&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;Foreigns&quot;,&quot;minimum&quot;:0.0,&quot;maximum&quot;:100.0},{&quot;series&quot;:&quot;Difference&quot;,&quot;minimum&quot;:-10.0,&quot;maximum&quot;:50.0}]"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;series&quot;:&quot;Difference&quot;,&quot;value&quot;:0,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;series&quot;:&quot;Difference&quot;,&quot;xValue&quot;:28,&quot;yValue&quot;:0,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#dd1367&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;series&quot;:&quot;Difference&quot;,&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:28,&quot;yValue&quot;:4.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;0&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="null"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Percentage&quot;,&quot;Percentage points&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Series&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Foreigns&quot;,&quot;Germans&quot;,&quot;Difference&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Series&quot;},{&quot;name&quot;:&quot;sex&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;Female&quot;,&quot;Male&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Sex&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;series&quot;:&quot;Germans&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;Foreigns&quot;,&quot;step&quot;:10.0},{&quot;series&quot;:&quot;Difference&quot;,&quot;step&quot;:2.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -2169,62 +2159,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -2237,12 +2225,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">German school graduates</h4>
-          <h6 id="chart-heading" class="chart-subtitle">Share of all German school-leavers</h6>
+          <h4 id="chart-heading" class="chart-title">
+            German school graduates
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -2257,54 +2245,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>05.11.2024</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -2336,54 +2315,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>05.11.2024</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -2471,197 +2441,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the proportion of foreign school leavers among all foreign school leavers in a year group (in %). School leavers are those who leave general education schools with at least a lower secondary school leaving certificate, while school leavers are those who leave school without a school leaving certificate.</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Foreign school graduates</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the proportion of foreign school leavers among all foreign school leavers in a year group (in %). School leavers are those who leave general education schools with at least a lower secondary school leaving certificate, while school leavers are those who leave school without a school leaving certificate.</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>The integration of foreigners living in Germany is an important prerequisite for the social cohesion of our society. The basic prerequisite for successful integration is sufficient school qualifications that open up vocational training and employment opportunities.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>The integration of foreigners living in Germany is an important prerequisite for the social cohesion of our society. The basic prerequisite for successful integration is sufficient school qualifications that open up vocational training and employment opportunities.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Increase the proportion of foreign school leavers with at least a secondary general school certificate and bring into line with that of German school leavers by 2030<sup>1</sup><br /><small><sup>1</sup> The designation of school leaving qualifications was revised for the 2024/25 reporting year in accordance with the <i>Agreement on School Types and Educational Pathways in Lower Secondary Education</i> (Resolution of the Standing Conference of the Ministers of Education and Cultural Affairs of 03/12/1993, as amended on 07/10/2022).</small></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Increase the proportion of foreign school leavers with at least a secondary general school certificate and bring into line with that of German school leavers by 2030<sup>1</sup><br /><small><sup>1</sup> The designation of school leaving qualifications was revised for the 2024/25 reporting year in accordance with the <i>Agreement on School Types and Educational Pathways in Lower Secondary Education</i> (Resolution of the Standing Conference of the Ministers of Education and Cultural Affairs of 03/12/1993, as amended on 07/10/2022).</small></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Combination of Directional target and Target with specific target value</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Combination of Directional target and Target with specific target value</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>Indicator 10.1 comprises two sub-targets that must be achieved simultaneously: first, the proportion of foreign school graduates should be increased; second, the difference compared with the corresponding proportion of German school graduates should be reduced to a maximum of 0 percentage points by 2030.<br />• The first sub-target is assessed as <b>slightly cloudy</b>, as the most recent development in 2023 points in the desired direction, while the average development between 2018 and 2023 moved in the opposite direction. The second sub-target is assessed as <b>cloud</b>, since the overall trend is positive, but the politically defined target value of 0 percentage points by 2030 would still be clearly missed if the current development continues.<br />• For indicators wit several sub-targets that must be met concurrently, the lowest rating determines the overall assessment. Indicator 10.1 is therefore assessed as <b>cloud</b> for 2023.<br />• Data status at assessment: 05/11/2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Different target types." alt="Weathersymbol: cloud" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>Indicator 10.1 comprises two sub-targets that must be achieved simultaneously: first, the proportion of foreign school graduates should be increased; second, the difference compared with the corresponding proportion of German school graduates should be reduced to a maximum of 0 percentage points by 2030.<br />• The first sub-target is assessed as <b>slightly cloudy</b>, as the most recent development in 2023 points in the desired direction, while the average development between 2018 and 2023 moved in the opposite direction. The second sub-target is assessed as <b>cloud</b>, since the overall trend is positive, but the politically defined target value of 0 percentage points by 2030 would still be clearly missed if the current development continues.<br />• For indicators wit several sub-targets that must be met concurrently, the lowest rating determines the overall assessment. Indicator 10.1 is therefore assessed as <b>cloud</b> for 2023.<br />• Data status at assessment: 05/11/2024.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Wolke.png" title="Different target types." alt="Weathersymbol: cloud" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -3447,20 +3367,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3477,25 +3402,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #dd1367; font-size: large">10.1&nbsp;Foreign school graduates</b><br /><br />This indicator represents the proportion of foreign school graduates relative to the total number of foreign school leavers and graduates within a given cohort. Graduates are defined as pupils who have completed a specific type of school with a formal qualification. This also includes those who transfer to another general education school type to obtain an additional qualification. Foreign nationals are defined as all persons who are not German within the meaning of Article 116&nbsp;(1) of the Basic Law (Grundgesetz), that is, those who do not hold German citizenship. This definition also encompasses stateless persons and those with unresolved citizenship status. Persons holding German citizenship alongside another nationality are not classified as part of the foreign population.<br /><br />In 2023, the proportion of foreign school graduates among all foreign school leavers and graduates stood at 82.3%. This represents the third consecutive year of decline compared to the previous year. A gender-specific analysis reveals that the proportion of female foreign graduates among all female foreign school leavers and graduates was 85.2%, whereas the corresponding figure for males was 79.7%. The proportion of German school graduates among all German school leavers and graduates was most recently 94.2%, remaining very stable over the past fifteen years.<br /><br />The difference between the proportion of foreign and German graduates reached its lowest point of 6.1&nbsp;percentage points in 2013. However, following increased migration of refugees in 2015/2016, this gap widened significantly again, surpassing the level observed in 1996&nbsp;(11.8&nbsp;percentage points). The largest gap recorded was in 2017, at 13.0&nbsp;percentage points. After a temporary reduction to 9.6&nbsp;percentage points in 2020, the gap stood again at 11.9&nbsp;percentage points in 2023. The politically established target to increase the proportion of foreign school graduates with at least a First School Leaving Certificate (formerly: Hauptschulabschluss) was not met in 2023, nor was the goal of aligning this proportion with the level of German school graduates.<br /><br />When considering not only absolute proportions but also the level of attainment, it is evident that among foreign graduates of general education schools in the 2023&nbsp;cohort, 30.9% obtained the First School Leaving Certificate, 39.0% left school with an Intermediate School Leaving Certificate (Mittlerer Abschluss), and 12.3% achieved the entrance qualification for universities of applied sciences (Fachhochschulreife) or the general higher education entrance qualification (Allgemeine Hochschulreife). Among German school graduates, the corresponding proportions were 14.9% for the First School Leaving Certificate, 43.5% for the Intermediate School Leaving Certificate, and 35.9% for the Fachhochschulreife or Allgemeine Hochschulreife. Notably, foreign youths are markedly underrepresented compared to their German peers, especially in higher educational qualifications.<br /><br />The data underlying this indicator derive from school statistics compiled by the Federal Statistical Office from the individual Länder’ records. These generally consist of complete surveys with a mandatory reporting obligation. The aggregation of Länder results into a national figure is influenced by differences in education policy among the Länder&nbsp;–&nbsp;for example, with respect to promotion regulations or the structuring of vocational education pathways. Such differences can only be partially compensated for by formal regulations aimed at standardising classifications.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #dd1367; font-size: large">10.1&nbsp;Foreign school graduates</b><br /><br />This indicator represents the proportion of foreign school graduates relative to the total number of foreign school leavers and graduates within a given cohort. Graduates are defined as pupils who have completed a specific type of school with a formal qualification. This also includes those who transfer to another general education school type to obtain an additional qualification. Foreign nationals are defined as all persons who are not German within the meaning of Article 116&nbsp;(1) of the Basic Law (Grundgesetz), that is, those who do not hold German citizenship. This definition also encompasses stateless persons and those with unresolved citizenship status. Persons holding German citizenship alongside another nationality are not classified as part of the foreign population.<br /><br />In 2023, the proportion of foreign school graduates among all foreign school leavers and graduates stood at 82.3%. This represents the third consecutive year of decline compared to the previous year. A gender-specific analysis reveals that the proportion of female foreign graduates among all female foreign school leavers and graduates was 85.2%, whereas the corresponding figure for males was 79.7%. The proportion of German school graduates among all German school leavers and graduates was most recently 94.2%, remaining very stable over the past fifteen years.<br /><br />The difference between the proportion of foreign and German graduates reached its lowest point of 6.1&nbsp;percentage points in 2013. However, following increased migration of refugees in 2015/2016, this gap widened significantly again, surpassing the level observed in 1996&nbsp;(11.8&nbsp;percentage points). The largest gap recorded was in 2017, at 13.0&nbsp;percentage points. After a temporary reduction to 9.6&nbsp;percentage points in 2020, the gap stood again at 11.9&nbsp;percentage points in 2023. The politically established target to increase the proportion of foreign school graduates with at least a First School Leaving Certificate (formerly: Hauptschulabschluss) was not met in 2023, nor was the goal of aligning this proportion with the level of German school graduates.<br /><br />When considering not only absolute proportions but also the level of attainment, it is evident that among foreign graduates of general education schools in the 2023&nbsp;cohort, 30.9% obtained the First School Leaving Certificate, 39.0% left school with an Intermediate School Leaving Certificate (Mittlerer Abschluss), and 12.3% achieved the entrance qualification for universities of applied sciences (Fachhochschulreife) or the general higher education entrance qualification (Allgemeine Hochschulreife). Among German school graduates, the corresponding proportions were 14.9% for the First School Leaving Certificate, 43.5% for the Intermediate School Leaving Certificate, and 35.9% for the Fachhochschulreife or Allgemeine Hochschulreife. Notably, foreign youths are markedly underrepresented compared to their German peers, especially in higher educational qualifications.<br /><br />The data underlying this indicator derive from school statistics compiled by the Federal Statistical Office from the individual Länder’ records. These generally consist of complete surveys with a mandatory reporting obligation. The aggregation of Länder results into a national figure is influenced by differences in education policy among the Länder&nbsp;–&nbsp;for example, with respect to promotion regulations or the structuring of vocational education pathways. Such differences can only be partially compensated for by formal regulations aimed at standardising classifications.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -4289,19 +4209,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -4315,8 +4240,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -5053,204 +4978,130 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/destatis.png" alt="Federal Statistical Office" title=" Click here to visit the homepage of the organizationFederal Statistical Office" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.destatis.de/EN/Home/_node.html" target="_blank">Federal Statistical Office</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=21111-0004&bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
+                School leavers (graduates and dropouts): Germany – GENESIS online 21111-0004 <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www-genesis.destatis.de/genesis//online?operation=table&code=21111-0004&bypass=true&levelindex=0&levelid=1660823284613&language=en" target="_blank">
-                    School leavers (graduates and dropouts): Germany – GENESIS online 21111-0004 <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.destatis.de/EN/Themes/Society-Environment/Education-Research-Culture/Schools/_node.html" target="_blank">
+                Statistical report - General education schools (only available in German) <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                  <a href="https://www.destatis.de/EN/Themes/Society-Environment/Education-Research-Culture/Schools/_node.html" target="_blank">
-                    Statistical report - General education schools (only available in German) <span class="visuallyhidden">opens in a new window</span>
-                  </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -5316,6 +5167,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -5323,11 +5175,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -5338,18 +5190,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -5363,12 +5215,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>

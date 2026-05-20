@@ -2,7 +2,7 @@
 <html lang="en" class="no-js">
     <head>
         <meta charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha384-bPV3mA2eo3edoq56VzcPBmG1N1QVUfjYMxVIJPPzyFJyFZ8GFfN7Npt06Zr23qts" crossorigin="anonymous"></script>
         <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&features=Promise%2CString.prototype.includes%2CCustomEvent%2CArray.prototype.includes%2CArray.prototype.find%2CObject.assign%2CObject.values%2CObject.entries%2CArray.from%2CSet%2CArray.prototype.findIndex%2Cfetch"></script>
 <script crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/javascript-canvas-to-blob/3.15.0/js/canvas-to-blob.min.js"></script>
 
@@ -43,6 +43,8 @@ var opensdg = {
   ignoredDisaggregations: null,
 
   language: 'en',
+
+  language_numbers: '',
 
   mapColors: {
     "default": [
@@ -144,9 +146,8 @@ var translations = {
         
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link res="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
-        <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/3.2.3/css/fixedColumns.dataTables.min.css" crossorigin="">
-        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520102105">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" crossorigin="">
+        <link rel="stylesheet" href="/site/assets/css/style.css?v=20260520103520">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
           integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
           crossorigin=""/>
@@ -261,32 +262,31 @@ layout-indicator-iframe
 
 
 <div class="heading goal-banner indicator goal-13">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
-        <a href="/site/en/13/" aria-label=" 13" title="View this goal's indicator overview">
-          <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png"
-              alt="Climate action - Goal 13"
-              id="goal-13"
-              class="goal-icon-image goal-icon-image-" />
-        </a>
-      </div>
-      <div class="col-8 col-md-9 col-lg-10 indicator-details">
-      
-        <div>
-          <h1 class="titles goal-13">
+    <div class="container">
+        <div class="row">
             
-              Indicator 13.1.a
+            <div class="col-4 col-md-3 col-lg-2 goal-icon goal-tiles">
+                <a href="/site/en/13/" aria-label=" 13" title=" 13">
+                    <img src="https://g205sdgs.github.io/sdg-indicators/assets/img/goals/dns/en/13.png"
+                        alt="Climate action - Goal 13"
+                        id="goal-13"
+                        class="goal-icon-image goal-icon-image-" />
+                </a>
+            </div>
+            <div class="col-8 col-md-9 col-lg-10 indicator-details">
             
-            <span class="lead-copy">Greenhouse gas emissions</span>
-          </h1>
+                <div>
+                    <h1>
+                        
+                        Indicator 13.1.a
+                        
+                        <span class="lead-copy">Greenhouse gas emissions</span>
+                    </h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
-
 <div id="main-content" class="container goal-13" role="main">
   
 
@@ -303,8 +303,6 @@ layout-indicator-iframe
 
 
 
-
-
 <div class="row"
   id="indicatorData"
   data-indicatorid='indicator_13-1-a'
@@ -312,12 +310,9 @@ layout-indicator-iframe
   data-country="Germany"
   data-charttitle="Greenhouse gas emissions"
   data-charttitles="null"
-  data-chartsubtitle=""
-  data-chartsubtitles="null"
   data-measurementunit=""
   data-xaxislabel=""
   data-showdata="true"
-  data-showinfo="false"
   data-graphtype="line"
   data-graphtypes="null"
   data-geocoderegex=""
@@ -325,25 +320,20 @@ layout-indicator-iframe
   data-startvalues="[{&quot;field&quot;:&quot;Time series&quot;,&quot;value&quot;:&quot;Greenhouse gas emissions&quot;}]"
   data-graphlimits="null"
   data-stackeddisaggregation=""
-  data-showline="true"
-  data-spangaps="true"
-  data-mixedtypes="null"
   data-graphannotations="[{&quot;value&quot;:60,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2020&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:35,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2030&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:12,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2040&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;value&quot;:0,&quot;label&quot;:{&quot;content&quot;:&quot;Target 2045&quot;,&quot;position&quot;:&quot;left&quot;,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;color&quot;:&quot;transparent&quot;},&quot;preset&quot;:&quot;target_line&quot;,&quot;borderColor&quot;:&quot;transparent&quot;}]"
   data-graphtargetlines="null"
-  data-graphtargetpoints="[{&quot;xValue&quot;:30,&quot;yValue&quot;:60,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#3f7e44&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:35,&quot;yValue&quot;:35,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#3f7e44&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:36,&quot;yValue&quot;:12,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#3f7e44&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;xValue&quot;:37,&quot;yValue&quot;:0,&quot;pointStyle&quot;:&quot;triangle&quot;,&quot;rotation&quot;:180,&quot;borderColor&quot;:&quot;#3f7e44&quot;,&quot;preset&quot;:&quot;target_points&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:30,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;60&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:35,&quot;yValue&quot;:41.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;35&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:36,&quot;yValue&quot;:18.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Target:&quot;,&quot;12&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;},{&quot;type&quot;:&quot;label&quot;,&quot;xValue&quot;:33.0,&quot;yValue&quot;:2.0,&quot;backgroundColor&quot;:&quot;transparent&quot;,&quot;content&quot;:[&quot;Net greenhouse gas neutrality&quot;],&quot;font&quot;:{&quot;size&quot;:14},&quot;borderColor&quot;:&quot;transparent&quot;}]"
-  data-graphtargetlabels="null"
   data-graphseriesbreaks="[{&quot;value&quot;:32.5}]"
-  data-grapherrorbars="null"
   data-indicatordownloads="null"
   data-dataschema="{&quot;fields&quot;:[{&quot;name&quot;:&quot;Year&quot;,&quot;type&quot;:&quot;integer&quot;,&quot;title&quot;:&quot;Year&quot;},{&quot;name&quot;:&quot;Units&quot;,&quot;type&quot;:&quot;string&quot;,&quot;constraints&quot;:{&quot;enum&quot;:[&quot;1990 = 100&quot;,&quot;&quot;]},&quot;title&quot;:&quot;Units&quot;},{&quot;name&quot;:&quot;Value&quot;,&quot;type&quot;:&quot;number&quot;,&quot;title&quot;:&quot;Value&quot;}]}"
   data-compositebreakdownlabel=""
   data-precision="[{&quot;decimals&quot;:1.0}]"
-  data-graphstepsize="[{&quot;step&quot;:10.0}]"
   data-proxy=""
   data-proxyseries="null"
 >
   
   <span role="status" class="visually-hidden" id="indicator-data-view-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-unit-status"></span>
+  <span role="status" class="visually-hidden" id="indicator-data-series-status"></span>
   <div id="indicator-sidebar" class="indicator-sidebar col-md-3">
     <div id="serieses"></div>
 <div id="units"></div>
@@ -1033,62 +1023,60 @@ layout-indicator-iframe
 
     <div style="display: none;">
     <span id="table-alternative"></span>
-</div>
-<ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link active"
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-chartview"
-        data-bs-target="#chartview"
-        aria-controls="chartview"
-        aria-describedby="table-alternative"
-        data-on="click"
+  </div>
+  <ul class="nav nav-tabs non-stacking-tabs data-view" role="tablist">
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link active"
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-chartview"
+          data-bs-target="#chartview"
+          aria-controls="chartview"
+          aria-describedby="table-alternative"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Chart tab"
 
-        ><i class="fa fa-line-chart" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Chart</span></button>
-  </li>
-  
-  <li role="presentation"
-    class="
-      nav-item
-      
-      
-    ">
-    <button
-      class="nav-link "
-      data-bs-toggle="tab"
-      role="tab"
-      type="button"
-      
-        id="tab-tableview"
-        data-bs-target="#tableview"
-        aria-controls="tableview"
-        data-on="click"
+        
+      >Chart</button>
+    </li>
+    
+    <li role="presentation"
+      class="
+        nav-item
+        
+        
+      ">
+      <button
+        class="nav-link "
+        data-bs-toggle="tab"
+        role="tab"
+        type="button"
+        
+          id="tab-tableview"
+          data-bs-target="#tableview"
+          aria-controls="tableview"
+          data-on="click"
 data-event-category="Tab change"
 data-event-action="Change data view"
 data-event-label="Change to Table tab"
 
-        ><i class="fa fa-table" aria-hidden="true"></i>
-      
-    <span class="hidden-xs" style="color:black">Table</span></button>
-  </li>
+        
+      >Table</button>
+    </li>
+    
+  </ul>
   
-</ul>
-
     <div class="tab-content data-view">
     
       
@@ -1101,12 +1089,12 @@ data-event-label="Change to Table tab"
     </div>
 
     
-    
     <div id="selectionsChart">
       <figure role="group">
         <div id="chart-canvas">
-          <h4 id="chart-heading" class="chart-title">Greenhouse gas emissions</h4>
-          <h6 id="chart-heading" class="chart-subtitle"></h6>
+          <h4 id="chart-heading" class="chart-title">
+            Greenhouse gas emissions
+          </h4>
           <div id="chart" class="plot-container">
             <canvas
     role="img"
@@ -1121,57 +1109,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionChartFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>14.03.2025</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Greenhouse gases = carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), sulphur hexafluoride (SF₆), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs) and perfluorocarbons (PFCs).<br>• Partly revised data.<br>• 2024 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
         </div>
@@ -1203,57 +1179,45 @@ data-event-label="Change to Table tab"
 
 
 
-
-
-
 <div id="selectionTableFooter" class="table-footer-text">
   <h5 class="sr-only">Chart details</h5>
     <dl>
         
-          <dt><u>Data source</u>:</dt>
-          <dd><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></dd>
+        <dt>Data source:</dt>
+        <dd><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></dd>
         
 
         
-          <dt><u>Data state</u>:</dt>
-          <dd>14.03.2025</dd>
+        <dt>Geographical Area:</dt>
+        <dd>Germany</dd>
         
 
-        
-          <dt><u>Geographical Area</u>:</dt>
-          <dd>Germany</dd>
-        
-
-        <dt class="data-controlled-footer-field unit-from-data"><u>Unit of measurement</u>:</dt>
+        <dt class="data-controlled-footer-field unit-from-data">Unit of measurement:</dt>
         <dd class="data-controlled-footer-field unit-from-data"></dd>
 
         
-
-        
-          <dt><u>Notes</u>:</dt>
-          <dd><br>• Greenhouse gases = carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), sulphur hexafluoride (SF₆), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs) and perfluorocarbons (PFCs).<br>• Partly revised data.<br>• 2024 provisional data.</dd>
+        <dt>Copyright:</dt>
+        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
         
 
         
+
         
+
         
         
         <dt
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
-        ><u>Note</u>:</dt>
+        >Note:</dt>
         <dd
           class="data-controlled-footer-field"
           data-ts-attribute="COMMENT_TS"
         ></dd>
         
         
-
-        
-        <dt><u>Copyright</u>:</dt>
-        <dd>&copy; Federal Statistical Office (Destatis), 2025</dd>
-        
     </dl>
+    
 </div>
 
 <div id="tableSelectionDownload" class="clearfix"></div>
@@ -1341,197 +1305,147 @@ data-event-label="Change to indicator.sources tab"
 </ul>
 
 <div class="tab-content">
-  
     
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane active" id="national">
-      <article>
-        <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
-
         
-<table class="table" style="width:100%; table-layout: fixed;">
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      
         
-      
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane active" id="national">
+            <article>
+                <p>This table includes additional information to the above visualized indicators, like a short definition of this indicator and a description of the politically determined target values as well as explaining the political intention behind selecting this indicator.</p>
 
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
+                <table class="table metadata-content">
+  <tbody>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
       
-        
-      
-
       
       
-
-
       
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Definition </th>
-            <td>
-              
-                <p>The indicator shows the index of emissions of the following greenhouse gases (substances or groups of substances, in CO₂ equivalents) compared to the base year 1990: Carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs/HFCs), perfluorocarbons (PFCs/HFCs) and sulphur hexafluoride (SF₆).</p>
+      <tr>
+        <th scope="row">Time series available </th>
+        <td>
+          
+            <p>Greenhouse gas emissions</p>
 
-              
-            </td>
-          </tr>
+          
+        </td>
+        </tr>
         
       
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
+      
+      
+      <tr>
+        <th scope="row">Definition </th>
+        <td>
+          
+            <p>The indicator shows the index of emissions of the following greenhouse gases (substances or groups of substances, in CO₂ equivalents) compared to the base year 1990: Carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs/HFCs), perfluorocarbons (PFCs/HFCs) and sulphur hexafluoride (SF₆).</p>
+
+          
+        </td>
+        </tr>
+        
+      
+  
+      
+      
       
         
           
       
+      
+      
         
           
       
+      
+      
+      
+      <tr>
+        <th scope="row">Intention </th>
+        <td>
+          
+            <p>The average global temperature on the Earth’s surface is rising continuously due to the increasing concentration of carbon dioxide (CO₂) and other greenhouse gases (GHG) in the atmosphere.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Intention </th>
-            <td>
-              
-                <p>The average global temperature on the Earth’s surface is rising continuously due to the increasing concentration of carbon dioxide (CO₂) and other greenhouse gases (GHG) in the atmosphere.</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Target </th>
+        <td>
+          
+            <p>Reduction by at least 65% by 2030 and by at least 88% by 2040, in both cases compared to 1990; greenhouse gas neutrality to be achieved by 2045</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Target </th>
-            <td>
-              
-                <p>Reduction by at least 65% by 2030 and by at least 88% by 2040, in both cases compared to 1990; greenhouse gas neutrality to be achieved by 2045</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Type of target </th>
+        <td>
+          
+            <p>Target with specific target value</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Type of target </th>
-            <td>
-              
-                <p>Target with specific target value</p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Assessment </th>
+        <td>
+          
+            <p>For indicator 13.1.a, various targets are defined for different years. For the assessment, the politically defined target closest in time is relevant. Greenhouse gas emissions should be reduced to a maximum of 35% of the 1990 level by 2030.<br />• If the trend observed over the past six years continues, the politically defined 2030 target will be narrowly missed. Indicator 13.1.a is therefore assessed as <b>slightly cloudy</b> for 2024.<br />• Data status at assessment: 14/03/2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="If the development from 2024&nbsp;had continued, the target had been missed by at least 5&nbsp;documentat%, but by a maximum of 20&nbsp;% of the difference between the target value and the value at that time." alt="Weathersymbol: Clouded sun" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Assessment </th>
-            <td>
-              
-                <p>For indicator 13.1.a, various targets are defined for different years. For the assessment, the politically defined target closest in time is relevant. Greenhouse gas emissions should be reduced to a maximum of 35% of the 1990 level by 2030.<br />• If the trend observed over the past six years continues, the politically defined 2030 target will be narrowly missed. Indicator 13.1.a is therefore assessed as <b>slightly cloudy</b> for 2024.<br />• Data status at assessment: 14/03/2025.<br /><br /><a href="https://dnsUpgradeEnvironment.github.io/site/en/status"><img src="https://sdg-indikatoren.de/public/Wettersymbole/Leicht bewölkt.png" title="If the development from 2024&nbsp;had continued, the target had been missed by at least 5&nbsp;documentat%, but by a maximum of 20&nbsp;% of the difference between the target value and the value at that time." alt="Weathersymbol: Clouded sun" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
+      
+      
       
         
           
@@ -2317,20 +2231,25 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="content">
-      <article>
+            </article>
+        </div>
         
         
-<table class="table" style="width:100%; table-layout: fixed;">
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="content">
+            <article>
+                
+                <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -2347,25 +2266,20 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Content and progress </th>
+        <td>
+          
+            <p><b style="color: #3f7e44; font-size: large">13.1.a Greenhouse gas emissions</b><br /><br />The global greenhouse effect arises from the impact of various gases on the Earth's atmosphere: short-wave solar radiation passes through almost unhindered and is re-emitted by the Earth's surface as long-wave infrared radiation. This thermal radiation is absorbed by greenhouse gases (GHGs) and re-emitted at various wavelengths. Depending on the gas, absorption behaviour and atmospheric lifetime vary. Therefore, individual greenhouse gases contribute to the greenhouse effect to different extents. To make their impact comparable, it is expressed in so-called <i>CO₂ equivalents</i>. The year 1990&nbsp;is used as the reference year for evaluating the development of greenhouse gas emissions.<br /><br />The indicator records emissions of the most significant greenhouse gases caused by human activity: carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), and sulphur hexafluoride (SF₆). The annual collection and reporting of emissions data is conducted by the Federal Environment Agency (UBA) as part of international obligations&nbsp;–&nbsp;such as under the Paris Agreement, the United Nations Framework Convention on Climate Change (UNFCCC), and the Federal Climate Change Act (Bundes-Klimaschutzgesetz). The calculation follows the <i>polluter pays</i> and territorial principles, whereby relevant emission sources within Germany are recorded. Emissions from international maritime shipping and aviation are excluded. Emissions from land use, land-use change and forestry (LULUCF) are also not included in the indicator, in accordance with an agreement under the Kyoto Protocol. The LULUCF sector includes both emissions and removals of greenhouse gases through forests, arable land, grassland and wetlands.<br /><br />Since 1990, greenhouse gas emissions in Germany have shown a long-term decline, interrupted only occasionally by temporary increases. Notable reductions occurred in 2009&nbsp;as a result of the global financial and economic crisis, and again in 2020&nbsp;due to pandemic-related effects such as reduced economic activity and passenger transport. As a result, the politically set target to reduce emissions by 2020&nbsp;to below 60% of the 1990&nbsp;level was achieved.<br /><br />According to preliminary calculations by the UBA, greenhouse gas emissions fell by 48.2% between 1990&nbsp;and 2024. In 2024, approximately 649&nbsp;million tonnes of greenhouse gases were emitted, representing a decline of about 23&nbsp;million tonnes or 3.4% compared to the previous year. If the trend of recent years continues, the target to reduce greenhouse gas emissions to 35% of the 1990&nbsp;level by 2030&nbsp;is likely to be narrowly missed.<br /><br />In 2023, 88.4% of total greenhouse gas emissions were attributable to carbon dioxide (CO₂), 6.7% to methane (CH₄), 3.6% to nitrous oxide (N₂O), and 1.4% to fluorinated greenhouse gases. CO₂ emissions predominantly result from electricity and heat generation, while methane and nitrous oxide emissions primarily originate from agriculture. In 2024, the largest share of greenhouse gas emissions was attributed to the energy sector (28.5%). Industry accounted for 23.6%, transport for 22.0%, and the buildings sector for 15.5%. The remaining 10.4% was mainly attributed to agriculture, waste management, and other emitters.<br /><br />Over the long-term comparison between 2023&nbsp;and 1990, the reduction in greenhouse gas emissions in Germany stands at 46%, significantly higher than the preliminary average reduction across the European Union (EU-27), which is around 36%. Even greater reductions have been recorded in some Central and Eastern European countries&nbsp;–&nbsp;especially in the Baltic States: Estonia (–73%), Latvia and Lithuania (each –62%). With the exception of Cyprus (+52%), all Member States have managed to reduce their emissions. Compared to the previous year, when Ireland (+13%) and Spain (+6%) had still reported increases, a decline was also observed here&nbsp;–&nbsp;by 6% in Spain and 1% in Ireland.</p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-         <!-- case: content -->
-          <p> <p><b style="color: #3f7e44; font-size: large">13.1.a Greenhouse gas emissions</b><br /><br />The global greenhouse effect arises from the impact of various gases on the Earth's atmosphere: short-wave solar radiation passes through almost unhindered and is re-emitted by the Earth's surface as long-wave infrared radiation. This thermal radiation is absorbed by greenhouse gases (GHGs) and re-emitted at various wavelengths. Depending on the gas, absorption behaviour and atmospheric lifetime vary. Therefore, individual greenhouse gases contribute to the greenhouse effect to different extents. To make their impact comparable, it is expressed in so-called <i>CO₂ equivalents</i>. The year 1990&nbsp;is used as the reference year for evaluating the development of greenhouse gas emissions.<br /><br />The indicator records emissions of the most significant greenhouse gases caused by human activity: carbon dioxide (CO₂), methane (CH₄), nitrous oxide (N₂O), nitrogen trifluoride (NF₃), hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), and sulphur hexafluoride (SF₆). The annual collection and reporting of emissions data is conducted by the Federal Environment Agency (UBA) as part of international obligations&nbsp;–&nbsp;such as under the Paris Agreement, the United Nations Framework Convention on Climate Change (UNFCCC), and the Federal Climate Change Act (Bundes-Klimaschutzgesetz). The calculation follows the <i>polluter pays</i> and territorial principles, whereby relevant emission sources within Germany are recorded. Emissions from international maritime shipping and aviation are excluded. Emissions from land use, land-use change and forestry (LULUCF) are also not included in the indicator, in accordance with an agreement under the Kyoto Protocol. The LULUCF sector includes both emissions and removals of greenhouse gases through forests, arable land, grassland and wetlands.<br /><br />Since 1990, greenhouse gas emissions in Germany have shown a long-term decline, interrupted only occasionally by temporary increases. Notable reductions occurred in 2009&nbsp;as a result of the global financial and economic crisis, and again in 2020&nbsp;due to pandemic-related effects such as reduced economic activity and passenger transport. As a result, the politically set target to reduce emissions by 2020&nbsp;to below 60% of the 1990&nbsp;level was achieved.<br /><br />According to preliminary calculations by the UBA, greenhouse gas emissions fell by 48.2% between 1990&nbsp;and 2024. In 2024, approximately 649&nbsp;million tonnes of greenhouse gases were emitted, representing a decline of about 23&nbsp;million tonnes or 3.4% compared to the previous year. If the trend of recent years continues, the target to reduce greenhouse gas emissions to 35% of the 1990&nbsp;level by 2030&nbsp;is likely to be narrowly missed.<br /><br />In 2023, 88.4% of total greenhouse gas emissions were attributable to carbon dioxide (CO₂), 6.7% to methane (CH₄), 3.6% to nitrous oxide (N₂O), and 1.4% to fluorinated greenhouse gases. CO₂ emissions predominantly result from electricity and heat generation, while methane and nitrous oxide emissions primarily originate from agriculture. In 2024, the largest share of greenhouse gas emissions was attributed to the energy sector (28.5%). Industry accounted for 23.6%, transport for 22.0%, and the buildings sector for 15.5%. The remaining 10.4% was mainly attributed to agriculture, waste management, and other emitters.<br /><br />Over the long-term comparison between 2023&nbsp;and 1990, the reduction in greenhouse gas emissions in Germany stands at 46%, significantly higher than the preliminary average reduction across the European Union (EU-27), which is around 36%. Even greater reductions have been recorded in some Central and Eastern European countries&nbsp;–&nbsp;especially in the Baltic States: Estonia (–73%), Latvia and Lithuania (each –62%). With the exception of Cyprus (+52%), all Member States have managed to reduce their emissions. Compared to the previous year, when Ireland (+13%) and Spain (+6%) had still reported increases, a decline was also observed here&nbsp;–&nbsp;by 6% in Spain and 1% in Ireland.</p>
- </p>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
   
   
@@ -3159,19 +3073,24 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
-      </article>
-    </div>
-    
-    
-    
-    
-    
-    <div role="tabpanel" class="tab-pane " id="sources">
-      <article>
+            </article>
+        </div>
         
-        <!-- Count the non-empty sources (up to 5) -->
+        
+        
+        
+        
+        
+        
+        
+        
+        <div role="tabpanel" class="tab-pane " id="sources">
+            <article>
+                
+                <!-- Count the non-empty sources (up to 5) -->
 
 
 
@@ -3185,8 +3104,8 @@ data-event-label="Change to indicator.sources tab"
         <h4 class="sr-only">Data source 1</h4>
       
       
-      
-<table class="table" style="width:100%; table-layout: fixed;">
+      <table class="table metadata-content">
+  <tbody>
   
   
   
@@ -3923,151 +3842,110 @@ data-event-label="Change to indicator.sources tab"
   
   
       
+      
+      
+      
+      <tr>
+        <th scope="row"> </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/uba.png" alt="German Environment Agency" title=" Click here to visit the homepage of the organizationGerman Environment Agency" style="height:60px; width:148px; border:transparent" /></a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;"> </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')"><img src="https://dnsTestEnvironment.github.io/dns-indicators/public/OrgImgEn/uba.png" alt="German Environment Agency" title=" Click here to visit the homepage of the organizationGerman Environment Agency" style="height:60px; width:148px; border:transparent" /></a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Organisation </th>
+        <td>
+          
+            <p><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></p>
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Organisation </th>
-            <td>
-              
-                <p><a href="https://www.umweltbundesamt.de/en" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En')">German Environment Agency</a></p>
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
+      
+      
+      
+      <tr>
+        <th scope="row">Link to <br>data source </th>
+        <td>
+          
+            
+            
+            
+            
+            
+              <a href="https://www.umweltbundesamt.de/en/data/environmental-indicators/indicator-greenhouse-gas-emissions" target="_blank">
+                Emission of greenhouse gases covered by the UN Framework Convention on Climate <span class="visuallyhidden">opens in a new window</span>
+              </a>
+            
+
+          
+        </td>
+        </tr>
         
       
-
-      
-      
-
-
-      
-        
-           <tr id="everythingElse">
-            <th scope="row" style="text-align: left; width: 130px;">Link to <br>data source </th>
-            <td>
-              
-                
-                
-                
-                
-
-                
-                
-                
-
-                
-                  
-                    <a href="https://www.umweltbundesamt.de/en/data/environmental-indicators/indicator-greenhouse-gas-emissions" target="_blank" onclick="return confirm_alert('the German Environment Agency', 'En');">
-                      Emission of greenhouse gases covered by the UN Framework Convention on Climate <span class="visuallyhidden">opens in a new window</span>
-                    </a>
-                  
-                
-
-              
-            </td>
-          </tr>
-        
-      
-
-      <!-- weather -->
-      
-
-      
-    
   
       
-        
-      
-
       
       
-
-
       
-
-      <!-- weather -->
       
-
-      
-    
   
+      
+      
       
         
           
       
-        
-          
+      
       
         
           
       
-        
-          
+      
       
         
           
+      
+      
+      
+        
+          
+      
+      
+      
+        
+          
+      
+      
       
         
           
@@ -4133,6 +4011,7 @@ data-event-label="Change to indicator.sources tab"
   
   
   
+  </tbody>
 </table>
 
     </div>
@@ -4140,11 +4019,11 @@ data-event-label="Change to indicator.sources tab"
   </div>
 
 
-      </article>
-    </div>
+            </article>
+        </div>
+        
     
-  
-  
+    
 </div>
 
 </div>
@@ -4155,18 +4034,18 @@ data-event-label="Change to indicator.sources tab"
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js" integrity="sha384-ficRBwtap/VLzILv81vIvgp30PoJYnlCm96tPpNYHXAf+h9SIThOZxxIzRUzbpAh" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js" integrity="sha384-jIAE3P7Re8BgMkT0XOtfQ6lzZgbDw/02WeRMJvXK3WMHBNynEx5xofqia1OHuGh0" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js" integrity="sha256-Y26AMvaIfrZ1EQU49pf6H4QzVTrOI8m9wQYKkftBt4s=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/patternomaly@1.3.2/dist/patternomaly.js" integrity="sha384-kdgUFNEbslNOEAQ/zFH9wjDORAbvN0KUYOpfJIJYPdjtzLXkZsMJAXU9HPpi5B5c" crossorigin="anonymous"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@1.2.2/dist/chartjs-plugin-annotation.min.js" integrity="sha256-XuHhf6q+GD7fscc96mTm/228GXf1Nn9wOYOE0EgeFzY=" crossorigin="anonymous"></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha384-eEX5kO4tdQpY+eTjDbZNPlMm4QhsK+kosSZtkzp+uZk0L5g0lSzmWXWHzKDoOzA7" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.js" integrity="sha384-3qyhlVVDXXiWhzgKIoL/aw+uaXN5kyAFE0Jv2LGoV+nnQnum4ebt1QAtRbjnz9pL" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js" integrity="sha384-KQ8aykg/lc6595wSrMplFVs4kRS66x+EdkX7EQsJ2Pe6FX7l3tMqyD1Am0c2dKBG" crossorigin="anonymous"></script>
 
 
 
@@ -4180,12 +4059,12 @@ data-event-label="Change to indicator.sources tab"
 <script>translations['search'] = translations['search'] || {};
     translations['search']['search'] = 'Search';</script>
 
-<script src='/site/assets/js/sdg.js?v=20260520102105'></script>
+<script src='/site/assets/js/sdg.js?v=20260520103520'></script>
 
 
     
     
-    <script src="/site/assets/js/custom.js?v=20260520102105"></script><script>
+    <script src="/site/assets/js/custom.js?v=20260520103520"></script><script>
     new indicatorInit();
     new accessibilitySwitcher();
 </script>
